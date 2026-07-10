@@ -1,5 +1,8 @@
 # nzc-customreports
 
+[![Validate metadata](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml/badge.svg)](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A free, unmanaged, open-source package of basic **Lightning Report Types, Reports, and Dashboards** for **Salesforce Net Zero Cloud** (core Lightning analytics only — no CRM Analytics / Einstein components). Metadata API version **60.0**.
 
 ## What's included
@@ -63,9 +66,19 @@ Deploy-time validation against a real Net Zero Cloud org (field and relationship
 
 ## Deploy
 
+### Option 1: Deploy button
+
+<a href="https://githubsfdeploy.herokuapp.com?owner=mshresponse&amp;repo=nzc-customreports&amp;ref=main">
+  <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
+
+### Option 2: Salesforce CLI
+
 ```bash
 sf project deploy start --manifest manifest/package.xml --target-org <your-org-alias>
 ```
+
+Tip: validate first without saving anything to the org by adding `--dry-run`.
 
 ## Validating API names against your org
 

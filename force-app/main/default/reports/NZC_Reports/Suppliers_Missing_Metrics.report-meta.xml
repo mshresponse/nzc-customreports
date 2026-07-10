@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$BillingCountry</field>
+    </columns>
+    <description>Accounts that have no related Supplier Metric record, grouped by industry. Use this to target suppliers for Scope 3 emissions data collection.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.SpplrMtrcs$Id</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Industry</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Suppliers Missing Metrics</name>
+    <reportType>Accounts_with_or_without_Supplier_Metrics</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

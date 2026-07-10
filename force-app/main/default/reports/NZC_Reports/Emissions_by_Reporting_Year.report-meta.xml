@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>StnryAsstCrbnFprint$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAsstCrbnFprint$Stage</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAsstCrbnFprint$TotalScope1Emissions</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAsstCrbnFprint$TotalScope2LocationBasedEmissions</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAsstCrbnFprint$TotalScope2MarketBasedEmissions</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAsstCrbnFprint$TotalCarbonFootprint</field>
+    </columns>
+    <description>Stationary asset carbon footprints grouped by reporting year, with summed Scope 1, Scope 2 (location- and market-based), and total emissions. Year-over-year emissions trend for the stationary asset inventory.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAsstCrbnFprint$ReportingYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Emissions by Reporting Year</name>
+    <reportType>Standalone_Carbon_Footprints</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAsstCrbnFprint$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

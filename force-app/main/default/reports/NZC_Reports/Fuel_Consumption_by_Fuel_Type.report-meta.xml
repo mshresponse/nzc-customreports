@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>StnryAsstCrbnFprint$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAsstCrbnFprint$ReportingYear</field>
+    </columns>
+    <columns>
+        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$FuelConsumption</field>
+    </columns>
+    <columns>
+        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$FuelConsumptionUnit</field>
+    </columns>
+    <description>Fossil fuel energy use records behind stationary asset carbon footprints, grouped by fuel type with total fuel consumption. Supports Scope 1 stationary combustion analysis.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$FuelType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Fuel Consumption by Fuel Type</name>
+    <reportType>Footprints_with_Energy_Uses</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAsstCrbnFprint$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

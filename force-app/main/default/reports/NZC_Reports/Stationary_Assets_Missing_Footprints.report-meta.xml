@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>StnryAsstEnvrSrc$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAsstEnvrSrc$BusinessRegion</field>
+    </columns>
+    <columns>
+        <field>StnryAsstEnvrSrc$City</field>
+    </columns>
+    <columns>
+        <field>StnryAsstEnvrSrc$Country</field>
+    </columns>
+    <description>Stationary Asset Environmental Sources that have no related Stationary Asset Carbon Footprint record, grouped by asset type (record type). Data-completeness check for the emissions inventory.</description>
+    <filter>
+        <criteriaItems>
+            <column>StnryAsstEnvrSrc.StnryAsstCrbnFprints$Id</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAsstEnvrSrc$RecordType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Stationary Assets Missing Footprints</name>
+    <reportType>Stationary_Assets_with_without_Carbon_Footprints</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAsstEnvrSrc$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

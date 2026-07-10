@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>StnryAsstCrbnFprint</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Stationary Asset Carbon Footprints with related Stationary Asset Fossil Fuel Energy Use records (inner join). Use this report type to analyze fuel consumption behind each footprint.</description>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>StnryAsstFossilFuelEnrgyUses</relationship>
+    </join>
+    <label>Footprints with Energy Uses</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>StnryAsstCrbnFprint</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ReportingYear</field>
+            <table>StnryAsstCrbnFprint</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Stage</field>
+            <table>StnryAsstCrbnFprint</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotalScope1Emissions</field>
+            <table>StnryAsstCrbnFprint</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotalScope2LocationBasedEmissions</field>
+            <table>StnryAsstCrbnFprint</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotalScope2MarketBasedEmissions</field>
+            <table>StnryAsstCrbnFprint</table>
+        </columns>
+        <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FuelType</field>
+            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FuelConsumption</field>
+            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FuelConsumptionUnit</field>
+            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+        </columns>
+        <masterLabel>Fossil Fuel Energy Uses</masterLabel>
+    </sections>
+</ReportType>

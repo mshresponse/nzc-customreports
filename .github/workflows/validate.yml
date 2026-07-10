@@ -1,0 +1,76 @@
+name: Validate metadata
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check XML well-formedness
+        run: |
+          python3 - <<'EOF'
+          import glob, sys, xml.dom.minidom
+          failures = []
+          files = glob.glob('force-app/**/*.xml', recursive=True) + glob.glob('manifest/*.xml')
+          for path in sorted(files):
+              try:
+                  xml.dom.minidom.parse(path)
+                  print(f'OK   {path}')
+              except Exception as exc:
+                  failures.append((path, exc))
+                  print(f'FAIL {path}: {exc}')
+          sys.exit(1 if failures else 0)
+          EOF
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Salesforce CLI
+        run: npm install --global @salesforce/cli
+
+      - name: Convert source (validates SFDX project structure)
+        run: sf project convert source --output-dir mdapi-out
+
+      - name: Verify manifest members exist in source
+        run: |
+          python3 - <<'EOF'
+          import sys, xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          NS = {'m': 'http://soap.sforce.com/2006/04/metadata'}
+          SUFFIX = {
+              'ReportType': ('force-app/main/default/reportTypes', '.reportType-meta.xml'),
+              'Report': ('force-app/main/default/reports', '.report-meta.xml'),
+              'Dashboard': ('force-app/main/default/dashboards', '.dashboard-meta.xml'),
+          }
+          FOLDER_SUFFIX = {
+              'Report': '.reportFolder-meta.xml',
+              'Dashboard': '.dashboardFolder-meta.xml',
+          }
+
+          tree = ET.parse('manifest/package.xml')
+          missing = []
+          for t in tree.getroot().findall('m:types', NS):
+              name = t.find('m:name', NS).text
+              if name not in SUFFIX:
+                  continue
+              base, suffix = SUFFIX[name]
+              for member in t.findall('m:members', NS):
+                  value = member.text
+                  candidates = [Path(base) / (value + suffix)]
+                  if '/' not in value and name in FOLDER_SUFFIX:
+                      candidates.append(Path(base) / (value + FOLDER_SUFFIX[name]))
+                  if not any(c.is_file() for c in candidates):
+                      missing.append(f'{name}: {value}')
+          if missing:
+              print('Manifest members with no matching source file:')
+              print('\n'.join(missing))
+              sys.exit(1)
+          print('All manifest members have matching source files.')
+          EOF

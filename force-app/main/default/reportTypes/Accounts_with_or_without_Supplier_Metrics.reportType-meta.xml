@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Account</baseObject>
+    <category>accounts</category>
+    <deployed>true</deployed>
+    <description>Accounts with or without related Supplier Metric records (outer join). Use this report type to find suppliers that have not yet disclosed emissions data.</description>
+    <join>
+        <outerJoin>true</outerJoin>
+        <relationship>SpplrMtrcs</relationship>
+    </join>
+    <label>Accounts with or without Supplier Metrics</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Industry</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>BillingCountry</field>
+            <table>Account</table>
+        </columns>
+        <masterLabel>Accounts</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Account.SpplrMtrcs</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ReportingYear</field>
+            <table>Account.SpplrMtrcs</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope1Emissions</field>
+            <table>Account.SpplrMtrcs</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope2Emissions</field>
+            <table>Account.SpplrMtrcs</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3Emissions</field>
+            <table>Account.SpplrMtrcs</table>
+        </columns>
+        <masterLabel>Supplier Metrics</masterLabel>
+    </sections>
+</ReportType>

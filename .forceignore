@@ -1,0 +1,6 @@
+# Exclude the manifest from source tracking operations
+package.xml
+
+# LWC/Aura config files (none in this project, kept for convention)
+**/jsconfig.json
+**/.eslintrc.json

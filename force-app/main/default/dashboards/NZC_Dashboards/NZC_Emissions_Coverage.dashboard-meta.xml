@@ -4,7 +4,7 @@
     <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
     <backgroundStartColor>#FFFFFF</backgroundStartColor>
     <dashboardType>LoggedInUser</dashboardType>
-    <description>Net Zero Cloud emissions data-coverage overview. Highlights stationary assets that are missing carbon footprint records.</description>
+    <description>Net Zero Cloud emissions overview: data coverage gaps for stationary assets and suppliers, emissions trend by reporting year, and fleet composition.</description>
     <isGridLayout>false</isGridLayout>
     <leftSection>
         <columnSize>Medium</columnSize>
@@ -27,10 +27,70 @@
             <title>Assets Missing Carbon Footprints by Asset Type</title>
             <useReportChart>false</useReportChart>
         </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <header>Data Coverage</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>NZC_Reports/Suppliers_Missing_Metrics</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Suppliers Missing Metrics by Industry</title>
+            <useReportChart>false</useReportChart>
+        </components>
     </leftSection>
     <middleSection>
         <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <header>Emissions Trend</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>NZC_Reports/Emissions_by_Reporting_Year</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Total Emissions by Reporting Year (tCO2e)</title>
+            <useReportChart>false</useReportChart>
+        </components>
     </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <header>Fleet</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>NZC_Reports/Fleet_by_Fuel_Type</report>
+            <showPercentage>true</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Vehicle Assets by Fuel Type</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
     <textColor>#000000</textColor>
     <title>NZC Emissions Coverage</title>
 </Dashboard>

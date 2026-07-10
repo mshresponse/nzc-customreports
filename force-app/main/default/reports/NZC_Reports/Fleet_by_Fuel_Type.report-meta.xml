@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>VehicleAsset$Name</field>
+    </columns>
+    <columns>
+        <field>VehicleAsset$VehicleType</field>
+    </columns>
+    <description>Vehicle asset inventory grouped by fuel type. Baseline view of the fleet composition driving Scope 1 mobile combustion emissions.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VehicleAsset$FuelType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Fleet by Fuel Type</name>
+    <reportType>Standalone_Vehicle_Assets</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>VehicleAsset$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

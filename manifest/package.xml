@@ -11,6 +11,10 @@
     <types>
         <members>NZC_Reports</members>
         <members>NZC_Reports/Stationary_Assets_Missing_Footprints</members>
+        <members>NZC_Reports/Fuel_Consumption_by_Fuel_Type</members>
+        <members>NZC_Reports/Suppliers_Missing_Metrics</members>
+        <members>NZC_Reports/Emissions_by_Reporting_Year</members>
+        <members>NZC_Reports/Fleet_by_Fuel_Type</members>
         <name>Report</name>
     </types>
     <types>

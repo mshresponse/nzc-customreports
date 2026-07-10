@@ -12,7 +12,11 @@ A free, unmanaged, open-source package of basic **Lightning Report Types, Report
 | Custom Report Type | `Standalone_Carbon_Footprints` | Single object: `StnryAsstCrbnFprint` |
 | Custom Report Type | `Standalone_Vehicle_Assets` | Single object: `VehicleAsset` |
 | Report | `NZC_Reports/Stationary_Assets_Missing_Footprints` | Summary report grouped by asset type (record type), filtered to rows where the related Carbon Footprint Id is blank |
-| Dashboard | `NZC_Dashboards/NZC_Emissions_Coverage` | Bar chart of assets missing carbon footprints, by asset type |
+| Report | `NZC_Reports/Fuel_Consumption_by_Fuel_Type` | Summary report grouped by fuel type, with summed fuel consumption |
+| Report | `NZC_Reports/Suppliers_Missing_Metrics` | Accounts with no Supplier Metric record, grouped by industry |
+| Report | `NZC_Reports/Emissions_by_Reporting_Year` | Footprints grouped by reporting year with summed Scope 1 / Scope 2 / total emissions |
+| Report | `NZC_Reports/Fleet_by_Fuel_Type` | Vehicle assets grouped by fuel type |
+| Dashboard | `NZC_Dashboards/NZC_Emissions_Coverage` | Bar charts for asset/supplier data gaps, column chart of emissions by year, donut of fleet by fuel type |
 
 All report type layouts are curated to the fields sustainability teams use most (asset name, reporting year, stage, Scope 1 / Scope 2 emissions (tCO2e), fuel type, record type), and every curated column is flagged `checkedByDefault` so it is pre-selected when users build a new report.
 
@@ -31,11 +35,26 @@ force-app/main/default/
 │   └── Standalone_Vehicle_Assets.reportType-meta.xml
 ├── reports/
 │   ├── NZC_Reports.reportFolder-meta.xml
-│   └── NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml
+│   └── NZC_Reports/
+│       ├── Stationary_Assets_Missing_Footprints.report-meta.xml
+│       ├── Fuel_Consumption_by_Fuel_Type.report-meta.xml
+│       ├── Suppliers_Missing_Metrics.report-meta.xml
+│       ├── Emissions_by_Reporting_Year.report-meta.xml
+│       └── Fleet_by_Fuel_Type.report-meta.xml
 └── dashboards/
     ├── NZC_Dashboards.dashboardFolder-meta.xml
     └── NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
 ```
+
+## Continuous integration
+
+Every push and pull request runs `.github/workflows/validate.yml`, which:
+
+1. Checks that every XML file is well-formed.
+2. Runs `sf project convert source` to validate the SFDX project structure and metadata file suffixes (no org required).
+3. Cross-checks that every member listed in `manifest/package.xml` has a matching source file.
+
+Deploy-time validation against a real Net Zero Cloud org (field and relationship API names) still needs to be done with `sf project deploy start --dry-run` against your own org, since those objects require the NZC license.
 
 ## Prerequisites
 

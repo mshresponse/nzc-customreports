@@ -6,10 +6,10 @@
     <columns>
         <field>Account$BillingCountry</field>
     </columns>
-    <description>Accounts that have no related Supplier Metric record, grouped by industry. Use this to target suppliers for Scope 3 emissions data collection.</description>
+    <description>Accounts with no related Supplier record, grouped by industry. These are value-chain relationships that have not been registered as suppliers, which is the first gap to close before Scope 3 supplier data can be collected.</description>
     <filter>
         <criteriaItems>
-            <column>Account.SpplrMtrcs$Id</column>
+            <column>Account.Suppliers$Id</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>
@@ -21,8 +21,8 @@
         <field>Account$Industry</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Suppliers Missing Metrics</name>
-    <reportType>Accounts_with_or_without_Supplier_Metrics</reportType>
+    <name>Accounts Not Registered as Suppliers</name>
+    <reportType>Accounts_with_or_without_Suppliers</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

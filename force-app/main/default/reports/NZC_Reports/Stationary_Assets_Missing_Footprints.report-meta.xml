@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>StnryAsstEnvrSrc$Name</field>
+        <field>StnryAssetEnvrSrc$Name</field>
     </columns>
     <columns>
-        <field>StnryAsstEnvrSrc$BusinessRegion</field>
+        <field>StnryAssetEnvrSrc$BusinessRegion</field>
     </columns>
     <columns>
-        <field>StnryAsstEnvrSrc$City</field>
+        <field>StnryAssetEnvrSrc$City</field>
     </columns>
     <columns>
-        <field>StnryAsstEnvrSrc$Country</field>
+        <field>StnryAssetEnvrSrc$Country</field>
     </columns>
-    <description>Stationary Asset Environmental Sources that have no related Stationary Asset Carbon Footprint record, grouped by asset type (record type). Data-completeness check for the emissions inventory.</description>
+    <description>Stationary Asset Environmental Sources that have no related Stationary Asset Carbon Footprint record, grouped by stationary asset type. Data-completeness check for the emissions inventory.</description>
     <filter>
         <criteriaItems>
-            <column>StnryAsstEnvrSrc.StnryAsstCrbnFprints$Id</column>
+            <column>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts$Id</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>
@@ -24,7 +24,7 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>StnryAsstEnvrSrc$RecordType</field>
+        <field>StnryAssetEnvrSrc$StationaryAssetType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Stationary Assets Missing Footprints</name>
@@ -32,7 +32,7 @@
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>StnryAsstEnvrSrc$CreatedDate</dateColumn>
+        <dateColumn>StnryAssetEnvrSrc$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>VehicleAssetEnrgyUse</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Single-object report type over Vehicle Asset Energy Use records. Use this report type to break the fleet down by fuel type for Scope 1 mobile combustion tracking. Fuel data lives on this object, not on the vehicle emission source.</description>
+    <label>Standalone Vehicle Energy Uses</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FuelType</field>
+            <table>VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FuelConsumption</field>
+            <table>VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FuelConsumptionUnit</field>
+            <table>VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Distance</field>
+            <table>VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>VehicleAssetEnrgyUse</table>
+        </columns>
+        <masterLabel>Vehicle Asset Energy Uses</masterLabel>
+    </sections>
+</ReportType>

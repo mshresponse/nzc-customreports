@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>StnryAsstCrbnFprint$Name</field>
+        <field>StnryAssetCrbnFtprnt$Name</field>
     </columns>
     <columns>
-        <field>StnryAsstCrbnFprint$Stage</field>
-    </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>StnryAsstCrbnFprint$TotalScope1Emissions</field>
+        <field>StnryAssetCrbnFtprnt$FootprintStage</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>StnryAsstCrbnFprint$TotalScope2LocationBasedEmissions</field>
+        <field>StnryAssetCrbnFtprnt$TotScope1EmissionsInTco2e</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>StnryAsstCrbnFprint$TotalScope2MarketBasedEmissions</field>
+        <field>StnryAssetCrbnFtprnt$TotScope2LocBasedEmissions</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>StnryAsstCrbnFprint$TotalCarbonFootprint</field>
+        <field>StnryAssetCrbnFtprnt$TotScope2MktBasedEmissions</field>
     </columns>
-    <description>Stationary asset carbon footprints grouped by reporting year, with summed Scope 1, Scope 2 (location- and market-based), and total emissions. Year-over-year emissions trend for the stationary asset inventory.</description>
+    <description>Stationary asset carbon footprints grouped by reporting year, with summed Scope 1 and both Scope 2 accounting methods. No combined total is shown on purpose: location-based and market-based Scope 2 are alternative measures of the same emissions, so adding them to Scope 1 would double count. Pick the Scope 2 basis your disclosure uses.</description>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>StnryAsstCrbnFprint$ReportingYear</field>
+        <field>StnryAssetCrbnFtprnt$ReportingYear</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Emissions by Reporting Year</name>
@@ -34,7 +30,7 @@
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>StnryAsstCrbnFprint$CreatedDate</dateColumn>
+        <dateColumn>StnryAssetCrbnFtprnt$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

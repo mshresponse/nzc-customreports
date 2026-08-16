@@ -3,18 +3,18 @@
     <types>
         <members>Stationary_Assets_with_without_Carbon_Footprints</members>
         <members>Footprints_with_Energy_Uses</members>
-        <members>Accounts_with_or_without_Supplier_Metrics</members>
+        <members>Accounts_with_or_without_Suppliers</members>
         <members>Standalone_Carbon_Footprints</members>
-        <members>Standalone_Vehicle_Assets</members>
+        <members>Standalone_Vehicle_Energy_Uses</members>
         <name>ReportType</name>
     </types>
     <types>
         <members>NZC_Reports</members>
         <members>NZC_Reports/Stationary_Assets_Missing_Footprints</members>
         <members>NZC_Reports/Fuel_Consumption_by_Fuel_Type</members>
-        <members>NZC_Reports/Suppliers_Missing_Metrics</members>
+        <members>NZC_Reports/Accounts_Not_Registered_As_Suppliers</members>
         <members>NZC_Reports/Emissions_by_Reporting_Year</members>
-        <members>NZC_Reports/Fleet_by_Fuel_Type</members>
+        <members>NZC_Reports/Fleet_Fuel_by_Fuel_Type</members>
         <name>Report</name>
     </types>
     <types>

@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <baseObject>StnryAsstCrbnFprint</baseObject>
+    <baseObject>StnryAssetCrbnFtprnt</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Stationary Asset Carbon Footprints with related Stationary Asset Fossil Fuel Energy Use records (inner join). Use this report type to analyze fuel consumption behind each footprint.</description>
+    <description>Stationary Asset Carbon Footprints with their related Stationary Asset Energy Use records (inner join). Use this report type to analyse fuel consumption behind each footprint.</description>
     <join>
         <outerJoin>false</outerJoin>
-        <relationship>StnryAsstFossilFuelEnrgyUses</relationship>
+        <!-- VERIFY IN ORG: Salesforce does not publish child relationship names in the
+             object reference, so this is the conventional plural rather than a
+             documented value. If the deploy fails here, read the real name from a
+             describe (see README > Verifying relationship names) and replace it both
+             on this line and in the <table> paths below. -->
+        <relationship>StnryAssetEnrgyUses</relationship>
     </join>
     <label>Footprints with Energy Uses</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAsstCrbnFprint</table>
+            <table>StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>ReportingYear</field>
-            <table>StnryAsstCrbnFprint</table>
+            <table>StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>Stage</field>
-            <table>StnryAsstCrbnFprint</table>
+            <field>FootprintStage</field>
+            <table>StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>TotalScope1Emissions</field>
-            <table>StnryAsstCrbnFprint</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>TotalScope2LocationBasedEmissions</field>
-            <table>StnryAsstCrbnFprint</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>TotalScope2MarketBasedEmissions</field>
-            <table>StnryAsstCrbnFprint</table>
+            <field>TotScope1EmissionsInTco2e</field>
+            <table>StnryAssetCrbnFtprnt</table>
         </columns>
         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
     </sections>
@@ -46,23 +41,23 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
         </columns>
-        <masterLabel>Fossil Fuel Energy Uses</masterLabel>
+        <masterLabel>Stationary Asset Energy Uses</masterLabel>
     </sections>
 </ReportType>

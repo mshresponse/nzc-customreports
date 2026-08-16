@@ -38,12 +38,12 @@
             <expandOthers>true</expandOthers>
             <header>Data Coverage</header>
             <legendPosition>Bottom</legendPosition>
-            <report>NZC_Reports/Suppliers_Missing_Metrics</report>
+            <report>NZC_Reports/Accounts_Not_Registered_As_Suppliers</report>
             <showPercentage>false</showPercentage>
             <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
-            <title>Suppliers Missing Metrics by Industry</title>
+            <title>Accounts Not Registered as Suppliers by Industry</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -65,7 +65,7 @@
             <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Total Emissions by Reporting Year (tCO2e)</title>
+            <title>Scope 1 Emissions by Reporting Year (tCO2e)</title>
             <useReportChart>false</useReportChart>
         </components>
     </middleSection>
@@ -82,12 +82,12 @@
             <expandOthers>true</expandOthers>
             <header>Fleet</header>
             <legendPosition>Bottom</legendPosition>
-            <report>NZC_Reports/Fleet_by_Fuel_Type</report>
+            <report>NZC_Reports/Fleet_Fuel_by_Fuel_Type</report>
             <showPercentage>true</showPercentage>
             <showTotal>true</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
-            <title>Vehicle Assets by Fuel Type</title>
+            <title>Fleet Fuel Consumption by Fuel Type</title>
             <useReportChart>false</useReportChart>
         </components>
     </rightSection>

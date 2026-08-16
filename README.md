@@ -3,7 +3,44 @@
 [![Validate metadata](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml/badge.svg)](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A free, unmanaged, open-source package of basic **Lightning Report Types, Reports, and Dashboards** for **Salesforce Net Zero Cloud** (core Lightning analytics only — no CRM Analytics / Einstein components). Metadata API version **60.0**.
+A free, unmanaged, open-source package of basic **Lightning Report Types, Reports, and Dashboards** for **Salesforce Net Zero Cloud** (core Lightning analytics only — no CRM Analytics / Einstein components). Metadata API version **67.0**.
+
+## Install
+
+**One click, no CLI.** Deploys straight from this repo into your org via the
+[GitHub Salesforce Deploy Tool](https://github.com/afawcett/githubsfdeploy) — pick
+Production/Developer or Sandbox on the page that opens, authorise, and it deploys.
+
+<a href="https://githubsfdeploy.herokuapp.com/app/githubdeploy/mshresponse/nzc-customreports?ref=main">
+  <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
+
+### Before you install
+
+Your org needs the **Net Zero Cloud** license with its managed objects enabled
+(`StnryAsstEnvrSrc`, `StnryAsstCrbnFprint`, `StnryAsstFossilFuelEnrgyUse`,
+`SpplrMtrc`, `VehicleAsset`). Without it the report types have nothing to build on
+and the deploy fails on unknown sObjects.
+
+### After you install
+
+Deployed report and dashboard folders land **private to the deploying user**.
+Nobody else sees them until you share the folders:
+
+1. Reports tab → **All Folders** → *NZC Reports* → **Share**
+2. Dashboards tab → **All Folders** → *NZC Dashboards* → **Share**
+
+Give the roles, groups or users who need them **Viewer** access (or **Editor** if
+you want them adapting the reports, which is rather the point of shipping the
+source).
+
+### Prefer the CLI?
+
+```bash
+sf project deploy start --manifest manifest/package.xml --target-org <your-org-alias>
+```
+
+Add `--dry-run` to validate without saving anything to the org.
 
 ## What's included
 
@@ -58,27 +95,6 @@ Every push and pull request runs `.github/workflows/validate.yml`, which:
 3. Cross-checks that every member listed in `manifest/package.xml` has a matching source file.
 
 Deploy-time validation against a real Net Zero Cloud org (field and relationship API names) still needs to be done with `sf project deploy start --dry-run` against your own org, since those objects require the NZC license.
-
-## Prerequisites
-
-- A Salesforce org with the **Net Zero Cloud** license and managed objects enabled (`StnryAsstEnvrSrc`, `StnryAsstCrbnFprint`, `StnryAsstFossilFuelEnrgyUse`, `SpplrMtrc`, `VehicleAsset`).
-- Salesforce CLI (`sf`).
-
-## Deploy
-
-### Option 1: Deploy button
-
-<a href="https://githubsfdeploy.herokuapp.com?owner=mshresponse&amp;repo=nzc-customreports&amp;ref=main">
-  <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
-</a>
-
-### Option 2: Salesforce CLI
-
-```bash
-sf project deploy start --manifest manifest/package.xml --target-org <your-org-alias>
-```
-
-Tip: validate first without saving anything to the org by adding `--dry-run`.
 
 ## Validating API names against your org
 

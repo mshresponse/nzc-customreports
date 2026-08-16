@@ -22,5 +22,5 @@
         <members>NZC_Dashboards/NZC_Emissions_Coverage</members>
         <name>Dashboard</name>
     </types>
-    <version>60.0</version>
+    <version>67.0</version>
 </Package>

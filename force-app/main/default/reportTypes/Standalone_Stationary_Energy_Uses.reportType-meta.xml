@@ -1,51 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <baseObject>VehicleAssetEnrgyUse</baseObject>
+    <baseObject>StnryAssetEnrgyUse</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Every vehicle energy use record, single object. Carries both parent lookups, since a record may hang off either a fleet footprint or a vehicle. An orphan is one where both are blank.</description>
-    <label>NZC: Fleet Energy Uses (all)</label>
+    <description>Every stationary asset energy use record, single object. Carries both parent lookups, since an energy use record may hang off either a footprint or an asset. An orphan is one where both are blank.</description>
+    <label>NZC: Energy Uses (all)</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>VehicleAssetEnrgyUse</table>
+            <table>StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>VehicleAssetEnrgyUse</table>
+            <table>StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>VehicleAssetEnrgyUse</table>
+            <table>StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>VehicleAssetEnrgyUse</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Distance</field>
-            <table>VehicleAssetEnrgyUse</table>
+            <table>StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>VehicleAssetEnrgyUse</table>
+            <table>StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>VehicleAssetCrbnFtprntId</field>
-            <table>VehicleAssetEnrgyUse</table>
+            <field>StnryAssetCrbnFtprntId</field>
+            <table>StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>VehicleAssetEmssnSrcId</field>
-            <table>VehicleAssetEnrgyUse</table>
+            <field>StnryAssetEnvrSrcId</field>
+            <table>StnryAssetEnrgyUse</table>
         </columns>
-        <masterLabel>Vehicle Asset Energy Uses</masterLabel>
+        <masterLabel>Stationary Asset Energy Uses</masterLabel>
     </sections>
 </ReportType>

@@ -10,14 +10,28 @@
     <columns>
         <field>StnryAssetEnrgyUse$FuelConsumptionUnit</field>
     </columns>
-    <description>Stationary consumption grouped by fuel type. Consumption sums across whatever units are present, so read the unit column before trusting a subtotal.</description>
+    <description>Energy use records attached to neither a footprint nor an asset. Both parent lookups must be blank to qualify, since a record may legitimately hang off either one.</description>
+    <filter>
+        <criteriaItems>
+            <column>StnryAssetEnrgyUse$StnryAssetCrbnFtprntId</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>StnryAssetEnrgyUse$StnryAssetEnvrSrcId</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>StnryAssetEnrgyUse$FuelType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Fuel Consumption by Fuel Type</name>
+    <name>Orphaned Stationary Energy Uses</name>
     <reportType>Standalone_Stationary_Energy_Uses</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>

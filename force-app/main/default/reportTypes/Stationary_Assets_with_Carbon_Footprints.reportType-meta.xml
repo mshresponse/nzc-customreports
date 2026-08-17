@@ -3,12 +3,12 @@
     <baseObject>StnryAssetEnvrSrc</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Stationary assets with or without energy use records (outer join). Finds assets carrying no consumption data at all, which is an earlier gap than a missing footprint and usually the first thing to fix.</description>
+    <description>Stationary assets joined to their carbon footprints (inner join). Every row resolves to a real footprint record, which is what makes the footprint columns editable inline. Use this to correct emissions data in place instead of exporting to CSV.</description>
     <join>
-        <outerJoin>true</outerJoin>
-        <relationship>StationaryAssetEnergyUses</relationship>
+        <outerJoin>false</outerJoin>
+        <relationship>CarbonFootprints</relationship>
     </join>
-    <label>NZC: Assets with/without Energy Use</label>
+    <label>NZC: Assets with Footprints</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
@@ -46,28 +46,38 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>FuelType</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <field>ReportingYear</field>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>FuelConsumption</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <field>FootprintStage</field>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>FuelConsumptionUnit</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <field>TotScope1EmissionsInTco2e</field>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotScope2LocBasedEmissions</field>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotScope2MktBasedEmissions</field>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
         </columns>
-        <masterLabel>Stationary Asset Energy Uses</masterLabel>
+        <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
     </sections>
 </ReportType>

@@ -3,17 +3,12 @@
     <baseObject>StnryAssetEnvrSrc</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Stationary Asset Environmental Sources with or without related Stationary Asset Carbon Footprints (outer join). Use this report type to find assets that are missing carbon footprint records.</description>
+    <description>Stationary assets with or without carbon footprints (outer join). Use this to find assets still needing a footprint record created. Footprint columns are blank on those rows and cannot be edited, because inline editing cannot create records.</description>
     <join>
         <outerJoin>true</outerJoin>
-        <!-- VERIFY IN ORG: Salesforce does not publish child relationship names in the
-             object reference, so this is the conventional plural rather than a
-             documented value. If the deploy fails here, read the real name from a
-             describe (see README > Verifying relationship names) and replace it both
-             on this line and in the <table> paths below. -->
         <relationship>CarbonFootprints</relationship>
     </join>
-    <label>Stationary Assets with/without Carbon Footprints</label>
+    <label>NZC: Assets with/without Footprints</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
@@ -38,6 +33,11 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Country</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
             <table>StnryAssetEnvrSrc</table>
         </columns>
         <masterLabel>Stationary Asset Environmental Sources</masterLabel>
@@ -71,6 +71,11 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>TotScope2MktBasedEmissions</field>
+            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
             <table>StnryAssetEnvrSrc.CarbonFootprints</table>
         </columns>
         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>

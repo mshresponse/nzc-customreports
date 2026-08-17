@@ -3,12 +3,12 @@
     <baseObject>StnryAssetEnvrSrc</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Stationary assets with or without energy use records (outer join). Finds assets carrying no consumption data at all, which is an earlier gap than a missing footprint and usually the first thing to fix.</description>
+    <description>Stationary assets joined to their energy use records (inner join). Consumption, fuel type and unit are editable inline on every row. This is the working surface for correcting consumption data an ESG team owns.</description>
     <join>
-        <outerJoin>true</outerJoin>
+        <outerJoin>false</outerJoin>
         <relationship>StationaryAssetEnergyUses</relationship>
     </join>
-    <label>NZC: Assets with/without Energy Use</label>
+    <label>NZC: Assets with Energy Use</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>

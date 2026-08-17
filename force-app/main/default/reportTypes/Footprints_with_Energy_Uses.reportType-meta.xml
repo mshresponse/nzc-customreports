@@ -3,17 +3,12 @@
     <baseObject>StnryAssetCrbnFtprnt</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Stationary Asset Carbon Footprints with their related Stationary Asset Energy Use records (inner join). Use this report type to analyse fuel consumption behind each footprint.</description>
+    <description>Carbon footprints joined to the energy use records behind them (inner join). Use this to check and correct the fuel rows that drive a given footprint, with the emissions figures alongside for context.</description>
     <join>
         <outerJoin>false</outerJoin>
-        <!-- VERIFY IN ORG: Salesforce does not publish child relationship names in the
-             object reference, so this is the conventional plural rather than a
-             documented value. If the deploy fails here, read the real name from a
-             describe (see README > Verifying relationship names) and replace it both
-             on this line and in the <table> paths below. -->
         <relationship>StationaryAssetEnergyUses</relationship>
     </join>
-    <label>Footprints with Energy Uses</label>
+    <label>NZC: Footprints with Energy Uses</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
@@ -33,6 +28,21 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>TotScope1EmissionsInTco2e</field>
+            <table>StnryAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotScope2LocBasedEmissions</field>
+            <table>StnryAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotScope2MktBasedEmissions</field>
+            <table>StnryAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
             <table>StnryAssetCrbnFtprnt</table>
         </columns>
         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
@@ -56,6 +66,11 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
+            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
             <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
         </columns>
         <masterLabel>Stationary Asset Energy Uses</masterLabel>

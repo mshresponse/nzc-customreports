@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>StnryAssetEnvrSrc$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc$StationaryAssetType</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc$BusinessRegion</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc$City</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc$Country</field>
+    </columns>
+    <description>Every stationary asset, nothing grouped and nothing null, so every column edits in place. Fixes site names that arrived as symbols from a non-UTF-8 CSV. Needs Setup > Reports and Dashboards Settings > Enable Inline Editing in Reports.</description>
+    <format>Tabular</format>
+    <name>Asset Names and Locations</name>
+    <reportType>Standalone_Stationary_Assets</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAssetEnvrSrc$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

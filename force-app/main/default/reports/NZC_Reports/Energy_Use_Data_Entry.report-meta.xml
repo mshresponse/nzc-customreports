@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>StnryAssetEnvrSrc$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelType</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelConsumption</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelConsumptionUnit</field>
+    </columns>
+    <description>Assets and their consumption records. Fuel type, amount and unit edit in place, which beats correcting a bad import through another CSV. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
+    <format>Tabular</format>
+    <name>Energy Use Data Entry</name>
+    <reportType>Stationary_Assets_with_Energy_Use</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAssetEnvrSrc$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

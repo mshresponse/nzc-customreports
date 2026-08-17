@@ -8,20 +8,31 @@
         <field>VehicleAssetEnrgyUse$FuelConsumption</field>
     </columns>
     <columns>
-        <field>VehicleAssetEnrgyUse$FuelConsumptionUnit</field>
-    </columns>
-    <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>VehicleAssetEnrgyUse$Distance</field>
     </columns>
-    <description>Fleet consumption and distance grouped by fuel type. Same unit caveat as the stationary equivalent.</description>
+    <description>Vehicle energy use records attached to neither a fleet footprint nor a vehicle. Both parent lookups must be blank to qualify.</description>
+    <filter>
+        <criteriaItems>
+            <column>VehicleAssetEnrgyUse$VehicleAssetCrbnFtprntId</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>VehicleAssetEnrgyUse$VehicleAssetEmssnSrcId</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>VehicleAssetEnrgyUse$FuelType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Fleet Fuel by Fuel Type</name>
+    <name>Orphaned Vehicle Energy Uses</name>
     <reportType>Standalone_Vehicle_Energy_Uses</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>

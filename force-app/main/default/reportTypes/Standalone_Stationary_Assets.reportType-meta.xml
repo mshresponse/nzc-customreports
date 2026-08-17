@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>StnryAssetEnvrSrc</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Every stationary asset, single object, no join. Nothing is null and nothing is grouped, so every field is editable inline. This is the report for cleaning up site names, including ones mangled by a non-UTF-8 CSV import.</description>
+    <label>NZC: Assets (all)</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>StationaryAssetType</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>BusinessRegion</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>City</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Country</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ParentEnvironmentalSourceId</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <masterLabel>Stationary Asset Environmental Sources</masterLabel>
+    </sections>
+</ReportType>

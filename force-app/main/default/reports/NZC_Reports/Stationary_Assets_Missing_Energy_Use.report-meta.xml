@@ -12,7 +12,7 @@
     <columns>
         <field>StnryAssetEnvrSrc$Country</field>
     </columns>
-    <description>Stationary Asset Environmental Sources with no related Energy Use record, grouped by stationary asset type. These assets have no consumption data at all, which is an earlier gap than a missing carbon footprint.</description>
+    <description>Stationary assets with no energy use record at all, grouped by asset type. An earlier gap than a missing footprint: without consumption data there is nothing to calculate a footprint from.</description>
     <filter>
         <criteriaItems>
             <column>StnryAssetEnvrSrc.StationaryAssetEnergyUses$Id</column>

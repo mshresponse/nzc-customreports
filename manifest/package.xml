@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Stationary_Assets_with_without_Carbon_Footprints</members>
         <members>Footprints_with_Energy_Uses</members>
-        <members>Stationary_Assets_with_without_Energy_Use</members>
         <members>Standalone_Carbon_Footprints</members>
+        <members>Standalone_Stationary_Assets</members>
+        <members>Standalone_Stationary_Energy_Uses</members>
+        <members>Standalone_Vehicle_Assets</members>
+        <members>Standalone_Vehicle_Carbon_Footprints</members>
         <members>Standalone_Vehicle_Energy_Uses</members>
+        <members>Stationary_Assets_with_Carbon_Footprints</members>
+        <members>Stationary_Assets_with_Energy_Use</members>
+        <members>Stationary_Assets_with_without_Carbon_Footprints</members>
+        <members>Stationary_Assets_with_without_Energy_Use</members>
+        <members>Vehicle_Assets_with_Carbon_Footprints</members>
+        <members>Vehicle_Assets_with_Energy_Use</members>
+        <members>Vehicle_Assets_with_without_Carbon_Footprints</members>
+        <members>Vehicle_Assets_with_without_Energy_Use</members>
+        <members>Vehicle_Footprints_with_Energy_Uses</members>
         <name>ReportType</name>
     </types>
     <types>
         <members>NZC_Reports</members>
-        <members>NZC_Reports/Stationary_Assets_Missing_Footprints</members>
-        <members>NZC_Reports/Fuel_Consumption_by_Fuel_Type</members>
-        <members>NZC_Reports/Stationary_Assets_Missing_Energy_Use</members>
+        <members>NZC_Reports/Asset_Names_and_Locations</members>
         <members>NZC_Reports/Emissions_by_Reporting_Year</members>
+        <members>NZC_Reports/Energy_Use_Data_Entry</members>
+        <members>NZC_Reports/Fleet_Assets_Missing_Energy_Use</members>
+        <members>NZC_Reports/Fleet_Assets_Missing_Footprints</members>
+        <members>NZC_Reports/Fleet_Energy_Data_Entry</members>
         <members>NZC_Reports/Fleet_Fuel_by_Fuel_Type</members>
+        <members>NZC_Reports/Fleet_Names_and_Types</members>
+        <members>NZC_Reports/Footprint_Data_Entry</members>
+        <members>NZC_Reports/Fuel_Consumption_by_Fuel_Type</members>
+        <members>NZC_Reports/Orphaned_Carbon_Footprints</members>
+        <members>NZC_Reports/Orphaned_Fleet_Footprints</members>
+        <members>NZC_Reports/Orphaned_Stationary_Energy_Uses</members>
+        <members>NZC_Reports/Orphaned_Vehicle_Energy_Uses</members>
+        <members>NZC_Reports/Stationary_Assets_Missing_Energy_Use</members>
+        <members>NZC_Reports/Stationary_Assets_Missing_Footprints</members>
         <name>Report</name>
     </types>
     <types>
         <members>NZC_Dashboards</members>
+        <members>NZC_Dashboards/NZC_Data_Quality</members>
         <members>NZC_Dashboards/NZC_Emissions_Coverage</members>
         <name>Dashboard</name>
     </types>

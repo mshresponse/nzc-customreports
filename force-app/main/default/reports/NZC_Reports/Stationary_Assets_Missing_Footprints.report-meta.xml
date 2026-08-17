@@ -12,7 +12,7 @@
     <columns>
         <field>StnryAssetEnvrSrc$Country</field>
     </columns>
-    <description>Stationary Asset Environmental Sources that have no related Stationary Asset Carbon Footprint record, grouped by stationary asset type. Data-completeness check for the emissions inventory.</description>
+    <description>Stationary assets with no carbon footprint record, grouped by asset type. These need records created, not edited, so treat this as an upload worklist rather than something to fix inline.</description>
     <filter>
         <criteriaItems>
             <column>StnryAssetEnvrSrc.CarbonFootprints$Id</column>

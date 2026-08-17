@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>VehicleAssetEmssnSrc</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Fleet emission sources joined to their carbon footprints (inner join). Footprint columns are editable inline on every row. The mobile combustion counterpart of the stationary assets report.</description>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>CarbonFootprints</relationship>
+    </join>
+    <label>NZC: Fleet with Footprints</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>VehicleType</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FleetVehicleType</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <masterLabel>Vehicle Asset Emission Sources</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ReportingYear</field>
+            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FootprintStage</field>
+            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+        </columns>
+        <masterLabel>Vehicle Asset Carbon Footprints</masterLabel>
+    </sections>
+</ReportType>

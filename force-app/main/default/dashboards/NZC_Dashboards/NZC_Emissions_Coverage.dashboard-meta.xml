@@ -4,50 +4,9 @@
     <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
     <backgroundStartColor>#FFFFFF</backgroundStartColor>
     <dashboardType>LoggedInUser</dashboardType>
-    <description>Net Zero Cloud emissions overview: data coverage gaps for stationary assets, emissions trend by reporting year, and fleet fuel composition.</description>
+    <description>Net Zero Cloud emissions overview: Scope 1 trend by reporting year, stationary fuel mix and fleet fuel mix. Core Lightning analytics only, so it works without CRM Analytics enabled in the org.</description>
     <isGridLayout>false</isGridLayout>
     <leftSection>
-        <columnSize>Medium</columnSize>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Bar</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
-            <header>Data Coverage</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>NZC_Reports/Stationary_Assets_Missing_Footprints</report>
-            <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
-            <showValues>true</showValues>
-            <sortBy>RowValueDescending</sortBy>
-            <title>Assets Missing Carbon Footprints by Asset Type</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Bar</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
-            <header>Data Coverage</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>NZC_Reports/Stationary_Assets_Missing_Energy_Use</report>
-            <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
-            <showValues>true</showValues>
-            <sortBy>RowValueDescending</sortBy>
-            <title>Assets Missing Energy Use by Asset Type</title>
-            <useReportChart>false</useReportChart>
-        </components>
-    </leftSection>
-    <middleSection>
         <columnSize>Medium</columnSize>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
@@ -58,14 +17,36 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>true</expandOthers>
-            <header>Emissions Trend</header>
+            <header>Emissions trend</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Emissions_by_Reporting_Year</report>
             <showPercentage>false</showPercentage>
             <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Scope 1 Emissions by Reporting Year (tCO2e)</title>
+            <title>Scope 1 by Reporting Year (tCO2e)</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <header>Fuel mix</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>NZC_Reports/Fuel_Consumption_by_Fuel_Type</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Stationary Fuel by Type</title>
             <useReportChart>false</useReportChart>
         </components>
     </middleSection>
@@ -80,14 +61,14 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>true</expandOthers>
-            <header>Fleet</header>
+            <header>Fuel mix</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Fleet_Fuel_by_Fuel_Type</report>
             <showPercentage>true</showPercentage>
             <showTotal>true</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
-            <title>Fleet Fuel Consumption by Fuel Type</title>
+            <title>Fleet Fuel by Type</title>
             <useReportChart>false</useReportChart>
         </components>
     </rightSection>

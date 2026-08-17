@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>VehicleAssetCrbnFtprnt$Name</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetCrbnFtprnt$FootprintStage</field>
+    </columns>
+    <description>Fleet carbon footprints belonging to no vehicle emission source.</description>
+    <filter>
+        <criteriaItems>
+            <column>VehicleAssetCrbnFtprnt$VehicleAssetEmssnSrcId</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VehicleAssetCrbnFtprnt$ReportingYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Orphaned Fleet Footprints</name>
+    <reportType>Standalone_Vehicle_Carbon_Footprints</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>VehicleAssetCrbnFtprnt$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

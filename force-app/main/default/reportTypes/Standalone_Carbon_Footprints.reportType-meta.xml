@@ -3,8 +3,8 @@
     <baseObject>StnryAssetCrbnFtprnt</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Single-object report type over Stationary Asset Carbon Footprints. Use this report type to trend emissions by reporting year across Scope 1 and both Scope 2 accounting methods.</description>
-    <label>Standalone Carbon Footprints</label>
+    <description>Every stationary asset carbon footprint, single object. Carries the parent lookup so orphaned footprints, which belong to no asset, can be filtered out and reassigned.</description>
+    <label>NZC: Footprints (all)</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
@@ -39,6 +39,11 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
+            <table>StnryAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>StnryAssetEnvrSrcId</field>
             <table>StnryAssetCrbnFtprnt</table>
         </columns>
         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>

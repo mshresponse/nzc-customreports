@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>VehicleAssetEmssnSrc$Name</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetEmssnSrc$FleetVehicleType</field>
+    </columns>
+    <description>Fleet emission sources with no fuel or mileage recorded, grouped by vehicle type.</description>
+    <filter>
+        <criteriaItems>
+            <column>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Id</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VehicleAssetEmssnSrc$VehicleType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Fleet Assets Missing Energy Use</name>
+    <reportType>Vehicle_Assets_with_without_Energy_Use</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>VehicleAssetEmssnSrc$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

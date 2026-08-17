@@ -10,22 +10,22 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>StnryAssetCrbnFtprnt$TotScope1EmissionsInTco2e</field>
     </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>StnryAssetCrbnFtprnt$TotScope2LocBasedEmissions</field>
-    </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>StnryAssetCrbnFtprnt$TotScope2MktBasedEmissions</field>
-    </columns>
-    <description>Footprints by reporting year with Scope 1 and both Scope 2 bases summed. No combined total: location and market based Scope 2 measure the same emissions, so adding both to Scope 1 double counts.</description>
+    <description>Carbon footprints belonging to no stationary asset. Usually the residue of a part-finished load or a deleted asset. They still carry emissions figures, so they can quietly distort totals.</description>
+    <filter>
+        <criteriaItems>
+            <column>StnryAssetCrbnFtprnt$StnryAssetEnvrSrcId</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>StnryAssetCrbnFtprnt$ReportingYear</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Emissions by Reporting Year</name>
+    <name>Orphaned Carbon Footprints</name>
     <reportType>Standalone_Carbon_Footprints</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>

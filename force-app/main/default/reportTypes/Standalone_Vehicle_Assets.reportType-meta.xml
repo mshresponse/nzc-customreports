@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>VehicleAssetEmssnSrc</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Every fleet emission source, single object, no join. Fully editable inline, so this is the report for correcting vehicle names and types in place.</description>
+    <label>NZC: Fleet Assets (all)</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>VehicleType</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FleetVehicleType</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ParentEmissionSourceId</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <masterLabel>Vehicle Asset Emission Sources</masterLabel>
+    </sections>
+</ReportType>

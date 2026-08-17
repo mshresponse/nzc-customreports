@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>VehicleAssetEmssnSrc$Name</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Name</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelType</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelConsumption</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelConsumptionUnit</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Distance</field>
+    </columns>
+    <description>Vehicles and their fuel and mileage records, inner join so every row edits. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
+    <format>Tabular</format>
+    <name>Fleet Energy Data Entry</name>
+    <reportType>Vehicle_Assets_with_Energy_Use</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>VehicleAssetEmssnSrc$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

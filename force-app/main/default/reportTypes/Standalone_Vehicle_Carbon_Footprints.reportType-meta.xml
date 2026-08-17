@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>VehicleAssetCrbnFtprnt</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Every fleet carbon footprint, single object. Carries the parent lookup so orphaned footprints can be found and reassigned.</description>
+    <label>NZC: Fleet Footprints (all)</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>VehicleAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ReportingYear</field>
+            <table>VehicleAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FootprintStage</field>
+            <table>VehicleAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>VehicleAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>VehicleAssetEmssnSrcId</field>
+            <table>VehicleAssetCrbnFtprnt</table>
+        </columns>
+        <masterLabel>Vehicle Asset Carbon Footprints</masterLabel>
+    </sections>
+</ReportType>

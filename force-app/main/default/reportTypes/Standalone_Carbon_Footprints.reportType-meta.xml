@@ -43,7 +43,7 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>StnryAssetEnvrSrcId</field>
+            <field>StnryAssetEnvrSrc</field>
             <table>StnryAssetCrbnFtprnt</table>
         </columns>
         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>

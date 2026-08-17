@@ -9,7 +9,7 @@
     <description>Fleet emission sources with no carbon footprint record, grouped by vehicle type. Upload worklist for the mobile combustion side of the inventory.</description>
     <filter>
         <criteriaItems>
-            <column>VehicleAssetEmssnSrc.CarbonFootprints$Id</column>
+            <column>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt$Id</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

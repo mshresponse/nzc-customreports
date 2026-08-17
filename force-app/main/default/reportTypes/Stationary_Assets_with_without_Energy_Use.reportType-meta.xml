@@ -6,7 +6,7 @@
     <description>Stationary assets with or without energy use records (outer join). Finds assets carrying no consumption data at all, which is an earlier gap than a missing footprint and usually the first thing to fix.</description>
     <join>
         <outerJoin>true</outerJoin>
-        <relationship>StationaryAssetEnergyUses</relationship>
+        <relationship>StnryAssetEnrgyUse</relationship>
     </join>
     <label>NZC: Assets with/without Energy Use</label>
     <sections>
@@ -46,27 +46,27 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <masterLabel>Stationary Asset Energy Uses</masterLabel>
     </sections>

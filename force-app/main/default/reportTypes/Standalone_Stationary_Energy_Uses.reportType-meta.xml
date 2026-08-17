@@ -33,12 +33,17 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>StnryAssetCrbnFtprntId</field>
+            <field>StnryAssetCrbnFtprnt</field>
             <table>StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>StnryAssetEnvrSrcId</field>
+            <field>StnryAssetEnvrSrc</field>
+            <table>StnryAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Supplier</field>
             <table>StnryAssetEnrgyUse</table>
         </columns>
         <masterLabel>Stationary Asset Energy Uses</masterLabel>

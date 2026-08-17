@@ -4,19 +4,19 @@
         <field>VehicleAssetEmssnSrc$Name</field>
     </columns>
     <columns>
-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Name</field>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$Name</field>
     </columns>
     <columns>
-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelType</field>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$FuelType</field>
     </columns>
     <columns>
-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelConsumption</field>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$FuelConsumption</field>
     </columns>
     <columns>
-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelConsumptionUnit</field>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$FuelConsumptionUnit</field>
     </columns>
     <columns>
-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Distance</field>
+        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$Distance</field>
     </columns>
     <description>Vehicles and their fuel and mileage records, inner join so every row edits. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>

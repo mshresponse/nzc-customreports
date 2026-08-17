@@ -6,7 +6,7 @@
     <description>Stationary assets joined to their energy use records (inner join). Consumption, fuel type and unit are editable inline on every row. This is the working surface for correcting consumption data an ESG team owns.</description>
     <join>
         <outerJoin>false</outerJoin>
-        <relationship>StationaryAssetEnergyUses</relationship>
+        <relationship>StnryAssetEnrgyUse</relationship>
     </join>
     <label>NZC: Assets with Energy Use</label>
     <sections>
@@ -46,27 +46,27 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <masterLabel>Stationary Asset Energy Uses</masterLabel>
     </sections>

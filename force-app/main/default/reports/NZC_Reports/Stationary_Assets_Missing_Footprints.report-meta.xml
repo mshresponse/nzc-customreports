@@ -15,7 +15,7 @@
     <description>Stationary assets with no carbon footprint record, grouped by asset type. These need records created, not edited, so treat this as an upload worklist rather than something to fix inline.</description>
     <filter>
         <criteriaItems>
-            <column>StnryAssetEnvrSrc.CarbonFootprints$Id</column>
+            <column>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$Id</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

@@ -13,7 +13,7 @@
     <description>Carbon footprints belonging to no stationary asset. Usually the residue of a part-finished load or a deleted asset. They still carry emissions figures, so they can quietly distort totals.</description>
     <filter>
         <criteriaItems>
-            <column>StnryAssetCrbnFtprnt$StnryAssetEnvrSrcId</column>
+            <column>StnryAssetCrbnFtprnt$StnryAssetEnvrSrc</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

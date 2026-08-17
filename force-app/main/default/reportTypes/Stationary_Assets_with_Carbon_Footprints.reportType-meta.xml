@@ -6,7 +6,7 @@
     <description>Stationary assets joined to their carbon footprints (inner join). Every row resolves to a real footprint record, which is what makes the footprint columns editable inline. Use this to correct emissions data in place instead of exporting to CSV.</description>
     <join>
         <outerJoin>false</outerJoin>
-        <relationship>CarbonFootprints</relationship>
+        <relationship>StnryAssetCrbnFtprnt</relationship>
     </join>
     <label>NZC: Assets with Footprints</label>
     <sections>
@@ -46,37 +46,37 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>ReportingYear</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FootprintStage</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>TotScope1EmissionsInTco2e</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>TotScope2LocBasedEmissions</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>TotScope2MktBasedEmissions</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
         </columns>
         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
     </sections>

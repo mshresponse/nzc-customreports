@@ -9,7 +9,7 @@
     <description>Fleet carbon footprints belonging to no vehicle emission source.</description>
     <filter>
         <criteriaItems>
-            <column>VehicleAssetCrbnFtprnt$VehicleAssetEmssnSrcId</column>
+            <column>VehicleAssetCrbnFtprnt$VehicleAssetEmssnSrc</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

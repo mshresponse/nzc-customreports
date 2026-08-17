@@ -4,16 +4,16 @@
         <field>StnryAssetEnvrSrc$Name</field>
     </columns>
     <columns>
-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$Name</field>
+        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$Name</field>
     </columns>
     <columns>
-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelType</field>
+        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$FuelType</field>
     </columns>
     <columns>
-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelConsumption</field>
+        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$FuelConsumption</field>
     </columns>
     <columns>
-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelConsumptionUnit</field>
+        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$FuelConsumptionUnit</field>
     </columns>
     <description>Assets and their consumption records. Fuel type, amount and unit edit in place, which beats correcting a bad import through another CSV. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>

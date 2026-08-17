@@ -6,7 +6,7 @@
     <description>Carbon footprints joined to the energy use records behind them (inner join). Use this to check and correct the fuel rows that drive a given footprint, with the emissions figures alongside for context.</description>
     <join>
         <outerJoin>false</outerJoin>
-        <relationship>StationaryAssetEnergyUses</relationship>
+        <relationship>StnryAssetEnrgyUse</relationship>
     </join>
     <label>NZC: Footprints with Energy Uses</label>
     <sections>
@@ -51,27 +51,27 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
+            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
         </columns>
         <masterLabel>Stationary Asset Energy Uses</masterLabel>
     </sections>

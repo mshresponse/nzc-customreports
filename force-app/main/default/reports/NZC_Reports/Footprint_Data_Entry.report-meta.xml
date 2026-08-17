@@ -4,13 +4,13 @@
         <field>StnryAssetEnvrSrc$Name</field>
     </columns>
     <columns>
-        <field>StnryAssetEnvrSrc.CarbonFootprints$Name</field>
+        <field>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$Name</field>
     </columns>
     <columns>
-        <field>StnryAssetEnvrSrc.CarbonFootprints$ReportingYear</field>
+        <field>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$ReportingYear</field>
     </columns>
     <columns>
-        <field>StnryAssetEnvrSrc.CarbonFootprints$FootprintStage</field>
+        <field>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$FootprintStage</field>
     </columns>
     <description>Assets and their existing footprints, inner join so every row is a real record. Correct year and stage here rather than through a data load. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>

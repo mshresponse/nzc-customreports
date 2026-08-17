@@ -14,13 +14,13 @@
     <description>Vehicle energy use records attached to neither a fleet footprint nor a vehicle. Both parent lookups must be blank to qualify.</description>
     <filter>
         <criteriaItems>
-            <column>VehicleAssetEnrgyUse$VehicleAssetCrbnFtprntId</column>
+            <column>VehicleAssetEnrgyUse$VehicleAssetCrbnFtprnt</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
-            <column>VehicleAssetEnrgyUse$VehicleAssetEmssnSrcId</column>
+            <column>VehicleAssetEnrgyUse$VehicleAssetEmssnSrc</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

@@ -38,7 +38,12 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>ParentEnvironmentalSourceId</field>
+            <field>ParentEnvironmentalSource</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>AccountName</field>
             <table>StnryAssetEnvrSrc</table>
         </columns>
         <masterLabel>Stationary Asset Environmental Sources</masterLabel>

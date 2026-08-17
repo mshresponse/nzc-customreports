@@ -6,7 +6,7 @@
     <description>Fleet emission sources with or without carbon footprints (outer join). Finds vehicles still needing a footprint record created.</description>
     <join>
         <outerJoin>true</outerJoin>
-        <relationship>CarbonFootprints</relationship>
+        <relationship>VehicleAssetCrbnFtprnt</relationship>
     </join>
     <label>NZC: Fleet with/without Footprints</label>
     <sections>
@@ -36,22 +36,22 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>ReportingYear</field>
-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FootprintStage</field>
-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
         </columns>
         <masterLabel>Vehicle Asset Carbon Footprints</masterLabel>
     </sections>

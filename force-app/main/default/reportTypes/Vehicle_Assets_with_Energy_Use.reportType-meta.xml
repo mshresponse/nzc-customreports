@@ -6,7 +6,7 @@
     <description>Fleet emission sources joined to their energy use records (inner join). Fuel type, consumption, unit and distance are editable inline. Fuel data lives here, not on the vehicle record itself.</description>
     <join>
         <outerJoin>false</outerJoin>
-        <relationship>VehicleAssetEnergyUses</relationship>
+        <relationship>VehicleAssetEnrgyUse</relationship>
     </join>
     <label>NZC: Fleet with Energy Use</label>
     <sections>
@@ -36,32 +36,32 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Distance</field>
-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
         <masterLabel>Vehicle Asset Energy Uses</masterLabel>
     </sections>

@@ -6,7 +6,7 @@
     <description>Fleet carbon footprints joined to the energy use records behind them (inner join). Use this to check and correct the fuel rows driving a vehicle footprint.</description>
     <join>
         <outerJoin>false</outerJoin>
-        <relationship>VehicleAssetEnergyUses</relationship>
+        <relationship>VehicleAssetEnrgyUse</relationship>
     </join>
     <label>NZC: Fleet Footprints with Energy Uses</label>
     <sections>
@@ -36,32 +36,32 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Distance</field>
-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
+            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
         </columns>
         <masterLabel>Vehicle Asset Energy Uses</masterLabel>
     </sections>

@@ -13,13 +13,13 @@
     <description>Energy use records attached to neither a footprint nor an asset. Both parent lookups must be blank to qualify, since a record may legitimately hang off either one.</description>
     <filter>
         <criteriaItems>
-            <column>StnryAssetEnrgyUse$StnryAssetCrbnFtprntId</column>
+            <column>StnryAssetEnrgyUse$StnryAssetCrbnFtprnt</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
-            <column>StnryAssetEnrgyUse$StnryAssetEnvrSrcId</column>
+            <column>StnryAssetEnrgyUse$StnryAssetEnvrSrc</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

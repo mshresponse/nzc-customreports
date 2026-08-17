@@ -28,7 +28,12 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>ParentEmissionSourceId</field>
+            <field>ParentEmissionSource</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>AccountName</field>
             <table>VehicleAssetEmssnSrc</table>
         </columns>
         <masterLabel>Vehicle Asset Emission Sources</masterLabel>

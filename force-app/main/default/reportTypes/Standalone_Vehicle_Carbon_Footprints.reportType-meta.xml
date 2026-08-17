@@ -28,7 +28,7 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>VehicleAssetEmssnSrcId</field>
+            <field>VehicleAssetEmssnSrc</field>
             <table>VehicleAssetCrbnFtprnt</table>
         </columns>
         <masterLabel>Vehicle Asset Carbon Footprints</masterLabel>

@@ -15,7 +15,7 @@
     <description>Stationary assets with no energy use record at all, grouped by asset type. An earlier gap than a missing footprint: without consumption data there is nothing to calculate a footprint from.</description>
     <filter>
         <criteriaItems>
-            <column>StnryAssetEnvrSrc.StationaryAssetEnergyUses$Id</column>
+            <column>StnryAssetEnvrSrc.StnryAssetEnrgyUse$Id</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

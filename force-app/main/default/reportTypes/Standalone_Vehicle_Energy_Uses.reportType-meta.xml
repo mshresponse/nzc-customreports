@@ -38,12 +38,17 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>VehicleAssetCrbnFtprntId</field>
+            <field>VehicleAssetCrbnFtprnt</field>
             <table>VehicleAssetEnrgyUse</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>VehicleAssetEmssnSrcId</field>
+            <field>VehicleAssetEmssnSrc</field>
+            <table>VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Supplier</field>
             <table>VehicleAssetEnrgyUse</table>
         </columns>
         <masterLabel>Vehicle Asset Energy Uses</masterLabel>

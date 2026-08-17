@@ -9,7 +9,7 @@
     <description>Fleet emission sources with no fuel or mileage recorded, grouped by vehicle type.</description>
     <filter>
         <criteriaItems>
-            <column>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Id</column>
+            <column>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$Id</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

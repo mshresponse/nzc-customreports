@@ -1,0 +1,4 @@
+Name,VehicleAssetEmssnSrc.Name,VehicleAssetCrbnFtprnt.Name,FuelType,FuelConsumption,FuelConsumptionUnit,Distance
+VEU Citroën Diesel 2025,Fourgon Citroën 01,VFP Citroën 2025,Diesel,3200,Liters,41000
+VEU Volvo Diesel 2025,Lastbil Volvo 02,VFP Volvo 2025,Diesel,11800,Liters,96000
+VEU Peñarol Diesel 2025,Camión Peñarol 03,,Diesel,7400,Liters,62000

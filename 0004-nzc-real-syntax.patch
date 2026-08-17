@@ -1,0 +1,905 @@
+From 3fe4c81b90a5ddfd01584afcfc7fc4c6ce7f8cc8 Mon Sep 17 00:00:00 2001
+From: mshresponse <9147626+mshresponse@users.noreply.github.com>
+Date: Mon, 17 Aug 2026 03:45:21 +0000
+Subject: [PATCH 1/2] Add required titleSize to both dashboards
+
+Deploy against a Net Zero Cloud org rejected both dashboards with "Invalid
+title size, must be in the set {8, 9, 10, 12, 14, 18, 24, 36}". The element
+was absent entirely rather than wrong. It surfaced only after titleColor was
+fixed, since the Metadata API reports one missing required field per component
+per attempt.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01PByp6ikfmh71aGqG1zth4k
+---
+ .../NZC_Dashboards/NZC_Data_Quality.dashboard-meta.xml           | 1 +
+ .../NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml     | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/force-app/main/default/dashboards/NZC_Dashboards/NZC_Data_Quality.dashboard-meta.xml b/force-app/main/default/dashboards/NZC_Dashboards/NZC_Data_Quality.dashboard-meta.xml
+index ac394d6..0e7c202 100644
+--- a/force-app/main/default/dashboards/NZC_Dashboards/NZC_Data_Quality.dashboard-meta.xml
++++ b/force-app/main/default/dashboards/NZC_Dashboards/NZC_Data_Quality.dashboard-meta.xml
+@@ -132,4 +132,5 @@
+     <textColor>#000000</textColor>
+     <title>NZC Data Quality</title>
+     <titleColor>#000000</titleColor>
++    <titleSize>18</titleSize>
+ </Dashboard>
+diff --git a/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml b/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
+index 88b0df5..5493c1a 100644
+--- a/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
++++ b/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
+@@ -75,4 +75,5 @@
+     <textColor>#000000</textColor>
+     <title>NZC Emissions Coverage</title>
+     <titleColor>#000000</titleColor>
++    <titleSize>18</titleSize>
+ </Dashboard>
+-- 
+2.43.0
+
+
+From 3f8902d238471afcedf3f3180accc9ebb41bbc06 Mon Sep 17 00:00:00 2001
+From: mshresponse <9147626+mshresponse@users.noreply.github.com>
+Date: Mon, 17 Aug 2026 13:55:32 +0000
+Subject: [PATCH 2/2] Use the report type metadata syntax Salesforce actually
+ emits
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Three deploys failed because report type metadata uses a different name space
+than describe does, and I kept feeding it describe names. Resolved by building
+one report type in the UI and retrieving it, which is what I should have done
+first.
+
+  <relationship>   the CHILD OBJECT API NAME
+                   StnryAssetCrbnFtprnt, not CarbonFootprints
+
+  <table>          OBJECT API NAMES chained per hop
+                   StnryAssetEnvrSrc.StnryAssetCrbnFtprnt.StnryAssetEnrgyUse
+
+  lookup column    the RELATIONSHIP NAME with no Id suffix
+                   ParentEnvironmentalSource, not ParentEnvironmentalSourceId
+
+  multi-level      nested <join> elements, inner element is the deeper hop
+
+Report type metadata never uses child relationship names. The describe values
+that took two rounds to obtain — CarbonFootprints, StationaryAssetEnergyUses —
+are correct for SOQL and useless here.
+
+Also restores the required dashboard titleSize, which the regeneration dropped.
+
+Verified against the org's own schema: 37 files well-formed, every object,
+field, relationship, table hop and column reference resolves, no dangling
+report type or report references, manifest parity, and a clean source convert.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01PByp6ikfmh71aGqG1zth4k
+---
+ ...otprints_with_Energy_Uses.reportType-meta.xml | 12 ++++++------
+ ...ndalone_Carbon_Footprints.reportType-meta.xml |  2 +-
+ ...ndalone_Stationary_Assets.reportType-meta.xml |  7 ++++++-
+ ...ne_Stationary_Energy_Uses.reportType-meta.xml |  9 +++++++--
+ ...Standalone_Vehicle_Assets.reportType-meta.xml |  7 ++++++-
+ ...Vehicle_Carbon_Footprints.reportType-meta.xml |  2 +-
+ ...alone_Vehicle_Energy_Uses.reportType-meta.xml |  9 +++++++--
+ ...ts_with_Carbon_Footprints.reportType-meta.xml | 16 ++++++++--------
+ ...ry_Assets_with_Energy_Use.reportType-meta.xml | 12 ++++++------
+ ...without_Carbon_Footprints.reportType-meta.xml | 16 ++++++++--------
+ ...s_with_without_Energy_Use.reportType-meta.xml | 12 ++++++------
+ ...ts_with_Carbon_Footprints.reportType-meta.xml | 10 +++++-----
+ ...le_Assets_with_Energy_Use.reportType-meta.xml | 14 +++++++-------
+ ...without_Carbon_Footprints.reportType-meta.xml | 10 +++++-----
+ ...s_with_without_Energy_Use.reportType-meta.xml | 14 +++++++-------
+ ...otprints_with_Energy_Uses.reportType-meta.xml | 14 +++++++-------
+ .../Energy_Use_Data_Entry.report-meta.xml        |  8 ++++----
+ ...eet_Assets_Missing_Energy_Use.report-meta.xml |  2 +-
+ ...eet_Assets_Missing_Footprints.report-meta.xml |  2 +-
+ .../Fleet_Energy_Data_Entry.report-meta.xml      | 10 +++++-----
+ .../Footprint_Data_Entry.report-meta.xml         |  6 +++---
+ .../Orphaned_Carbon_Footprints.report-meta.xml   |  2 +-
+ .../Orphaned_Fleet_Footprints.report-meta.xml    |  2 +-
+ ...phaned_Stationary_Energy_Uses.report-meta.xml |  4 ++--
+ .../Orphaned_Vehicle_Energy_Uses.report-meta.xml |  4 ++--
+ ...ary_Assets_Missing_Energy_Use.report-meta.xml |  2 +-
+ ...ary_Assets_Missing_Footprints.report-meta.xml |  2 +-
+ 27 files changed, 115 insertions(+), 95 deletions(-)
+
+diff --git a/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml b/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml
+index 42843e5..ce2a36e 100644
+--- a/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Carbon footprints joined to the energy use records behind them (inner join). Use this to check and correct the fuel rows that drive a given footprint, with the emissions figures alongside for context.</description>
+     <join>
+         <outerJoin>false</outerJoin>
+-        <relationship>StationaryAssetEnergyUses</relationship>
++        <relationship>StnryAssetEnrgyUse</relationship>
+     </join>
+     <label>NZC: Footprints with Energy Uses</label>
+     <sections>
+@@ -51,27 +51,27 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelType</field>
+-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumption</field>
+-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumptionUnit</field>
+-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Stationary Asset Energy Uses</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml
+index 2b181d3..fdf923a 100644
+--- a/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml
+@@ -43,7 +43,7 @@
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>StnryAssetEnvrSrcId</field>
++            <field>StnryAssetEnvrSrc</field>
+             <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+diff --git a/force-app/main/default/reportTypes/Standalone_Stationary_Assets.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Stationary_Assets.reportType-meta.xml
+index 8da9b6f..81e37f2 100644
+--- a/force-app/main/default/reportTypes/Standalone_Stationary_Assets.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Standalone_Stationary_Assets.reportType-meta.xml
+@@ -38,7 +38,12 @@
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>ParentEnvironmentalSourceId</field>
++            <field>ParentEnvironmentalSource</field>
++            <table>StnryAssetEnvrSrc</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>AccountName</field>
+             <table>StnryAssetEnvrSrc</table>
+         </columns>
+         <masterLabel>Stationary Asset Environmental Sources</masterLabel>
+diff --git a/force-app/main/default/reportTypes/Standalone_Stationary_Energy_Uses.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Stationary_Energy_Uses.reportType-meta.xml
+index 3957a95..cd6d143 100644
+--- a/force-app/main/default/reportTypes/Standalone_Stationary_Energy_Uses.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Standalone_Stationary_Energy_Uses.reportType-meta.xml
+@@ -33,12 +33,17 @@
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>StnryAssetCrbnFtprntId</field>
++            <field>StnryAssetCrbnFtprnt</field>
+             <table>StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>StnryAssetEnvrSrcId</field>
++            <field>StnryAssetEnvrSrc</field>
++            <table>StnryAssetEnrgyUse</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>Supplier</field>
+             <table>StnryAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Stationary Asset Energy Uses</masterLabel>
+diff --git a/force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml
+index b19fddb..1943e07 100644
+--- a/force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml
+@@ -28,7 +28,12 @@
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>ParentEmissionSourceId</field>
++            <field>ParentEmissionSource</field>
++            <table>VehicleAssetEmssnSrc</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>AccountName</field>
+             <table>VehicleAssetEmssnSrc</table>
+         </columns>
+         <masterLabel>Vehicle Asset Emission Sources</masterLabel>
+diff --git a/force-app/main/default/reportTypes/Standalone_Vehicle_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Vehicle_Carbon_Footprints.reportType-meta.xml
+index c0ab9ec..b817020 100644
+--- a/force-app/main/default/reportTypes/Standalone_Vehicle_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Standalone_Vehicle_Carbon_Footprints.reportType-meta.xml
+@@ -28,7 +28,7 @@
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>VehicleAssetEmssnSrcId</field>
++            <field>VehicleAssetEmssnSrc</field>
+             <table>VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Vehicle Asset Carbon Footprints</masterLabel>
+diff --git a/force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml
+index 804aee7..ac68f8c 100644
+--- a/force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml
+@@ -38,12 +38,17 @@
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>VehicleAssetCrbnFtprntId</field>
++            <field>VehicleAssetCrbnFtprnt</field>
+             <table>VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>VehicleAssetEmssnSrcId</field>
++            <field>VehicleAssetEmssnSrc</field>
++            <table>VehicleAssetEnrgyUse</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>Supplier</field>
+             <table>VehicleAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Vehicle Asset Energy Uses</masterLabel>
+diff --git a/force-app/main/default/reportTypes/Stationary_Assets_with_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Stationary_Assets_with_Carbon_Footprints.reportType-meta.xml
+index 04ea1c9..fcb9247 100644
+--- a/force-app/main/default/reportTypes/Stationary_Assets_with_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Stationary_Assets_with_Carbon_Footprints.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Stationary assets joined to their carbon footprints (inner join). Every row resolves to a real footprint record, which is what makes the footprint columns editable inline. Use this to correct emissions data in place instead of exporting to CSV.</description>
+     <join>
+         <outerJoin>false</outerJoin>
+-        <relationship>CarbonFootprints</relationship>
++        <relationship>StnryAssetCrbnFtprnt</relationship>
+     </join>
+     <label>NZC: Assets with Footprints</label>
+     <sections>
+@@ -46,37 +46,37 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>ReportingYear</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FootprintStage</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>TotScope1EmissionsInTco2e</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>TotScope2LocBasedEmissions</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>TotScope2MktBasedEmissions</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Stationary_Assets_with_Energy_Use.reportType-meta.xml b/force-app/main/default/reportTypes/Stationary_Assets_with_Energy_Use.reportType-meta.xml
+index a7bbcae..814735a 100644
+--- a/force-app/main/default/reportTypes/Stationary_Assets_with_Energy_Use.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Stationary_Assets_with_Energy_Use.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Stationary assets joined to their energy use records (inner join). Consumption, fuel type and unit are editable inline on every row. This is the working surface for correcting consumption data an ESG team owns.</description>
+     <join>
+         <outerJoin>false</outerJoin>
+-        <relationship>StationaryAssetEnergyUses</relationship>
++        <relationship>StnryAssetEnrgyUse</relationship>
+     </join>
+     <label>NZC: Assets with Energy Use</label>
+     <sections>
+@@ -46,27 +46,27 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelType</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumption</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumptionUnit</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Stationary Asset Energy Uses</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml
+index a75d5a4..87bce6a 100644
+--- a/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Stationary assets with or without carbon footprints (outer join). Use this to find assets still needing a footprint record created. Footprint columns are blank on those rows and cannot be edited, because inline editing cannot create records.</description>
+     <join>
+         <outerJoin>true</outerJoin>
+-        <relationship>CarbonFootprints</relationship>
++        <relationship>StnryAssetCrbnFtprnt</relationship>
+     </join>
+     <label>NZC: Assets with/without Footprints</label>
+     <sections>
+@@ -46,37 +46,37 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>ReportingYear</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FootprintStage</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>TotScope1EmissionsInTco2e</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>TotScope2LocBasedEmissions</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>TotScope2MktBasedEmissions</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Stationary_Assets_with_without_Energy_Use.reportType-meta.xml b/force-app/main/default/reportTypes/Stationary_Assets_with_without_Energy_Use.reportType-meta.xml
+index 07ba6e5..026e5ea 100644
+--- a/force-app/main/default/reportTypes/Stationary_Assets_with_without_Energy_Use.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Stationary_Assets_with_without_Energy_Use.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Stationary assets with or without energy use records (outer join). Finds assets carrying no consumption data at all, which is an earlier gap than a missing footprint and usually the first thing to fix.</description>
+     <join>
+         <outerJoin>true</outerJoin>
+-        <relationship>StationaryAssetEnergyUses</relationship>
++        <relationship>StnryAssetEnrgyUse</relationship>
+     </join>
+     <label>NZC: Assets with/without Energy Use</label>
+     <sections>
+@@ -46,27 +46,27 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelType</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumption</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumptionUnit</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
++            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Stationary Asset Energy Uses</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Vehicle_Assets_with_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Vehicle_Assets_with_Carbon_Footprints.reportType-meta.xml
+index f7ae45d..41837e9 100644
+--- a/force-app/main/default/reportTypes/Vehicle_Assets_with_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Vehicle_Assets_with_Carbon_Footprints.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Fleet emission sources joined to their carbon footprints (inner join). Footprint columns are editable inline on every row. The mobile combustion counterpart of the stationary assets report.</description>
+     <join>
+         <outerJoin>false</outerJoin>
+-        <relationship>CarbonFootprints</relationship>
++        <relationship>VehicleAssetCrbnFtprnt</relationship>
+     </join>
+     <label>NZC: Fleet with Footprints</label>
+     <sections>
+@@ -36,22 +36,22 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>ReportingYear</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FootprintStage</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Vehicle Asset Carbon Footprints</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Vehicle_Assets_with_Energy_Use.reportType-meta.xml b/force-app/main/default/reportTypes/Vehicle_Assets_with_Energy_Use.reportType-meta.xml
+index a45e466..89d8221 100644
+--- a/force-app/main/default/reportTypes/Vehicle_Assets_with_Energy_Use.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Vehicle_Assets_with_Energy_Use.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Fleet emission sources joined to their energy use records (inner join). Fuel type, consumption, unit and distance are editable inline. Fuel data lives here, not on the vehicle record itself.</description>
+     <join>
+         <outerJoin>false</outerJoin>
+-        <relationship>VehicleAssetEnergyUses</relationship>
++        <relationship>VehicleAssetEnrgyUse</relationship>
+     </join>
+     <label>NZC: Fleet with Energy Use</label>
+     <sections>
+@@ -36,32 +36,32 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelType</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumption</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumptionUnit</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Distance</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Vehicle Asset Energy Uses</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Carbon_Footprints.reportType-meta.xml
+index 003bd63..1672173 100644
+--- a/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Carbon_Footprints.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Fleet emission sources with or without carbon footprints (outer join). Finds vehicles still needing a footprint record created.</description>
+     <join>
+         <outerJoin>true</outerJoin>
+-        <relationship>CarbonFootprints</relationship>
++        <relationship>VehicleAssetCrbnFtprnt</relationship>
+     </join>
+     <label>NZC: Fleet with/without Footprints</label>
+     <sections>
+@@ -36,22 +36,22 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>ReportingYear</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FootprintStage</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>VehicleAssetEmssnSrc.CarbonFootprints</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Vehicle Asset Carbon Footprints</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Energy_Use.reportType-meta.xml b/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Energy_Use.reportType-meta.xml
+index 8e276c8..2c1d8ec 100644
+--- a/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Energy_Use.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Vehicle_Assets_with_without_Energy_Use.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Fleet emission sources with or without energy use records (outer join). Finds vehicles with no fuel or mileage recorded against them.</description>
+     <join>
+         <outerJoin>true</outerJoin>
+-        <relationship>VehicleAssetEnergyUses</relationship>
++        <relationship>VehicleAssetEnrgyUse</relationship>
+     </join>
+     <label>NZC: Fleet with/without Energy Use</label>
+     <sections>
+@@ -36,32 +36,32 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelType</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumption</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumptionUnit</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Distance</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>VehicleAssetEmssnSrc.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Vehicle Asset Energy Uses</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Vehicle_Footprints_with_Energy_Uses.reportType-meta.xml b/force-app/main/default/reportTypes/Vehicle_Footprints_with_Energy_Uses.reportType-meta.xml
+index 18d6d8c..43dd622 100644
+--- a/force-app/main/default/reportTypes/Vehicle_Footprints_with_Energy_Uses.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Vehicle_Footprints_with_Energy_Uses.reportType-meta.xml
+@@ -6,7 +6,7 @@
+     <description>Fleet carbon footprints joined to the energy use records behind them (inner join). Use this to check and correct the fuel rows driving a vehicle footprint.</description>
+     <join>
+         <outerJoin>false</outerJoin>
+-        <relationship>VehicleAssetEnergyUses</relationship>
++        <relationship>VehicleAssetEnrgyUse</relationship>
+     </join>
+     <label>NZC: Fleet Footprints with Energy Uses</label>
+     <sections>
+@@ -36,32 +36,32 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelType</field>
+-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumption</field>
+-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumptionUnit</field>
+-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Distance</field>
+-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>CreatedDate</field>
+-            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnergyUses</table>
++            <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
+         </columns>
+         <masterLabel>Vehicle Asset Energy Uses</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reports/NZC_Reports/Energy_Use_Data_Entry.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Energy_Use_Data_Entry.report-meta.xml
+index d03e9df..f3e271b 100644
+--- a/force-app/main/default/reports/NZC_Reports/Energy_Use_Data_Entry.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Energy_Use_Data_Entry.report-meta.xml
+@@ -4,16 +4,16 @@
+         <field>StnryAssetEnvrSrc$Name</field>
+     </columns>
+     <columns>
+-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$Name</field>
++        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$Name</field>
+     </columns>
+     <columns>
+-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelType</field>
++        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$FuelType</field>
+     </columns>
+     <columns>
+-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelConsumption</field>
++        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$FuelConsumption</field>
+     </columns>
+     <columns>
+-        <field>StnryAssetEnvrSrc.StationaryAssetEnergyUses$FuelConsumptionUnit</field>
++        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$FuelConsumptionUnit</field>
+     </columns>
+     <description>Assets and their consumption records. Fuel type, amount and unit edit in place, which beats correcting a bad import through another CSV. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
+     <format>Tabular</format>
+diff --git a/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Energy_Use.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Energy_Use.report-meta.xml
+index ce07fc2..f2e238e 100644
+--- a/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Energy_Use.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Energy_Use.report-meta.xml
+@@ -9,7 +9,7 @@
+     <description>Fleet emission sources with no fuel or mileage recorded, grouped by vehicle type.</description>
+     <filter>
+         <criteriaItems>
+-            <column>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Id</column>
++            <column>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$Id</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+diff --git a/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Footprints.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Footprints.report-meta.xml
+index 0d396bb..fd223db 100644
+--- a/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Footprints.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Fleet_Assets_Missing_Footprints.report-meta.xml
+@@ -9,7 +9,7 @@
+     <description>Fleet emission sources with no carbon footprint record, grouped by vehicle type. Upload worklist for the mobile combustion side of the inventory.</description>
+     <filter>
+         <criteriaItems>
+-            <column>VehicleAssetEmssnSrc.CarbonFootprints$Id</column>
++            <column>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt$Id</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+diff --git a/force-app/main/default/reports/NZC_Reports/Fleet_Energy_Data_Entry.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Fleet_Energy_Data_Entry.report-meta.xml
+index 7e5507c..0b2361c 100644
+--- a/force-app/main/default/reports/NZC_Reports/Fleet_Energy_Data_Entry.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Fleet_Energy_Data_Entry.report-meta.xml
+@@ -4,19 +4,19 @@
+         <field>VehicleAssetEmssnSrc$Name</field>
+     </columns>
+     <columns>
+-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Name</field>
++        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$Name</field>
+     </columns>
+     <columns>
+-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelType</field>
++        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$FuelType</field>
+     </columns>
+     <columns>
+-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelConsumption</field>
++        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$FuelConsumption</field>
+     </columns>
+     <columns>
+-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$FuelConsumptionUnit</field>
++        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$FuelConsumptionUnit</field>
+     </columns>
+     <columns>
+-        <field>VehicleAssetEmssnSrc.VehicleAssetEnergyUses$Distance</field>
++        <field>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$Distance</field>
+     </columns>
+     <description>Vehicles and their fuel and mileage records, inner join so every row edits. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
+     <format>Tabular</format>
+diff --git a/force-app/main/default/reports/NZC_Reports/Footprint_Data_Entry.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Footprint_Data_Entry.report-meta.xml
+index 05cf91a..13ada73 100644
+--- a/force-app/main/default/reports/NZC_Reports/Footprint_Data_Entry.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Footprint_Data_Entry.report-meta.xml
+@@ -4,13 +4,13 @@
+         <field>StnryAssetEnvrSrc$Name</field>
+     </columns>
+     <columns>
+-        <field>StnryAssetEnvrSrc.CarbonFootprints$Name</field>
++        <field>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$Name</field>
+     </columns>
+     <columns>
+-        <field>StnryAssetEnvrSrc.CarbonFootprints$ReportingYear</field>
++        <field>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$ReportingYear</field>
+     </columns>
+     <columns>
+-        <field>StnryAssetEnvrSrc.CarbonFootprints$FootprintStage</field>
++        <field>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$FootprintStage</field>
+     </columns>
+     <description>Assets and their existing footprints, inner join so every row is a real record. Correct year and stage here rather than through a data load. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
+     <format>Tabular</format>
+diff --git a/force-app/main/default/reports/NZC_Reports/Orphaned_Carbon_Footprints.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Orphaned_Carbon_Footprints.report-meta.xml
+index 57cc11c..fd0b391 100644
+--- a/force-app/main/default/reports/NZC_Reports/Orphaned_Carbon_Footprints.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Orphaned_Carbon_Footprints.report-meta.xml
+@@ -13,7 +13,7 @@
+     <description>Carbon footprints belonging to no stationary asset. Usually the residue of a part-finished load or a deleted asset. They still carry emissions figures, so they can quietly distort totals.</description>
+     <filter>
+         <criteriaItems>
+-            <column>StnryAssetCrbnFtprnt$StnryAssetEnvrSrcId</column>
++            <column>StnryAssetCrbnFtprnt$StnryAssetEnvrSrc</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+diff --git a/force-app/main/default/reports/NZC_Reports/Orphaned_Fleet_Footprints.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Orphaned_Fleet_Footprints.report-meta.xml
+index ad21003..9db0283 100644
+--- a/force-app/main/default/reports/NZC_Reports/Orphaned_Fleet_Footprints.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Orphaned_Fleet_Footprints.report-meta.xml
+@@ -9,7 +9,7 @@
+     <description>Fleet carbon footprints belonging to no vehicle emission source.</description>
+     <filter>
+         <criteriaItems>
+-            <column>VehicleAssetCrbnFtprnt$VehicleAssetEmssnSrcId</column>
++            <column>VehicleAssetCrbnFtprnt$VehicleAssetEmssnSrc</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+diff --git a/force-app/main/default/reports/NZC_Reports/Orphaned_Stationary_Energy_Uses.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Orphaned_Stationary_Energy_Uses.report-meta.xml
+index a4c7588..3d358a5 100644
+--- a/force-app/main/default/reports/NZC_Reports/Orphaned_Stationary_Energy_Uses.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Orphaned_Stationary_Energy_Uses.report-meta.xml
+@@ -13,13 +13,13 @@
+     <description>Energy use records attached to neither a footprint nor an asset. Both parent lookups must be blank to qualify, since a record may legitimately hang off either one.</description>
+     <filter>
+         <criteriaItems>
+-            <column>StnryAssetEnrgyUse$StnryAssetCrbnFtprntId</column>
++            <column>StnryAssetEnrgyUse$StnryAssetCrbnFtprnt</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+         </criteriaItems>
+         <criteriaItems>
+-            <column>StnryAssetEnrgyUse$StnryAssetEnvrSrcId</column>
++            <column>StnryAssetEnrgyUse$StnryAssetEnvrSrc</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+diff --git a/force-app/main/default/reports/NZC_Reports/Orphaned_Vehicle_Energy_Uses.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Orphaned_Vehicle_Energy_Uses.report-meta.xml
+index 2272670..b9fe885 100644
+--- a/force-app/main/default/reports/NZC_Reports/Orphaned_Vehicle_Energy_Uses.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Orphaned_Vehicle_Energy_Uses.report-meta.xml
+@@ -14,13 +14,13 @@
+     <description>Vehicle energy use records attached to neither a fleet footprint nor a vehicle. Both parent lookups must be blank to qualify.</description>
+     <filter>
+         <criteriaItems>
+-            <column>VehicleAssetEnrgyUse$VehicleAssetCrbnFtprntId</column>
++            <column>VehicleAssetEnrgyUse$VehicleAssetCrbnFtprnt</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+         </criteriaItems>
+         <criteriaItems>
+-            <column>VehicleAssetEnrgyUse$VehicleAssetEmssnSrcId</column>
++            <column>VehicleAssetEnrgyUse$VehicleAssetEmssnSrc</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+diff --git a/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Energy_Use.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Energy_Use.report-meta.xml
+index 5baa5dd..ba42d9c 100644
+--- a/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Energy_Use.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Energy_Use.report-meta.xml
+@@ -15,7 +15,7 @@
+     <description>Stationary assets with no energy use record at all, grouped by asset type. An earlier gap than a missing footprint: without consumption data there is nothing to calculate a footprint from.</description>
+     <filter>
+         <criteriaItems>
+-            <column>StnryAssetEnvrSrc.StationaryAssetEnergyUses$Id</column>
++            <column>StnryAssetEnvrSrc.StnryAssetEnrgyUse$Id</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+diff --git a/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml
+index 2e0d71b..3d22a53 100644
+--- a/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml
+@@ -15,7 +15,7 @@
+     <description>Stationary assets with no carbon footprint record, grouped by asset type. These need records created, not edited, so treat this as an upload worklist rather than something to fix inline.</description>
+     <filter>
+         <criteriaItems>
+-            <column>StnryAssetEnvrSrc.CarbonFootprints$Id</column>
++            <column>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt$Id</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+-- 
+2.43.0
+

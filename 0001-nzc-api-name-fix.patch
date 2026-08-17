@@ -1,0 +1,1025 @@
+From fce70c1f4209cf50a7a282f947dfbafb453d9193 Mon Sep 17 00:00:00 2001
+From: mshresponse <9147626+mshresponse@users.noreply.github.com>
+Date: Sun, 16 Aug 2026 19:55:18 +0000
+Subject: [PATCH] Correct NZC object and field API names against API 67.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+The metadata referenced Net Zero Cloud objects that do not exist, so the
+package could not deploy into any org — not just one missing the licence.
+
+Objects:
+  StnryAsstEnvrSrc            -> StnryAssetEnvrSrc
+  StnryAsstCrbnFprint         -> StnryAssetCrbnFtprnt
+  StnryAsstFossilFuelEnrgyUse -> StnryAssetEnrgyUse
+  SpplrMtrc                   -> no such object; use Supplier
+  VehicleAsset                -> no such object; use VehicleAssetEnrgyUse
+
+Fields:
+  Stage                             -> FootprintStage
+  TotalScope1Emissions              -> TotScope1EmissionsInTco2e
+  TotalScope2LocationBasedEmissions -> TotScope2LocBasedEmissions
+  TotalScope2MarketBasedEmissions   -> TotScope2MktBasedEmissions
+  RecordType                        -> StationaryAssetType
+  TotalCarbonFootprint, Scope1Emissions, Scope2Emissions,
+  Scope3Emissions                   -> no equivalent, removed
+
+Two modelling consequences. Emissions by Reporting Year no longer shows a
+combined total: location-based and market-based Scope 2 are alternative
+measures of the same emissions, so adding both to Scope 1 double counts,
+and there is no TotalCarbonFootprint field to fall back on. And fleet fuel
+now comes from VehicleAssetEnrgyUse, since VehicleAssetEmssnSrc carries
+VehicleType but no fuel field.
+
+Renames follow: Accounts_with_or_without_Supplier_Metrics ->
+Accounts_with_or_without_Suppliers, Standalone_Vehicle_Assets ->
+Standalone_Vehicle_Energy_Uses, Suppliers_Missing_Metrics ->
+Accounts_Not_Registered_As_Suppliers, Fleet_by_Fuel_Type ->
+Fleet_Fuel_by_Fuel_Type.
+
+Verified against the Net Zero Cloud Developer Guide object reference for
+API 67.0 (Summer '26). The three child relationship names used in the
+report type joins are NOT documented by Salesforce and follow convention;
+each carries a VERIFY IN ORG comment and the README explains how to read
+the real names from a describe.
+
+README also documents which org types actually include Net Zero Cloud
+(a plain Developer Edition org and a standard Trailhead Playground do
+not), and what the deploy button actually does.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01PByp6ikfmh71aGqG1zth4k
+---
+ README.md                                     | 149 ++++++++++++++----
+ .../NZC_Emissions_Coverage.dashboard-meta.xml |  10 +-
+ ..._or_without_Suppliers.reportType-meta.xml} |  35 ++--
+ ...rints_with_Energy_Uses.reportType-meta.xml |  43 +++--
+ ...lone_Carbon_Footprints.reportType-meta.xml |  33 ++--
+ ...ndalone_Vehicle_Assets.reportType-meta.xml |  31 ----
+ ...ne_Vehicle_Energy_Uses.reportType-meta.xml |  41 +++++
+ ...hout_Carbon_Footprints.reportType-meta.xml |  46 +++---
+ ...t_Registered_As_Suppliers.report-meta.xml} |   8 +-
+ ...missions_by_Reporting_Year.report-meta.xml |  20 +--
+ .../Fleet_Fuel_by_Fuel_Type.report-meta.xml   |  32 ++++
+ .../Fleet_by_Fuel_Type.report-meta.xml        |  24 ---
+ ...l_Consumption_by_Fuel_Type.report-meta.xml |  16 +-
+ ..._Assets_Missing_Footprints.report-meta.xml |  16 +-
+ manifest/package.xml                          |   8 +-
+ 15 files changed, 297 insertions(+), 215 deletions(-)
+ rename force-app/main/default/reportTypes/{Accounts_with_or_without_Supplier_Metrics.reportType-meta.xml => Accounts_with_or_without_Suppliers.reportType-meta.xml} (51%)
+ delete mode 100644 force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml
+ create mode 100644 force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml
+ rename force-app/main/default/reports/NZC_Reports/{Suppliers_Missing_Metrics.report-meta.xml => Accounts_Not_Registered_As_Suppliers.report-meta.xml} (66%)
+ create mode 100644 force-app/main/default/reports/NZC_Reports/Fleet_Fuel_by_Fuel_Type.report-meta.xml
+ delete mode 100644 force-app/main/default/reports/NZC_Reports/Fleet_by_Fuel_Type.report-meta.xml
+
+diff --git a/README.md b/README.md
+index c6c80f6..31e6de4 100644
+--- a/README.md
++++ b/README.md
+@@ -3,7 +3,7 @@
+ [![Validate metadata](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml/badge.svg)](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+ 
+-A free, unmanaged, open-source package of basic **Lightning Report Types, Reports, and Dashboards** for **Salesforce Net Zero Cloud** (core Lightning analytics only — no CRM Analytics / Einstein components). Metadata API version **67.0**.
++A free, open-source set of basic **Lightning Report Types, Reports, and Dashboards** for **Salesforce Net Zero Cloud** — now branded **Agentforce Net Zero** — using core Lightning analytics only, with no CRM Analytics or Einstein components. Source API version **67.0**.
+ 
+ ## Install
+ 
+@@ -15,12 +15,45 @@ Production/Developer or Sandbox on the page that opens, authorise, and it deploy
+   <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+ </a>
+ 
+-### Before you install
+-
+-Your org needs the **Net Zero Cloud** license with its managed objects enabled
+-(`StnryAsstEnvrSrc`, `StnryAsstCrbnFprint`, `StnryAsstFossilFuelEnrgyUse`,
+-`SpplrMtrc`, `VehicleAsset`). Without it the report types have nothing to build on
+-and the deploy fails on unknown sObjects.
++### Before you install: you need an org that actually has Net Zero Cloud
++
++This is the step people lose an afternoon to. **A standard free Developer Edition
++org does not include Net Zero Cloud, and neither does a standard Trailhead
++Playground.** Salesforce's own docs list Net Zero Cloud as "available in
++Enterprise, Performance, Unlimited, and Developer Editions", but that describes
++which editions the licence *can* be added to — it is not what you get when you
++sign up for a free org. Without the licence, the NZC objects do not exist and the
++deploy fails on unknown sObjects.
++
++Orgs that do work:
++
++| Org | Free? | Lasts | Notes |
++|---|---|---|---|
++| [Net Zero Cloud trial — Learning org](https://developer.salesforce.com/free-trials/comparison/net-zero-cloud) | Yes | 30 days | Pre-configured, with sample data. Best for seeing these reports return actual rows. |
++| [Net Zero Cloud trial — Base org](https://developer.salesforce.com/free-trials/comparison/net-zero-cloud) | Yes | 30 days | Unconfigured. Licences and permissions only, so reports deploy but come back empty until you load data. |
++| [Trailhead promo Developer Edition org](https://trailhead.salesforce.com/promo/orgs/net-zero-cloud) | Yes | Check at signup | A special DE org licensed for Agentforce Net Zero, linked from Trailhead's [Configure an Agentforce Net Zero Org](https://trailhead.salesforce.com/content/learn/projects/configure-a-net-zero-cloud-org) project. Some product-specific DE orgs carry a time-limited product licence even though the org itself does not expire — confirm on the signup page. |
++| Your own org or sandbox with NZC licensed | — | — | Deploy to a sandbox first. |
++
++The objects the report types build on are `StnryAssetEnvrSrc`,
++`StnryAssetCrbnFtprnt`, `StnryAssetEnrgyUse`, `Supplier` and `VehicleAssetEnrgyUse`.
++If you can see those in Setup → Object Manager, you are good.
++
++### What the deploy button actually does
++
++Worth being precise, because "unmanaged package" gets used loosely and this is not one:
++
++- It is a **Metadata API deploy of source**, not a package install. Nothing appears
++  under Setup → Installed Packages.
++- Everything lands as **ordinary org metadata you own** — editable, renameable and
++  deletable like anything you built yourself. There is no uninstall button; to
++  remove it, delete the components.
++- The deploy is **all-or-nothing** (`rollbackOnError`). If your org is missing the
++  NZC objects, the deploy fails and leaves nothing behind.
++- The deploying user needs **Modify Metadata Through Metadata API Functions** or
++  **Modify All Data** — any System Administrator has this.
++- The tool converts the whole `force-app` directory with `force:source:convert` and
++  generates its own manifest, so `manifest/package.xml` is used by the CLI path and
++  by CI, not by the button. Both cover the same 13 components.
+ 
+ ### After you install
+ 
+@@ -34,6 +67,11 @@ Give the roles, groups or users who need them **Viewer** access (or **Editor** i
+ you want them adapting the reports, which is rather the point of shipping the
+ source).
+ 
++The dashboard runs as **the logged-in user**, so there is no running user to fix up
++after the deploy — each viewer sees what their own sharing allows. On a Base trial
++org the reports will deploy and open cleanly but return no rows until you load
++data; that is expected, not a failed install.
++
+ ### Prefer the CLI?
+ 
+ ```bash
+@@ -46,22 +84,66 @@ Add `--dry-run` to validate without saving anything to the org.
+ 
+ | Component | API Name | Details |
+ |---|---|---|
+-| Custom Report Type | `Stationary_Assets_with_without_Carbon_Footprints` | `StnryAsstEnvrSrc` with/without `StnryAsstCrbnFprint` (outer join) |
+-| Custom Report Type | `Footprints_with_Energy_Uses` | `StnryAsstCrbnFprint` with `StnryAsstFossilFuelEnrgyUse` (inner join) |
+-| Custom Report Type | `Accounts_with_or_without_Supplier_Metrics` | `Account` with/without `SpplrMtrc` (outer join) |
+-| Custom Report Type | `Standalone_Carbon_Footprints` | Single object: `StnryAsstCrbnFprint` |
+-| Custom Report Type | `Standalone_Vehicle_Assets` | Single object: `VehicleAsset` |
+-| Report | `NZC_Reports/Stationary_Assets_Missing_Footprints` | Summary report grouped by asset type (record type), filtered to rows where the related Carbon Footprint Id is blank |
++| Custom Report Type | `Stationary_Assets_with_without_Carbon_Footprints` | `StnryAssetEnvrSrc` with/without `StnryAssetCrbnFtprnt` (outer join) |
++| Custom Report Type | `Footprints_with_Energy_Uses` | `StnryAssetCrbnFtprnt` with `StnryAssetEnrgyUse` (inner join) |
++| Custom Report Type | `Accounts_with_or_without_Suppliers` | `Account` with/without `Supplier` (outer join) |
++| Custom Report Type | `Standalone_Carbon_Footprints` | Single object: `StnryAssetCrbnFtprnt` |
++| Custom Report Type | `Standalone_Vehicle_Energy_Uses` | Single object: `VehicleAssetEnrgyUse` |
++| Report | `NZC_Reports/Stationary_Assets_Missing_Footprints` | Summary report grouped by `StationaryAssetType`, filtered to rows where the related Carbon Footprint Id is blank |
+ | Report | `NZC_Reports/Fuel_Consumption_by_Fuel_Type` | Summary report grouped by fuel type, with summed fuel consumption |
+-| Report | `NZC_Reports/Suppliers_Missing_Metrics` | Accounts with no Supplier Metric record, grouped by industry |
+-| Report | `NZC_Reports/Emissions_by_Reporting_Year` | Footprints grouped by reporting year with summed Scope 1 / Scope 2 / total emissions |
+-| Report | `NZC_Reports/Fleet_by_Fuel_Type` | Vehicle assets grouped by fuel type |
+-| Dashboard | `NZC_Dashboards/NZC_Emissions_Coverage` | Bar charts for asset/supplier data gaps, column chart of emissions by year, donut of fleet by fuel type |
++| Report | `NZC_Reports/Accounts_Not_Registered_As_Suppliers` | Accounts with no related Supplier record, grouped by industry |
++| Report | `NZC_Reports/Emissions_by_Reporting_Year` | Footprints grouped by reporting year, with summed Scope 1 and both Scope 2 accounting bases |
++| Report | `NZC_Reports/Fleet_Fuel_by_Fuel_Type` | Vehicle energy use records grouped by fuel type, with summed consumption and distance |
++| Dashboard | `NZC_Dashboards/NZC_Emissions_Coverage` | Bar charts for asset and supplier data gaps, column chart of Scope 1 by year, donut of fleet fuel by type |
+ 
+-All report type layouts are curated to the fields sustainability teams use most (asset name, reporting year, stage, Scope 1 / Scope 2 emissions (tCO2e), fuel type, record type), and every curated column is flagged `checkedByDefault` so it is pre-selected when users build a new report.
++All report type layouts are curated to the fields sustainability teams use most (asset name, asset type, reporting year, footprint stage, Scope 1 and Scope 2 emissions in tCO2e, fuel type and consumption), and every curated column is flagged `checkedByDefault` so it is pre-selected when users build a new report.
+ 
+ > **Note:** The first report type's label is "Stationary Assets with/without Carbon Footprints" (rather than "…with or without…") to stay within the 50-character report type label limit.
+ 
++### Two deliberate modelling choices
++
++**No combined emissions total.** Net Zero Cloud splits Scope 2 into
++`TotScope2LocBasedEmissions` and `TotScope2MktBasedEmissions`, which are two
++accounting methods for the *same* emissions rather than two separate sources. Adding
++both to Scope 1 would double count, so "Emissions by Reporting Year" reports the three
++figures side by side and leaves the choice of Scope 2 basis to whoever owns the
++disclosure. There is no `TotalCarbonFootprint` field on the object to fall back on.
++
++**Fleet fuel comes from the energy use record.** `VehicleAssetEmssnSrc` carries
++`VehicleType` and `FleetVehicleType` but no fuel field — fuel lives on
++`VehicleAssetEnrgyUse`. The fleet report is therefore built on the energy use object,
++which also gives it `FuelConsumption` and `Distance`.
++
++## Verifying relationship names
++
++Three of the five report types join a parent object to its children, and a custom report
++type join needs the **child relationship name** — the plural, such as
++`StnryAssetCrbnFtprnts`. Salesforce's object reference documents the parent-side
++relationship name but never the child-side plural, so the three names in this repo follow
++the naming convention rather than a published value. They are marked with a
++`VERIFY IN ORG` comment in the XML.
++
++If a deploy fails on one of them, read the real name from your org and replace it in both
++the `<relationship>` element and the `<table>` paths of that report type. In Setup →
++**Developer Console** → **Debug → Open Execute Anonymous Window**, tick **Open Log** and run:
++
++```apex
++for (String o : new List<String>{'StnryAssetEnvrSrc','StnryAssetCrbnFtprnt','Account'}) {
++  for (Schema.ChildRelationship cr : Schema.getGlobalDescribe().get(o).getDescribe().getChildRelationships()) {
++    if (cr.getRelationshipName() != null) {
++      System.debug(LoggingLevel.ERROR, o + ' -> ' + cr.getRelationshipName() + '  (child: ' + cr.getChildSObject() + ')');
++    }
++  }
++}
++```
++
++Tick **Debug Only** in the log window to read the results. Or, with the CLI:
++
++```bash
++sf sobject describe --sobject StnryAssetEnvrSrc --target-org <alias> \
++  | jq -r '.childRelationships[] | select(.relationshipName != null) | "\(.relationshipName) <- \(.childSObject)"'
++```
++
+ ## Project structure
+ 
+ ```
+@@ -70,17 +152,17 @@ force-app/main/default/
+ ├── reportTypes/
+ │   ├── Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml
+ │   ├── Footprints_with_Energy_Uses.reportType-meta.xml
+-│   ├── Accounts_with_or_without_Supplier_Metrics.reportType-meta.xml
++│   ├── Accounts_with_or_without_Suppliers.reportType-meta.xml
+ │   ├── Standalone_Carbon_Footprints.reportType-meta.xml
+-│   └── Standalone_Vehicle_Assets.reportType-meta.xml
++│   └── Standalone_Vehicle_Energy_Uses.reportType-meta.xml
+ ├── reports/
+ │   ├── NZC_Reports.reportFolder-meta.xml
+ │   └── NZC_Reports/
+ │       ├── Stationary_Assets_Missing_Footprints.report-meta.xml
+ │       ├── Fuel_Consumption_by_Fuel_Type.report-meta.xml
+-│       ├── Suppliers_Missing_Metrics.report-meta.xml
++│       ├── Accounts_Not_Registered_As_Suppliers.report-meta.xml
+ │       ├── Emissions_by_Reporting_Year.report-meta.xml
+-│       └── Fleet_by_Fuel_Type.report-meta.xml
++│       └── Fleet_Fuel_by_Fuel_Type.report-meta.xml
+ └── dashboards/
+     ├── NZC_Dashboards.dashboardFolder-meta.xml
+     └── NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
+@@ -94,21 +176,22 @@ Every push and pull request runs `.github/workflows/validate.yml`, which:
+ 2. Runs `sf project convert source` to validate the SFDX project structure and metadata file suffixes (no org required).
+ 3. Cross-checks that every member listed in `manifest/package.xml` has a matching source file.
+ 
+-Deploy-time validation against a real Net Zero Cloud org (field and relationship API names) still needs to be done with `sf project deploy start --dry-run` against your own org, since those objects require the NZC license.
+-
+-## Validating API names against your org
+-
+-Net Zero Cloud field and child-relationship API names can vary slightly by release and license edition. If a deploy fails on a field or relationship name, verify the exact names in your org and adjust the XML:
++**What CI cannot tell you.** None of those three checks can see a wrong sObject or field
++name — a reference to an object that does not exist produces perfectly well-formed XML
++that converts cleanly and matches the manifest. A green badge here means the *structure*
++is sound, not that the names resolve. Only a deploy against an org holding the Net Zero
++Cloud licence can confirm that:
+ 
+ ```bash
+-sf sobject describe --sobject StnryAsstCrbnFprint --target-org <alias> | jq '.fields[].name'
+-sf sobject describe --sobject StnryAsstEnvrSrc --target-org <alias> | jq '.childRelationships[] | {relationshipName, childSObject}'
++sf project deploy start --manifest manifest/package.xml --target-org <alias> --dry-run
+ ```
+ 
+-The most likely candidates to need adjustment:
+-
+-- Child relationship names used in the report type joins: `StnryAsstCrbnFprints`, `StnryAsstFossilFuelEnrgyUses`, `SpplrMtrcs`.
+-- Emissions field spellings on `StnryAsstCrbnFprint` (e.g. `TotalScope2LocationBasedEmissions` / `TotalScope2MarketBasedEmissions`) and metric fields on `SpplrMtrc`.
++Object and field names in this repo were verified against the
++[Net Zero Cloud Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.netzero_cloud_dev_guide.meta/netzero_cloud_dev_guide/netzero_cloud_std_objects_parent.htm)
++for **API 67.0 (Summer '26)**. Salesforce publishes a "New and Changed Objects for Net Zero
++Cloud" section every release, so treat these as version-pinned and re-run the dry run after
++a major upgrade. The three child relationship names are the exception — see
++[Verifying relationship names](#verifying-relationship-names) above.
+ 
+ ## License
+ 
+diff --git a/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml b/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
+index 35f312e..73a01b6 100644
+--- a/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
++++ b/force-app/main/default/dashboards/NZC_Dashboards/NZC_Emissions_Coverage.dashboard-meta.xml
+@@ -38,12 +38,12 @@
+             <expandOthers>true</expandOthers>
+             <header>Data Coverage</header>
+             <legendPosition>Bottom</legendPosition>
+-            <report>NZC_Reports/Suppliers_Missing_Metrics</report>
++            <report>NZC_Reports/Accounts_Not_Registered_As_Suppliers</report>
+             <showPercentage>false</showPercentage>
+             <showTotal>false</showTotal>
+             <showValues>true</showValues>
+             <sortBy>RowValueDescending</sortBy>
+-            <title>Suppliers Missing Metrics by Industry</title>
++            <title>Accounts Not Registered as Suppliers by Industry</title>
+             <useReportChart>false</useReportChart>
+         </components>
+     </leftSection>
+@@ -65,7 +65,7 @@
+             <showTotal>false</showTotal>
+             <showValues>true</showValues>
+             <sortBy>RowLabelAscending</sortBy>
+-            <title>Total Emissions by Reporting Year (tCO2e)</title>
++            <title>Scope 1 Emissions by Reporting Year (tCO2e)</title>
+             <useReportChart>false</useReportChart>
+         </components>
+     </middleSection>
+@@ -82,12 +82,12 @@
+             <expandOthers>true</expandOthers>
+             <header>Fleet</header>
+             <legendPosition>Bottom</legendPosition>
+-            <report>NZC_Reports/Fleet_by_Fuel_Type</report>
++            <report>NZC_Reports/Fleet_Fuel_by_Fuel_Type</report>
+             <showPercentage>true</showPercentage>
+             <showTotal>true</showTotal>
+             <showValues>true</showValues>
+             <sortBy>RowValueDescending</sortBy>
+-            <title>Vehicle Assets by Fuel Type</title>
++            <title>Fleet Fuel Consumption by Fuel Type</title>
+             <useReportChart>false</useReportChart>
+         </components>
+     </rightSection>
+diff --git a/force-app/main/default/reportTypes/Accounts_with_or_without_Supplier_Metrics.reportType-meta.xml b/force-app/main/default/reportTypes/Accounts_with_or_without_Suppliers.reportType-meta.xml
+similarity index 51%
+rename from force-app/main/default/reportTypes/Accounts_with_or_without_Supplier_Metrics.reportType-meta.xml
+rename to force-app/main/default/reportTypes/Accounts_with_or_without_Suppliers.reportType-meta.xml
+index 720f3e6..4e83daa 100644
+--- a/force-app/main/default/reportTypes/Accounts_with_or_without_Supplier_Metrics.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Accounts_with_or_without_Suppliers.reportType-meta.xml
+@@ -1,14 +1,19 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+     <baseObject>Account</baseObject>
+-    <category>accounts</category>
++    <category>other</category>
+     <deployed>true</deployed>
+-    <description>Accounts with or without related Supplier Metric records (outer join). Use this report type to find suppliers that have not yet disclosed emissions data.</description>
++    <description>Accounts with or without related Supplier records (outer join). Use this report type to find value-chain accounts that have not yet been registered as suppliers, which is the first gap to close before Scope 3 supplier data can be collected.</description>
+     <join>
+         <outerJoin>true</outerJoin>
+-        <relationship>SpplrMtrcs</relationship>
++        <!-- VERIFY IN ORG: Salesforce does not publish child relationship names in the
++             object reference, so this is the conventional plural rather than a
++             documented value. If the deploy fails here, read the real name from a
++             describe (see README > Verifying relationship names) and replace it both
++             on this line and in the <table> paths below. -->
++        <relationship>Suppliers</relationship>
+     </join>
+-    <label>Accounts with or without Supplier Metrics</label>
++    <label>Accounts with or without Suppliers</label>
+     <sections>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+@@ -31,28 +36,18 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>Account.SpplrMtrcs</table>
++            <table>Account.Suppliers</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>ReportingYear</field>
+-            <table>Account.SpplrMtrcs</table>
++            <field>CompanyRelationshipType</field>
++            <table>Account.Suppliers</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>Scope1Emissions</field>
+-            <table>Account.SpplrMtrcs</table>
++            <field>Description</field>
++            <table>Account.Suppliers</table>
+         </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>Scope2Emissions</field>
+-            <table>Account.SpplrMtrcs</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>Scope3Emissions</field>
+-            <table>Account.SpplrMtrcs</table>
+-        </columns>
+-        <masterLabel>Supplier Metrics</masterLabel>
++        <masterLabel>Suppliers</masterLabel>
+     </sections>
+ </ReportType>
+diff --git a/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml b/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml
+index 50def91..f226fb1 100644
+--- a/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Footprints_with_Energy_Uses.reportType-meta.xml
+@@ -1,44 +1,39 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+-    <baseObject>StnryAsstCrbnFprint</baseObject>
++    <baseObject>StnryAssetCrbnFtprnt</baseObject>
+     <category>other</category>
+     <deployed>true</deployed>
+-    <description>Stationary Asset Carbon Footprints with related Stationary Asset Fossil Fuel Energy Use records (inner join). Use this report type to analyze fuel consumption behind each footprint.</description>
++    <description>Stationary Asset Carbon Footprints with their related Stationary Asset Energy Use records (inner join). Use this report type to analyse fuel consumption behind each footprint.</description>
+     <join>
+         <outerJoin>false</outerJoin>
+-        <relationship>StnryAsstFossilFuelEnrgyUses</relationship>
++        <!-- VERIFY IN ORG: Salesforce does not publish child relationship names in the
++             object reference, so this is the conventional plural rather than a
++             documented value. If the deploy fails here, read the real name from a
++             describe (see README > Verifying relationship names) and replace it both
++             on this line and in the <table> paths below. -->
++        <relationship>StnryAssetEnrgyUses</relationship>
+     </join>
+     <label>Footprints with Energy Uses</label>
+     <sections>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>ReportingYear</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>Stage</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <field>FootprintStage</field>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope1Emissions</field>
+-            <table>StnryAsstCrbnFprint</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope2LocationBasedEmissions</field>
+-            <table>StnryAsstCrbnFprint</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope2MarketBasedEmissions</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <field>TotScope1EmissionsInTco2e</field>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+     </sections>
+@@ -46,23 +41,23 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelType</field>
+-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumption</field>
+-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>FuelConsumptionUnit</field>
+-            <table>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses</table>
++            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+         </columns>
+-        <masterLabel>Fossil Fuel Energy Uses</masterLabel>
++        <masterLabel>Stationary Asset Energy Uses</masterLabel>
+     </sections>
+ </ReportType>
+diff --git a/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml
+index 6159e5d..9f27881 100644
+--- a/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Standalone_Carbon_Footprints.reportType-meta.xml
+@@ -1,50 +1,45 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+-    <baseObject>StnryAsstCrbnFprint</baseObject>
++    <baseObject>StnryAssetCrbnFtprnt</baseObject>
+     <category>other</category>
+     <deployed>true</deployed>
+-    <description>Single-object report type over Stationary Asset Carbon Footprints. Use this report type for footprint-only rollups such as total emissions by reporting year or stage.</description>
++    <description>Single-object report type over Stationary Asset Carbon Footprints. Use this report type to trend emissions by reporting year across Scope 1 and both Scope 2 accounting methods.</description>
+     <label>Standalone Carbon Footprints</label>
+     <sections>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAsstCrbnFprint</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>StnryAsstEnvrSrc</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>ReportingYear</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>Stage</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <field>FootprintStage</field>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope1Emissions</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <field>TotScope1EmissionsInTco2e</field>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope2LocationBasedEmissions</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <field>TotScope2LocBasedEmissions</field>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope2MarketBasedEmissions</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <field>TotScope2MktBasedEmissions</field>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalCarbonFootprint</field>
+-            <table>StnryAsstCrbnFprint</table>
++            <field>CreatedDate</field>
++            <table>StnryAssetCrbnFtprnt</table>
+         </columns>
+         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml
+deleted file mode 100644
+index fd1a851..0000000
+--- a/force-app/main/default/reportTypes/Standalone_Vehicle_Assets.reportType-meta.xml
++++ /dev/null
+@@ -1,31 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+-    <baseObject>VehicleAsset</baseObject>
+-    <category>other</category>
+-    <deployed>true</deployed>
+-    <description>Single-object report type over Vehicle Assets. Use this report type to inventory fleet vehicles by vehicle type and fuel type for Scope 1 mobile combustion tracking.</description>
+-    <label>Standalone Vehicle Assets</label>
+-    <sections>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>Name</field>
+-            <table>VehicleAsset</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>VehicleType</field>
+-            <table>VehicleAsset</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>FuelType</field>
+-            <table>VehicleAsset</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>CreatedDate</field>
+-            <table>VehicleAsset</table>
+-        </columns>
+-        <masterLabel>Vehicle Assets</masterLabel>
+-    </sections>
+-</ReportType>
+diff --git a/force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml b/force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml
+new file mode 100644
+index 0000000..a817a31
+--- /dev/null
++++ b/force-app/main/default/reportTypes/Standalone_Vehicle_Energy_Uses.reportType-meta.xml
+@@ -0,0 +1,41 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
++    <baseObject>VehicleAssetEnrgyUse</baseObject>
++    <category>other</category>
++    <deployed>true</deployed>
++    <description>Single-object report type over Vehicle Asset Energy Use records. Use this report type to break the fleet down by fuel type for Scope 1 mobile combustion tracking. Fuel data lives on this object, not on the vehicle emission source.</description>
++    <label>Standalone Vehicle Energy Uses</label>
++    <sections>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>Name</field>
++            <table>VehicleAssetEnrgyUse</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>FuelType</field>
++            <table>VehicleAssetEnrgyUse</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>FuelConsumption</field>
++            <table>VehicleAssetEnrgyUse</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>FuelConsumptionUnit</field>
++            <table>VehicleAssetEnrgyUse</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>Distance</field>
++            <table>VehicleAssetEnrgyUse</table>
++        </columns>
++        <columns>
++            <checkedByDefault>true</checkedByDefault>
++            <field>CreatedDate</field>
++            <table>VehicleAssetEnrgyUse</table>
++        </columns>
++        <masterLabel>Vehicle Asset Energy Uses</masterLabel>
++    </sections>
++</ReportType>
+diff --git a/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml b/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml
+index ebfcbe1..08ded5a 100644
+--- a/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml
++++ b/force-app/main/default/reportTypes/Stationary_Assets_with_without_Carbon_Footprints.reportType-meta.xml
+@@ -1,39 +1,44 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+-    <baseObject>StnryAsstEnvrSrc</baseObject>
++    <baseObject>StnryAssetEnvrSrc</baseObject>
+     <category>other</category>
+     <deployed>true</deployed>
+     <description>Stationary Asset Environmental Sources with or without related Stationary Asset Carbon Footprints (outer join). Use this report type to find assets that are missing carbon footprint records.</description>
+     <join>
+         <outerJoin>true</outerJoin>
+-        <relationship>StnryAsstCrbnFprints</relationship>
++        <!-- VERIFY IN ORG: Salesforce does not publish child relationship names in the
++             object reference, so this is the conventional plural rather than a
++             documented value. If the deploy fails here, read the real name from a
++             describe (see README > Verifying relationship names) and replace it both
++             on this line and in the <table> paths below. -->
++        <relationship>StnryAssetCrbnFtprnts</relationship>
+     </join>
+     <label>Stationary Assets with/without Carbon Footprints</label>
+     <sections>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAsstEnvrSrc</table>
++            <table>StnryAssetEnvrSrc</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>RecordType</field>
+-            <table>StnryAsstEnvrSrc</table>
++            <field>StationaryAssetType</field>
++            <table>StnryAssetEnvrSrc</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>BusinessRegion</field>
+-            <table>StnryAsstEnvrSrc</table>
++            <table>StnryAssetEnvrSrc</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>City</field>
+-            <table>StnryAsstEnvrSrc</table>
++            <table>StnryAssetEnvrSrc</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Country</field>
+-            <table>StnryAsstEnvrSrc</table>
++            <table>StnryAssetEnvrSrc</table>
+         </columns>
+         <masterLabel>Stationary Asset Environmental Sources</masterLabel>
+     </sections>
+@@ -41,37 +46,32 @@
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>Name</field>
+-            <table>StnryAsstEnvrSrc.StnryAsstCrbnFprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+             <field>ReportingYear</field>
+-            <table>StnryAsstEnvrSrc.StnryAsstCrbnFprints</table>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>Stage</field>
+-            <table>StnryAsstEnvrSrc.StnryAsstCrbnFprints</table>
++            <field>FootprintStage</field>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope1Emissions</field>
+-            <table>StnryAsstEnvrSrc.StnryAsstCrbnFprints</table>
++            <field>TotScope1EmissionsInTco2e</field>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope2LocationBasedEmissions</field>
+-            <table>StnryAsstEnvrSrc.StnryAsstCrbnFprints</table>
++            <field>TotScope2LocBasedEmissions</field>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts</table>
+         </columns>
+         <columns>
+             <checkedByDefault>true</checkedByDefault>
+-            <field>TotalScope2MarketBasedEmissions</field>
+-            <table>StnryAsstEnvrSrc.StnryAsstCrbnFprints</table>
+-        </columns>
+-        <columns>
+-            <checkedByDefault>true</checkedByDefault>
+-            <field>TotalCarbonFootprint</field>
+-            <table>StnryAsstEnvrSrc.StnryAsstCrbnFprints</table>
++            <field>TotScope2MktBasedEmissions</field>
++            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts</table>
+         </columns>
+         <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+     </sections>
+diff --git a/force-app/main/default/reports/NZC_Reports/Suppliers_Missing_Metrics.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Accounts_Not_Registered_As_Suppliers.report-meta.xml
+similarity index 66%
+rename from force-app/main/default/reports/NZC_Reports/Suppliers_Missing_Metrics.report-meta.xml
+rename to force-app/main/default/reports/NZC_Reports/Accounts_Not_Registered_As_Suppliers.report-meta.xml
+index dc70daa..00b93b3 100644
+--- a/force-app/main/default/reports/NZC_Reports/Suppliers_Missing_Metrics.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Accounts_Not_Registered_As_Suppliers.report-meta.xml
+@@ -6,10 +6,10 @@
+     <columns>
+         <field>Account$BillingCountry</field>
+     </columns>
+-    <description>Accounts that have no related Supplier Metric record, grouped by industry. Use this to target suppliers for Scope 3 emissions data collection.</description>
++    <description>Accounts with no related Supplier record, grouped by industry. These are value-chain relationships that have not been registered as suppliers, which is the first gap to close before Scope 3 supplier data can be collected.</description>
+     <filter>
+         <criteriaItems>
+-            <column>Account.SpplrMtrcs$Id</column>
++            <column>Account.Suppliers$Id</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+@@ -21,8 +21,8 @@
+         <field>Account$Industry</field>
+         <sortOrder>Asc</sortOrder>
+     </groupingsDown>
+-    <name>Suppliers Missing Metrics</name>
+-    <reportType>Accounts_with_or_without_Supplier_Metrics</reportType>
++    <name>Accounts Not Registered as Suppliers</name>
++    <reportType>Accounts_with_or_without_Suppliers</reportType>
+     <scope>organization</scope>
+     <showDetails>true</showDetails>
+     <timeFrameFilter>
+diff --git a/force-app/main/default/reports/NZC_Reports/Emissions_by_Reporting_Year.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Emissions_by_Reporting_Year.report-meta.xml
+index c22f549..5ca2c46 100644
+--- a/force-app/main/default/reports/NZC_Reports/Emissions_by_Reporting_Year.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Emissions_by_Reporting_Year.report-meta.xml
+@@ -1,32 +1,28 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <Report xmlns="http://soap.sforce.com/2006/04/metadata">
+     <columns>
+-        <field>StnryAsstCrbnFprint$Name</field>
++        <field>StnryAssetCrbnFtprnt$Name</field>
+     </columns>
+     <columns>
+-        <field>StnryAsstCrbnFprint$Stage</field>
++        <field>StnryAssetCrbnFtprnt$FootprintStage</field>
+     </columns>
+     <columns>
+         <aggregateTypes>Sum</aggregateTypes>
+-        <field>StnryAsstCrbnFprint$TotalScope1Emissions</field>
++        <field>StnryAssetCrbnFtprnt$TotScope1EmissionsInTco2e</field>
+     </columns>
+     <columns>
+         <aggregateTypes>Sum</aggregateTypes>
+-        <field>StnryAsstCrbnFprint$TotalScope2LocationBasedEmissions</field>
++        <field>StnryAssetCrbnFtprnt$TotScope2LocBasedEmissions</field>
+     </columns>
+     <columns>
+         <aggregateTypes>Sum</aggregateTypes>
+-        <field>StnryAsstCrbnFprint$TotalScope2MarketBasedEmissions</field>
++        <field>StnryAssetCrbnFtprnt$TotScope2MktBasedEmissions</field>
+     </columns>
+-    <columns>
+-        <aggregateTypes>Sum</aggregateTypes>
+-        <field>StnryAsstCrbnFprint$TotalCarbonFootprint</field>
+-    </columns>
+-    <description>Stationary asset carbon footprints grouped by reporting year, with summed Scope 1, Scope 2 (location- and market-based), and total emissions. Year-over-year emissions trend for the stationary asset inventory.</description>
++    <description>Stationary asset carbon footprints grouped by reporting year, with summed Scope 1 and both Scope 2 accounting methods. No combined total is shown on purpose: location-based and market-based Scope 2 are alternative measures of the same emissions, so adding them to Scope 1 would double count. Pick the Scope 2 basis your disclosure uses.</description>
+     <format>Summary</format>
+     <groupingsDown>
+         <dateGranularity>Day</dateGranularity>
+-        <field>StnryAsstCrbnFprint$ReportingYear</field>
++        <field>StnryAssetCrbnFtprnt$ReportingYear</field>
+         <sortOrder>Asc</sortOrder>
+     </groupingsDown>
+     <name>Emissions by Reporting Year</name>
+@@ -34,7 +30,7 @@
+     <scope>organization</scope>
+     <showDetails>true</showDetails>
+     <timeFrameFilter>
+-        <dateColumn>StnryAsstCrbnFprint$CreatedDate</dateColumn>
++        <dateColumn>StnryAssetCrbnFtprnt$CreatedDate</dateColumn>
+         <interval>INTERVAL_CUSTOM</interval>
+     </timeFrameFilter>
+ </Report>
+diff --git a/force-app/main/default/reports/NZC_Reports/Fleet_Fuel_by_Fuel_Type.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Fleet_Fuel_by_Fuel_Type.report-meta.xml
+new file mode 100644
+index 0000000..6b5808b
+--- /dev/null
++++ b/force-app/main/default/reports/NZC_Reports/Fleet_Fuel_by_Fuel_Type.report-meta.xml
+@@ -0,0 +1,32 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<Report xmlns="http://soap.sforce.com/2006/04/metadata">
++    <columns>
++        <field>VehicleAssetEnrgyUse$Name</field>
++    </columns>
++    <columns>
++        <aggregateTypes>Sum</aggregateTypes>
++        <field>VehicleAssetEnrgyUse$FuelConsumption</field>
++    </columns>
++    <columns>
++        <field>VehicleAssetEnrgyUse$FuelConsumptionUnit</field>
++    </columns>
++    <columns>
++        <aggregateTypes>Sum</aggregateTypes>
++        <field>VehicleAssetEnrgyUse$Distance</field>
++    </columns>
++    <description>Vehicle asset energy use records grouped by fuel type, with total fuel consumption and distance. Fleet composition for Scope 1 mobile combustion. Fuel data lives on the energy use record, not on the vehicle emission source.</description>
++    <format>Summary</format>
++    <groupingsDown>
++        <dateGranularity>Day</dateGranularity>
++        <field>VehicleAssetEnrgyUse$FuelType</field>
++        <sortOrder>Asc</sortOrder>
++    </groupingsDown>
++    <name>Fleet Fuel by Fuel Type</name>
++    <reportType>Standalone_Vehicle_Energy_Uses</reportType>
++    <scope>organization</scope>
++    <showDetails>true</showDetails>
++    <timeFrameFilter>
++        <dateColumn>VehicleAssetEnrgyUse$CreatedDate</dateColumn>
++        <interval>INTERVAL_CUSTOM</interval>
++    </timeFrameFilter>
++</Report>
+diff --git a/force-app/main/default/reports/NZC_Reports/Fleet_by_Fuel_Type.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Fleet_by_Fuel_Type.report-meta.xml
+deleted file mode 100644
+index 294275a..0000000
+--- a/force-app/main/default/reports/NZC_Reports/Fleet_by_Fuel_Type.report-meta.xml
++++ /dev/null
+@@ -1,24 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+-    <columns>
+-        <field>VehicleAsset$Name</field>
+-    </columns>
+-    <columns>
+-        <field>VehicleAsset$VehicleType</field>
+-    </columns>
+-    <description>Vehicle asset inventory grouped by fuel type. Baseline view of the fleet composition driving Scope 1 mobile combustion emissions.</description>
+-    <format>Summary</format>
+-    <groupingsDown>
+-        <dateGranularity>Day</dateGranularity>
+-        <field>VehicleAsset$FuelType</field>
+-        <sortOrder>Asc</sortOrder>
+-    </groupingsDown>
+-    <name>Fleet by Fuel Type</name>
+-    <reportType>Standalone_Vehicle_Assets</reportType>
+-    <scope>organization</scope>
+-    <showDetails>true</showDetails>
+-    <timeFrameFilter>
+-        <dateColumn>VehicleAsset$CreatedDate</dateColumn>
+-        <interval>INTERVAL_CUSTOM</interval>
+-    </timeFrameFilter>
+-</Report>
+diff --git a/force-app/main/default/reports/NZC_Reports/Fuel_Consumption_by_Fuel_Type.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Fuel_Consumption_by_Fuel_Type.report-meta.xml
+index 604423b..a70ff4b 100644
+--- a/force-app/main/default/reports/NZC_Reports/Fuel_Consumption_by_Fuel_Type.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Fuel_Consumption_by_Fuel_Type.report-meta.xml
+@@ -1,26 +1,26 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <Report xmlns="http://soap.sforce.com/2006/04/metadata">
+     <columns>
+-        <field>StnryAsstCrbnFprint$Name</field>
++        <field>StnryAssetCrbnFtprnt$Name</field>
+     </columns>
+     <columns>
+-        <field>StnryAsstCrbnFprint$ReportingYear</field>
++        <field>StnryAssetCrbnFtprnt$ReportingYear</field>
+     </columns>
+     <columns>
+-        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$Name</field>
++        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$Name</field>
+     </columns>
+     <columns>
+         <aggregateTypes>Sum</aggregateTypes>
+-        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$FuelConsumption</field>
++        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$FuelConsumption</field>
+     </columns>
+     <columns>
+-        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$FuelConsumptionUnit</field>
++        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$FuelConsumptionUnit</field>
+     </columns>
+-    <description>Fossil fuel energy use records behind stationary asset carbon footprints, grouped by fuel type with total fuel consumption. Supports Scope 1 stationary combustion analysis.</description>
++    <description>Stationary asset energy use records behind carbon footprints, grouped by fuel type with total fuel consumption. Supports Scope 1 stationary combustion analysis. Note that consumption is summed across whatever units are present, so read the unit column before trusting a subtotal.</description>
+     <format>Summary</format>
+     <groupingsDown>
+         <dateGranularity>Day</dateGranularity>
+-        <field>StnryAsstCrbnFprint.StnryAsstFossilFuelEnrgyUses$FuelType</field>
++        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$FuelType</field>
+         <sortOrder>Asc</sortOrder>
+     </groupingsDown>
+     <name>Fuel Consumption by Fuel Type</name>
+@@ -28,7 +28,7 @@
+     <scope>organization</scope>
+     <showDetails>true</showDetails>
+     <timeFrameFilter>
+-        <dateColumn>StnryAsstCrbnFprint$CreatedDate</dateColumn>
++        <dateColumn>StnryAssetCrbnFtprnt$CreatedDate</dateColumn>
+         <interval>INTERVAL_CUSTOM</interval>
+     </timeFrameFilter>
+ </Report>
+diff --git a/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml b/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml
+index 6f7f999..15f886d 100644
+--- a/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml
++++ b/force-app/main/default/reports/NZC_Reports/Stationary_Assets_Missing_Footprints.report-meta.xml
+@@ -1,21 +1,21 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <Report xmlns="http://soap.sforce.com/2006/04/metadata">
+     <columns>
+-        <field>StnryAsstEnvrSrc$Name</field>
++        <field>StnryAssetEnvrSrc$Name</field>
+     </columns>
+     <columns>
+-        <field>StnryAsstEnvrSrc$BusinessRegion</field>
++        <field>StnryAssetEnvrSrc$BusinessRegion</field>
+     </columns>
+     <columns>
+-        <field>StnryAsstEnvrSrc$City</field>
++        <field>StnryAssetEnvrSrc$City</field>
+     </columns>
+     <columns>
+-        <field>StnryAsstEnvrSrc$Country</field>
++        <field>StnryAssetEnvrSrc$Country</field>
+     </columns>
+-    <description>Stationary Asset Environmental Sources that have no related Stationary Asset Carbon Footprint record, grouped by asset type (record type). Data-completeness check for the emissions inventory.</description>
++    <description>Stationary Asset Environmental Sources that have no related Stationary Asset Carbon Footprint record, grouped by stationary asset type. Data-completeness check for the emissions inventory.</description>
+     <filter>
+         <criteriaItems>
+-            <column>StnryAsstEnvrSrc.StnryAsstCrbnFprints$Id</column>
++            <column>StnryAssetEnvrSrc.StnryAssetCrbnFtprnts$Id</column>
+             <isUnlocked>true</isUnlocked>
+             <operator>equals</operator>
+             <value></value>
+@@ -24,7 +24,7 @@
+     <format>Summary</format>
+     <groupingsDown>
+         <dateGranularity>Day</dateGranularity>
+-        <field>StnryAsstEnvrSrc$RecordType</field>
++        <field>StnryAssetEnvrSrc$StationaryAssetType</field>
+         <sortOrder>Asc</sortOrder>
+     </groupingsDown>
+     <name>Stationary Assets Missing Footprints</name>
+@@ -32,7 +32,7 @@
+     <scope>organization</scope>
+     <showDetails>true</showDetails>
+     <timeFrameFilter>
+-        <dateColumn>StnryAsstEnvrSrc$CreatedDate</dateColumn>
++        <dateColumn>StnryAssetEnvrSrc$CreatedDate</dateColumn>
+         <interval>INTERVAL_CUSTOM</interval>
+     </timeFrameFilter>
+ </Report>
+diff --git a/manifest/package.xml b/manifest/package.xml
+index a0c2bad..fa2c058 100644
+--- a/manifest/package.xml
++++ b/manifest/package.xml
+@@ -3,18 +3,18 @@
+     <types>
+         <members>Stationary_Assets_with_without_Carbon_Footprints</members>
+         <members>Footprints_with_Energy_Uses</members>
+-        <members>Accounts_with_or_without_Supplier_Metrics</members>
++        <members>Accounts_with_or_without_Suppliers</members>
+         <members>Standalone_Carbon_Footprints</members>
+-        <members>Standalone_Vehicle_Assets</members>
++        <members>Standalone_Vehicle_Energy_Uses</members>
+         <name>ReportType</name>
+     </types>
+     <types>
+         <members>NZC_Reports</members>
+         <members>NZC_Reports/Stationary_Assets_Missing_Footprints</members>
+         <members>NZC_Reports/Fuel_Consumption_by_Fuel_Type</members>
+-        <members>NZC_Reports/Suppliers_Missing_Metrics</members>
++        <members>NZC_Reports/Accounts_Not_Registered_As_Suppliers</members>
+         <members>NZC_Reports/Emissions_by_Reporting_Year</members>
+-        <members>NZC_Reports/Fleet_by_Fuel_Type</members>
++        <members>NZC_Reports/Fleet_Fuel_by_Fuel_Type</members>
+         <name>Report</name>
+     </types>
+     <types>
+-- 
+2.43.0
+

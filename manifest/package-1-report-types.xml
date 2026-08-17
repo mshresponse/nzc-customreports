@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Report types only.
+
+     Optional. The full manifest deploys everything in one go; these three
+     narrower manifests exist so you can land one layer at a time when
+     iterating or diagnosing, since a failed all-or-nothing deploy tells you
+     nothing about which layer was at fault. -->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Footprints_with_Energy_Uses</members>
+        <members>Standalone_Carbon_Footprints</members>
+        <members>Standalone_Stationary_Assets</members>
+        <members>Standalone_Stationary_Energy_Uses</members>
+        <members>Standalone_Vehicle_Assets</members>
+        <members>Standalone_Vehicle_Carbon_Footprints</members>
+        <members>Standalone_Vehicle_Energy_Uses</members>
+        <members>Stationary_Assets_with_Carbon_Footprints</members>
+        <members>Stationary_Assets_with_Energy_Use</members>
+        <members>Stationary_Assets_with_without_Carbon_Footprints</members>
+        <members>Stationary_Assets_with_without_Energy_Use</members>
+        <members>Vehicle_Assets_with_Carbon_Footprints</members>
+        <members>Vehicle_Assets_with_Energy_Use</members>
+        <members>Vehicle_Assets_with_without_Carbon_Footprints</members>
+        <members>Vehicle_Assets_with_without_Energy_Use</members>
+        <members>Vehicle_Footprints_with_Energy_Uses</members>
+        <name>ReportType</name>
+    </types>
+    <version>67.0</version>
+</Package>

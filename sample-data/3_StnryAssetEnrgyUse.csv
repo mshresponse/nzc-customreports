@@ -1,0 +1,8 @@
+Name,StnryAssetEnvrSrc.Name,StnryAssetCrbnFtprnt.Name,FuelType,FuelConsumption,FuelConsumptionUnit
+EU Zürich Electricity 2025,Zürich Süd Rechenzentrum,FP Zürich 2025,Electricity,412000,kWh
+EU Zürich Natural Gas 2025,Zürich Süd Rechenzentrum,FP Zürich 2025,Natural Gas,8600,Therms
+EU São Paulo Electricity 2025,São Paulo Fábrica,FP São Paulo 2025,Electricity,238000,kWh
+EU São Paulo Diesel 2025,São Paulo Fábrica,FP São Paulo 2025,Diesel,14500,Liters
+EU Peña Verde Electricity 2025,Peña Verde Oficina,,Electricity,61000,kWh
+EU Ōsaka Electricity 2024,Ōsaka Seizōsho,FP Ōsaka 2024,Electricity,305000,kWh
+EU Ōsaka Propane 2024,Ōsaka Seizōsho,FP Ōsaka 2024,Propane,2200,Liters

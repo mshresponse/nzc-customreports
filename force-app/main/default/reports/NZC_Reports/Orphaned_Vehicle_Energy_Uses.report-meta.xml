@@ -33,7 +33,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Orphaned Vehicle Energy Uses</name>
-    <reportType>Standalone_Vehicle_Energy_Uses</reportType>
+    <reportType>Standalone_Vehicle_Energy_Uses__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

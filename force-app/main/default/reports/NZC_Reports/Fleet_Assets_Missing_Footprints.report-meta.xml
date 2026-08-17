@@ -22,7 +22,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Fleet Assets Missing Footprints</name>
-    <reportType>Vehicle_Assets_with_without_Carbon_Footprints</reportType>
+    <reportType>Vehicle_Assets_with_without_Carbon_Footprints__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

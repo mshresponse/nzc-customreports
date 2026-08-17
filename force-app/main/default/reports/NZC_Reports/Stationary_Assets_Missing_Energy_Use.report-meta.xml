@@ -28,7 +28,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Stationary Assets Missing Energy Use</name>
-    <reportType>Stationary_Assets_with_without_Energy_Use</reportType>
+    <reportType>Stationary_Assets_with_without_Energy_Use__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

@@ -15,7 +15,7 @@
     <description>Assets and their existing footprints, inner join so every row is a real record. Correct year and stage here rather than through a data load. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>
     <name>Footprint Data Entry</name>
-    <reportType>Stationary_Assets_with_Carbon_Footprints</reportType>
+    <reportType>Stationary_Assets_with_Carbon_Footprints__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

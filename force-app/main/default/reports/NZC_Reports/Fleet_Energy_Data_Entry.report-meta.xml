@@ -21,7 +21,7 @@
     <description>Vehicles and their fuel and mileage records, inner join so every row edits. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>
     <name>Fleet Energy Data Entry</name>
-    <reportType>Vehicle_Assets_with_Energy_Use</reportType>
+    <reportType>Vehicle_Assets_with_Energy_Use__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

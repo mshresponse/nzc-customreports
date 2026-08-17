@@ -26,7 +26,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Emissions by Reporting Year</name>
-    <reportType>Standalone_Carbon_Footprints</reportType>
+    <reportType>Standalone_Carbon_Footprints__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

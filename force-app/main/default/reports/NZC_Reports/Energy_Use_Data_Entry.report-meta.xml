@@ -18,7 +18,7 @@
     <description>Assets and their consumption records. Fuel type, amount and unit edit in place, which beats correcting a bad import through another CSV. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>
     <name>Energy Use Data Entry</name>
-    <reportType>Stationary_Assets_with_Energy_Use</reportType>
+    <reportType>Stationary_Assets_with_Energy_Use__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

@@ -22,7 +22,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Fleet Fuel by Fuel Type</name>
-    <reportType>Standalone_Vehicle_Energy_Uses</reportType>
+    <reportType>Standalone_Vehicle_Energy_Uses__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

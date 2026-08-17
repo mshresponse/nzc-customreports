@@ -44,6 +44,11 @@
     </sections>
     <sections>
         <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>
+        </columns>
+        <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
             <table>StnryAssetEnvrSrc.StnryAssetCrbnFtprnt</table>

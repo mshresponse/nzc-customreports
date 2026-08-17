@@ -18,7 +18,7 @@
     <description>Every stationary asset, nothing grouped and nothing null, so every column edits in place. Fixes site names that arrived as symbols from a non-UTF-8 CSV. Needs Setup > Reports and Dashboards Settings > Enable Inline Editing in Reports.</description>
     <format>Tabular</format>
     <name>Asset Names and Locations</name>
-    <reportType>Standalone_Stationary_Assets</reportType>
+    <reportType>Standalone_Stationary_Assets__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

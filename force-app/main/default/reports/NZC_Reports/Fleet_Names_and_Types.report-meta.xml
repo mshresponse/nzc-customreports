@@ -12,7 +12,7 @@
     <description>Every fleet emission source with its editable fields. Vehicle counterpart of Asset Names and Locations. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>
     <name>Fleet Names and Types</name>
-    <reportType>Standalone_Vehicle_Assets</reportType>
+    <reportType>Standalone_Vehicle_Assets__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

@@ -34,6 +34,11 @@
     </sections>
     <sections>
         <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>

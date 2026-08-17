@@ -22,7 +22,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Fleet Assets Missing Energy Use</name>
-    <reportType>Vehicle_Assets_with_without_Energy_Use</reportType>
+    <reportType>Vehicle_Assets_with_without_Energy_Use__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

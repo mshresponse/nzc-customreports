@@ -22,7 +22,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Orphaned Fleet Footprints</name>
-    <reportType>Standalone_Vehicle_Carbon_Footprints</reportType>
+    <reportType>Standalone_Vehicle_Carbon_Footprints__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

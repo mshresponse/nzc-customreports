@@ -32,7 +32,7 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Orphaned Stationary Energy Uses</name>
-    <reportType>Standalone_Stationary_Energy_Uses</reportType>
+    <reportType>Standalone_Stationary_Energy_Uses__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

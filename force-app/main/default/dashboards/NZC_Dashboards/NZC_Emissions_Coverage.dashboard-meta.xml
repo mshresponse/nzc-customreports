@@ -75,4 +75,5 @@
     <textColor>#000000</textColor>
     <title>NZC Emissions Coverage</title>
     <titleColor>#000000</titleColor>
+    <titleSize>18</titleSize>
 </Dashboard>

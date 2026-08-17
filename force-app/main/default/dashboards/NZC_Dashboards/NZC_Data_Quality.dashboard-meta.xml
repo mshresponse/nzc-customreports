@@ -132,4 +132,5 @@
     <textColor>#000000</textColor>
     <title>NZC Data Quality</title>
     <titleColor>#000000</titleColor>
+    <titleSize>18</titleSize>
 </Dashboard>

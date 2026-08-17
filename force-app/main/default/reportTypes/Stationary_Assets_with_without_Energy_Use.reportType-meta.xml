@@ -3,17 +3,15 @@
     <baseObject>StnryAssetEnvrSrc</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Stationary Asset Environmental Sources with or without related Stationary Asset Carbon Footprints (outer join). Use this report type to find assets that are missing carbon footprint records.</description>
+    <description>Stationary Asset Environmental Sources with or without related Stationary Asset Energy Use records (outer join). Use this report type to find assets with no consumption data recorded at all, which is an earlier gap than a missing footprint.</description>
     <join>
         <outerJoin>true</outerJoin>
-        <!-- VERIFY IN ORG: Salesforce does not publish child relationship names in the
-             object reference, so this is the conventional plural rather than a
-             documented value. If the deploy fails here, read the real name from a
-             describe (see README > Verifying relationship names) and replace it both
-             on this line and in the <table> paths below. -->
-        <relationship>CarbonFootprints</relationship>
+        <!-- Relationship name read from a describe against a Net Zero Cloud org, not
+             inferred: StnryAssetEnvrSrc exposes its StnryAssetEnrgyUse children as
+             StationaryAssetEnergyUses. -->
+        <relationship>StationaryAssetEnergyUses</relationship>
     </join>
-    <label>Stationary Assets with/without Carbon Footprints</label>
+    <label>Stationary Assets with/without Energy Use</label>
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
@@ -46,33 +44,23 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>ReportingYear</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <field>FuelType</field>
+            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>FootprintStage</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <field>FuelConsumption</field>
+            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <field>TotScope1EmissionsInTco2e</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
+            <field>FuelConsumptionUnit</field>
+            <table>StnryAssetEnvrSrc.StationaryAssetEnergyUses</table>
         </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>TotScope2LocBasedEmissions</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>TotScope2MktBasedEmissions</field>
-            <table>StnryAssetEnvrSrc.CarbonFootprints</table>
-        </columns>
-        <masterLabel>Stationary Asset Carbon Footprints</masterLabel>
+        <masterLabel>Stationary Asset Energy Uses</masterLabel>
     </sections>
 </ReportType>

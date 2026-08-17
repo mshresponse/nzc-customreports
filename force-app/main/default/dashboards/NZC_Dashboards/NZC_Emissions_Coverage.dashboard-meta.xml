@@ -4,7 +4,7 @@
     <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
     <backgroundStartColor>#FFFFFF</backgroundStartColor>
     <dashboardType>LoggedInUser</dashboardType>
-    <description>Net Zero Cloud emissions overview: data coverage gaps for stationary assets and suppliers, emissions trend by reporting year, and fleet composition.</description>
+    <description>Net Zero Cloud emissions overview: data coverage gaps for stationary assets, emissions trend by reporting year, and fleet fuel composition.</description>
     <isGridLayout>false</isGridLayout>
     <leftSection>
         <columnSize>Medium</columnSize>
@@ -38,12 +38,12 @@
             <expandOthers>true</expandOthers>
             <header>Data Coverage</header>
             <legendPosition>Bottom</legendPosition>
-            <report>NZC_Reports/Accounts_Not_Registered_As_Suppliers</report>
+            <report>NZC_Reports/Stationary_Assets_Missing_Energy_Use</report>
             <showPercentage>false</showPercentage>
             <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
-            <title>Accounts Not Registered as Suppliers by Industry</title>
+            <title>Assets Missing Energy Use by Asset Type</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -93,4 +93,5 @@
     </rightSection>
     <textColor>#000000</textColor>
     <title>NZC Emissions Coverage</title>
+    <titleColor>#000000</titleColor>
 </Dashboard>

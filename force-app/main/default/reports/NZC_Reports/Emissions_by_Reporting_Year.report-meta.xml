@@ -18,7 +18,7 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>StnryAssetCrbnFtprnt$TotScope2MktBasedEmissions</field>
     </columns>
-    <description>Stationary asset carbon footprints grouped by reporting year, with summed Scope 1 and both Scope 2 accounting methods. No combined total is shown on purpose: location-based and market-based Scope 2 are alternative measures of the same emissions, so adding them to Scope 1 would double count. Pick the Scope 2 basis your disclosure uses.</description>
+    <description>Stationary asset carbon footprints grouped by reporting year, with summed Scope 1 and both Scope 2 bases. No combined total: location- and market-based Scope 2 measure the same emissions, so adding both to Scope 1 double counts.</description>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

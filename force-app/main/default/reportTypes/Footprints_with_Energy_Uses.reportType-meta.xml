@@ -11,7 +11,7 @@
              documented value. If the deploy fails here, read the real name from a
              describe (see README > Verifying relationship names) and replace it both
              on this line and in the <table> paths below. -->
-        <relationship>StnryAssetEnrgyUses</relationship>
+        <relationship>StationaryAssetEnergyUses</relationship>
     </join>
     <label>Footprints with Energy Uses</label>
     <sections>
@@ -41,22 +41,22 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelType</field>
-            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumption</field>
-            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
-            <table>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses</table>
+            <table>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses</table>
         </columns>
         <masterLabel>Stationary Asset Energy Uses</masterLabel>
     </sections>

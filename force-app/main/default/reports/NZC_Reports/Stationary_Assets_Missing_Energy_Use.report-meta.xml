@@ -12,10 +12,10 @@
     <columns>
         <field>StnryAssetEnvrSrc$Country</field>
     </columns>
-    <description>Stationary Asset Environmental Sources that have no related Stationary Asset Carbon Footprint record, grouped by stationary asset type. Data-completeness check for the emissions inventory.</description>
+    <description>Stationary Asset Environmental Sources with no related Energy Use record, grouped by stationary asset type. These assets have no consumption data at all, which is an earlier gap than a missing carbon footprint.</description>
     <filter>
         <criteriaItems>
-            <column>StnryAssetEnvrSrc.CarbonFootprints$Id</column>
+            <column>StnryAssetEnvrSrc.StationaryAssetEnergyUses$Id</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>
@@ -27,8 +27,8 @@
         <field>StnryAssetEnvrSrc$StationaryAssetType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Stationary Assets Missing Footprints</name>
-    <reportType>Stationary_Assets_with_without_Carbon_Footprints</reportType>
+    <name>Stationary Assets Missing Energy Use</name>
+    <reportType>Stationary_Assets_with_without_Energy_Use</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>

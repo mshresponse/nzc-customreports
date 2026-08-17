@@ -7,20 +7,20 @@
         <field>StnryAssetCrbnFtprnt$ReportingYear</field>
     </columns>
     <columns>
-        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$Name</field>
+        <field>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses$Name</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$FuelConsumption</field>
+        <field>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses$FuelConsumption</field>
     </columns>
     <columns>
-        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$FuelConsumptionUnit</field>
+        <field>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses$FuelConsumptionUnit</field>
     </columns>
-    <description>Stationary asset energy use records behind carbon footprints, grouped by fuel type with total fuel consumption. Supports Scope 1 stationary combustion analysis. Note that consumption is summed across whatever units are present, so read the unit column before trusting a subtotal.</description>
+    <description>Stationary asset energy use records behind carbon footprints, grouped by fuel type with total fuel consumption. Supports Scope 1 stationary combustion analysis. Consumption sums across mixed units, so read the unit column.</description>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>StnryAssetCrbnFtprnt.StnryAssetEnrgyUses$FuelType</field>
+        <field>StnryAssetCrbnFtprnt.StationaryAssetEnergyUses$FuelType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Fuel Consumption by Fuel Type</name>

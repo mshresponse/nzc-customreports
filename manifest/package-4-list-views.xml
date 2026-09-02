@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Optional. Six list views, one per Net Zero Cloud object, with the same narrow
+     editable columns as the data-entry reports. Deployed separately from
+     package.xml because they are only worth having once the two Winter '27
+     list-view inline-editing settings are switched on (see README), and so a
+     column-name mismatch here can never block the core report deploy.
+     Nothing else in the package depends on these. -->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>StnryAssetEnvrSrc.NZC_Assets</members>
+        <members>StnryAssetCrbnFtprnt.NZC_Footprints</members>
+        <members>StnryAssetEnrgyUse.NZC_Energy_Uses</members>
+        <members>VehicleAssetEmssnSrc.NZC_Fleet_Assets</members>
+        <members>VehicleAssetCrbnFtprnt.NZC_Fleet_Footprints</members>
+        <members>VehicleAssetEnrgyUse.NZC_Fleet_Energy_Uses</members>
+        <name>ListView</name>
+    </types>
+    <version>67.0</version>
+</Package>

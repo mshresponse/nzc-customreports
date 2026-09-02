@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>StnryAssetCrbnFtprnt$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAssetCrbnFtprnt$ReportingYear</field>
+    </columns>
+    <columns>
+        <field>StnryAssetCrbnFtprnt$StnryAssetEnvrSrc</field>
+    </columns>
+    <description>How much of the stationary inventory is still draft or in progress versus complete. Anything not complete is a number that could still change under audit.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAssetCrbnFtprnt$FootprintStage</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Footprints by Stage</name>
+    <reportType>Standalone_Carbon_Footprints__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAssetCrbnFtprnt$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

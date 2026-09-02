@@ -37,10 +37,10 @@ jobs:
       - name: Convert source (validates SFDX project structure)
         run: sf project convert source --output-dir mdapi-out
 
-      - name: Verify manifest members exist in source
+      - name: Verify manifest members exist in source (all manifests)
         run: |
           python3 - <<'EOF'
-          import sys, xml.etree.ElementTree as ET
+          import glob, sys, xml.etree.ElementTree as ET
           from pathlib import Path
 
           NS = {'m': 'http://soap.sforce.com/2006/04/metadata'}
@@ -54,20 +54,30 @@ jobs:
               'Dashboard': '.dashboardFolder-meta.xml',
           }
 
-          tree = ET.parse('manifest/package.xml')
+          def candidates_for(kind, value):
+              if kind == 'ListView':
+                  obj, _, name = value.partition('.')
+                  return [Path('force-app/main/default/objects') / obj / 'listViews' / f'{name}.listView-meta.xml']
+              if kind not in SUFFIX:
+                  return None
+              base, suffix = SUFFIX[kind]
+              paths = [Path(base) / (value + suffix)]
+              if '/' not in value and kind in FOLDER_SUFFIX:
+                  paths.append(Path(base) / (value + FOLDER_SUFFIX[kind]))
+              return paths
+
           missing = []
-          for t in tree.getroot().findall('m:types', NS):
-              name = t.find('m:name', NS).text
-              if name not in SUFFIX:
-                  continue
-              base, suffix = SUFFIX[name]
-              for member in t.findall('m:members', NS):
-                  value = member.text
-                  candidates = [Path(base) / (value + suffix)]
-                  if '/' not in value and name in FOLDER_SUFFIX:
-                      candidates.append(Path(base) / (value + FOLDER_SUFFIX[name]))
-                  if not any(c.is_file() for c in candidates):
-                      missing.append(f'{name}: {value}')
+          for manifest in sorted(glob.glob('manifest/*.xml')):
+              tree = ET.parse(manifest)
+              for t in tree.getroot().findall('m:types', NS):
+                  kind = t.find('m:name', NS).text
+                  for member in t.findall('m:members', NS):
+                      paths = candidates_for(kind, member.text)
+                      if paths is None:
+                          continue
+                      if not any(p.is_file() for p in paths):
+                          missing.append(f'{manifest}: {kind} {member.text}')
+              print(f'checked {manifest}')
           if missing:
               print('Manifest members with no matching source file:')
               print('\n'.join(missing))

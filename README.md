@@ -3,9 +3,14 @@
 [![Validate metadata](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml/badge.svg)](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**16 custom report types, 16 reports and 2 dashboards for Salesforce Net Zero Cloud**
-(Agentforce Net Zero), using core Lightning reporting only. No CRM Analytics, no Einstein,
-no managed package, no custom objects or fields. API 67.0.
+**16 custom report types, 21 reports, 3 dashboards and 6 list views for Salesforce Net Zero
+Cloud** (now sold as Agentforce Net Zero), using core Lightning reporting only. No CRM
+Analytics, no Einstein, no managed package, no custom objects or fields. API 67.0.
+
+On the name: the product launched as Sustainability Cloud, became Net Zero Cloud in 2022 and
+Agentforce Net Zero in 2025. Everything here is labelled `NZC:` because that is what the
+object API names, the Setup menu and the developer guide still say — and because a report
+type's API name can't be renamed in place, only deleted and recreated in every org that has it.
 
 The reports are laid out for **inline editing**, so a sustainability team can correct data
 in the report instead of raising a ticket for a CSV re-upload.
@@ -77,11 +82,24 @@ nothing explains.
 **3 summaries** — Emissions by Reporting Year, Fuel Consumption by Fuel Type, Fleet Fuel by
 Fuel Type.
 
+**5 audit reports** — the part of the CRM Analytics audit dashboard you can rebuild in core
+Lightning. Emissions by Asset and Year is a matrix, one site per row and one year per
+column, so a figure that jumped or collapsed between years stands out on a single screen.
+Footprints by Stage and Footprints by Year and Stage (stationary and fleet) show how much of
+each disclosure year is still draft or in progress — a number that could still change under
+audit.
+
 **16 report types** covering both stationary and fleet, in three shapes each — `with`
 (inner join), `with/without` (outer join), and standalone. Build your own reports on any of
 them; that's rather the point of shipping the source.
 
-**2 dashboards** — NZC Data Quality and NZC Emissions Coverage.
+**3 dashboards** — NZC Audit, NZC Data Quality and NZC Emissions Coverage. NZC Audit has a
+**Reporting Year** filter across the top, so an admin can audit one disclosure year at a
+time; the year list is 2023–2026 and is a one-minute edit in the dashboard builder. Every
+component opens its report, and every report is editable inline where the record exists.
+
+**6 list views**, optional, for Winter '27 bulk editing — see
+[List views for bulk edits](#list-views-for-bulk-edits-winter-27).
 
 ---
 
@@ -121,10 +139,37 @@ The limits shaped the report layouts, so they're worth knowing before you promis
 | Grouping fields are not editable | Group by something you don't need to fix. |
 | A lookup that's null across the row can't be edited | You can't create a missing record from a report. |
 | FLS and validation rules still apply | A failing edit shows the rule's own message. |
+| The field must be on the record's page layout, on the default tab | A column that's greyed out in the report is usually a field that's missing from the layout or sits on a second tab. Winter '27 lifts this for **list views only** (see below); reports still need the field on the layout. |
 
 That fourth row is why the **Missing** reports are upload worklists, not fix-it-here
 reports. If an asset has no footprint record, there's no footprint row to edit. Inline
 editing fixes what exists; it doesn't conjure records.
+
+---
+
+<a name="list-views-for-bulk-edits-winter-27"></a>
+## List views for bulk edits (Winter '27)
+
+Winter '27 adds two **User Interface** settings (Setup → User Interface), both off by
+default:
+
+- **Make inline edits in list views with multiple record types** — a list mixing record
+  types used to turn editing off entirely.
+- **Remove list view inline edit dependencies on page layout** — edit any field you have
+  edit access to, on the layout or not.
+
+With both on, a list view becomes the better bulk-edit surface: edit several rows, save
+once, no refresh after every cell. The package ships one list view per Net Zero Cloud
+object with the same narrow columns as the data-entry reports. They're in their own
+manifest so they never gate the core deploy:
+
+```bash
+sf project deploy start --manifest manifest/package-4-list-views.xml --target-org <alias> --dry-run
+```
+
+All six validate against a licensed Net Zero Cloud org. They're kept separate anyway, because
+they only earn their place once those two settings are on, and because list view column
+names are their own name space (see [`docs/building-your-own.md`](docs/building-your-own.md)).
 
 ---
 
@@ -176,7 +221,7 @@ fuel, consumption and distance all live on `VehicleAssetEnrgyUse`.
 ## Continuous integration
 
 `.github/workflows/validate.yml` checks XML well-formedness, that `sf project convert
-source` succeeds, and that manifest members have matching files.
+source` succeeds, and that every member in every `manifest/*.xml` has a matching source file.
 
 **None of that can see a wrong object or field name.** A reference to an object that does
 not exist produces well-formed XML that converts cleanly and matches the manifest. This

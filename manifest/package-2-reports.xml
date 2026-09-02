@@ -6,14 +6,19 @@
     <types>
         <members>NZC_Reports</members>
         <members>NZC_Reports/Asset_Names_and_Locations</members>
+        <members>NZC_Reports/Emissions_by_Asset_and_Year</members>
         <members>NZC_Reports/Emissions_by_Reporting_Year</members>
         <members>NZC_Reports/Energy_Use_Data_Entry</members>
         <members>NZC_Reports/Fleet_Assets_Missing_Energy_Use</members>
         <members>NZC_Reports/Fleet_Assets_Missing_Footprints</members>
         <members>NZC_Reports/Fleet_Energy_Data_Entry</members>
+        <members>NZC_Reports/Fleet_Footprints_by_Stage</members>
+        <members>NZC_Reports/Fleet_Footprints_by_Year_and_Stage</members>
         <members>NZC_Reports/Fleet_Fuel_by_Fuel_Type</members>
         <members>NZC_Reports/Fleet_Names_and_Types</members>
         <members>NZC_Reports/Footprint_Data_Entry</members>
+        <members>NZC_Reports/Footprints_by_Stage</members>
+        <members>NZC_Reports/Footprints_by_Year_and_Stage</members>
         <members>NZC_Reports/Fuel_Consumption_by_Fuel_Type</members>
         <members>NZC_Reports/Orphaned_Carbon_Footprints</members>
         <members>NZC_Reports/Orphaned_Fleet_Footprints</members>

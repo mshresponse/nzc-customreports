@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>VehicleAssetCrbnFtprnt$Name</field>
+    </columns>
+    <columns>
+        <field>VehicleAssetCrbnFtprnt$VehicleAssetEmssnSrc</field>
+    </columns>
+    <description>Fleet equivalent of Footprints by Year and Stage: reporting years down, stage across, record count in each cell.</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>VehicleAssetCrbnFtprnt$FootprintStage</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VehicleAssetCrbnFtprnt$ReportingYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Fleet Footprints by Year and Stage</name>
+    <reportType>Standalone_Vehicle_Carbon_Footprints__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>VehicleAssetCrbnFtprnt$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

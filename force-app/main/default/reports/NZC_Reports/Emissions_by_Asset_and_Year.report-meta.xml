@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAssetCrbnFtprnt$TotScope1EmissionsInTco2e</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAssetCrbnFtprnt$TotScope2LocBasedEmissions</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>StnryAssetCrbnFtprnt$TotScope2MktBasedEmissions</field>
+    </columns>
+    <description>One row per stationary asset, one column per reporting year, emissions summed in each cell. Read across a row to spot a site whose number jumped or collapsed between years: the CRM Analytics audit check, without the licence.</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAssetCrbnFtprnt$ReportingYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAssetCrbnFtprnt$StnryAssetEnvrSrc</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Emissions by Asset and Year</name>
+    <reportType>Standalone_Carbon_Footprints__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAssetCrbnFtprnt$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

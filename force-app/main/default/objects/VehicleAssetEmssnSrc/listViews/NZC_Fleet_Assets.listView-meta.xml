@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NZC_Fleet_Assets</fullName>
+    <columns>Name</columns>
+    <columns>VehicleType</columns>
+    <columns>FleetVehicleType</columns>
+    <filterScope>Everything</filterScope>
+    <label>NZC: Fleet Assets</label>
+</ListView>

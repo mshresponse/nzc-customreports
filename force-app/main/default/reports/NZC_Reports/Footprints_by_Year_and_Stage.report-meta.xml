@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>StnryAssetCrbnFtprnt$Name</field>
+    </columns>
+    <columns>
+        <field>StnryAssetCrbnFtprnt$StnryAssetEnvrSrc</field>
+    </columns>
+    <description>Reporting years down, footprint stage across, record count in each cell. A prior year with anything still outside the complete column is a disclosure that is not yet closed.</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAssetCrbnFtprnt$FootprintStage</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAssetCrbnFtprnt$ReportingYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Footprints by Year and Stage</name>
+    <reportType>Standalone_Carbon_Footprints__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>StnryAssetCrbnFtprnt$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

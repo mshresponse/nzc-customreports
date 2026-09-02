@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NZC_Fleet_Footprints</fullName>
+    <columns>NAME</columns>
+    <columns>ReportingYear</columns>
+    <columns>FootprintStage</columns>
+    <filterScope>Everything</filterScope>
+    <label>NZC: Fleet Footprints</label>
+</ListView>

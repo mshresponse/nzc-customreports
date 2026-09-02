@@ -101,3 +101,74 @@ report type is not a refinement here but the only way in.
 reports, dashboards, documents and email templates all require named folders. This wastes
 an afternoon roughly once per career.
 
+## Matrix reports and dashboard filters
+
+The audit dashboard uses two constructs the rest of the package doesn't.
+
+**A matrix report** is a summary report with a second grouping axis. `groupingsDown` is the
+row grouping, `groupingsAcross` the column grouping, and each `<columns>` entry with an
+`aggregateTypes` becomes a cell value. Grouping on a lookup column (`…$StnryAssetEnvrSrc`)
+groups by the parent's name, which is what you want for one-row-per-asset.
+
+**A dashboard filter** is declared once at the top of the dashboard:
+
+```xml
+<dashboardFilters>
+    <dashboardFilterOptions>
+        <operator>equals</operator>
+        <values>2025</values>
+    </dashboardFilterOptions>
+    <name>Reporting Year</name>
+</dashboardFilters>
+```
+
+and then each component names *its own* column for that filter, so components on different
+report types can share one picker:
+
+```xml
+<dashboardFilterColumns>
+    <column>VehicleAssetCrbnFtprnt$ReportingYear</column>
+</dashboardFilterColumns>
+```
+
+The options are literal values, so the year list is hard-coded. Editing it in the dashboard
+builder is faster than editing the XML.
+
+## Year-over-year change: build it in the UI
+
+The one audit signal deliberately not shipped as metadata is a **% change from the previous
+year** column. It's a custom summary formula using `PREVGROUPVAL`, and its metadata form
+references columns and groupings by internal keys that can only be confirmed by retrieving a
+formula Salesforce itself emitted. Rather than ship a guess that would fail the all-or-nothing
+deploy for everyone, add it in the report builder — it takes a minute:
+
+1. Open **Emissions by Reporting Year** → Edit.
+2. Columns → **Add Summary Formula**. Name it `Scope 1 YoY change`, format Percent.
+3. Formula (grouping level: Reporting Year):
+
+   ```
+   IF(ISBLANK(PREVGROUPVAL(StnryAssetCrbnFtprnt.TotScope1EmissionsInTco2e:SUM, StnryAssetCrbnFtprnt.ReportingYear)), 0,
+     (StnryAssetCrbnFtprnt.TotScope1EmissionsInTco2e:SUM
+      - PREVGROUPVAL(StnryAssetCrbnFtprnt.TotScope1EmissionsInTco2e:SUM, StnryAssetCrbnFtprnt.ReportingYear))
+     / PREVGROUPVAL(StnryAssetCrbnFtprnt.TotScope1EmissionsInTco2e:SUM, StnryAssetCrbnFtprnt.ReportingYear))
+   ```
+
+   The builder's insert-field picker will substitute the exact keys your org uses if these
+   differ.
+
+4. Save, then retrieve the report and commit the `<aggregates>` block Salesforce emitted.
+
+If you do that, please send it back as a pull request — it's the one thing this repo could
+not verify without an org.
+
+## List views are a fourth name space
+
+List view `<columns>` entries are neither describe names nor report keys. Custom fields
+use their API name; the record name column is `NAME`; and on the older core CRM objects
+standard fields take legacy forms like `ACCOUNT.NAME`. The six list views in this package
+use `NAME` plus plain field API names, which is the form the platform emits for objects
+introduced after the classic CRM set — but it was written from the pattern, not retrieved.
+That is exactly why they live in `manifest/package-4-list-views.xml` and not in
+`package.xml`. If a column is rejected: build one list view in the UI, retrieve it, read
+what came back, fix all six.
+

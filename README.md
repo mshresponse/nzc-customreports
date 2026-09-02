@@ -167,11 +167,9 @@ manifest so they never gate the core deploy:
 sf project deploy start --manifest manifest/package-4-list-views.xml --target-org <alias> --dry-run
 ```
 
-Honest caveat: list view column names are their own name space (see
-[`docs/building-your-own.md`](docs/building-your-own.md)), and these six were written from
-the pattern, not retrieved from an org. If the dry run rejects a column, build one list view
-in the UI, retrieve it, and copy what Salesforce emitted — ten seconds, and it settles the
-format for all six.
+All six validate against a licensed Net Zero Cloud org. They're kept separate anyway, because
+they only earn their place once those two settings are on, and because list view column
+names are their own name space (see [`docs/building-your-own.md`](docs/building-your-own.md)).
 
 ---
 

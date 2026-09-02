@@ -163,12 +163,14 @@ not verify without an org.
 
 ## List views are a fourth name space
 
-List view `<columns>` entries are neither describe names nor report keys. Custom fields
-use their API name; the record name column is `NAME`; and on the older core CRM objects
-standard fields take legacy forms like `ACCOUNT.NAME`. The six list views in this package
-use `NAME` plus plain field API names, which is the form the platform emits for objects
-introduced after the classic CRM set — but it was written from the pattern, not retrieved.
-That is exactly why they live in `manifest/package-4-list-views.xml` and not in
-`package.xml`. If a column is rejected: build one list view in the UI, retrieve it, read
-what came back, fix all six.
+List view `<columns>` entries are neither describe names nor report keys, and the form
+depends on the object's vintage. On the classic CRM objects, standard fields take legacy
+keys like `ACCOUNT.NAME`, and on custom objects the record name column is `NAME`. On the
+Net Zero Cloud objects, **neither applies**: a deploy of `<columns>NAME</columns>` fails with
+`Could not resolve list view column: NAME`, and the column that works is the plain field API
+name, `Name` — the same form as every other field (`ReportingYear`, `FootprintStage`,
+`FuelConsumption`). All six list views in this package deploy against a licensed org on
+that pattern. The lesson is the same one as the report type joins: the platform's newer
+objects use plain API names in places where its older objects use legacy keys, and only a
+deploy tells you which you've got.
 

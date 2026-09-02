@@ -12,7 +12,7 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>StnryAssetCrbnFtprnt$TotScope2MktBasedEmissions</field>
     </columns>
-    <description>One row per stationary asset, one column per reporting year, emissions summed in each cell. Read across a row to spot a site whose number jumped or collapsed between years; that is the anomaly check the CRM Analytics audit dashboard does, without the licence.</description>
+    <description>One row per stationary asset, one column per reporting year, emissions summed in each cell. Read across a row to spot a site whose number jumped or collapsed between years: the CRM Analytics audit check, without the licence.</description>
     <format>Matrix</format>
     <groupingsAcross>
         <dateGranularity>Day</dateGranularity>

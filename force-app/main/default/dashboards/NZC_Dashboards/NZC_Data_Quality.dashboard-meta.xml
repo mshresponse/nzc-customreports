@@ -128,6 +128,44 @@
             <title>Orphaned Energy Uses by Fuel</title>
             <useReportChart>false</useReportChart>
         </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <header>Orphans</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>NZC_Reports/Orphaned_Fleet_Footprints</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Orphaned Fleet Footprints</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <header>Orphans</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>NZC_Reports/Orphaned_Vehicle_Energy_Uses</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Orphaned Vehicle Energy Uses</title>
+            <useReportChart>false</useReportChart>
+        </components>
     </rightSection>
     <textColor>#000000</textColor>
     <title>NZC Data Quality</title>

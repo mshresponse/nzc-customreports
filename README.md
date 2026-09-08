@@ -209,6 +209,38 @@ produces a report that runs cleanly and reports the wrong number.
 **Fleet fuel comes from the energy use record.** `VehicleAssetEmssnSrc` has no fuel field —
 fuel, consumption and distance all live on `VehicleAssetEnrgyUse`.
 
+## Scope: the reports read the whole object, deliberately
+
+Fifteen of the 21 reports carry no filter, and all 21 leave the standard date filter
+unbounded. That is a decision, not an oversight, and it is worth understanding before you
+deploy into an org with years of history.
+
+**Why unbounded.** The date column available on these objects is `CreatedDate` — when
+somebody typed the record in. The business axis is `ReportingYear`, and the two do not
+agree: a footprint *for* 2024 is routinely entered in 2026, during the disclosure cycle.
+Bounding on `CreatedDate` would therefore drop records that belong in the answer. It would
+make the reports faster and wrong, which is the worse of the two failures for anything
+feeding a disclosure.
+
+**What it costs.** Each of these reports reads every record in scope on every run. On a
+dev org or a first year of data that is invisible. On an org with several years of
+footprint and energy-use records it is the first thing that will get slow, and the
+dashboard-fed reports pay it on every refresh.
+
+**What to do about it, when you get there.** Add a `ReportingYear` filter — it is on every
+report type here, and it is the axis the reports already group by. Which years to keep is
+a question about your disclosure obligations rather than about Salesforce, which is why
+this repository does not choose for you.
+
+Two related shapes, also deliberate:
+
+- **The six tabular reports have no row limit.** They are worklists and lookup lists —
+  *Footprint Data Entry*, *Asset Names and Locations* — meant to be worked all the way
+  through. A row limit on a worklist hides the rows somebody still has to fill in.
+- **The summary reports show details.** The same reports are read two ways: as a chart on a
+  dashboard, and as a list of the specific assets to go and fix. Turning details off would
+  make the chart marginally cheaper and the worklist useless.
+
 ## Also in this repo
 
 - [`sample-data/`](sample-data/) — six UTF-8 CSVs with deliberate gaps and orphans, so the

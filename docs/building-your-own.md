@@ -174,3 +174,55 @@ that pattern. The lesson is the same one as the report type joins: the platform'
 objects use plain API names in places where its older objects use legacy keys, and only a
 deploy tells you which you've got.
 
+
+## Retrieving overwrites what the source deliberately leaves out
+
+`sf project retrieve start` does not give you back what you deployed. It gives you the
+org's rendering of it, and for dashboards that includes two elements this package
+deliberately does not carry:
+
+```xml
+<owner>someone@example.com</owner>
+<runningUser>someone@example.com</runningUser>
+```
+
+Salesforce stamps both on every dashboard, whatever the source said, and it does so even
+for a `LoggedInUser` dashboard where the running user is not used to decide what anyone
+sees. Commit them and you have broken the package for everybody else: that username does
+not exist in their org, so the deploy fails on a user it cannot resolve. You have also put
+your own email address into a public repository, twice per dashboard.
+
+The committed dashboards here carry `<dashboardType>LoggedInUser</dashboardType>` and no
+owner or running user. That omission is the portable form, and it is load-bearing.
+
+**So: never commit a dashboard retrieve without checking.**
+
+```bash
+sf project retrieve start --manifest manifest/package.xml --target-org <alias>
+grep -rn "owner\|runningUser" force-app/main/default/dashboards/
+```
+
+Anything printed has to come out before you commit. If the rest of the retrieve is
+cosmetic — and it usually is — the honest move is to throw the whole thing away and keep
+the hand-authored source:
+
+```bash
+git checkout -- force-app
+```
+
+### What else comes back, and why none of it is worth keeping
+
+The same round trip adds a few dozen lines of defaults across the reports:
+`<params><name>co</name><value>1</value></params>`, `<showGrandTotal>`, `<showSubTotals>`.
+They change nothing — a deploy from the source without them succeeds — and they make a
+report definition longer without making its intent clearer.
+
+The dashboards also come back with two properties *rewritten* rather than added:
+`<expandOthers>` flips to `false` and `<showTotal>` is dropped altogether. Neither applies
+to a Bar component; Salesforce is normalising settings that were never doing anything.
+That is worth knowing when you write a new component — those two do nothing on a bar chart
+— but it is not worth taking a two-hundred-line reformat to find out.
+
+The general rule, and it is the same one as everywhere else in this document: a deploy
+tells you whether the source is *sufficient*. A retrieve tells you what the org chose to
+store, which is a different question, and a noisier answer.

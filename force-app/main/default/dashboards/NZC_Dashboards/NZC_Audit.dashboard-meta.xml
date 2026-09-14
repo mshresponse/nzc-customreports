@@ -38,12 +38,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Anomalies</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Emissions_by_Asset_and_Year</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>false</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>Scope 1 by Asset and Year (tCO2e)</title>
@@ -60,12 +58,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Anomalies</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Orphaned_Carbon_Footprints</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>Orphaned Footprints by Year</title>
@@ -107,12 +103,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Completeness</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Footprints_by_Year_and_Stage</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>Stationary Footprints by Year and Stage</title>
@@ -154,12 +148,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Fleet completeness</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Fleet_Footprints_by_Year_and_Stage</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>Fleet Footprints by Year and Stage</title>

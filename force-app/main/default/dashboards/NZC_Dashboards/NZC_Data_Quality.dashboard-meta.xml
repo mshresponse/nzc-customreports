@@ -16,12 +16,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Stationary gaps</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Stationary_Assets_Missing_Footprints</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Assets Missing Footprints</title>
@@ -35,12 +33,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Stationary gaps</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Stationary_Assets_Missing_Energy_Use</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Assets Missing Energy Use</title>
@@ -57,12 +53,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Fleet gaps</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Fleet_Assets_Missing_Footprints</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Fleet Missing Footprints</title>
@@ -76,12 +70,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Fleet gaps</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Fleet_Assets_Missing_Energy_Use</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Fleet Missing Energy Use</title>
@@ -98,12 +90,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Orphans</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Orphaned_Carbon_Footprints</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Orphaned Footprints by Year</title>
@@ -117,12 +107,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Orphans</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Orphaned_Stationary_Energy_Uses</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Orphaned Energy Uses by Fuel</title>
@@ -136,12 +124,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Orphans</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Orphaned_Fleet_Footprints</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Orphaned Fleet Footprints</title>
@@ -155,12 +141,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Orphans</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Orphaned_Vehicle_Energy_Uses</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Orphaned Vehicle Energy Uses</title>

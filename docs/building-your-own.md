@@ -217,11 +217,14 @@ The same round trip adds a few dozen lines of defaults across the reports:
 They change nothing — a deploy from the source without them succeeds — and they make a
 report definition longer without making its intent clearer.
 
-The dashboards also come back with two properties *rewritten* rather than added:
-`<expandOthers>` flips to `false` and `<showTotal>` is dropped altogether. Neither applies
-to a Bar component; Salesforce is normalising settings that were never doing anything.
-That is worth knowing when you write a new component — those two do nothing on a bar chart
-— but it is not worth taking a two-hundred-line reformat to find out.
+The dashboards used to come back with two properties *rewritten* rather than added:
+`<expandOthers>` flipped to `false` and `<showTotal>` was dropped altogether. Neither
+applies to a bar or column component; Salesforce was normalising settings that were never
+doing anything. The committed dashboards no longer carry either element on Bar, Column or
+ColumnStacked components. They stay on the three Donut components, where they mean
+something: `<showTotal>` puts the total in the centre of the ring, and `<expandOthers>`
+decides whether the small slices grouped as "Others" can be opened. When you write a new
+component, add those two only for a donut or pie.
 
 The general rule, and it is the same one as everywhere else in this document: a deploy
 tells you whether the source is *sufficient*. A retrieve tells you what the org chose to

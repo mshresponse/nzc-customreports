@@ -16,12 +16,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Emissions trend</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Emissions_by_Reporting_Year</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>Scope 1 by Reporting Year (tCO2e)</title>
@@ -38,12 +36,10 @@
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
-            <expandOthers>true</expandOthers>
             <header>Fuel mix</header>
             <legendPosition>Bottom</legendPosition>
             <report>NZC_Reports/Fuel_Consumption_by_Fuel_Type</report>
             <showPercentage>false</showPercentage>
-            <showTotal>false</showTotal>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
             <title>Stationary Fuel by Type</title>

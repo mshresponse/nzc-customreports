@@ -1,6 +1,6 @@
 # Sample data
 
-Six CSVs that populate a Net Zero Cloud **Base** trial org — the unconfigured one, which
+CSVs that populate a Net Zero Cloud **Base** trial org — the unconfigured one, which
 ships licences and permissions but no records. Without data every report in this package
 deploys cleanly and returns nothing, which looks like a failed install and isn't.
 
@@ -10,37 +10,110 @@ Oficina`, `Malmö Kontor`, `Ōsaka Seizōsho`). That is not decoration — it is
 your loading path. If names arrive in the org with question marks or mojibake, your
 spreadsheet or loader wrote the wrong encoding. See [`../docs/encoding-evidence/`](../docs/encoding-evidence/).
 
-## Load them in order
+## Load everything in one go
 
-The order matters: children reference parents by name, so a parent that doesn't exist yet
-produces a row that fails to relate.
+From the repository root, after deploying the package:
+
+```bash
+sf org assign permset --name NetZeroAdmin --target-org <alias>
+```
+
+```bash
+sf project deploy start --metadata-dir sample-data/org-setup --target-org <alias>
+```
+
+```bash
+sf data import tree --plan sample-data/tree/plan.json --target-org <alias>
+```
+
+The first command gives you access to the Net Zero Cloud fields; skip it if you already
+have the permission set. The second is the Net Zero Cloud setup an unconfigured org is
+missing (next section). The third loads all 31 records, parents first, with every lookup
+resolved — no Ids to copy between files. Run it once: run it twice and you get two of
+everything.
+
+Then check every report returns what it should:
+
+```bash
+python3 scripts/check-reports.py --target-org <alias>
+```
+
+## What an unconfigured org needs first
+
+A Base trial org or a fresh scratch org refuses every record until three things exist. Each
+error names the cause badly, so here they are with the message you'd see:
+
+| Missing | Error | Fixed by |
+|---|---|---|
+| Record types on the two source objects, mapped to Net Zero Cloud's asset types | `Configure the record types using the setup entities before you create this record.` | `org-setup/`: record types `Commercial Building` and `Data Center` on stationary assets, `Fleet Vehicle` on vehicles, and the `StnryAssetEnvSrcCnfg` / `VehicleAssetEmssnSrcCnfg` records that map them |
+| A default record type for whoever loads the data | The same message, now pointing at `RecordTypeId` | `org-setup/profiles/Admin.profile` makes them visible and default for System Administrator |
+| An emission factor set covering the fuel, for vehicle energy use | `Select an emission factor that contains factors to calculate the emissions.` | `0a_OtherEmssnFctrSet.csv` and `0b_OtherEmssnFctrSetItem.csv` — one illustrative diesel factor. Not a real factor; replace it before reporting anything |
+
+`org-setup/` is plain Metadata API format, kept outside `force-app/` so it never ships with
+the reports. In an org that already has Net Zero Cloud record types configured — a Learning
+trial org, or your own — skip it; the data still loads.
+
+## What the data looks like
 
 | # | File | Object | Depends on |
 |---|---|---|---|
+| 0a | `0a_OtherEmssnFctrSet.csv` | Other Emission Factor Set | — |
+| 0b | `0b_OtherEmssnFctrSetItem.csv` | Other Emission Factor Set Item | 0a |
 | 1 | `1_StnryAssetEnvrSrc.csv` | Stationary Asset Environmental Source | — |
 | 2 | `2_StnryAssetCrbnFtprnt.csv` | Stationary Asset Carbon Footprint | 1 |
 | 3 | `3_StnryAssetEnrgyUse.csv` | Stationary Asset Energy Use | 1, 2 |
 | 4 | `4_VehicleAssetEmssnSrc.csv` | Vehicle Asset Emission Source | — |
 | 5 | `5_VehicleAssetCrbnFtprnt.csv` | Vehicle Asset Carbon Footprint | 4 |
-| 6 | `6_VehicleAssetEnrgyUse.csv` | Vehicle Asset Energy Use | 4, 5 |
+| 6 | `6_VehicleAssetEnrgyUse.csv` | Vehicle Asset Energy Use | 0a, 4, 5 |
+
+The CSVs are the source. `tree/` is generated from them by
+[`scripts/build-sample-tree.py`](../scripts/build-sample-tree.py) — rerun it after editing a
+CSV; CI fails if you forget.
+
+Values are API names, not labels — `NaturalGas`, not `Natural Gas`; `LITERS` for vehicle
+fuel, `Liters` for stationary — because several of these picklists are restricted and an
+API load rejects the label.
+
+**Reporting years are 2023 and 2024**, because that is where Net Zero Cloud's
+`ReportingYear` picklist ends in a fresh org. It is a restricted picklist: before anyone
+enters 2025 data, an admin adds the year in Setup → Object Manager → Stationary Asset
+Carbon Footprint (and Vehicle Asset Carbon Footprint) → Reporting Year.
+
+**The Scope 1 and 2 totals stay blank.** Net Zero Cloud calculates them from energy use and
+emission factors in its own processing; loading records doesn't run it. The emissions
+reports and charts therefore show zero against sample data, and real figures against real
+data.
 
 ## About the `Parent.Name` columns
 
-Files 2, 3, 5 and 6 reference their parents by **name**, e.g. `StnryAssetEnvrSrc.Name`.
-Whether that works depends on your loader:
+Files 2, 3, 5 and 6 (and 0b) reference their parents by **name**, e.g.
+`StnryAssetEnvrSrc.Name`. The tree import resolves those for you. If you load the CSVs with
+**Data Loader** or the **Data Import Wizard** instead, they want the parent **record Id**:
+load the parent file, export the Ids, and substitute them. The name column is there so the
+relationships are readable and so you can see what should link to what.
 
-- **Data Loader / Data Import Wizard** generally want the parent **record Id**, not the
-  name. Load the parent file, export the Ids, and substitute them.
-- Some loaders resolve a parent by an **External Id** field, which `Name` is not by default.
-
-If your loader rejects the name columns, load file 1 (and 4), grab the Ids, and map them
-into the child files. The name column is there so the relationships are readable and so
-you can see what should link to what — treat it as documentation of intent as much as
-loadable data.
-
-## Deliberate gaps
+## Deliberate gaps, and what each report should return
 
 The data is not uniformly complete, on purpose. Some assets have a footprint and no energy
-use; some have neither; some footprints have no parent asset at all. That is what makes
-the **Missing** and **Orphaned** reports return rows instead of empty results — you can see
-them working rather than taking their word for it.
+use; some have neither; some footprints have no parent asset at all; some energy use has no
+footprint. That is what makes the **Missing** and **Orphaned** reports return rows instead
+of empty results — you can see them working rather than taking their word for it:
+
+| Report | Should return |
+|---|---|
+| Stationary Assets Missing Footprints | Malmö Kontor, Peña Verde Oficina |
+| Stationary Assets Missing Energy Use | Kraków Magazyn, Malmö Kontor |
+| Fleet Assets Missing Footprints | Camión Peñarol 03, Kleinwagen Škoda 04 |
+| Fleet Assets Missing Energy Use | Kleinwagen Škoda 04 |
+| Orphaned Carbon Footprints | FP Orphan A 2024, FP Orphan B 2023 |
+| Orphaned Fleet Footprints | VFP Fleet Orphan 2024 |
+| Orphaned Stationary Energy Uses | EU Peña Verde Electricity 2024 |
+| Orphaned Vehicle Energy Uses | VEU Peñarol Diesel 2024 |
+
+If a Missing report lists *every* asset, the cross filter isn't in your copy — redeploy
+from `main`.
+
+There is no energy use with neither an asset nor a footprint. Net Zero Cloud won't create
+one (`insufficient access rights on cross-reference id`) and won't delete an asset that
+still has energy use, so the only orphan an energy use can become is one that has lost its
+footprint.

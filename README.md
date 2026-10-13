@@ -61,11 +61,16 @@ script.
 |---|---|
 | Asset Names and Locations | Site names, city, country, asset type |
 | Fleet Names and Types | Vehicle names and types |
-| Footprint Data Entry | Reporting year, stage, Scope 1 and Scope 2 figures |
+| Footprint Data Entry | Reporting year, stage |
 | Energy Use Data Entry | Fuel type, consumption, unit |
 | Fleet Energy Data Entry | Fuel type, consumption, distance |
 
-**4 reports that find missing records** — outer joins, grouped by asset type:
+The Scope 1 and Scope 2 totals on a footprint are not on that list, and can't be: Net Zero
+Cloud calculates them from the energy use records and emission factors, and the fields are
+read-only even for an admin. Correct the energy use and the footprint follows.
+
+**4 reports that find missing records** — a cross filter (*assets **without** footprints*),
+grouped by asset type:
 
 Stationary Assets Missing Footprints · Stationary Assets Missing Energy Use ·
 Fleet Assets Missing Footprints · Fleet Assets Missing Energy Use
@@ -76,8 +81,11 @@ can never show you:
 Orphaned Carbon Footprints · Orphaned Stationary Energy Uses · Orphaned Fleet Footprints ·
 Orphaned Vehicle Energy Uses
 
-An orphaned footprint still contributes to a total. It's a number in your disclosure that
-nothing explains.
+An orphaned footprint, one with no asset, still contributes to a total. It's a number in
+your disclosure that nothing explains. An orphaned energy use is the opposite problem: Net
+Zero Cloud won't let one exist without its asset, but it can lose its footprint — deleting a
+footprint blanks the lookup on every energy use under it — and then its consumption is
+counted in no footprint at all.
 
 **3 summaries** — Emissions by Reporting Year, Fuel Consumption by Fuel Type, Fleet Fuel by
 Fuel Type.
@@ -181,6 +189,7 @@ names are their own name space (see [`docs/building-your-own.md`](docs/building-
 | [NZC trial — Learning org](https://developer.salesforce.com/free-trials/comparison/net-zero-cloud) | Yes | 30 days | Pre-configured with sample data. |
 | [NZC trial — Base org](https://developer.salesforce.com/free-trials/comparison/net-zero-cloud) | Yes | 30 days | Licences only. Reports deploy but return nothing until you load data — see [`sample-data/`](sample-data/). |
 | [Trailhead promo DE org](https://trailhead.salesforce.com/promo/orgs/net-zero-cloud) | Yes | Check at signup | Licensed for Agentforce Net Zero. |
+| Scratch org from your Dev Hub | Yes | Up to 30 days | `sf org create scratch --definition-file config/project-scratch-def.json --alias nzc`. Net Zero Cloud is switched on by the definition file; assign yourself the `NetZeroAdmin` permission set before loading data. |
 | Your own licensed org or sandbox | — | — | Deploy to a sandbox first. |
 
 Salesforce's docs list NZC as available in Enterprise, Performance, Unlimited and Developer
@@ -211,7 +220,8 @@ fuel, consumption and distance all live on `VehicleAssetEnrgyUse`.
 
 ## Scope: the reports read the whole object, deliberately
 
-Fifteen of the 21 reports carry no filter, and all 21 leave the standard date filter
+Thirteen of the 21 reports carry no filter — the other eight are the Missing and Orphaned
+worklists, which filter by definition — and all 21 leave the standard date filter
 unbounded. That is a decision, not an oversight, and it is worth understanding before you
 deploy into an org with years of history.
 
@@ -243,17 +253,25 @@ Two related shapes, also deliberate:
 
 ## Also in this repo
 
-- [`sample-data/`](sample-data/) — six UTF-8 CSVs with deliberate gaps and orphans, so the
-  Missing and Orphaned reports return rows on an empty trial org.
+- [`sample-data/`](sample-data/) — UTF-8 CSVs with deliberate gaps and orphans, so the
+  Missing and Orphaned reports return rows on an empty trial org. Loads in one command; the
+  README there lists the rows each report should return.
+- [`scripts/check-reports.py`](scripts/check-reports.py) — runs every report and dashboard
+  against an org holding the sample data and compares with those rows.
+- [`config/project-scratch-def.json`](config/project-scratch-def.json) — a scratch org with
+  Net Zero Cloud switched on.
 - [`docs/encoding-evidence/`](docs/encoding-evidence/) — why accented site names arrive as
   question marks, and which step is responsible.
 - [`docs/building-your-own.md`](docs/building-your-own.md) — the report type metadata
   gotchas, for anyone forking this.
+- [`docs/appexchange.md`](docs/appexchange.md) — the plan for a free AgentExchange
+  (AppExchange) listing, and what a managed package would change for people who install it.
 
 ## Continuous integration
 
 `.github/workflows/validate.yml` checks XML well-formedness, that `sf project convert
-source` succeeds, and that every member in every `manifest/*.xml` has a matching source file.
+source` succeeds, that every member in every `manifest/*.xml` has a matching source file, and
+that `sample-data/tree/` matches the CSVs it is generated from.
 
 **None of that can see a wrong object or field name.** A reference to an object that does
 not exist produces well-formed XML that converts cleanly and matches the manifest. This
@@ -264,6 +282,14 @@ against a licensed org proves the names resolve:
 sf project deploy start --manifest manifest/package.xml --target-org <alias> --dry-run
 ```
 
+**And a deploy can't see a report that returns the wrong rows.** The four Missing reports
+deployed cleanly for months while listing every asset, because a filter on the child side
+of an outer join behaves like part of the join (see
+[`docs/building-your-own.md`](docs/building-your-own.md)). So the workflow has a second
+job: it creates a Net Zero Cloud scratch org, deploys, loads the sample data and runs
+`scripts/check-reports.py`. It needs a Dev Hub, supplied as the repository secret
+`DEVHUB_SFDX_AUTH_URL`; without it the job is skipped.
+
 ## License
 
-MIT.
+MIT. Built and maintained by [Everything Virtually](https://www.everythingvirtually.com/).

@@ -1,0 +1,2 @@
+ParentEmissionFactor.Name,FuelType,Co2EmissionFactor,Co2EmissionFactorUnit,CalorificValue,CalorificValueUnit
+Sample Fleet Factors,Diesel,2.68,KG_PER_L,10.0,KWH_PER_L

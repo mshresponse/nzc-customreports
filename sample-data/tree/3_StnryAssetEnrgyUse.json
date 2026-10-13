@@ -1,0 +1,87 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "StnryAssetEnrgyUseRef1"
+      },
+      "Name": "EU Zürich Electricity 2024",
+      "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef1",
+      "StnryAssetCrbnFtprntId": "@StnryAssetCrbnFtprntRef1",
+      "FuelType": "Electricity",
+      "FuelConsumption": 412000,
+      "FuelConsumptionUnit": "kWh"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "StnryAssetEnrgyUseRef2"
+      },
+      "Name": "EU Zürich Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef1",
+      "StnryAssetCrbnFtprntId": "@StnryAssetCrbnFtprntRef1",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 8600,
+      "FuelConsumptionUnit": "Therms"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "StnryAssetEnrgyUseRef3"
+      },
+      "Name": "EU São Paulo Electricity 2024",
+      "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef2",
+      "StnryAssetCrbnFtprntId": "@StnryAssetCrbnFtprntRef2",
+      "FuelType": "Electricity",
+      "FuelConsumption": 238000,
+      "FuelConsumptionUnit": "kWh"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "StnryAssetEnrgyUseRef4"
+      },
+      "Name": "EU São Paulo Diesel 2024",
+      "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef2",
+      "StnryAssetCrbnFtprntId": "@StnryAssetCrbnFtprntRef2",
+      "FuelType": "Diesel",
+      "FuelConsumption": 14500,
+      "FuelConsumptionUnit": "Liters"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "StnryAssetEnrgyUseRef5"
+      },
+      "Name": "EU Peña Verde Electricity 2024",
+      "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef4",
+      "FuelType": "Electricity",
+      "FuelConsumption": 61000,
+      "FuelConsumptionUnit": "kWh"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "StnryAssetEnrgyUseRef6"
+      },
+      "Name": "EU Ōsaka Electricity 2023",
+      "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef6",
+      "StnryAssetCrbnFtprntId": "@StnryAssetCrbnFtprntRef4",
+      "FuelType": "Electricity",
+      "FuelConsumption": 305000,
+      "FuelConsumptionUnit": "kWh"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "StnryAssetEnrgyUseRef7"
+      },
+      "Name": "EU Ōsaka Propane 2023",
+      "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef6",
+      "StnryAssetCrbnFtprntId": "@StnryAssetCrbnFtprntRef4",
+      "FuelType": "Propane",
+      "FuelConsumption": 2200,
+      "FuelConsumptionUnit": "Liters"
+    }
+  ]
+}

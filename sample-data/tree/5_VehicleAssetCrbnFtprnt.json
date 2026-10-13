@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "VehicleAssetCrbnFtprntRef1"
+      },
+      "Name": "VFP Citroën 2024",
+      "VehicleAssetEmssnSrcId": "@VehicleAssetEmssnSrcRef1",
+      "ReportingYear": "2024"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "VehicleAssetCrbnFtprntRef2"
+      },
+      "Name": "VFP Volvo 2024",
+      "VehicleAssetEmssnSrcId": "@VehicleAssetEmssnSrcRef2",
+      "ReportingYear": "2024"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "VehicleAssetCrbnFtprntRef3"
+      },
+      "Name": "VFP Fleet Orphan 2024",
+      "ReportingYear": "2024"
+    }
+  ]
+}

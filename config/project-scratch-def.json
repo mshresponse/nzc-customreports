@@ -1,0 +1,14 @@
+{
+  "orgName": "NZC Custom Reports",
+  "edition": "Enterprise",
+  "features": ["SustainabilityApp"],
+  "settings": {
+    "industriesSettings": {
+      "enableSustainabilityCloud": true,
+      "enableSCCarbonAccounting": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    }
+  }
+}

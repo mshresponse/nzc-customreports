@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSet",
+        "referenceId": "OtherEmssnFctrSetRef1"
+      },
+      "Name": "Sample Fleet Factors",
+      "EmissionFactorDataSource": "Illustrative only, for loading sample data. Replace with factors from your own source before reporting."
+    }
+  ]
+}

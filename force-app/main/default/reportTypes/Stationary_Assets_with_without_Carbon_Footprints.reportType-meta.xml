@@ -11,6 +11,11 @@
     <label>NZC: Assets with/without Footprints</label>
     <sections>
         <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>StnryAssetEnvrSrc</table>
+        </columns>
+        <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
             <table>StnryAssetEnvrSrc</table>

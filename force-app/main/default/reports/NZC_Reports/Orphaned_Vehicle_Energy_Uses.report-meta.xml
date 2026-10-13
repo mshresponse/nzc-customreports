@@ -4,6 +4,9 @@
         <field>VehicleAssetEnrgyUse$Name</field>
     </columns>
     <columns>
+        <field>VehicleAssetEnrgyUse$VehicleAssetEmssnSrc</field>
+    </columns>
+    <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>VehicleAssetEnrgyUse$FuelConsumption</field>
     </columns>
@@ -11,16 +14,10 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>VehicleAssetEnrgyUse$Distance</field>
     </columns>
-    <description>Vehicle energy use records attached to neither a fleet footprint nor a vehicle. Both parent lookups must be blank to qualify.</description>
+    <description>Vehicle energy use records with no fleet footprint, so their fuel is counted in no footprint total. Net Zero Cloud requires the vehicle, so the footprint is the lookup that goes missing, usually when a footprint is deleted.</description>
     <filter>
         <criteriaItems>
             <column>VehicleAssetEnrgyUse$VehicleAssetCrbnFtprnt</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value></value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>VehicleAssetEnrgyUse$VehicleAssetEmssnSrc</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

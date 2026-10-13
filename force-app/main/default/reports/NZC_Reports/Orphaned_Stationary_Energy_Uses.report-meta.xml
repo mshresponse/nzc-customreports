@@ -4,22 +4,19 @@
         <field>StnryAssetEnrgyUse$Name</field>
     </columns>
     <columns>
+        <field>StnryAssetEnrgyUse$StnryAssetEnvrSrc</field>
+    </columns>
+    <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>StnryAssetEnrgyUse$FuelConsumption</field>
     </columns>
     <columns>
         <field>StnryAssetEnrgyUse$FuelConsumptionUnit</field>
     </columns>
-    <description>Energy use records attached to neither a footprint nor an asset. Both parent lookups must be blank to qualify, since a record may legitimately hang off either one.</description>
+    <description>Energy use records with no carbon footprint, so their consumption is counted in no footprint total. Net Zero Cloud requires the asset, so the footprint is the lookup that goes missing, usually when a footprint is deleted.</description>
     <filter>
         <criteriaItems>
             <column>StnryAssetEnrgyUse$StnryAssetCrbnFtprnt</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value></value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>StnryAssetEnrgyUse$StnryAssetEnvrSrc</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

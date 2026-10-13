@@ -64,13 +64,63 @@ answer and it disagrees with the Metadata API on purpose.
 
 ### 3. A report can only filter on columns the report type exposes
 
-The "missing related record" reports work by outer-joining and filtering where the child's
-`Id` is blank. That fails with `Invalid field name: Parent.Child$Id` unless `Id` is a
-column in the report type — even though every record has one.
+A filter on `Parent.Child$Id` fails with `Invalid field name: Parent.Child$Id` unless `Id`
+is a column in the report type — even though every record has one. So the four
+`with/without` report types carry `Id` on the child object as an unchecked column, and on
+the parent too, for the cross filters in the next section. Salesforce's own shipped report
+types do the same thing, which is where the pattern came from.
 
-So the four `with/without` report types carry `Id` on the child object as an unchecked
-column. Salesforce's own shipped report types do the same thing, which is where the
-pattern came from.
+### 4. "Child Id equals blank" does not find parents without children
+
+This one deploys, runs, returns plausible rows, and is wrong — which is why it survived
+here for months.
+
+The obvious way to list assets with no footprint is an outer-join report type filtered on
+the footprint's `Id` being blank. On a `with/without` report type, that filter is not
+applied to the joined rows. It is applied *inside* the join: it removes the footprint rows,
+and then every asset still appears, each with a blank footprint. The report returns every
+asset you have, and on a dashboard that looks like a large, believable gap.
+
+The construct that means "parents without children" is a **cross filter**:
+
+```xml
+<crossFilters>
+    <operation>without</operation>
+    <primaryTableColumn>StnryAssetEnvrSrc$Id</primaryTableColumn>
+    <relatedTable>StnryAssetCrbnFtprnt</relatedTable>
+    <relatedTableJoinColumn>StnryAssetEnvrSrc</relatedTableJoinColumn>
+</crossFilters>
+```
+
+Three things about it you won't guess:
+
+- `primaryTableColumn` is the parent's `Id`, so the report type must expose `Id` on the
+  parent or the deploy fails with `Invalid field name: StnryAssetEnvrSrc$Id`.
+- `relatedTable` is the child's object API name and `relatedTableJoinColumn` is the
+  lookup's relationship name — the same name space as report type joins.
+- The Analytics REST API shows the same filter with `primaryEntityField` set to an internal
+  key (`072…`), not a field name. Hand-write `StnryAssetEnvrSrc.Id` there and the API
+  accepts it, runs the report, and silently ignores the filter. Build it in the report
+  builder once and read what comes back.
+
+The test that catches this class of bug isn't a deploy; it is running the report against
+data whose answer you already know. That is what `sample-data/` and
+`scripts/check-reports.py` are for.
+
+### 5. Net Zero Cloud's own rules shape what an orphan can be
+
+Learned by trying to create the records the Orphaned reports look for:
+
+- A **footprint** can exist without an asset. Those are real orphans, and they still
+  contribute to totals.
+- An **energy use** cannot. Create one without an asset and you get `insufficient access
+  rights on cross-reference id`, even as an admin, and an asset can't be deleted while
+  energy use points at it. What does happen is that deleting a *footprint* blanks the
+  footprint lookup on every energy use under it. So the Orphaned Energy Use reports look
+  for a blank footprint, not a blank everything.
+- An **asset** can't be created at all until its object has a record type mapped through
+  `StnryAssetEnvSrcCnfg` (or `VehicleAssetEmssnSrcCnfg` for vehicles). Both are Metadata
+  API types; `sample-data/org-setup/` has the XML Salesforce emits for them.
 
 ### The general lesson
 

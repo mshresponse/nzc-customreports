@@ -15,6 +15,35 @@ type's API name can't be renamed in place, only deleted and recreated in every o
 The reports are laid out for **inline editing**, so a sustainability team can correct data
 in the report instead of raising a ticket for a CSV re-upload.
 
+## What it looks like
+
+Captured in a Net Zero Cloud scratch org loaded with [`sample-data/showcase`](sample-data/README.md).
+Every site, supplier and figure is fictional.
+
+**Scope 1 and 2.** Total Scope 1 by reporting year on the *NZC Emissions Coverage* dashboard,
+and the *Emissions by Reporting Year* report with both Scope 2 bases beside it, never added
+together.
+
+![Scope 1 by reporting year](docs/images/nzc-scope1-trend.png)
+![Scope 1, location-based and market-based Scope 2 by reporting year](docs/images/nzc-scope1-2-by-year.png)
+
+**Scope 3.** Purchases by year, GHG category and supplier, and business travel by cost centre
+and type, on the *NZC Scope 3* dashboard.
+
+![Scope 3 purchases by year, category and supplier](docs/images/nzc-scope3-procurement.png)
+![Air travel, hotel stays and ground travel emissions](docs/images/nzc-scope3-travel.png)
+
+**Inline editing.** Correct an energy use or a purchase in the report itself; Net Zero Cloud
+recalculates its Scope 1, 2 or 3 on save.
+
+![Energy Use Data Entry with an inline editor open on Fuel Consumption](docs/images/nzc-inline-editing.png)
+![Procurement Items Data Entry with an inline editor open on Spent Amount](docs/images/nzc-scope3-inline-editing.png)
+
+**Data quality.** Sites and vehicles with no footprint or no energy use; each chart opens the
+worklist behind it.
+
+![NZC Data Quality dashboard](docs/images/nzc-data-quality.png)
+
 ---
 
 ## Setup — 4 steps

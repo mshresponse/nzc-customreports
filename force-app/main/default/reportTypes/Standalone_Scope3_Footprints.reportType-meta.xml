@@ -3,7 +3,7 @@
     <baseObject>Scope3CrbnFtprnt</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Every Scope 3 carbon footprint, single object. The totals are Net Zero Cloud's roll-ups, filled in when its calculation runs, not when records are saved.</description>
+    <description>Every Scope 3 carbon footprint, single object. The totals are Net Zero Cloud&apos;s roll-ups of the records under each footprint; they fill in a few minutes after those records save.</description>
     <label>NZC: Scope 3 Footprints (all)</label>
     <sections>
         <columns>

@@ -15,7 +15,16 @@
     <columns>
         <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$FuelConsumptionUnit</field>
     </columns>
-    <description>Assets and their consumption records. Fuel type, amount and unit edit in place, which beats correcting a bad import through another CSV. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
+    <columns>
+        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$Scope1EmissionsInTco2e</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$Scope2LocBasedEmssnInTco2e</field>
+    </columns>
+    <columns>
+        <field>StnryAssetEnvrSrc.StnryAssetEnrgyUse$Scope2MktBasedEmssnInTco2e</field>
+    </columns>
+    <description>Consumption records with the Scope 1 and 2 they produce. Fuel type, amount and unit edit in place; Net Zero Cloud recalculates the emissions on save. Needs Setup &gt; Reports and Dashboards Settings &gt; Enable Inline Editing in Reports.</description>
     <format>Tabular</format>
     <name>Energy Use Data Entry</name>
     <reportType>Stationary_Assets_with_Energy_Use__c</reportType>

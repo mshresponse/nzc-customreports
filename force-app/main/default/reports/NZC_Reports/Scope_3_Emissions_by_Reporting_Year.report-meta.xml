@@ -18,7 +18,7 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Scope3CrbnFtprnt$TotalScp3DnstrmEmissions</field>
     </columns>
-    <description>Net Zero Cloud's Scope 3 footprint totals by reporting year, upstream and downstream, as they will be disclosed. Zero until its calculation has run on the footprints.</description>
+    <description>Net Zero Cloud&apos;s Scope 3 footprint totals by reporting year, upstream and downstream, as they will be disclosed. They fill in a few minutes after the records under each footprint save.</description>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

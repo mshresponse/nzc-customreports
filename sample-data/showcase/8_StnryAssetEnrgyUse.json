@@ -10,7 +10,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt1",
       "FuelType": "Electricity",
       "FuelConsumption": 10353125,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -22,7 +26,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt1",
       "FuelType": "Diesel",
       "FuelConsumption": 8111,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -34,7 +41,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt2",
       "FuelType": "Electricity",
       "FuelConsumption": 10419222,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -46,7 +57,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt2",
       "FuelType": "Diesel",
       "FuelConsumption": 7444,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -58,7 +72,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt3",
       "FuelType": "Electricity",
       "FuelConsumption": 9305877,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -70,7 +88,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt3",
       "FuelType": "Diesel",
       "FuelConsumption": 7624,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -82,7 +103,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt4",
       "FuelType": "Electricity",
       "FuelConsumption": 9512844,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -94,7 +119,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt4",
       "FuelType": "Diesel",
       "FuelConsumption": 7241,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -106,7 +134,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt5",
       "FuelType": "Electricity",
       "FuelConsumption": 9123607,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -118,7 +150,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt5",
       "FuelType": "Diesel",
       "FuelConsumption": 7172,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -130,7 +165,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt6",
       "FuelType": "Electricity",
       "FuelConsumption": 8813733,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -142,7 +181,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt6",
       "FuelType": "Diesel",
       "FuelConsumption": 6766,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -154,7 +196,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt7",
       "FuelType": "Electricity",
       "FuelConsumption": 8160321,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -166,7 +212,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt7",
       "FuelType": "Diesel",
       "FuelConsumption": 6006,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -178,7 +227,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt8",
       "FuelType": "Electricity",
       "FuelConsumption": 8063532,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -190,7 +243,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt8",
       "FuelType": "Diesel",
       "FuelConsumption": 6043,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -202,7 +258,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt9",
       "FuelType": "Electricity",
       "FuelConsumption": 7769277,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -214,7 +274,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt9",
       "FuelType": "Diesel",
       "FuelConsumption": 5989,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -226,7 +289,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt10",
       "FuelType": "Electricity",
       "FuelConsumption": 535701,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -238,7 +305,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt10",
       "FuelType": "NaturalGas",
       "FuelConsumption": 9023,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -250,7 +320,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt11",
       "FuelType": "Electricity",
       "FuelConsumption": 566418,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -262,7 +336,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt11",
       "FuelType": "NaturalGas",
       "FuelConsumption": 9437,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -274,7 +351,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt12",
       "FuelType": "Electricity",
       "FuelConsumption": 535050,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -286,7 +367,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt12",
       "FuelType": "NaturalGas",
       "FuelConsumption": 9168,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -298,7 +382,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt13",
       "FuelType": "Electricity",
       "FuelConsumption": 438986,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -310,7 +398,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt13",
       "FuelType": "NaturalGas",
       "FuelConsumption": 7602,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -322,7 +413,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt14",
       "FuelType": "Electricity",
       "FuelConsumption": 449389,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -334,7 +429,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt14",
       "FuelType": "NaturalGas",
       "FuelConsumption": 7292,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -346,7 +444,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt15",
       "FuelType": "Electricity",
       "FuelConsumption": 427929,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -358,7 +460,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt15",
       "FuelType": "NaturalGas",
       "FuelConsumption": 7533,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -370,7 +475,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt16",
       "FuelType": "Electricity",
       "FuelConsumption": 186719,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -382,7 +491,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt16",
       "FuelType": "NaturalGas",
       "FuelConsumption": 2923,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -394,7 +506,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt17",
       "FuelType": "Electricity",
       "FuelConsumption": 183042,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -406,7 +522,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt17",
       "FuelType": "NaturalGas",
       "FuelConsumption": 2943,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -418,7 +537,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt18",
       "FuelType": "Electricity",
       "FuelConsumption": 170444,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -430,7 +553,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt18",
       "FuelType": "NaturalGas",
       "FuelConsumption": 2848,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -442,7 +568,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt19",
       "FuelType": "Electricity",
       "FuelConsumption": 209961,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -454,7 +584,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt19",
       "FuelType": "Propane",
       "FuelConsumption": 6010,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -466,7 +599,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt20",
       "FuelType": "Electricity",
       "FuelConsumption": 202805,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -478,7 +615,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt20",
       "FuelType": "Propane",
       "FuelConsumption": 6262,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -490,7 +630,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt21",
       "FuelType": "Electricity",
       "FuelConsumption": 197647,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -502,7 +646,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt21",
       "FuelType": "Propane",
       "FuelConsumption": 5853,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -514,7 +661,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt23",
       "FuelType": "Electricity",
       "FuelConsumption": 2852340,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -526,7 +677,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt23",
       "FuelType": "NaturalGas",
       "FuelConsumption": 258582,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -538,7 +692,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt24",
       "FuelType": "Electricity",
       "FuelConsumption": 2772260,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -550,7 +708,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt24",
       "FuelType": "NaturalGas",
       "FuelConsumption": 237902,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -562,7 +723,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt25",
       "FuelType": "Electricity",
       "FuelConsumption": 2525852,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -574,7 +739,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt25",
       "FuelType": "NaturalGas",
       "FuelConsumption": 221217,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -586,7 +754,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt26",
       "FuelType": "Electricity",
       "FuelConsumption": 2459253,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -598,7 +770,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt26",
       "FuelType": "NaturalGas",
       "FuelConsumption": 194666,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -610,7 +785,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt26",
       "FuelType": "FuelOil",
       "FuelConsumption": 28777,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -622,7 +800,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt27",
       "FuelType": "Electricity",
       "FuelConsumption": 2389344,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -634,7 +816,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt27",
       "FuelType": "NaturalGas",
       "FuelConsumption": 186041,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -646,7 +831,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt27",
       "FuelType": "FuelOil",
       "FuelConsumption": 26442,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -658,7 +846,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt28",
       "FuelType": "Electricity",
       "FuelConsumption": 2412810,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -670,7 +862,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt28",
       "FuelType": "NaturalGas",
       "FuelConsumption": 170952,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -682,7 +877,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt28",
       "FuelType": "FuelOil",
       "FuelConsumption": 26759,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -694,7 +892,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt29",
       "FuelType": "Electricity",
       "FuelConsumption": 3103825,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -706,7 +908,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt29",
       "FuelType": "NaturalGas",
       "FuelConsumption": 227163,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -718,7 +923,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt29",
       "FuelType": "FuelOil",
       "FuelConsumption": 34701,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -730,7 +938,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt30",
       "FuelType": "Electricity",
       "FuelConsumption": 3186833,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -742,7 +954,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt30",
       "FuelType": "NaturalGas",
       "FuelConsumption": 221225,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -754,7 +969,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt30",
       "FuelType": "FuelOil",
       "FuelConsumption": 32074,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -766,7 +984,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt31",
       "FuelType": "Electricity",
       "FuelConsumption": 2960707,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -778,7 +1000,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt31",
       "FuelType": "NaturalGas",
       "FuelConsumption": 207145,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -790,7 +1015,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt31",
       "FuelType": "FuelOil",
       "FuelConsumption": 31794,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -802,7 +1030,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt32",
       "FuelType": "Electricity",
       "FuelConsumption": 221438,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -814,7 +1046,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt32",
       "FuelType": "NaturalGas",
       "FuelConsumption": 3892,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -826,7 +1061,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt33",
       "FuelType": "Electricity",
       "FuelConsumption": 212509,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -838,7 +1077,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt33",
       "FuelType": "NaturalGas",
       "FuelConsumption": 3501,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -850,7 +1092,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt34",
       "FuelType": "Electricity",
       "FuelConsumption": 200738,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -862,7 +1108,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt34",
       "FuelType": "NaturalGas",
       "FuelConsumption": 3266,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -874,7 +1123,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt35",
       "FuelType": "Electricity",
       "FuelConsumption": 2444030,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -886,7 +1139,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt35",
       "FuelType": "NaturalGas",
       "FuelConsumption": 205031,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -898,7 +1154,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt36",
       "FuelType": "Electricity",
       "FuelConsumption": 2346356,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -910,7 +1170,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt36",
       "FuelType": "NaturalGas",
       "FuelConsumption": 187446,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -922,7 +1185,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt37",
       "FuelType": "Electricity",
       "FuelConsumption": 378554,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -934,7 +1201,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt37",
       "FuelType": "NaturalGas",
       "FuelConsumption": 6175,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -946,7 +1216,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt38",
       "FuelType": "Electricity",
       "FuelConsumption": 368477,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -958,7 +1232,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt38",
       "FuelType": "NaturalGas",
       "FuelConsumption": 5981,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -970,7 +1247,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt39",
       "FuelType": "Electricity",
       "FuelConsumption": 341384,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -982,7 +1263,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt39",
       "FuelType": "NaturalGas",
       "FuelConsumption": 5879,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -994,7 +1278,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt40",
       "FuelType": "Electricity",
       "FuelConsumption": 8654348,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1006,7 +1294,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt40",
       "FuelType": "Diesel",
       "FuelConsumption": 6913,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1018,7 +1309,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt41",
       "FuelType": "Electricity",
       "FuelConsumption": 8876235,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1030,7 +1325,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt41",
       "FuelType": "Diesel",
       "FuelConsumption": 6647,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1042,7 +1340,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt42",
       "FuelType": "Electricity",
       "FuelConsumption": 260621,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1054,7 +1356,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt42",
       "FuelType": "Propane",
       "FuelConsumption": 7574,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1066,7 +1371,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt43",
       "FuelType": "Electricity",
       "FuelConsumption": 241806,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1078,7 +1387,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt43",
       "FuelType": "Propane",
       "FuelConsumption": 7703,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1089,7 +1401,11 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
       "FuelType": "Electricity",
       "FuelConsumption": 247501,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1100,7 +1416,10 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
       "FuelType": "Propane",
       "FuelConsumption": 7320,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1112,7 +1431,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt44",
       "FuelType": "Electricity",
       "FuelConsumption": 2931338,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1124,7 +1447,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt44",
       "FuelType": "NaturalGas",
       "FuelConsumption": 257904,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1136,7 +1462,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt45",
       "FuelType": "Electricity",
       "FuelConsumption": 2735887,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1148,7 +1478,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt45",
       "FuelType": "NaturalGas",
       "FuelConsumption": 228690,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1160,7 +1493,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt46",
       "FuelType": "Electricity",
       "FuelConsumption": 2793026,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1172,7 +1509,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt46",
       "FuelType": "NaturalGas",
       "FuelConsumption": 219071,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1184,7 +1524,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt47",
       "FuelType": "Electricity",
       "FuelConsumption": 434762,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1196,7 +1540,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt47",
       "FuelType": "NaturalGas",
       "FuelConsumption": 7825,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1208,7 +1555,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt48",
       "FuelType": "Electricity",
       "FuelConsumption": 469459,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1220,7 +1571,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt48",
       "FuelType": "NaturalGas",
       "FuelConsumption": 7105,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1232,7 +1586,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt49",
       "FuelType": "Electricity",
       "FuelConsumption": 445288,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1244,7 +1602,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt49",
       "FuelType": "NaturalGas",
       "FuelConsumption": 6989,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1256,7 +1617,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt50",
       "FuelType": "Electricity",
       "FuelConsumption": 8293292,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1268,7 +1633,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt50",
       "FuelType": "Diesel",
       "FuelConsumption": 6645,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
     },
     {
       "attributes": {
@@ -1280,7 +1648,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt51",
       "FuelType": "Electricity",
       "FuelConsumption": 7925303,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1292,7 +1664,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt51",
       "FuelType": "Diesel",
       "FuelConsumption": 6178,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1304,7 +1679,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt52",
       "FuelType": "Electricity",
       "FuelConsumption": 7176344,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1316,7 +1695,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt52",
       "FuelType": "Diesel",
       "FuelConsumption": 5728,
-      "FuelConsumptionUnit": "Liters"
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1327,7 +1709,11 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc22",
       "FuelType": "Electricity",
       "FuelConsumption": 260647,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1338,7 +1724,10 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc22",
       "FuelType": "NaturalGas",
       "FuelConsumption": 4464,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1350,7 +1739,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt53",
       "FuelType": "Electricity",
       "FuelConsumption": 549745,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1362,7 +1755,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt53",
       "FuelType": "NaturalGas",
       "FuelConsumption": 8581,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
     },
     {
       "attributes": {
@@ -1374,7 +1770,11 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt54",
       "FuelType": "Electricity",
       "FuelConsumption": 498989,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1386,7 +1786,10 @@
       "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt54",
       "FuelType": "NaturalGas",
       "FuelConsumption": 8740,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1397,7 +1800,11 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc26",
       "FuelType": "Electricity",
       "FuelConsumption": 241006,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1408,7 +1815,10 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc26",
       "FuelType": "NaturalGas",
       "FuelConsumption": 3835,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1419,7 +1829,11 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc28",
       "FuelType": "Electricity",
       "FuelConsumption": 157977,
-      "FuelConsumptionUnit": "kWh"
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     },
     {
       "attributes": {
@@ -1430,7 +1844,10 @@
       "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc28",
       "FuelType": "NaturalGas",
       "FuelConsumption": 2730,
-      "FuelConsumptionUnit": "Therms"
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
     }
   ]
 }

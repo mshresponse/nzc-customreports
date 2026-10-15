@@ -61,10 +61,12 @@ Both read the same 300 showcase records in the same org.
 
 Two things only show up when both run on the same data:
 
-- **Neither shows Scope 1 or 2 totals in a fresh org.** Both read the totals Net Zero
-  Cloud's own calculation writes, and loading records doesn't run it, so both emissions
-  charts read zero. The CRM Analytics app does show 313 for vehicles: it also reads the
-  per-gas CO2 that Net Zero Cloud fills in on save when a vehicle energy use has a factor.
+- **Neither showed Scope 1 or 2 totals at first — and that was the data, not either
+  product.** The showcase data then had no emission factors on its energy use and no scope
+  allocation on its sites, and without them Net Zero Cloud leaves every scope field at zero.
+  The CRM Analytics app showed 313 for vehicles because it also reads per-gas CO2, which Net
+  Zero Cloud fills in whenever a vehicle energy use has a factor. The showcase data now
+  carries factors and allocations, so both show real Scope 1 and 2.
 - **Most of the CRM Analytics Data Quality tab needs data this demo doesn't have** — floor
   area for intensity, start and end dates on energy use for the monthly views — so it reads
   zero or "No results found". The two products answer different questions: theirs is "is
@@ -86,9 +88,8 @@ Three things that weren't obvious:
 - **Net Zero Cloud calculates Scope 3 on each record as it saves it** — spend times the
   procurement factor (deflated to the factor's year, hence the inflation rate the summary
   needs), distance times the haul-band factor for a flight, nights times the hotel factor.
-  The roll-ups onto Scope 3 footprints and procurement summaries stay at zero, as Scope 1
-  and 2 do, until Net Zero Cloud's own processing runs. The CRM Analytics dashboards read
-  the record-level figures, which is why they show numbers.
+  The Scope 3 footprints filled in a few minutes after the load; the procurement summaries'
+  totals stayed empty. The CRM Analytics dashboards read the record-level figures either way.
 - **After loading data, CRM Analytics needs a data sync and a recipe run** before the
   dashboards see it (`POST /wave/dataConnectors/{id}/ingest`, then start the recipe's
   dataflow with `POST /wave/dataflowjobs`). About ten minutes in a scratch org.

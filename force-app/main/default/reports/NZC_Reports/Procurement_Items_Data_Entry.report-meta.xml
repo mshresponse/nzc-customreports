@@ -24,7 +24,10 @@
     <columns>
         <field>Scope3PcmtSummary.Scope3PcmtItem$PcmtEmssnFctrSetItem</field>
     </columns>
-    <description>Every purchase, flat and narrow so it edits in place: spend, date, spending categories and GHG category. Fix a bad import here; the emissions recalculate on save. Needs inline editing on.</description>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Scope3EmissionsInTco2</field>
+    </columns>
+    <description>Every purchase, narrow so it edits in place: spend, date, spending categories, GHG category. Fix a bad import here; Final Scope 3 Emissions recalculates on save. Needs inline editing on.</description>
     <format>Tabular</format>
     <name>Procurement Items Data Entry</name>
     <reportType>Scope3_Procurement_Summaries_with_Items__c</reportType>

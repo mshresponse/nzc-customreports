@@ -8,7 +8,8 @@
       "Name": "Fourgon Citroën Lyon 01",
       "City": "Lyon",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -18,7 +19,8 @@
       "Name": "Lastbil Volvo Göteborg 02",
       "City": "Göteborg",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -28,7 +30,8 @@
       "Name": "Camión Peñarol Montevideo 03",
       "City": "Montevideo",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -38,7 +41,8 @@
       "Name": "Kleinwagen Škoda München 04",
       "City": "München",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -48,7 +52,8 @@
       "Name": "Ford Transit London 05",
       "City": "London",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -58,7 +63,8 @@
       "Name": "Mercedes Sprinter Frankfurt 06",
       "City": "Frankfurt",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -68,7 +74,8 @@
       "Name": "Isuzu Elf Tōkyō 07",
       "City": "Tōkyō",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -78,7 +85,8 @@
       "Name": "Toyota HiAce Sydney 08",
       "City": "Sydney",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -88,7 +96,8 @@
       "Name": "Ram ProMaster Chicago 09",
       "City": "Chicago",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -98,7 +107,8 @@
       "Name": "Chevrolet Express Dallas 10",
       "City": "Dallas",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -108,7 +118,8 @@
       "Name": "Tata Ace Bengaluru 11",
       "City": "Bengaluru",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -118,7 +129,8 @@
       "Name": "Volkswagen Crafter Milano 12",
       "City": "Milano",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -128,7 +140,8 @@
       "Name": "Shuttle Bus Dublin 13",
       "City": "Dublin",
       "VehicleType": "Company Shuttle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -138,7 +151,8 @@
       "Name": "Shuttle Bus Singapore 14",
       "City": "Singapore",
       "VehicleType": "Company Shuttle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -148,7 +162,8 @@
       "Name": "Toyota Prius Toronto 15",
       "City": "Toronto",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "Hybrid"
+      "FleetVehicleType": "Hybrid",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -158,7 +173,8 @@
       "Name": "Corolla Hybrid São Paulo 16",
       "City": "São Paulo",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "Hybrid"
+      "FleetVehicleType": "Hybrid",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -168,7 +184,8 @@
       "Name": "Mahindra Bolero Pune 17",
       "City": "Pune",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -178,7 +195,8 @@
       "Name": "Hyundai Porter Seoul 18",
       "City": "Seoul",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -188,7 +206,8 @@
       "Name": "Shuttle Bus Auckland 19",
       "City": "Auckland",
       "VehicleType": "Company Shuttle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -198,7 +217,8 @@
       "Name": "Isuzu D-Max Bangkok 20",
       "City": "Bangkok",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -208,7 +228,8 @@
       "Name": "Shuttle Bus Lyon 21",
       "City": "Lyon",
       "VehicleType": "Company Shuttle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     },
     {
       "attributes": {
@@ -218,7 +239,8 @@
       "Name": "Ford Ranger Santiago 22",
       "City": "Santiago",
       "VehicleType": "Fleet Vehicle",
-      "FleetVehicleType": "InternalCombustionEngine"
+      "FleetVehicleType": "InternalCombustionEngine",
+      "CrbnEmssnScopeAlloc": "Scope 1"
     }
   ]
 }

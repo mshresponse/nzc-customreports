@@ -199,9 +199,10 @@ the same scale as 95 thousand liters. So:
 - The two **Orphaned Energy Use** reports carry no sum on consumption, so their dashboard
   charts count records — how many to fix — instead of adding up mixed units.
 
-CO2e is the one measure that does share a unit across fuels. It isn't used here because Net
-Zero Cloud only fills it in once its own calculation has run, so a chart of it reads zero in
-a new org and in every trial.
+CO2e is the one measure that does share a unit across fuels, and the Scope 1 and 2 reports and
+charts use it. The fuel views stay in physical units because they answer a different question
+— how much of each fuel — and because CO2e only exists once an energy use has a factor and a
+scope allocation (see *What Net Zero Cloud calculates on save* below).
 
 ## Two dashboard formats
 
@@ -235,18 +236,29 @@ field:
 All twenty-two report types here label the name column by object: Asset Name, Vehicle Name,
 Footprint Name, Energy Use Name, Procurement Item Name, Scope 3 Source Name and so on.
 
+## What Net Zero Cloud calculates on save
+
+Every scope is calculated on the record as it saves — if the inputs are there. Without them
+Net Zero Cloud still computes the gas quantities (CO2 in kg) and leaves every scope field at
+zero, which is easy to mistake for "not calculated yet".
+
+- **Stationary energy use** gets Scope 1 or Scope 2 when the record has a factor and its asset
+  has a **Carbon Emissions Scope Allocation**. Electricity takes an electricity factor set,
+  location- and market-based, whose generation mix adds up to 100%; fuels take an
+  other-emissions factor set, per kWh with a calorific value (a per-litre factor computes
+  nothing for stationary combustion). The allocation maps each fuel type to a scope —
+  electricity to Scope 2, fuels to Scope 1 for an owned site.
+- **Vehicle energy use** gets Scope 1 with a per-litre factor and the vehicle's Carbon
+  Emissions Scope Allocation picklist set to Scope 1.
+- **Scope 3 records** need only their factors. A procurement item gets Final Scope 3 Emissions
+  from spend times its factor (deflated to the factor's year, which is why a procurement
+  summary refuses to save without an `InflationRate` for its year and currency); a flight gets
+  tCO2e from distance and haul band, a hotel stay from nights, ground travel from distance.
+- **Roll-ups differ.** Scope 3 footprints filled in by themselves a few minutes after a load.
+  Stationary and fleet footprints total their energy use when an energy use is saved — but a
+  bulk insert didn't trigger it in testing; saving the records once more did.
+
 ## Scope 3
-
-The Scope 3 reports read different figures from the Scope 1 and 2 ones, and the difference is
-worth knowing before you add your own:
-
-- **Scope 3 is calculated on every record as it saves.** A procurement item gets Final Scope 3
-  Emissions from spend times its factor (deflated to the factor's year, which is why a
-  procurement summary refuses to save without an `InflationRate` for its year and currency);
-  a flight gets tCO2e from distance and haul band, a hotel stay from nights, ground travel
-  from distance. The Scope 3 footprint totals fill in a few minutes later. The Scope 1 and 2
-  footprint totals don't, until Net Zero Cloud's own calculation runs — so in a new org the
-  Scope 3 dashboard shows numbers and the Scope 1 trend shows zero.
 - **The join rule holds even when the lookup isn't named after the parent.** Procurement items
   point at their summary through `ProcurementSummaryId`, but the report type join is still
   `<relationship>Scope3PcmtItem</relationship>`, the child object's API name.

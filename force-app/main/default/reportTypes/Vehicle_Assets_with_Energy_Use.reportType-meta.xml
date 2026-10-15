@@ -57,6 +57,11 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <field>Scope1EmissionsInTco2e</field>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
             <field>Distance</field>
             <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>

@@ -67,6 +67,21 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <field>Scope1EmissionsInTco2e</field>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope2LocBasedEmssnInTco2e</field>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope2MktBasedEmssnInTco2e</field>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
             <field>CreatedDate</field>
             <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>

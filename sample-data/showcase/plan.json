@@ -16,11 +16,35 @@
     ]
   },
   {
-    "sobject": "StnryAssetEnvrSrc",
+    "sobject": "ElectricityEmssnFctrSet",
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "3_StnryAssetEnvrSrc.json"
+      "3_ElectricityEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "CrbnEmssnScopeAlloc",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "4_CrbnEmssnScopeAlloc.json"
+    ]
+  },
+  {
+    "sobject": "CrbnEmssnScopeAllocVal",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "5_CrbnEmssnScopeAllocVal.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetEnvrSrc",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "6_StnryAssetEnvrSrc.json"
     ]
   },
   {
@@ -28,7 +52,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "4_StnryAssetCrbnFtprnt.json"
+      "7_StnryAssetCrbnFtprnt.json"
     ]
   },
   {
@@ -36,7 +60,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "5_StnryAssetEnrgyUse.json"
+      "8_StnryAssetEnrgyUse.json"
     ]
   },
   {
@@ -44,7 +68,7 @@
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "6_VehicleAssetEmssnSrc.json"
+      "9_VehicleAssetEmssnSrc.json"
     ]
   },
   {
@@ -52,7 +76,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "7_VehicleAssetCrbnFtprnt.json"
+      "10_VehicleAssetCrbnFtprnt.json"
     ]
   },
   {
@@ -60,7 +84,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "8_VehicleAssetEnrgyUse.json"
+      "11_VehicleAssetEnrgyUse.json"
     ]
   },
   {
@@ -68,7 +92,7 @@
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "9_Account.json"
+      "12_Account.json"
     ]
   },
   {
@@ -76,7 +100,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "10_Supplier.json"
+      "13_Supplier.json"
     ]
   },
   {
@@ -84,7 +108,7 @@
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "11_PcmtEmssnFctrSet.json"
+      "14_PcmtEmssnFctrSet.json"
     ]
   },
   {
@@ -92,7 +116,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "12_PcmtEmssnFctrSetItem.json"
+      "15_PcmtEmssnFctrSetItem.json"
     ]
   },
   {
@@ -100,7 +124,7 @@
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "13_AirTravelEmssnFctr.json"
+      "16_AirTravelEmssnFctr.json"
     ]
   },
   {
@@ -108,7 +132,7 @@
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "14_HotelStayEmssnFctr.json"
+      "17_HotelStayEmssnFctr.json"
     ]
   },
   {
@@ -116,7 +140,7 @@
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "15_GroundTravelEmssnFctr.json"
+      "18_GroundTravelEmssnFctr.json"
     ]
   },
   {
@@ -124,7 +148,7 @@
     "saveRefs": true,
     "resolveRefs": false,
     "files": [
-      "16_InflationRate.json"
+      "19_InflationRate.json"
     ]
   },
   {
@@ -132,7 +156,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "17_Scope3EmssnSrc.json"
+      "20_Scope3EmssnSrc.json"
     ]
   },
   {
@@ -140,7 +164,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "18_Scope3CrbnFtprnt.json"
+      "21_Scope3CrbnFtprnt.json"
     ]
   },
   {
@@ -148,7 +172,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "19_Scope3PcmtSummary.json"
+      "22_Scope3PcmtSummary.json"
     ]
   },
   {
@@ -156,7 +180,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "20_Scope3PcmtItem.json"
+      "23_Scope3PcmtItem.json"
     ]
   },
   {
@@ -164,7 +188,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "21_AirTravelEnrgyUse.json"
+      "24_AirTravelEnrgyUse.json"
     ]
   },
   {
@@ -172,7 +196,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "22_HotelStayEnrgyUse.json"
+      "25_HotelStayEnrgyUse.json"
     ]
   },
   {
@@ -180,7 +204,7 @@
     "saveRefs": true,
     "resolveRefs": true,
     "files": [
-      "23_GroundTravelEnrgyUse.json"
+      "26_GroundTravelEnrgyUse.json"
     ]
   }
 ]

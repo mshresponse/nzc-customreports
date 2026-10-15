@@ -107,6 +107,21 @@ STAGES_2024 = ['Data Collection', 'Data Gap Filling', 'Data Validation', 'Data V
 FLEET_STAGES_2024 = ['Data Collection', 'Data Validation', 'Data Validation', 'Internal Audit', 'External Audit']
 TREND = {'2022': 1.0, '2023': 0.965, '2024': 0.93}   # efficiency programme, roughly
 
+# Scope 1 and 2 need a factor on every energy use and a scope allocation on every site; without
+# them Net Zero Cloud computes nothing. Stationary fuels are factored per kWh, through the
+# calorific value; electricity per kWh by region, location-based and market-based. Illustrative.
+STATIONARY_FUEL_FACTORS = [   # fuel, CO2 factor, unit, calorific value, unit
+    ('Diesel', 0.268, 'KG_PER_KWH', 10.0, 'KWH_PER_L'),
+    ('NaturalGas', 53.06, 'KG_PER_MMBTU', 10.55, 'KWH_PER_M3'),
+    ('Propane', 0.214, 'KG_PER_KWH', 7.08, 'KWH_PER_L'),
+    ('FuelOil', 0.267, 'KG_PER_KWH', 10.9, 'KWH_PER_L'),
+]
+GRID_FACTORS = {   # region: (location-based, market-based) kg CO2e per kWh, location mix, market mix
+    'EMEA': (0.25, 0.18, {'Gas': 30, 'Nuclear': 30, 'Wind': 25, 'Hydro': 15}, {'Wind': 45, 'Hydro': 25, 'Gas': 30}),
+    'AMER': (0.38, 0.30, {'Gas': 40, 'Coal': 20, 'Nuclear': 20, 'Wind': 20}, {'Gas': 45, 'Wind': 35, 'Solar': 20}),
+    'APAC': (0.47, 0.40, {'Coal': 40, 'Gas': 35, 'Hydro': 15, 'Solar': 10}, {'Coal': 30, 'Gas': 40, 'Solar': 30}),
+}
+
 
 class Records:
     def __init__(self):
@@ -136,10 +151,34 @@ def build():
                                         'Co2EmissionFactor': co2, 'Co2EmissionFactorUnit': 'KG_PER_L',
                                         'CalorificValue': cv, 'CalorificValueUnit': 'KWH_PER_L'}, key=('item', fuel))
 
+    fuel_set = r.add('OtherEmssnFctrSet', {
+        'Name': 'Showcase Stationary Fuel Factors', 'EmissionFactorUpdateYear': '2019', 'Ch4GlblWarmingPot': 28, 'N2oGlblWarmingPot': 265,
+        'EmissionFactorDataSource': 'Illustrative only, for demo data. Replace with factors from your own source before reporting.'})
+    for fuel, co2, unit, cv, cv_unit in STATIONARY_FUEL_FACTORS:
+        r.add('OtherEmssnFctrSetItem', {'ParentEmissionFactorId': fuel_set, 'FuelType': fuel, 'Co2EmissionFactor': co2,
+                                        'Co2EmissionFactorUnit': unit, 'CalorificValue': cv, 'CalorificValueUnit': cv_unit},
+              key=('stationary item', fuel))
+    grids = {}
+    for region, (loc, mkt, loc_mix, mkt_mix) in GRID_FACTORS.items():
+        fields = {'Name': f'Showcase Grid Factors {region}', 'EmissionFactorUpdateYear': '2023',
+                  'EmissionsFactorType': 'LocationAndMarketBased',
+                  'Co2eEmissionRate': loc, 'Co2eEmissionRateUnit': 'KG_PER_KWH', 'Co2EmissionRate': loc, 'Co2EmissionRateUnit': 'KG_PER_KWH',
+                  'MktBsdCo2eEmissionRate': mkt, 'MktBsdCo2eEmissionRateUnit': 'KG_PER_KWH', 'MktBsdCo2EmssnRate': mkt,
+                  'MktBsdCo2EmssnRateUnit': 'KG_PER_KWH', 'EmissionFactorDataSource': 'Illustrative only, for demo data.'}
+        fields.update({f'LocationBased{k}MixPct': v for k, v in loc_mix.items()})
+        fields.update({f'MarketBased{k}MixPct': v for k, v in mkt_mix.items()})
+        grids[region] = r.add('ElectricityEmssnFctrSet', fields, key=('grid', region))
+    allocation = r.add('CrbnEmssnScopeAlloc', {'Name': 'Owned and operated'})
+    for fuel in ['Electricity'] + [f for f, *_ in STATIONARY_FUEL_FACTORS]:
+        r.add('CrbnEmssnScopeAllocVal', {'CrbnEmssnScopeAllocId': allocation, 'FuelType': fuel,
+                                          'FuelTypeAllocation': 'SCOPE2' if fuel == 'Electricity' else 'SCOPE1'}, key=('allocation', fuel))
+
     footprints, energy = [], []
     for name, city, country, region, kind, size, first, gap in SITES:
         asset = r.add('StnryAssetEnvrSrc', {'Name': name, 'City': city, 'Country': country,
-                                            'BusinessRegion': region, 'StationaryAssetType': kind})
+                                            'BusinessRegion': region, 'StationaryAssetType': kind,
+                                            'CrbnEmssnScopeAllocId': allocation, 'ElectricityEmssnFctrId': grids[region],
+                                            'MktBsdElectriEmssnFctrId': grids[region], 'OtherEmssnFctrId': fuel_set})
         years = YEARS[YEARS.index(first):] if first else []
         for year in years:
             if gap == 'footprint deleted 2024' and year == '2024':
@@ -154,10 +193,13 @@ def build():
         for year in sorted(set(consumption_years)):
             footprint = next((f for a, y, f in footprints if a == asset and y == year), None)
             for fuel, unit, per_size in FUELS[kind]:
+                factor = ({'ElectricityEmissionFactorsId': grids[region], 'MktBsdElectriEmssnFctrId': grids[region]}
+                          if fuel == 'Electricity' else {'OtherEmssnFctrId': fuel_set})
                 energy.append({'Name': f'{name} {FUEL_LABEL.get(fuel, fuel)} {year}', 'StnryAssetEnvrSrcId': asset,
                                'StnryAssetCrbnFtprntId': footprint, 'FuelType': fuel,
                                'FuelConsumption': round(per_size * size * TREND[year] * noise()),
-                               'FuelConsumptionUnit': unit})
+                               'FuelConsumptionUnit': unit, **factor,
+                               'StartDate': f'{year}-01-01', 'EndDate': f'{year}-12-31'})
     for name, year in [('Leeds Office', '2023'), ('Leeds Office', '2024'), ('Imported Footprint', '2022')]:
         r.add('StnryAssetCrbnFtprnt', {'Name': f'{name} {year}', 'ReportingYear': year,
                                        'FootprintStage': 'Completed' if year < '2024' else 'Data Validation'})
@@ -167,7 +209,7 @@ def build():
     fleet_energy = []
     for name, city, vtype, ftype, fuel, litres, km_per_l, gap in VEHICLES:
         vehicle = r.add('VehicleAssetEmssnSrc', {'Name': name, 'City': city, 'VehicleType': vtype,
-                                                 'FleetVehicleType': ftype})
+                                                 'FleetVehicleType': ftype, 'CrbnEmssnScopeAlloc': 'Scope 1'})
         if gap in ('not onboarded', 'energy use, no footprint'):
             years = []
         else:

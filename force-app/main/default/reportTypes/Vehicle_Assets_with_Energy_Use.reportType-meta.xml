@@ -12,6 +12,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Vehicle Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc</table>
         </columns>
@@ -35,6 +36,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Energy Use Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
@@ -51,6 +53,11 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
+            <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope1EmissionsInTco2e</field>
             <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>
         <columns>

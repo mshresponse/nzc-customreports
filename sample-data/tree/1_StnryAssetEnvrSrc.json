@@ -1,0 +1,82 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "StnryAssetEnvrSrcRef1"
+      },
+      "Name": "Zürich Süd Rechenzentrum",
+      "City": "Zürich",
+      "Country": "CH",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Data Center",
+      "StreetAddress": "Bahnhofstraße 47",
+      "Description": "Full chain: footprint and energy use"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "StnryAssetEnvrSrcRef2"
+      },
+      "Name": "São Paulo Fábrica",
+      "City": "São Paulo",
+      "Country": "BR",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Factory",
+      "StreetAddress": "Avenida Paulista 1.578",
+      "Description": "Full chain"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "StnryAssetEnvrSrcRef3"
+      },
+      "Name": "Kraków Magazyn",
+      "City": "Kraków",
+      "Country": "PL",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Warehouse",
+      "StreetAddress": "ulica Długa 12",
+      "Description": "Footprint but no energy use"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "StnryAssetEnvrSrcRef4"
+      },
+      "Name": "Peña Verde Oficina",
+      "City": "Ciudad de México",
+      "Country": "MX",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Office",
+      "StreetAddress": "Paseo de la Reforma 222",
+      "Description": "Energy use but no footprint"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "StnryAssetEnvrSrcRef5"
+      },
+      "Name": "Malmö Kontor",
+      "City": "Malmö",
+      "Country": "SE",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office",
+      "StreetAddress": "Storgatan 8",
+      "Description": "Nothing attached: appears in both gap reports"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "StnryAssetEnvrSrcRef6"
+      },
+      "Name": "Ōsaka Seizōsho",
+      "City": "Ōsaka",
+      "Country": "JP",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Manufacturing",
+      "StreetAddress": "Chūō-ku 3-5-1",
+      "Description": "Full chain, prior reporting year"
+    }
+  ]
+}

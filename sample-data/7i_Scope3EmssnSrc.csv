@@ -1,0 +1,4 @@
+Name,Scope3EmissionSourceType,BusinessRegion,Country,AirTravelEmssnFctr.Name,HotelStayEmssnFctr.Name,GroundTravelEmssnFctr.Name
+Procurement - Sample,Procurement,EMEA,GB,,,
+Business Travel - Sample,Business Travel,EMEA,GB,Sample Air Travel Factors,Sample Hotel Factors,Sample Ground Travel Factors
+Employee Commuting - Sample,Employee Commuting,EMEA,GB,,,

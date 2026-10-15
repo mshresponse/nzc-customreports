@@ -1,0 +1,186 @@
+[
+  {
+    "sobject": "OtherEmssnFctrSet",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "0a_OtherEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "OtherEmssnFctrSetItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "0b_OtherEmssnFctrSetItem.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetEnvrSrc",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "1_StnryAssetEnvrSrc.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetCrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "2_StnryAssetCrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "3_StnryAssetEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetEmssnSrc",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "4_VehicleAssetEmssnSrc.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetCrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "5_VehicleAssetCrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "6_VehicleAssetEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "7a_Account.json"
+    ]
+  },
+  {
+    "sobject": "Supplier",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7b_Supplier.json"
+    ]
+  },
+  {
+    "sobject": "PcmtEmssnFctrSet",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "7c_PcmtEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "PcmtEmssnFctrSetItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7d_PcmtEmssnFctrSetItem.json"
+    ]
+  },
+  {
+    "sobject": "InflationRate",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "7e_InflationRate.json"
+    ]
+  },
+  {
+    "sobject": "AirTravelEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "7f_AirTravelEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "HotelStayEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "7g_HotelStayEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "GroundTravelEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "7h_GroundTravelEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "Scope3EmssnSrc",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7i_Scope3EmssnSrc.json"
+    ]
+  },
+  {
+    "sobject": "Scope3CrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7j_Scope3CrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "Scope3PcmtSummary",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7k_Scope3PcmtSummary.json"
+    ]
+  },
+  {
+    "sobject": "Scope3PcmtItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7l_Scope3PcmtItem.json"
+    ]
+  },
+  {
+    "sobject": "AirTravelEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7m_AirTravelEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "HotelStayEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7n_HotelStayEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "GroundTravelEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7o_GroundTravelEnrgyUse.json"
+    ]
+  }
+]

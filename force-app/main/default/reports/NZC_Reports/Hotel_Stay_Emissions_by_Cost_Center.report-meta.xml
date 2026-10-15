@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>HotelStayEnrgyUse$Name</field>
+    </columns>
+    <columns>
+        <field>HotelStayEnrgyUse$HotelCountry</field>
+    </columns>
+    <columns>
+        <field>HotelStayEnrgyUse$StartDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>HotelStayEnrgyUse$Scope3EmissionsInTco2e</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>HotelStayEnrgyUse$StayNightsCount</field>
+    </columns>
+    <description>Hotel stays by cost center, with nights and Scope 3 tCO2e totalled.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>HotelStayEnrgyUse$CostCenter</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Hotel Stay Emissions by Cost Center</name>
+    <reportType>Standalone_Hotel_Stays__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>HotelStayEnrgyUse$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

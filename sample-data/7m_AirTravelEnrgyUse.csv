@@ -1,0 +1,3 @@
+Name,Scope3EmssnSrc.Name,Scope3CrbnFtprnt.Name,AirTravelEmssnFctr.Name,CostCenter,SegmentDistance,SegmentDistanceUnit,SourceCountry,DestinationCountry,StartDate,EndDate
+Flight LHR-JFK 2024,Business Travel - Sample,S3 Business Travel 2024,Sample Air Travel Factors,Sales,11080,Kilometers,GB,US,2024-04-08,2024-04-12
+Flight LHR-AMS 2024,Business Travel - Sample,S3 Business Travel 2024,Sample Air Travel Factors,Engineering,740,Kilometers,GB,NL,2024-10-02,2024-10-03

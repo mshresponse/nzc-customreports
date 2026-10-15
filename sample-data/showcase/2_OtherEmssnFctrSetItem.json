@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem1"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "Co2EmissionFactor": 2.68,
+      "Co2EmissionFactorUnit": "KG_PER_L",
+      "CalorificValue": 10.0,
+      "CalorificValueUnit": "KWH_PER_L"
+    },
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem2"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "Co2EmissionFactor": 2.31,
+      "Co2EmissionFactorUnit": "KG_PER_L",
+      "CalorificValue": 9.1,
+      "CalorificValueUnit": "KWH_PER_L"
+    },
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem3"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet2",
+      "FuelType": "Diesel",
+      "Co2EmissionFactor": 0.268,
+      "Co2EmissionFactorUnit": "KG_PER_KWH",
+      "CalorificValue": 10.0,
+      "CalorificValueUnit": "KWH_PER_L"
+    },
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem4"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet2",
+      "FuelType": "NaturalGas",
+      "Co2EmissionFactor": 53.06,
+      "Co2EmissionFactorUnit": "KG_PER_MMBTU",
+      "CalorificValue": 10.55,
+      "CalorificValueUnit": "KWH_PER_M3"
+    },
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem5"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet2",
+      "FuelType": "Propane",
+      "Co2EmissionFactor": 0.214,
+      "Co2EmissionFactorUnit": "KG_PER_KWH",
+      "CalorificValue": 7.08,
+      "CalorificValueUnit": "KWH_PER_L"
+    },
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem6"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet2",
+      "FuelType": "FuelOil",
+      "Co2EmissionFactor": 0.267,
+      "Co2EmissionFactorUnit": "KG_PER_KWH",
+      "CalorificValue": 10.9,
+      "CalorificValueUnit": "KWH_PER_L"
+    }
+  ]
+}

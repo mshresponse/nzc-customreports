@@ -12,6 +12,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Asset Name</displayNameOverride>
             <field>Name</field>
             <table>StnryAssetEnvrSrc</table>
         </columns>
@@ -45,6 +46,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Energy Use Name</displayNameOverride>
             <field>Name</field>
             <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
@@ -61,6 +63,21 @@
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>FuelConsumptionUnit</field>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope1EmissionsInTco2e</field>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope2LocBasedEmssnInTco2e</field>
+            <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope2MktBasedEmssnInTco2e</field>
             <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>
         <columns>

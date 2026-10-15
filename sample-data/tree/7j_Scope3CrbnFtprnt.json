@@ -1,0 +1,24 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "Scope3CrbnFtprntRef1"
+      },
+      "Name": "S3 Procurement 2024",
+      "Scope3EmssnSrcId": "@Scope3EmssnSrcRef1",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "Scope3CrbnFtprntRef2"
+      },
+      "Name": "S3 Business Travel 2024",
+      "Scope3EmssnSrcId": "@Scope3EmssnSrcRef2",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    }
+  ]
+}

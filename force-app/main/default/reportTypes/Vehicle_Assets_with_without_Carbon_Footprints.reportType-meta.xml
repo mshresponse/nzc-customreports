@@ -11,7 +11,13 @@
     <label>NZC: Fleet with/without Footprints</label>
     <sections>
         <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>VehicleAssetEmssnSrc</table>
+        </columns>
+        <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Vehicle Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc</table>
         </columns>
@@ -40,6 +46,7 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Footprint Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc.VehicleAssetCrbnFtprnt</table>
         </columns>

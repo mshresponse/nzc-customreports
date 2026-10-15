@@ -64,13 +64,63 @@ answer and it disagrees with the Metadata API on purpose.
 
 ### 3. A report can only filter on columns the report type exposes
 
-The "missing related record" reports work by outer-joining and filtering where the child's
-`Id` is blank. That fails with `Invalid field name: Parent.Child$Id` unless `Id` is a
-column in the report type — even though every record has one.
+A filter on `Parent.Child$Id` fails with `Invalid field name: Parent.Child$Id` unless `Id`
+is a column in the report type — even though every record has one. So the four
+`with/without` report types carry `Id` on the child object as an unchecked column, and on
+the parent too, for the cross filters in the next section. Salesforce's own shipped report
+types do the same thing, which is where the pattern came from.
 
-So the four `with/without` report types carry `Id` on the child object as an unchecked
-column. Salesforce's own shipped report types do the same thing, which is where the
-pattern came from.
+### 4. "Child Id equals blank" does not find parents without children
+
+This one deploys, runs, returns plausible rows, and is wrong — which is why it survived
+here for months.
+
+The obvious way to list assets with no footprint is an outer-join report type filtered on
+the footprint's `Id` being blank. On a `with/without` report type, that filter is not
+applied to the joined rows. It is applied *inside* the join: it removes the footprint rows,
+and then every asset still appears, each with a blank footprint. The report returns every
+asset you have, and on a dashboard that looks like a large, believable gap.
+
+The construct that means "parents without children" is a **cross filter**:
+
+```xml
+<crossFilters>
+    <operation>without</operation>
+    <primaryTableColumn>StnryAssetEnvrSrc$Id</primaryTableColumn>
+    <relatedTable>StnryAssetCrbnFtprnt</relatedTable>
+    <relatedTableJoinColumn>StnryAssetEnvrSrc</relatedTableJoinColumn>
+</crossFilters>
+```
+
+Three things about it you won't guess:
+
+- `primaryTableColumn` is the parent's `Id`, so the report type must expose `Id` on the
+  parent or the deploy fails with `Invalid field name: StnryAssetEnvrSrc$Id`.
+- `relatedTable` is the child's object API name and `relatedTableJoinColumn` is the
+  lookup's relationship name — the same name space as report type joins.
+- The Analytics REST API shows the same filter with `primaryEntityField` set to an internal
+  key (`072…`), not a field name. Hand-write `StnryAssetEnvrSrc.Id` there and the API
+  accepts it, runs the report, and silently ignores the filter. Build it in the report
+  builder once and read what comes back.
+
+The test that catches this class of bug isn't a deploy; it is running the report against
+data whose answer you already know. That is what `sample-data/` and
+`scripts/check-reports.py` are for.
+
+### 5. Net Zero Cloud's own rules shape what an orphan can be
+
+Learned by trying to create the records the Orphaned reports look for:
+
+- A **footprint** can exist without an asset. Those are real orphans, and they still
+  contribute to totals.
+- An **energy use** cannot. Create one without an asset and you get `insufficient access
+  rights on cross-reference id`, even as an admin, and an asset can't be deleted while
+  energy use points at it. What does happen is that deleting a *footprint* blanks the
+  footprint lookup on every energy use under it. So the Orphaned Energy Use reports look
+  for a blank footprint, not a blank everything.
+- An **asset** can't be created at all until its object has a record type mapped through
+  `StnryAssetEnvSrcCnfg` (or `VehicleAssetEmssnSrcCnfg` for vehicles). Both are Metadata
+  API types; `sample-data/org-setup/` has the XML Salesforce emits for them.
 
 ### The general lesson
 
@@ -90,7 +140,7 @@ sf data query --use-tooling-api --target-org <alias> --query \
 ```
 
 Worth knowing what it does *not* mean. Every Net Zero Cloud object returns
-`IsReportingEnabled = false`, yet all sixteen report types here deploy and run. The flag
+`IsReportingEnabled = false`, yet all twenty-two report types here deploy and run. The flag
 describes whether Salesforce auto-generates a **standard** report type for the object, not
 whether the object can be reported on. NZC ships none — which is precisely why a custom
 report type is not a refinement here but the only way in.
@@ -133,6 +183,92 @@ report types can share one picker:
 
 The options are literal values, so the year list is hard-coded. Editing it in the dashboard
 builder is faster than editing the XML.
+
+## Fuel never shares an axis
+
+Fuel Consumption on an energy use record is in whatever unit its Fuel Consumption Unit says:
+kWh for electricity, therms or m³ for gas, liters or gallons for liquid fuels. Summing it
+across fuel types produces a number with no unit, and a chart of it puts 170 million kWh on
+the same scale as 95 thousand liters. So:
+
+- **Fuel Consumption by Fuel Type** and **Fleet Fuel by Fuel Type** group by fuel type and
+  then by unit, so every subtotal is in one unit, and carry `<showGrandTotal>false</showGrandTotal>`
+  because there is no meaningful grand total.
+- The **Emissions Coverage** dashboard shows them as **tables**, one row per fuel and unit,
+  not as charts.
+- The two **Orphaned Energy Use** reports carry no sum on consumption, so their dashboard
+  charts count records — how many to fix — instead of adding up mixed units.
+
+CO2e is the one measure that does share a unit across fuels, and the Scope 1 and 2 reports and
+charts use it. The fuel views stay in physical units because they answer a different question
+— how much of each fuel — and because CO2e only exists once an energy use has a factor and a
+scope allocation (see *What Net Zero Cloud calculates on save* below).
+
+## Two dashboard formats
+
+NZC Audit and NZC Data Quality are **Classic-format** dashboards: `leftSection`,
+`middleSection`, `rightSection`, `isGridLayout` false. NZC Emissions Coverage is
+**Lightning-format**: `dashboardGridLayout`, a 12-column grid where each component has
+`columnIndex`, `colSpan`, `rowIndex` and `rowSpan`. Both render in Lightning Experience.
+
+The Lightning format exists here because the table component (`FlexTable`, with its
+`flexTableColumn` list of groupings and aggregates) is Lightning-only. Opening a Classic
+dashboard in the Lightning builder converts it on save; the retrieve then comes back in grid
+form with `owner` and `runningUser` stamped in, which have to come out (see below). The
+grid's column positions are easier to edit in the XML than by dragging.
+
+## Column labels in report types
+
+Every Net Zero Cloud object's record name field is called Name, so a report on a joined
+report type shows two or three columns all headed "Name". `displayNameOverride` on the
+report type column renames it for every report built on that type, without touching the
+field:
+
+```xml
+<columns>
+    <checkedByDefault>true</checkedByDefault>
+    <displayNameOverride>Asset Name</displayNameOverride>
+    <field>Name</field>
+    <table>StnryAssetEnvrSrc</table>
+</columns>
+```
+
+All twenty-two report types here label the name column by object: Asset Name, Vehicle Name,
+Footprint Name, Energy Use Name, Procurement Item Name, Scope 3 Source Name and so on.
+
+## What Net Zero Cloud calculates on save
+
+Every scope is calculated on the record as it saves — if the inputs are there. Without them
+Net Zero Cloud still computes the gas quantities (CO2 in kg) and leaves every scope field at
+zero, which is easy to mistake for "not calculated yet".
+
+- **Stationary energy use** gets Scope 1 or Scope 2 when the record has a factor and its asset
+  has a **Carbon Emissions Scope Allocation**. Electricity takes an electricity factor set,
+  location- and market-based, whose generation mix adds up to 100%; fuels take an
+  other-emissions factor set, per kWh with a calorific value (a per-litre factor computes
+  nothing for stationary combustion). The allocation maps each fuel type to a scope —
+  electricity to Scope 2, fuels to Scope 1 for an owned site.
+- **Vehicle energy use** gets Scope 1 with a per-litre factor and the vehicle's Carbon
+  Emissions Scope Allocation picklist set to Scope 1.
+- **Scope 3 records** need only their factors. A procurement item gets Final Scope 3 Emissions
+  from spend times its factor (deflated to the factor's year, which is why a procurement
+  summary refuses to save without an `InflationRate` for its year and currency); a flight gets
+  tCO2e from distance and haul band, a hotel stay from nights, ground travel from distance.
+- **Roll-ups differ.** Scope 3 footprints filled in by themselves a few minutes after a load.
+  Stationary and fleet footprints total their energy use when an energy use is saved — but a
+  bulk insert didn't trigger it in testing; saving the records once more did.
+
+## Scope 3
+- **The join rule holds even when the lookup isn't named after the parent.** Procurement items
+  point at their summary through `ProcurementSummaryId`, but the report type join is still
+  `<relationship>Scope3PcmtItem</relationship>`, the child object's API name.
+- **Group spend by currency before you total it.** `SpentAmount` is in the currency of its
+  procurement summary, so a spend total is only meaningful within one currency — the same
+  problem as fuel units. The spend reports group by currency first and carry no grand total;
+  tCO2e is the one figure totalled freely.
+- **Two dashboard limits the builder enforces and the XML doesn't warn about:** a component
+  title is at most 40 characters, and a Metric component needs `indicatorLowColor`,
+  `indicatorMiddleColor` and `indicatorHighColor` even when there are no breakpoints.
 
 ## Year-over-year change: build it in the UI
 

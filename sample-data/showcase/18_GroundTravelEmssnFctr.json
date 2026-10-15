@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "GroundTravelEmssnFctr",
+        "referenceId": "ShowGroundTravelEmssnFctr1"
+      },
+      "Name": "Showcase Ground Travel Factors",
+      "DistanceUnit": "Kilometers",
+      "CurrencyCode": "USD",
+      "EmissionFactorUpdateYear": "2023",
+      "TaxiEmssnInKgCo2eDstnUnit": 0.15,
+      "TaxiRateForDstnUnit": 2.0,
+      "TrainEmssnInKgCo2eDstnUnit": 0.035,
+      "TrainRateForDstnUnit": 0.3,
+      "PersCarEmssnInKgCo2eDstnUnit": 0.17,
+      "EmissionFactorDataSource": "Illustrative only, for demo data."
+    }
+  ]
+}

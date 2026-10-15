@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Name</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Supplier</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$SpendingCategory1</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$SpendingCategory2</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Scope3GhgCategory</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$SpentAmount</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$SpentDate</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$PcmtEmssnFctrSetItem</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Scope3EmissionsInTco2</field>
+    </columns>
+    <description>Every purchase, narrow so it edits in place: spend, date, spending categories, GHG category. Fix a bad import here; Final Scope 3 Emissions recalculates on save. Needs inline editing on.</description>
+    <format>Tabular</format>
+    <name>Procurement Items Data Entry</name>
+    <reportType>Scope3_Procurement_Summaries_with_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Scope3PcmtSummary$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

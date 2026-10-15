@@ -1,0 +1,2 @@
+Name,DistanceUnit,CurrencyCode,EmissionFactorUpdateYear,TaxiEmssnInKgCo2eDstnUnit,TaxiRateForDstnUnit,PersCarEmssnInKgCo2eDstnUnit,EmissionFactorDataSource
+Sample Ground Travel Factors,Kilometers,USD,2023,0.15,2.0,0.17,Illustrative only

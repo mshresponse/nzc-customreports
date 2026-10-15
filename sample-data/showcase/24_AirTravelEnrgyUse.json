@@ -1,0 +1,1300 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse1"
+      },
+      "Name": "LHR-JFK 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 11080,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-09-03",
+      "EndDate": "2022-09-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse2"
+      },
+      "Name": "LHR-FRA 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 1300,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-10-03",
+      "EndDate": "2022-10-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse3"
+      },
+      "Name": "ZRH-SIN 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 20600,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-01-03",
+      "EndDate": "2022-01-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse4"
+      },
+      "Name": "CDG-MAD 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 2120,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-10-03",
+      "EndDate": "2022-10-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse5"
+      },
+      "Name": "LHR-JFK 2022 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 11080,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-06-03",
+      "EndDate": "2022-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse6"
+      },
+      "Name": "LHR-FRA 2022 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Executive",
+      "SegmentDistance": 1300,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-07-03",
+      "EndDate": "2022-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse7"
+      },
+      "Name": "ZRH-SIN 2022 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 20600,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-04-03",
+      "EndDate": "2022-04-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse8"
+      },
+      "Name": "CDG-MAD 2022 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 2120,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2022-11-03",
+      "EndDate": "2022-11-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse9"
+      },
+      "Name": "LHR-JFK 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 11080,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-03-03",
+      "EndDate": "2023-03-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse10"
+      },
+      "Name": "LHR-FRA 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 1300,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-12-03",
+      "EndDate": "2023-12-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse11"
+      },
+      "Name": "ZRH-SIN 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 20600,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-04-03",
+      "EndDate": "2023-04-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse12"
+      },
+      "Name": "CDG-MAD 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 2120,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-05-03",
+      "EndDate": "2023-05-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse13"
+      },
+      "Name": "LHR-JFK 2023 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 11080,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-04-03",
+      "EndDate": "2023-04-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse14"
+      },
+      "Name": "LHR-FRA 2023 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Executive",
+      "SegmentDistance": 1300,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-06-03",
+      "EndDate": "2023-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse15"
+      },
+      "Name": "ZRH-SIN 2023 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 20600,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-11-03",
+      "EndDate": "2023-11-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse16"
+      },
+      "Name": "CDG-MAD 2023 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Executive",
+      "SegmentDistance": 2120,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2023-09-03",
+      "EndDate": "2023-09-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse17"
+      },
+      "Name": "LHR-JFK 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sales",
+      "SegmentDistance": 11080,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-09-03",
+      "EndDate": "2024-09-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse18"
+      },
+      "Name": "LHR-FRA 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 1300,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-02-03",
+      "EndDate": "2024-02-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse19"
+      },
+      "Name": "ZRH-SIN 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 20600,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-12-03",
+      "EndDate": "2024-12-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse20"
+      },
+      "Name": "CDG-MAD 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 2120,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-06-03",
+      "EndDate": "2024-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse21"
+      },
+      "Name": "LHR-JFK 2024 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 11080,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-05-03",
+      "EndDate": "2024-05-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse22"
+      },
+      "Name": "LHR-FRA 2024 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 1300,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-01-03",
+      "EndDate": "2024-01-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse23"
+      },
+      "Name": "ZRH-SIN 2024 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 20600,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-11-03",
+      "EndDate": "2024-11-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse24"
+      },
+      "Name": "CDG-MAD 2024 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 2120,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "TravelerBaseCountry": "GB",
+      "StartDate": "2024-03-03",
+      "EndDate": "2024-03-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse25"
+      },
+      "Name": "ORD-GRU 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 16800,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-10-03",
+      "EndDate": "2022-10-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse26"
+      },
+      "Name": "DFW-YYZ 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 3900,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-04-03",
+      "EndDate": "2022-04-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse27"
+      },
+      "Name": "ORD-LHR 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 12700,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-02-03",
+      "EndDate": "2022-02-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse28"
+      },
+      "Name": "ATL-MEX 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sales",
+      "SegmentDistance": 4280,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-08-03",
+      "EndDate": "2022-08-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse29"
+      },
+      "Name": "ORD-GRU 2022 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sales",
+      "SegmentDistance": 16800,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-12-03",
+      "EndDate": "2022-12-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse30"
+      },
+      "Name": "DFW-YYZ 2022 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 3900,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-07-03",
+      "EndDate": "2022-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse31"
+      },
+      "Name": "ORD-LHR 2022 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 12700,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-10-03",
+      "EndDate": "2022-10-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse32"
+      },
+      "Name": "ATL-MEX 2022 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sales",
+      "SegmentDistance": 4280,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2022-11-03",
+      "EndDate": "2022-11-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse33"
+      },
+      "Name": "ORD-GRU 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 16800,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-07-03",
+      "EndDate": "2023-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse34"
+      },
+      "Name": "DFW-YYZ 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 3900,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-07-03",
+      "EndDate": "2023-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse35"
+      },
+      "Name": "ORD-LHR 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 12700,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-03-03",
+      "EndDate": "2023-03-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse36"
+      },
+      "Name": "ATL-MEX 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 4280,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-12-03",
+      "EndDate": "2023-12-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse37"
+      },
+      "Name": "ORD-GRU 2023 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 16800,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-11-03",
+      "EndDate": "2023-11-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse38"
+      },
+      "Name": "DFW-YYZ 2023 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 3900,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-07-03",
+      "EndDate": "2023-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse39"
+      },
+      "Name": "ORD-LHR 2023 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sales",
+      "SegmentDistance": 12700,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-06-03",
+      "EndDate": "2023-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse40"
+      },
+      "Name": "ATL-MEX 2023 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 4280,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2023-06-03",
+      "EndDate": "2023-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse41"
+      },
+      "Name": "ORD-GRU 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 16800,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-12-03",
+      "EndDate": "2024-12-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse42"
+      },
+      "Name": "DFW-YYZ 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 3900,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-01-03",
+      "EndDate": "2024-01-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse43"
+      },
+      "Name": "ORD-LHR 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 12700,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-09-03",
+      "EndDate": "2024-09-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse44"
+      },
+      "Name": "ATL-MEX 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 4280,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-03-03",
+      "EndDate": "2024-03-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse45"
+      },
+      "Name": "ORD-GRU 2024 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 16800,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-10-03",
+      "EndDate": "2024-10-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse46"
+      },
+      "Name": "DFW-YYZ 2024 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Executive",
+      "SegmentDistance": 3900,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-07-03",
+      "EndDate": "2024-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse47"
+      },
+      "Name": "ORD-LHR 2024 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 12700,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-08-03",
+      "EndDate": "2024-08-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse48"
+      },
+      "Name": "ATL-MEX 2024 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sales",
+      "SegmentDistance": 4280,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "US",
+      "TravelerBaseCountry": "US",
+      "StartDate": "2024-01-03",
+      "EndDate": "2024-01-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse49"
+      },
+      "Name": "HND-SIN 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 10640,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-01-03",
+      "EndDate": "2022-01-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse50"
+      },
+      "Name": "SYD-AKL 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 4320,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-09-03",
+      "EndDate": "2022-09-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse51"
+      },
+      "Name": "BLR-SIN 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Executive",
+      "SegmentDistance": 6360,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-04-03",
+      "EndDate": "2022-04-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse52"
+      },
+      "Name": "HND-ICN 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 2420,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-11-03",
+      "EndDate": "2022-11-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse53"
+      },
+      "Name": "HND-SIN 2022 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 10640,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-06-03",
+      "EndDate": "2022-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse54"
+      },
+      "Name": "SYD-AKL 2022 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 4320,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-06-03",
+      "EndDate": "2022-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse55"
+      },
+      "Name": "BLR-SIN 2022 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 6360,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-08-03",
+      "EndDate": "2022-08-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse56"
+      },
+      "Name": "HND-ICN 2022 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 2420,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2022-08-03",
+      "EndDate": "2022-08-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse57"
+      },
+      "Name": "HND-SIN 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 10640,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-02-03",
+      "EndDate": "2023-02-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse58"
+      },
+      "Name": "SYD-AKL 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Operations",
+      "SegmentDistance": 4320,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-03-03",
+      "EndDate": "2023-03-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse59"
+      },
+      "Name": "BLR-SIN 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 6360,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-09-03",
+      "EndDate": "2023-09-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse60"
+      },
+      "Name": "HND-ICN 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sales",
+      "SegmentDistance": 2420,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-07-03",
+      "EndDate": "2023-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse61"
+      },
+      "Name": "HND-SIN 2023 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 10640,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-10-03",
+      "EndDate": "2023-10-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse62"
+      },
+      "Name": "SYD-AKL 2023 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Executive",
+      "SegmentDistance": 4320,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-01-03",
+      "EndDate": "2023-01-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse63"
+      },
+      "Name": "BLR-SIN 2023 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 6360,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-04-03",
+      "EndDate": "2023-04-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse64"
+      },
+      "Name": "HND-ICN 2023 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 2420,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2023-07-03",
+      "EndDate": "2023-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse65"
+      },
+      "Name": "HND-SIN 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sales",
+      "SegmentDistance": 10640,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-03-03",
+      "EndDate": "2024-03-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse66"
+      },
+      "Name": "SYD-AKL 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 4320,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-03-03",
+      "EndDate": "2024-03-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse67"
+      },
+      "Name": "BLR-SIN 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 6360,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-07-03",
+      "EndDate": "2024-07-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse68"
+      },
+      "Name": "HND-ICN 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 2420,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-08-03",
+      "EndDate": "2024-08-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse69"
+      },
+      "Name": "HND-SIN 2024 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Operations",
+      "SegmentDistance": 10640,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-01-03",
+      "EndDate": "2024-01-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse70"
+      },
+      "Name": "SYD-AKL 2024 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 4320,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-04-03",
+      "EndDate": "2024-04-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse71"
+      },
+      "Name": "BLR-SIN 2024 #7",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier10",
+      "CostCenter": "Sustainability",
+      "SegmentDistance": 6360,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-06-03",
+      "EndDate": "2024-06-07"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "ShowAirTravelEnrgyUse72"
+      },
+      "Name": "HND-ICN 2024 #8",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier9",
+      "CostCenter": "Executive",
+      "SegmentDistance": 2420,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "JP",
+      "TravelerBaseCountry": "JP",
+      "StartDate": "2024-02-03",
+      "EndDate": "2024-02-07"
+    }
+  ]
+}

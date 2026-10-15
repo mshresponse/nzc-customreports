@@ -1,0 +1,45 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "VehicleAssetEnrgyUseRef1"
+      },
+      "Name": "VEU Citroën Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@VehicleAssetEmssnSrcRef1",
+      "VehicleAssetCrbnFtprntId": "@VehicleAssetCrbnFtprntRef1",
+      "OtherEmssnFctrId": "@OtherEmssnFctrSetRef1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3200,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 41000
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "VehicleAssetEnrgyUseRef2"
+      },
+      "Name": "VEU Volvo Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@VehicleAssetEmssnSrcRef2",
+      "VehicleAssetCrbnFtprntId": "@VehicleAssetCrbnFtprntRef2",
+      "OtherEmssnFctrId": "@OtherEmssnFctrSetRef1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 11800,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 96000
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "VehicleAssetEnrgyUseRef3"
+      },
+      "Name": "VEU Peñarol Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@VehicleAssetEmssnSrcRef3",
+      "OtherEmssnFctrId": "@OtherEmssnFctrSetRef1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 7400,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 62000
+    }
+  ]
+}

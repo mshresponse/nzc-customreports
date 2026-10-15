@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "PcmtEmssnFctrSetItemRef1"
+      },
+      "Name": "Freight and logistics",
+      "PcmtEmssnFctrSetId": "@PcmtEmssnFctrSetRef1",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "EconomicSectorCategory": "Freight transport",
+      "TotScpe3EmssnPerMillionSpent": 720
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "PcmtEmssnFctrSetItemRef2"
+      },
+      "Name": "Office furniture",
+      "PcmtEmssnFctrSetId": "@PcmtEmssnFctrSetRef1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "EconomicSectorCategory": "Office goods",
+      "TotScpe3EmssnPerMillionSpent": 310
+    }
+  ]
+}

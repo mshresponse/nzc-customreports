@@ -1,0 +1,23 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSet",
+        "referenceId": "ShowOtherEmssnFctrSet1"
+      },
+      "Name": "Showcase Fleet Factors",
+      "EmissionFactorDataSource": "Illustrative only, for demo data. Replace with factors from your own source before reporting."
+    },
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSet",
+        "referenceId": "ShowOtherEmssnFctrSet2"
+      },
+      "Name": "Showcase Stationary Fuel Factors",
+      "EmissionFactorUpdateYear": "2019",
+      "Ch4GlblWarmingPot": 28,
+      "N2oGlblWarmingPot": 265,
+      "EmissionFactorDataSource": "Illustrative only, for demo data. Replace with factors from your own source before reporting."
+    }
+  ]
+}

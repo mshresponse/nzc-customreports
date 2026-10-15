@@ -1,0 +1,514 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc1"
+      },
+      "Name": "Zürich Süd Rechenzentrum",
+      "City": "Zürich",
+      "Country": "CH",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Data Center",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc2"
+      },
+      "Name": "Frankfurt Rechenzentrum",
+      "City": "Frankfurt",
+      "Country": "DE",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Data Center",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc3"
+      },
+      "Name": "Dublin Data Centre",
+      "City": "Dublin",
+      "Country": "IE",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Data Center",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc4"
+      },
+      "Name": "London Head Office",
+      "City": "London",
+      "Country": "GB",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc5"
+      },
+      "Name": "Paris La Défense Bureau",
+      "City": "Paris",
+      "Country": "FR",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc6"
+      },
+      "Name": "Malmö Kontor",
+      "City": "Malmö",
+      "Country": "SE",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc7"
+      },
+      "Name": "Kraków Magazyn",
+      "City": "Kraków",
+      "Country": "PL",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Warehouse",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc8"
+      },
+      "Name": "Rotterdam Distributiecentrum",
+      "City": "Rotterdam",
+      "Country": "NL",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Warehouse",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc9"
+      },
+      "Name": "Milano Stabilimento",
+      "City": "Milano",
+      "Country": "IT",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Manufacturing",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc10"
+      },
+      "Name": "Lyon Usine",
+      "City": "Lyon",
+      "Country": "FR",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Factory",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc11"
+      },
+      "Name": "São Paulo Fábrica",
+      "City": "São Paulo",
+      "Country": "BR",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Factory",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc12"
+      },
+      "Name": "Peña Verde Oficina",
+      "City": "Ciudad de México",
+      "Country": "MX",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc13"
+      },
+      "Name": "Monterrey Planta",
+      "City": "Monterrey",
+      "Country": "MX",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Manufacturing",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc14"
+      },
+      "Name": "Chicago Regional Office",
+      "City": "Chicago",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc15"
+      },
+      "Name": "Dallas Data Center",
+      "City": "Dallas",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Data Center",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc16"
+      },
+      "Name": "Toronto Warehouse",
+      "City": "Toronto",
+      "Country": "CA",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc17"
+      },
+      "Name": "Santiago Bodega",
+      "City": "Santiago",
+      "Country": "CL",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc18"
+      },
+      "Name": "Atlanta Retail Hub",
+      "City": "Atlanta",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Retail",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc19"
+      },
+      "Name": "Ōsaka Seizōsho",
+      "City": "Ōsaka",
+      "Country": "JP",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Manufacturing",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc20"
+      },
+      "Name": "Tōkyō Honsha",
+      "City": "Tōkyō",
+      "Country": "JP",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc21"
+      },
+      "Name": "Singapore Data Centre",
+      "City": "Singapore",
+      "Country": "SG",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Data Center",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc22"
+      },
+      "Name": "Sydney Office",
+      "City": "Sydney",
+      "Country": "AU",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc23"
+      },
+      "Name": "Bengaluru Campus",
+      "City": "Bengaluru",
+      "Country": "IN",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc24"
+      },
+      "Name": "Shenzhen Factory",
+      "City": "Shenzhen",
+      "Country": "CN",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Factory",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc25"
+      },
+      "Name": "Auckland Office",
+      "City": "Auckland",
+      "Country": "NZ",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc26"
+      },
+      "Name": "Melbourne Office",
+      "City": "Melbourne",
+      "Country": "AU",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc27"
+      },
+      "Name": "Seoul Office",
+      "City": "Seoul",
+      "Country": "KR",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc28"
+      },
+      "Name": "Gdańsk Biuro",
+      "City": "Gdańsk",
+      "Country": "PL",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc29"
+      },
+      "Name": "Denver Retail Store",
+      "City": "Denver",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Retail",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc30"
+      },
+      "Name": "Phoenix Retail Store",
+      "City": "Phoenix",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Retail",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc31"
+      },
+      "Name": "Lima Almacén",
+      "City": "Lima",
+      "Country": "PE",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc32"
+      },
+      "Name": "Bogotá Bodega",
+      "City": "Bogotá",
+      "Country": "CO",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc33"
+      },
+      "Name": "Porto Armazém",
+      "City": "Porto",
+      "Country": "PT",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Warehouse",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc34"
+      },
+      "Name": "Hanoi Factory",
+      "City": "Hanoi",
+      "Country": "VN",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Factory",
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "ElectricityEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2"
+    }
+  ]
+}

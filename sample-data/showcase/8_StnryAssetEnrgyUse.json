@@ -1,0 +1,1853 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse1"
+      },
+      "Name": "Zürich Süd Rechenzentrum Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt1",
+      "FuelType": "Electricity",
+      "FuelConsumption": 10353125,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse2"
+      },
+      "Name": "Zürich Süd Rechenzentrum Diesel 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 8111,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse3"
+      },
+      "Name": "Zürich Süd Rechenzentrum Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt2",
+      "FuelType": "Electricity",
+      "FuelConsumption": 10419222,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse4"
+      },
+      "Name": "Zürich Süd Rechenzentrum Diesel 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt2",
+      "FuelType": "Diesel",
+      "FuelConsumption": 7444,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse5"
+      },
+      "Name": "Zürich Süd Rechenzentrum Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt3",
+      "FuelType": "Electricity",
+      "FuelConsumption": 9305877,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse6"
+      },
+      "Name": "Zürich Süd Rechenzentrum Diesel 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt3",
+      "FuelType": "Diesel",
+      "FuelConsumption": 7624,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse7"
+      },
+      "Name": "Frankfurt Rechenzentrum Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt4",
+      "FuelType": "Electricity",
+      "FuelConsumption": 9512844,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse8"
+      },
+      "Name": "Frankfurt Rechenzentrum Diesel 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt4",
+      "FuelType": "Diesel",
+      "FuelConsumption": 7241,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse9"
+      },
+      "Name": "Frankfurt Rechenzentrum Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt5",
+      "FuelType": "Electricity",
+      "FuelConsumption": 9123607,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse10"
+      },
+      "Name": "Frankfurt Rechenzentrum Diesel 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt5",
+      "FuelType": "Diesel",
+      "FuelConsumption": 7172,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse11"
+      },
+      "Name": "Frankfurt Rechenzentrum Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt6",
+      "FuelType": "Electricity",
+      "FuelConsumption": 8813733,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse12"
+      },
+      "Name": "Frankfurt Rechenzentrum Diesel 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt6",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6766,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse13"
+      },
+      "Name": "Dublin Data Centre Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt7",
+      "FuelType": "Electricity",
+      "FuelConsumption": 8160321,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse14"
+      },
+      "Name": "Dublin Data Centre Diesel 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt7",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6006,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse15"
+      },
+      "Name": "Dublin Data Centre Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt8",
+      "FuelType": "Electricity",
+      "FuelConsumption": 8063532,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse16"
+      },
+      "Name": "Dublin Data Centre Diesel 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt8",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6043,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse17"
+      },
+      "Name": "Dublin Data Centre Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt9",
+      "FuelType": "Electricity",
+      "FuelConsumption": 7769277,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse18"
+      },
+      "Name": "Dublin Data Centre Diesel 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt9",
+      "FuelType": "Diesel",
+      "FuelConsumption": 5989,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse19"
+      },
+      "Name": "London Head Office Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt10",
+      "FuelType": "Electricity",
+      "FuelConsumption": 535701,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse20"
+      },
+      "Name": "London Head Office Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt10",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 9023,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse21"
+      },
+      "Name": "London Head Office Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt11",
+      "FuelType": "Electricity",
+      "FuelConsumption": 566418,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse22"
+      },
+      "Name": "London Head Office Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt11",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 9437,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse23"
+      },
+      "Name": "London Head Office Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt12",
+      "FuelType": "Electricity",
+      "FuelConsumption": 535050,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse24"
+      },
+      "Name": "London Head Office Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt12",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 9168,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse25"
+      },
+      "Name": "Paris La Défense Bureau Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt13",
+      "FuelType": "Electricity",
+      "FuelConsumption": 438986,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse26"
+      },
+      "Name": "Paris La Défense Bureau Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt13",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 7602,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse27"
+      },
+      "Name": "Paris La Défense Bureau Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt14",
+      "FuelType": "Electricity",
+      "FuelConsumption": 449389,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse28"
+      },
+      "Name": "Paris La Défense Bureau Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt14",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 7292,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse29"
+      },
+      "Name": "Paris La Défense Bureau Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt15",
+      "FuelType": "Electricity",
+      "FuelConsumption": 427929,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse30"
+      },
+      "Name": "Paris La Défense Bureau Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt15",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 7533,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse31"
+      },
+      "Name": "Malmö Kontor Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt16",
+      "FuelType": "Electricity",
+      "FuelConsumption": 186719,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse32"
+      },
+      "Name": "Malmö Kontor Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt16",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 2923,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse33"
+      },
+      "Name": "Malmö Kontor Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt17",
+      "FuelType": "Electricity",
+      "FuelConsumption": 183042,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse34"
+      },
+      "Name": "Malmö Kontor Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt17",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 2943,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse35"
+      },
+      "Name": "Malmö Kontor Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt18",
+      "FuelType": "Electricity",
+      "FuelConsumption": 170444,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse36"
+      },
+      "Name": "Malmö Kontor Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt18",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 2848,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse37"
+      },
+      "Name": "Kraków Magazyn Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt19",
+      "FuelType": "Electricity",
+      "FuelConsumption": 209961,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse38"
+      },
+      "Name": "Kraków Magazyn Propane 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt19",
+      "FuelType": "Propane",
+      "FuelConsumption": 6010,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse39"
+      },
+      "Name": "Kraków Magazyn Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt20",
+      "FuelType": "Electricity",
+      "FuelConsumption": 202805,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse40"
+      },
+      "Name": "Kraków Magazyn Propane 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt20",
+      "FuelType": "Propane",
+      "FuelConsumption": 6262,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse41"
+      },
+      "Name": "Kraków Magazyn Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt21",
+      "FuelType": "Electricity",
+      "FuelConsumption": 197647,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse42"
+      },
+      "Name": "Kraków Magazyn Propane 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt21",
+      "FuelType": "Propane",
+      "FuelConsumption": 5853,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse43"
+      },
+      "Name": "Milano Stabilimento Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt23",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2852340,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse44"
+      },
+      "Name": "Milano Stabilimento Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt23",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 258582,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse45"
+      },
+      "Name": "Milano Stabilimento Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt24",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2772260,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse46"
+      },
+      "Name": "Milano Stabilimento Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt24",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 237902,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse47"
+      },
+      "Name": "Milano Stabilimento Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt25",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2525852,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse48"
+      },
+      "Name": "Milano Stabilimento Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt25",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 221217,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse49"
+      },
+      "Name": "Lyon Usine Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt26",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2459253,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse50"
+      },
+      "Name": "Lyon Usine Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt26",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 194666,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse51"
+      },
+      "Name": "Lyon Usine Fuel Oil 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt26",
+      "FuelType": "FuelOil",
+      "FuelConsumption": 28777,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse52"
+      },
+      "Name": "Lyon Usine Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt27",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2389344,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse53"
+      },
+      "Name": "Lyon Usine Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt27",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 186041,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse54"
+      },
+      "Name": "Lyon Usine Fuel Oil 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt27",
+      "FuelType": "FuelOil",
+      "FuelConsumption": 26442,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse55"
+      },
+      "Name": "Lyon Usine Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt28",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2412810,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse56"
+      },
+      "Name": "Lyon Usine Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt28",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 170952,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse57"
+      },
+      "Name": "Lyon Usine Fuel Oil 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt28",
+      "FuelType": "FuelOil",
+      "FuelConsumption": 26759,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse58"
+      },
+      "Name": "São Paulo Fábrica Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt29",
+      "FuelType": "Electricity",
+      "FuelConsumption": 3103825,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse59"
+      },
+      "Name": "São Paulo Fábrica Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt29",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 227163,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse60"
+      },
+      "Name": "São Paulo Fábrica Fuel Oil 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt29",
+      "FuelType": "FuelOil",
+      "FuelConsumption": 34701,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse61"
+      },
+      "Name": "São Paulo Fábrica Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt30",
+      "FuelType": "Electricity",
+      "FuelConsumption": 3186833,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse62"
+      },
+      "Name": "São Paulo Fábrica Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt30",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 221225,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse63"
+      },
+      "Name": "São Paulo Fábrica Fuel Oil 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt30",
+      "FuelType": "FuelOil",
+      "FuelConsumption": 32074,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse64"
+      },
+      "Name": "São Paulo Fábrica Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt31",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2960707,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse65"
+      },
+      "Name": "São Paulo Fábrica Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt31",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 207145,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse66"
+      },
+      "Name": "São Paulo Fábrica Fuel Oil 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt31",
+      "FuelType": "FuelOil",
+      "FuelConsumption": 31794,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse67"
+      },
+      "Name": "Peña Verde Oficina Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt32",
+      "FuelType": "Electricity",
+      "FuelConsumption": 221438,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse68"
+      },
+      "Name": "Peña Verde Oficina Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt32",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 3892,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse69"
+      },
+      "Name": "Peña Verde Oficina Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt33",
+      "FuelType": "Electricity",
+      "FuelConsumption": 212509,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse70"
+      },
+      "Name": "Peña Verde Oficina Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt33",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 3501,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse71"
+      },
+      "Name": "Peña Verde Oficina Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt34",
+      "FuelType": "Electricity",
+      "FuelConsumption": 200738,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse72"
+      },
+      "Name": "Peña Verde Oficina Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt34",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 3266,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse73"
+      },
+      "Name": "Monterrey Planta Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc13",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt35",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2444030,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse74"
+      },
+      "Name": "Monterrey Planta Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc13",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt35",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 205031,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse75"
+      },
+      "Name": "Monterrey Planta Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc13",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt36",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2346356,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse76"
+      },
+      "Name": "Monterrey Planta Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc13",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt36",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 187446,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse77"
+      },
+      "Name": "Chicago Regional Office Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt37",
+      "FuelType": "Electricity",
+      "FuelConsumption": 378554,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse78"
+      },
+      "Name": "Chicago Regional Office Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt37",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 6175,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse79"
+      },
+      "Name": "Chicago Regional Office Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt38",
+      "FuelType": "Electricity",
+      "FuelConsumption": 368477,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse80"
+      },
+      "Name": "Chicago Regional Office Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt38",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 5981,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse81"
+      },
+      "Name": "Chicago Regional Office Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt39",
+      "FuelType": "Electricity",
+      "FuelConsumption": 341384,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse82"
+      },
+      "Name": "Chicago Regional Office Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt39",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 5879,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse83"
+      },
+      "Name": "Dallas Data Center Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc15",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt40",
+      "FuelType": "Electricity",
+      "FuelConsumption": 8654348,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse84"
+      },
+      "Name": "Dallas Data Center Diesel 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc15",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt40",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6913,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse85"
+      },
+      "Name": "Dallas Data Center Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc15",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt41",
+      "FuelType": "Electricity",
+      "FuelConsumption": 8876235,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse86"
+      },
+      "Name": "Dallas Data Center Diesel 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc15",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt41",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6647,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse87"
+      },
+      "Name": "Toronto Warehouse Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt42",
+      "FuelType": "Electricity",
+      "FuelConsumption": 260621,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse88"
+      },
+      "Name": "Toronto Warehouse Propane 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt42",
+      "FuelType": "Propane",
+      "FuelConsumption": 7574,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse89"
+      },
+      "Name": "Toronto Warehouse Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt43",
+      "FuelType": "Electricity",
+      "FuelConsumption": 241806,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse90"
+      },
+      "Name": "Toronto Warehouse Propane 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt43",
+      "FuelType": "Propane",
+      "FuelConsumption": 7703,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse91"
+      },
+      "Name": "Toronto Warehouse Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "FuelType": "Electricity",
+      "FuelConsumption": 247501,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet2",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse92"
+      },
+      "Name": "Toronto Warehouse Propane 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "FuelType": "Propane",
+      "FuelConsumption": 7320,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse93"
+      },
+      "Name": "Ōsaka Seizōsho Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt44",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2931338,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse94"
+      },
+      "Name": "Ōsaka Seizōsho Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt44",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 257904,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse95"
+      },
+      "Name": "Ōsaka Seizōsho Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt45",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2735887,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse96"
+      },
+      "Name": "Ōsaka Seizōsho Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt45",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 228690,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse97"
+      },
+      "Name": "Ōsaka Seizōsho Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt46",
+      "FuelType": "Electricity",
+      "FuelConsumption": 2793026,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse98"
+      },
+      "Name": "Ōsaka Seizōsho Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt46",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 219071,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse99"
+      },
+      "Name": "Tōkyō Honsha Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt47",
+      "FuelType": "Electricity",
+      "FuelConsumption": 434762,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse100"
+      },
+      "Name": "Tōkyō Honsha Natural Gas 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt47",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 7825,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse101"
+      },
+      "Name": "Tōkyō Honsha Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt48",
+      "FuelType": "Electricity",
+      "FuelConsumption": 469459,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse102"
+      },
+      "Name": "Tōkyō Honsha Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt48",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 7105,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse103"
+      },
+      "Name": "Tōkyō Honsha Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt49",
+      "FuelType": "Electricity",
+      "FuelConsumption": 445288,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse104"
+      },
+      "Name": "Tōkyō Honsha Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt49",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 6989,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse105"
+      },
+      "Name": "Singapore Data Centre Electricity 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt50",
+      "FuelType": "Electricity",
+      "FuelConsumption": 8293292,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse106"
+      },
+      "Name": "Singapore Data Centre Diesel 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt50",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6645,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse107"
+      },
+      "Name": "Singapore Data Centre Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt51",
+      "FuelType": "Electricity",
+      "FuelConsumption": 7925303,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse108"
+      },
+      "Name": "Singapore Data Centre Diesel 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt51",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6178,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse109"
+      },
+      "Name": "Singapore Data Centre Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt52",
+      "FuelType": "Electricity",
+      "FuelConsumption": 7176344,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse110"
+      },
+      "Name": "Singapore Data Centre Diesel 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt52",
+      "FuelType": "Diesel",
+      "FuelConsumption": 5728,
+      "FuelConsumptionUnit": "Liters",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse111"
+      },
+      "Name": "Sydney Office Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc22",
+      "FuelType": "Electricity",
+      "FuelConsumption": 260647,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse112"
+      },
+      "Name": "Sydney Office Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc22",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 4464,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse113"
+      },
+      "Name": "Bengaluru Campus Electricity 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc23",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt53",
+      "FuelType": "Electricity",
+      "FuelConsumption": 549745,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse114"
+      },
+      "Name": "Bengaluru Campus Natural Gas 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc23",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt53",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 8581,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse115"
+      },
+      "Name": "Bengaluru Campus Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc23",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt54",
+      "FuelType": "Electricity",
+      "FuelConsumption": 498989,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse116"
+      },
+      "Name": "Bengaluru Campus Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc23",
+      "StnryAssetCrbnFtprntId": "@ShowStnryAssetCrbnFtprnt54",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 8740,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse117"
+      },
+      "Name": "Melbourne Office Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc26",
+      "FuelType": "Electricity",
+      "FuelConsumption": 241006,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet3",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet3",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse118"
+      },
+      "Name": "Melbourne Office Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc26",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 3835,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse119"
+      },
+      "Name": "Gdańsk Biuro Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc28",
+      "FuelType": "Electricity",
+      "FuelConsumption": 157977,
+      "FuelConsumptionUnit": "kWh",
+      "ElectricityEmissionFactorsId": "@ShowElectricityEmssnFctrSet1",
+      "MktBsdElectriEmssnFctrId": "@ShowElectricityEmssnFctrSet1",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse120"
+      },
+      "Name": "Gdańsk Biuro Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc28",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 2730,
+      "FuelConsumptionUnit": "Therms",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet2",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    }
+  ]
+}

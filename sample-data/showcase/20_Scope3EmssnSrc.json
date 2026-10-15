@@ -1,0 +1,83 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "ShowScope3EmssnSrc1"
+      },
+      "Name": "Procurement - Global",
+      "Scope3EmissionSourceType": "Procurement",
+      "BusinessRegion": "EMEA",
+      "Country": "GB"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "ShowScope3EmssnSrc2"
+      },
+      "Name": "Business Travel - EMEA",
+      "Scope3EmissionSourceType": "Business Travel",
+      "BusinessRegion": "EMEA",
+      "Country": "GB",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "ShowScope3EmssnSrc3"
+      },
+      "Name": "Business Travel - AMER",
+      "Scope3EmissionSourceType": "Business Travel",
+      "BusinessRegion": "AMER",
+      "Country": "US",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "ShowScope3EmssnSrc4"
+      },
+      "Name": "Business Travel - APAC",
+      "Scope3EmissionSourceType": "Business Travel",
+      "BusinessRegion": "APAC",
+      "Country": "JP",
+      "AirTravelEmssnFctrId": "@ShowAirTravelEmssnFctr1",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "ShowScope3EmssnSrc5"
+      },
+      "Name": "Employee Commuting - Global",
+      "Scope3EmissionSourceType": "Employee Commuting",
+      "BusinessRegion": "EMEA",
+      "Country": "GB"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "ShowScope3EmssnSrc6"
+      },
+      "Name": "Downstream Distribution - AMER",
+      "Scope3EmissionSourceType": "Downstream Transportation",
+      "BusinessRegion": "AMER",
+      "Country": "US"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "ShowScope3EmssnSrc7"
+      },
+      "Name": "Leased Warehouses - APAC",
+      "Scope3EmissionSourceType": "Upstream Leased Assets",
+      "BusinessRegion": "APAC",
+      "Country": "SG"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3PcmtSummary",
+        "referenceId": "Scope3PcmtSummaryRef1"
+      },
+      "Name": "Procurement Summary 2024",
+      "Scope3CrbnFtprntId": "@Scope3CrbnFtprntRef1",
+      "Scope3EmssnSrcId": "@Scope3EmssnSrcRef1",
+      "CalendarYear": "2024",
+      "CurrencyCode": "USD",
+      "PcmtEmssnFctrId": "@PcmtEmssnFctrSetRef1"
+    }
+  ]
+}

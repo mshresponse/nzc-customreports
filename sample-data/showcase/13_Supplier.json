@@ -1,0 +1,112 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier1"
+      },
+      "Name": "Nordlicht IT Services",
+      "AccountId": "@ShowAccount1",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier2"
+      },
+      "Name": "Halvorsen Consulting",
+      "AccountId": "@ShowAccount2",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier3"
+      },
+      "Name": "Atlas Office Supply",
+      "AccountId": "@ShowAccount3",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier4"
+      },
+      "Name": "Clearwater Facilities",
+      "AccountId": "@ShowAccount4",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier5"
+      },
+      "Name": "Kestrel Hardware",
+      "AccountId": "@ShowAccount5",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier6"
+      },
+      "Name": "Summit Fit-Out",
+      "AccountId": "@ShowAccount6",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier7"
+      },
+      "Name": "Meridian Freight",
+      "AccountId": "@ShowAccount7",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier8"
+      },
+      "Name": "GreenCycle Waste Services",
+      "AccountId": "@ShowAccount8",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier9"
+      },
+      "Name": "Skyward Airlines",
+      "AccountId": "@ShowAccount9",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier10"
+      },
+      "Name": "Polar Air",
+      "AccountId": "@ShowAccount10",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier11"
+      },
+      "Name": "Harbor Hotels Group",
+      "AccountId": "@ShowAccount11",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "ShowSupplier12"
+      },
+      "Name": "CityCab Network",
+      "AccountId": "@ShowAccount12",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    }
+  ]
+}

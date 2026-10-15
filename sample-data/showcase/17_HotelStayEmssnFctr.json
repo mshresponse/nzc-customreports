@@ -1,0 +1,14 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "HotelStayEmssnFctr",
+        "referenceId": "ShowHotelStayEmssnFctr1"
+      },
+      "Name": "Showcase Hotel Factors",
+      "EmissionFactorUpdateYear": "2023",
+      "HotelStayEmssnInKgCo2eNight": 15,
+      "EmissionFactorDataSource": "Illustrative only, for demo data."
+    }
+  ]
+}

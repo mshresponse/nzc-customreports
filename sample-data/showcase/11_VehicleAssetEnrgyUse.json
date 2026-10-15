@@ -1,0 +1,366 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse1"
+      },
+      "Name": "Fourgon Citroën Lyon 01 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc1",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt1",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3055,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 40549
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse2"
+      },
+      "Name": "Fourgon Citroën Lyon 01 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc1",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt2",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 2983,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 36793
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse3"
+      },
+      "Name": "Lastbil Volvo Göteborg 02 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc2",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt3",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 11236,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 86353
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse4"
+      },
+      "Name": "Lastbil Volvo Göteborg 02 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc2",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt4",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 11414,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 94076
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse5"
+      },
+      "Name": "Camión Peñarol Montevideo 03 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc3",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt5",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 7150,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 58819
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse6"
+      },
+      "Name": "Camión Peñarol Montevideo 03 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc3",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt6",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 6720,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 55270
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse7"
+      },
+      "Name": "Ford Transit London 05 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc5",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt9",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3523,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 40267
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse8"
+      },
+      "Name": "Ford Transit London 05 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc5",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt10",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3385,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 38865
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse9"
+      },
+      "Name": "Mercedes Sprinter Frankfurt 06 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc6",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt11",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3745,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 40602
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse10"
+      },
+      "Name": "Mercedes Sprinter Frankfurt 06 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc6",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt12",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3719,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 41889
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse11"
+      },
+      "Name": "Isuzu Elf Tōkyō 07 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc7",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt13",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 4616,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 42577
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse12"
+      },
+      "Name": "Isuzu Elf Tōkyō 07 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc7",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt14",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 4449,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 44919
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse13"
+      },
+      "Name": "Toyota HiAce Sydney 08 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc8",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt15",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3325,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 38884
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse14"
+      },
+      "Name": "Toyota HiAce Sydney 08 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc8",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt16",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 3063,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 35980
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse15"
+      },
+      "Name": "Ram ProMaster Chicago 09 Gasoline 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc9",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt17",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 4026,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 30732
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse16"
+      },
+      "Name": "Ram ProMaster Chicago 09 Gasoline 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc9",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt18",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 3988,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 32997
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse17"
+      },
+      "Name": "Chevrolet Express Dallas 10 Gasoline 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc10",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt19",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 4328,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 29571
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse18"
+      },
+      "Name": "Chevrolet Express Dallas 10 Gasoline 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc10",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt20",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 3980,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 28370
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse19"
+      },
+      "Name": "Tata Ace Bengaluru 11 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc11",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 2039,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 28548
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse20"
+      },
+      "Name": "Shuttle Bus Dublin 13 Diesel 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc13",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt23",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 13932,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 57590
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse21"
+      },
+      "Name": "Shuttle Bus Dublin 13 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc13",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt24",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 13995,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 53190
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse22"
+      },
+      "Name": "Toyota Prius Toronto 15 Gasoline 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc15",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt25",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 919,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 20084
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse23"
+      },
+      "Name": "Toyota Prius Toronto 15 Gasoline 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc15",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt26",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 886,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 19550
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse24"
+      },
+      "Name": "Corolla Hybrid São Paulo 16 Gasoline 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc16",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt27",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 1056,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 20950
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse25"
+      },
+      "Name": "Corolla Hybrid São Paulo 16 Gasoline 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc16",
+      "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt28",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "FuelConsumption": 1030,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 22074
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse26"
+      },
+      "Name": "Isuzu D-Max Bangkok 20 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc20",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 2744,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 33921
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "InflationRate",
+        "referenceId": "ShowInflationRate1"
+      },
+      "CurrencyCode": "USD",
+      "CalendarYear": "2022",
+      "InflationRate": 8.0,
+      "DataSource": "Illustrative only, for demo data."
+    },
+    {
+      "attributes": {
+        "type": "InflationRate",
+        "referenceId": "ShowInflationRate2"
+      },
+      "CurrencyCode": "USD",
+      "CalendarYear": "2023",
+      "InflationRate": 4.1,
+      "DataSource": "Illustrative only, for demo data."
+    },
+    {
+      "attributes": {
+        "type": "InflationRate",
+        "referenceId": "ShowInflationRate3"
+      },
+      "CurrencyCode": "USD",
+      "CalendarYear": "2024",
+      "InflationRate": 2.9,
+      "DataSource": "Illustrative only, for demo data."
+    }
+  ]
+}

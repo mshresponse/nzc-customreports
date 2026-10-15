@@ -1,0 +1,746 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem1"
+      },
+      "Name": "Cloud hosting 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Cloud hosting",
+      "SpentAmount": 399300.0,
+      "SpentDate": "2022-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem2"
+      },
+      "Name": "Software licences 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Software licences",
+      "SpentAmount": 386200.0,
+      "SpentDate": "2022-10-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem3"
+      },
+      "Name": "Managed service desk 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Managed service desk",
+      "SpentAmount": 396800.0,
+      "SpentDate": "2022-04-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem4"
+      },
+      "Name": "Audit and assurance 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem2",
+      "SupplierId": "@ShowSupplier2",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Professional services",
+      "SpendingCategory2": "Audit and assurance",
+      "SpentAmount": 305000.0,
+      "SpentDate": "2022-12-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem5"
+      },
+      "Name": "Sustainability advisory 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem2",
+      "SupplierId": "@ShowSupplier2",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Professional services",
+      "SpendingCategory2": "Sustainability advisory",
+      "SpentAmount": 311600.0,
+      "SpentDate": "2022-10-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem6"
+      },
+      "Name": "Office furniture 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem3",
+      "SupplierId": "@ShowSupplier3",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Office supplies and furniture",
+      "SpendingCategory2": "Office furniture",
+      "SpentAmount": 107900.0,
+      "SpentDate": "2022-10-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem7"
+      },
+      "Name": "Stationery 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem3",
+      "SupplierId": "@ShowSupplier3",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Office supplies and furniture",
+      "SpendingCategory2": "Stationery",
+      "SpentAmount": 102400.0,
+      "SpentDate": "2022-05-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem8"
+      },
+      "Name": "Cleaning contract 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem4",
+      "SupplierId": "@ShowSupplier4",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Facilities and cleaning",
+      "SpendingCategory2": "Cleaning contract",
+      "SpentAmount": 244900.0,
+      "SpentDate": "2022-03-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem9"
+      },
+      "Name": "Building maintenance 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem4",
+      "SupplierId": "@ShowSupplier4",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Facilities and cleaning",
+      "SpendingCategory2": "Building maintenance",
+      "SpentAmount": 228500.0,
+      "SpentDate": "2022-05-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem10"
+      },
+      "Name": "Server refresh 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem5",
+      "SupplierId": "@ShowSupplier5",
+      "Scope3GhgCategory": "Capital Goods",
+      "SpendingCategory1": "Computers and servers",
+      "SpendingCategory2": "Server refresh",
+      "SpentAmount": 437700.0,
+      "SpentDate": "2022-07-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem11"
+      },
+      "Name": "Laptop fleet 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem5",
+      "SupplierId": "@ShowSupplier5",
+      "Scope3GhgCategory": "Capital Goods",
+      "SpendingCategory1": "Computers and servers",
+      "SpendingCategory2": "Laptop fleet",
+      "SpentAmount": 441900.0,
+      "SpentDate": "2022-11-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem12"
+      },
+      "Name": "Inbound freight 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem7",
+      "SupplierId": "@ShowSupplier7",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpendingCategory2": "Inbound freight",
+      "SpentAmount": 393100.0,
+      "SpentDate": "2022-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem13"
+      },
+      "Name": "Last-mile delivery 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem7",
+      "SupplierId": "@ShowSupplier7",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpendingCategory2": "Last-mile delivery",
+      "SpentAmount": 426100.0,
+      "SpentDate": "2022-03-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem14"
+      },
+      "Name": "Waste collection 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem8",
+      "SupplierId": "@ShowSupplier8",
+      "Scope3GhgCategory": "Waste Generated In Operations",
+      "SpendingCategory1": "Waste collection and treatment",
+      "SpendingCategory2": "Waste collection",
+      "SpentAmount": 71200.0,
+      "SpentDate": "2022-02-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem15"
+      },
+      "Name": "E-waste recycling 2022",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary1",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem8",
+      "SupplierId": "@ShowSupplier8",
+      "Scope3GhgCategory": "Waste Generated In Operations",
+      "SpendingCategory1": "Waste collection and treatment",
+      "SpendingCategory2": "E-waste recycling",
+      "SpentAmount": 70100.0,
+      "SpentDate": "2022-05-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem16"
+      },
+      "Name": "Cloud hosting 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Cloud hosting",
+      "SpentAmount": 373800.0,
+      "SpentDate": "2023-02-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem17"
+      },
+      "Name": "Software licences 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Software licences",
+      "SpentAmount": 360600.0,
+      "SpentDate": "2023-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem18"
+      },
+      "Name": "Managed service desk 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Managed service desk",
+      "SpentAmount": 354900.0,
+      "SpentDate": "2023-05-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem19"
+      },
+      "Name": "Audit and assurance 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem2",
+      "SupplierId": "@ShowSupplier2",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Professional services",
+      "SpendingCategory2": "Audit and assurance",
+      "SpentAmount": 292600.0,
+      "SpentDate": "2023-07-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem20"
+      },
+      "Name": "Sustainability advisory 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem2",
+      "SupplierId": "@ShowSupplier2",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Professional services",
+      "SpendingCategory2": "Sustainability advisory",
+      "SpentAmount": 322400.0,
+      "SpentDate": "2023-05-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem21"
+      },
+      "Name": "Office furniture 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem3",
+      "SupplierId": "@ShowSupplier3",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Office supplies and furniture",
+      "SpendingCategory2": "Office furniture",
+      "SpentAmount": 100300.0,
+      "SpentDate": "2023-01-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem22"
+      },
+      "Name": "Stationery 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem3",
+      "SupplierId": "@ShowSupplier3",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Office supplies and furniture",
+      "SpendingCategory2": "Stationery",
+      "SpentAmount": 95900.0,
+      "SpentDate": "2023-04-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem23"
+      },
+      "Name": "Cleaning contract 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem4",
+      "SupplierId": "@ShowSupplier4",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Facilities and cleaning",
+      "SpendingCategory2": "Cleaning contract",
+      "SpentAmount": 218300.0,
+      "SpentDate": "2023-02-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem24"
+      },
+      "Name": "Building maintenance 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem4",
+      "SupplierId": "@ShowSupplier4",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Facilities and cleaning",
+      "SpendingCategory2": "Building maintenance",
+      "SpentAmount": 220300.0,
+      "SpentDate": "2023-09-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem25"
+      },
+      "Name": "Server refresh 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem5",
+      "SupplierId": "@ShowSupplier5",
+      "Scope3GhgCategory": "Capital Goods",
+      "SpendingCategory1": "Computers and servers",
+      "SpendingCategory2": "Server refresh",
+      "SpentAmount": 448000.0,
+      "SpentDate": "2023-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem26"
+      },
+      "Name": "Laptop fleet 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem5",
+      "SupplierId": "@ShowSupplier5",
+      "Scope3GhgCategory": "Capital Goods",
+      "SpendingCategory1": "Computers and servers",
+      "SpendingCategory2": "Laptop fleet",
+      "SpentAmount": 434000.0,
+      "SpentDate": "2023-08-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem27"
+      },
+      "Name": "Office fit-out 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem6",
+      "SupplierId": "@ShowSupplier6",
+      "Scope3GhgCategory": "Capital Goods",
+      "SpendingCategory1": "Construction and fit-out",
+      "SpendingCategory2": "Office fit-out",
+      "SpentAmount": 1563900.0,
+      "SpentDate": "2023-11-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem28"
+      },
+      "Name": "Inbound freight 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem7",
+      "SupplierId": "@ShowSupplier7",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpendingCategory2": "Inbound freight",
+      "SpentAmount": 410800.0,
+      "SpentDate": "2023-01-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem29"
+      },
+      "Name": "Last-mile delivery 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem7",
+      "SupplierId": "@ShowSupplier7",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpendingCategory2": "Last-mile delivery",
+      "SpentAmount": 420900.0,
+      "SpentDate": "2023-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem30"
+      },
+      "Name": "Waste collection 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem8",
+      "SupplierId": "@ShowSupplier8",
+      "Scope3GhgCategory": "Waste Generated In Operations",
+      "SpendingCategory1": "Waste collection and treatment",
+      "SpendingCategory2": "Waste collection",
+      "SpentAmount": 68400.0,
+      "SpentDate": "2023-10-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem31"
+      },
+      "Name": "E-waste recycling 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem8",
+      "SupplierId": "@ShowSupplier8",
+      "Scope3GhgCategory": "Waste Generated In Operations",
+      "SpendingCategory1": "Waste collection and treatment",
+      "SpendingCategory2": "E-waste recycling",
+      "SpentAmount": 67200.0,
+      "SpentDate": "2023-11-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem32"
+      },
+      "Name": "Cloud hosting 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Cloud hosting",
+      "SpentAmount": 372700.0,
+      "SpentDate": "2024-11-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem33"
+      },
+      "Name": "Software licences 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Software licences",
+      "SpentAmount": 351100.0,
+      "SpentDate": "2024-09-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem34"
+      },
+      "Name": "Managed service desk 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem1",
+      "SupplierId": "@ShowSupplier1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "IT services and software",
+      "SpendingCategory2": "Managed service desk",
+      "SpentAmount": 364300.0,
+      "SpentDate": "2024-05-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem35"
+      },
+      "Name": "Audit and assurance 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem2",
+      "SupplierId": "@ShowSupplier2",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Professional services",
+      "SpendingCategory2": "Audit and assurance",
+      "SpentAmount": 293600.0,
+      "SpentDate": "2024-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem36"
+      },
+      "Name": "Sustainability advisory 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem2",
+      "SupplierId": "@ShowSupplier2",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Professional services",
+      "SpendingCategory2": "Sustainability advisory",
+      "SpentAmount": 281800.0,
+      "SpentDate": "2024-12-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem37"
+      },
+      "Name": "Office furniture 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem3",
+      "SupplierId": "@ShowSupplier3",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Office supplies and furniture",
+      "SpendingCategory2": "Office furniture",
+      "SpentAmount": 96900.0,
+      "SpentDate": "2024-01-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem38"
+      },
+      "Name": "Stationery 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem3",
+      "SupplierId": "@ShowSupplier3",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Office supplies and furniture",
+      "SpendingCategory2": "Stationery",
+      "SpentAmount": 95100.0,
+      "SpentDate": "2024-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem39"
+      },
+      "Name": "Cleaning contract 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem4",
+      "SupplierId": "@ShowSupplier4",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Facilities and cleaning",
+      "SpendingCategory2": "Cleaning contract",
+      "SpentAmount": 217600.0,
+      "SpentDate": "2024-02-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem40"
+      },
+      "Name": "Building maintenance 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem4",
+      "SupplierId": "@ShowSupplier4",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Facilities and cleaning",
+      "SpendingCategory2": "Building maintenance",
+      "SpentAmount": 217800.0,
+      "SpentDate": "2024-07-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem41"
+      },
+      "Name": "Server refresh 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem5",
+      "SupplierId": "@ShowSupplier5",
+      "Scope3GhgCategory": "Capital Goods",
+      "SpendingCategory1": "Computers and servers",
+      "SpendingCategory2": "Server refresh",
+      "SpentAmount": 418500.0,
+      "SpentDate": "2024-01-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem42"
+      },
+      "Name": "Laptop fleet 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem5",
+      "SupplierId": "@ShowSupplier5",
+      "Scope3GhgCategory": "Capital Goods",
+      "SpendingCategory1": "Computers and servers",
+      "SpendingCategory2": "Laptop fleet",
+      "SpentAmount": 430000.0,
+      "SpentDate": "2024-06-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem43"
+      },
+      "Name": "Inbound freight 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem7",
+      "SupplierId": "@ShowSupplier7",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpendingCategory2": "Inbound freight",
+      "SpentAmount": 371900.0,
+      "SpentDate": "2024-01-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem44"
+      },
+      "Name": "Last-mile delivery 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem7",
+      "SupplierId": "@ShowSupplier7",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpendingCategory2": "Last-mile delivery",
+      "SpentAmount": 396200.0,
+      "SpentDate": "2024-02-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem45"
+      },
+      "Name": "Waste collection 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem8",
+      "SupplierId": "@ShowSupplier8",
+      "Scope3GhgCategory": "Waste Generated In Operations",
+      "SpendingCategory1": "Waste collection and treatment",
+      "SpendingCategory2": "Waste collection",
+      "SpentAmount": 62500.0,
+      "SpentDate": "2024-02-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem46"
+      },
+      "Name": "E-waste recycling 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "PcmtEmssnFctrSetItemId": "@ShowPcmtEmssnFctrSetItem8",
+      "SupplierId": "@ShowSupplier8",
+      "Scope3GhgCategory": "Waste Generated In Operations",
+      "SpendingCategory1": "Waste collection and treatment",
+      "SpendingCategory2": "E-waste recycling",
+      "SpentAmount": 62100.0,
+      "SpentDate": "2024-03-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem47"
+      },
+      "Name": "Promotional merchandise 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "SupplierId": "@ShowSupplier3",
+      "SpendingCategory1": "Marketing",
+      "SpendingCategory2": "Promotional merchandise",
+      "SpentAmount": 38000,
+      "SpentDate": "2024-09-30"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem48"
+      },
+      "Name": "Legal fees 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "SupplierId": "@ShowSupplier2",
+      "SpendingCategory1": "Legal services",
+      "SpendingCategory2": "Legal fees",
+      "SpentAmount": 96000,
+      "SpentDate": "2024-09-30"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem49"
+      },
+      "Name": "Spare parts 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "SupplierId": "@ShowSupplier5",
+      "SpendingCategory1": "Maintenance",
+      "SpendingCategory2": "Spare parts",
+      "SpentAmount": 22000,
+      "SpentDate": "2023-09-30"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem50"
+      },
+      "Name": "Customs brokerage 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "SupplierId": "@ShowSupplier7",
+      "SpendingCategory1": "Freight services",
+      "SpendingCategory2": "Customs brokerage",
+      "SpentAmount": 17500,
+      "SpentDate": "2024-09-30"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "GroundTravelEnrgyUseRef1"
+      },
+      "Name": "Taxi JFK 2024",
+      "Scope3EmssnSrcId": "@Scope3EmssnSrcRef2",
+      "Scope3CrbnFtprntId": "@Scope3CrbnFtprntRef2",
+      "GroundTravelEmssnFctrId": "@GroundTravelEmssnFctrRef1",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "CostCenter": "Sales",
+      "Distance": 32,
+      "DistanceUnit": "Kilometers",
+      "StartDate": "2024-04-08",
+      "EndDate": "2024-04-08"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "GroundTravelEnrgyUseRef2"
+      },
+      "Name": "Commute 2024",
+      "Scope3EmssnSrcId": "@Scope3EmssnSrcRef2",
+      "Scope3CrbnFtprntId": "@Scope3CrbnFtprntRef2",
+      "GroundTravelEmssnFctrId": "@GroundTravelEmssnFctrRef1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "CostCenter": "Engineering",
+      "Distance": 2400,
+      "DistanceUnit": "Kilometers",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-12-31"
+    }
+  ]
+}

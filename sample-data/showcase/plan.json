@@ -1,0 +1,210 @@
+[
+  {
+    "sobject": "OtherEmssnFctrSet",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "1_OtherEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "OtherEmssnFctrSetItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "2_OtherEmssnFctrSetItem.json"
+    ]
+  },
+  {
+    "sobject": "ElectricityEmssnFctrSet",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "3_ElectricityEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "CrbnEmssnScopeAlloc",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "4_CrbnEmssnScopeAlloc.json"
+    ]
+  },
+  {
+    "sobject": "CrbnEmssnScopeAllocVal",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "5_CrbnEmssnScopeAllocVal.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetEnvrSrc",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "6_StnryAssetEnvrSrc.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetCrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7_StnryAssetCrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "8_StnryAssetEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetEmssnSrc",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "9_VehicleAssetEmssnSrc.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetCrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "10_VehicleAssetCrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "11_VehicleAssetEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "12_Account.json"
+    ]
+  },
+  {
+    "sobject": "Supplier",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "13_Supplier.json"
+    ]
+  },
+  {
+    "sobject": "PcmtEmssnFctrSet",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "14_PcmtEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "PcmtEmssnFctrSetItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "15_PcmtEmssnFctrSetItem.json"
+    ]
+  },
+  {
+    "sobject": "AirTravelEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "16_AirTravelEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "HotelStayEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "17_HotelStayEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "GroundTravelEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "18_GroundTravelEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "InflationRate",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "19_InflationRate.json"
+    ]
+  },
+  {
+    "sobject": "Scope3EmssnSrc",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "20_Scope3EmssnSrc.json"
+    ]
+  },
+  {
+    "sobject": "Scope3CrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "21_Scope3CrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "Scope3PcmtSummary",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "22_Scope3PcmtSummary.json"
+    ]
+  },
+  {
+    "sobject": "Scope3PcmtItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "23_Scope3PcmtItem.json"
+    ]
+  },
+  {
+    "sobject": "AirTravelEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "24_AirTravelEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "HotelStayEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "25_HotelStayEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "GroundTravelEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "26_GroundTravelEnrgyUse.json"
+    ]
+  }
+]

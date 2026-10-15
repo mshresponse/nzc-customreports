@@ -4,12 +4,22 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check the generated sample data is up to date
+        run: |
+          python3 scripts/build-sample-tree.py
+          python3 scripts/build-showcase-data.py
+          git diff --exit-code -- sample-data/tree sample-data/showcase || {
+            echo "Generated sample data is stale: run scripts/build-sample-tree.py and scripts/build-showcase-data.py and commit the result."
+            exit 1
+          }
 
       - name: Check XML well-formedness
         run: |
@@ -84,3 +94,48 @@ jobs:
               sys.exit(1)
           print('All manifest members have matching source files.')
           EOF
+
+  # Everything above checks that the metadata is well formed. This job checks that it works:
+  # it deploys to a fresh Net Zero Cloud scratch org, loads sample-data/, and runs every
+  # report and dashboard against the rows that data was built to produce. It needs a Dev Hub;
+  # store its auth URL (sf org display --verbose --target-org <devhub>) as the repository
+  # secret DEVHUB_SFDX_AUTH_URL. Without the secret the job does nothing and passes.
+  org-check:
+    needs: validate
+    runs-on: ubuntu-latest
+    env:
+      DEVHUB_SFDX_AUTH_URL: ${{ secrets.DEVHUB_SFDX_AUTH_URL }}
+    steps:
+      - name: Check for a Dev Hub
+        id: devhub
+        run: |
+          if [ -n "$DEVHUB_SFDX_AUTH_URL" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::No DEVHUB_SFDX_AUTH_URL secret, so the scratch org check was skipped."
+          fi
+
+      - if: steps.devhub.outputs.present == 'true'
+        uses: actions/checkout@v4
+
+      - if: steps.devhub.outputs.present == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Deploy to a Net Zero Cloud scratch org and check every report
+        if: steps.devhub.outputs.present == 'true'
+        run: |
+          npm install --global @salesforce/cli
+          echo "$DEVHUB_SFDX_AUTH_URL" | sf org login sfdx-url --sfdx-url-stdin --alias devhub --set-default-dev-hub
+          sf org create scratch --definition-file config/project-scratch-def.json --alias ci --duration-days 1 --wait 20
+          sf org assign permset --name NetZeroAdmin --name NetZeroManager --target-org ci
+          sf project deploy start --manifest manifest/package.xml --target-org ci --wait 30
+          sf project deploy start --manifest manifest/package-4-list-views.xml --target-org ci --wait 30
+          sf project deploy start --metadata-dir sample-data/org-setup --target-org ci --wait 10
+          sf data import tree --plan sample-data/tree/plan.json --target-org ci
+          python3 scripts/check-reports.py --target-org ci
+
+      - name: Delete the scratch org
+        if: always() && steps.devhub.outputs.present == 'true'
+        run: sf org delete scratch --target-org ci --no-prompt || true

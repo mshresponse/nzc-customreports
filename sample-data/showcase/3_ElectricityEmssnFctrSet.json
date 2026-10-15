@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "ElectricityEmssnFctrSet",
+        "referenceId": "ShowElectricityEmssnFctrSet1"
+      },
+      "Name": "Showcase Grid Factors EMEA",
+      "EmissionFactorUpdateYear": "2023",
+      "EmissionsFactorType": "LocationAndMarketBased",
+      "Co2eEmissionRate": 0.25,
+      "Co2eEmissionRateUnit": "KG_PER_KWH",
+      "Co2EmissionRate": 0.25,
+      "Co2EmissionRateUnit": "KG_PER_KWH",
+      "MktBsdCo2eEmissionRate": 0.18,
+      "MktBsdCo2eEmissionRateUnit": "KG_PER_KWH",
+      "MktBsdCo2EmssnRate": 0.18,
+      "MktBsdCo2EmssnRateUnit": "KG_PER_KWH",
+      "EmissionFactorDataSource": "Illustrative only, for demo data.",
+      "LocationBasedGasMixPct": 30,
+      "LocationBasedNuclearMixPct": 30,
+      "LocationBasedWindMixPct": 25,
+      "LocationBasedHydroMixPct": 15,
+      "MarketBasedWindMixPct": 45,
+      "MarketBasedHydroMixPct": 25,
+      "MarketBasedGasMixPct": 30
+    },
+    {
+      "attributes": {
+        "type": "ElectricityEmssnFctrSet",
+        "referenceId": "ShowElectricityEmssnFctrSet2"
+      },
+      "Name": "Showcase Grid Factors AMER",
+      "EmissionFactorUpdateYear": "2023",
+      "EmissionsFactorType": "LocationAndMarketBased",
+      "Co2eEmissionRate": 0.38,
+      "Co2eEmissionRateUnit": "KG_PER_KWH",
+      "Co2EmissionRate": 0.38,
+      "Co2EmissionRateUnit": "KG_PER_KWH",
+      "MktBsdCo2eEmissionRate": 0.3,
+      "MktBsdCo2eEmissionRateUnit": "KG_PER_KWH",
+      "MktBsdCo2EmssnRate": 0.3,
+      "MktBsdCo2EmssnRateUnit": "KG_PER_KWH",
+      "EmissionFactorDataSource": "Illustrative only, for demo data.",
+      "LocationBasedGasMixPct": 40,
+      "LocationBasedCoalMixPct": 20,
+      "LocationBasedNuclearMixPct": 20,
+      "LocationBasedWindMixPct": 20,
+      "MarketBasedGasMixPct": 45,
+      "MarketBasedWindMixPct": 35,
+      "MarketBasedSolarMixPct": 20
+    },
+    {
+      "attributes": {
+        "type": "ElectricityEmssnFctrSet",
+        "referenceId": "ShowElectricityEmssnFctrSet3"
+      },
+      "Name": "Showcase Grid Factors APAC",
+      "EmissionFactorUpdateYear": "2023",
+      "EmissionsFactorType": "LocationAndMarketBased",
+      "Co2eEmissionRate": 0.47,
+      "Co2eEmissionRateUnit": "KG_PER_KWH",
+      "Co2EmissionRate": 0.47,
+      "Co2EmissionRateUnit": "KG_PER_KWH",
+      "MktBsdCo2eEmissionRate": 0.4,
+      "MktBsdCo2eEmissionRateUnit": "KG_PER_KWH",
+      "MktBsdCo2EmssnRate": 0.4,
+      "MktBsdCo2EmssnRateUnit": "KG_PER_KWH",
+      "EmissionFactorDataSource": "Illustrative only, for demo data.",
+      "LocationBasedCoalMixPct": 40,
+      "LocationBasedGasMixPct": 35,
+      "LocationBasedHydroMixPct": 15,
+      "LocationBasedSolarMixPct": 10,
+      "MarketBasedCoalMixPct": 30,
+      "MarketBasedGasMixPct": 40,
+      "MarketBasedSolarMixPct": 30
+    }
+  ]
+}

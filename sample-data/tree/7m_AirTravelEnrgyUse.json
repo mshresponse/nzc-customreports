@@ -1,0 +1,38 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "AirTravelEnrgyUseRef1"
+      },
+      "Name": "Flight LHR-JFK 2024",
+      "Scope3EmssnSrcId": "@Scope3EmssnSrcRef2",
+      "Scope3CrbnFtprntId": "@Scope3CrbnFtprntRef2",
+      "AirTravelEmssnFctrId": "@AirTravelEmssnFctrRef1",
+      "CostCenter": "Sales",
+      "SegmentDistance": 11080,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "DestinationCountry": "US",
+      "StartDate": "2024-04-08",
+      "EndDate": "2024-04-12"
+    },
+    {
+      "attributes": {
+        "type": "AirTravelEnrgyUse",
+        "referenceId": "AirTravelEnrgyUseRef2"
+      },
+      "Name": "Flight LHR-AMS 2024",
+      "Scope3EmssnSrcId": "@Scope3EmssnSrcRef2",
+      "Scope3CrbnFtprntId": "@Scope3CrbnFtprntRef2",
+      "AirTravelEmssnFctrId": "@AirTravelEmssnFctrRef1",
+      "CostCenter": "Engineering",
+      "SegmentDistance": 740,
+      "SegmentDistanceUnit": "Kilometers",
+      "SourceCountry": "GB",
+      "DestinationCountry": "NL",
+      "StartDate": "2024-10-02",
+      "EndDate": "2024-10-03"
+    }
+  ]
+}

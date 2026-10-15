@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "CrbnEmssnScopeAllocVal",
+        "referenceId": "ShowCrbnEmssnScopeAllocVal1"
+      },
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "FuelType": "Electricity",
+      "FuelTypeAllocation": "SCOPE2"
+    },
+    {
+      "attributes": {
+        "type": "CrbnEmssnScopeAllocVal",
+        "referenceId": "ShowCrbnEmssnScopeAllocVal2"
+      },
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "FuelType": "Diesel",
+      "FuelTypeAllocation": "SCOPE1"
+    },
+    {
+      "attributes": {
+        "type": "CrbnEmssnScopeAllocVal",
+        "referenceId": "ShowCrbnEmssnScopeAllocVal3"
+      },
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "FuelType": "NaturalGas",
+      "FuelTypeAllocation": "SCOPE1"
+    },
+    {
+      "attributes": {
+        "type": "CrbnEmssnScopeAllocVal",
+        "referenceId": "ShowCrbnEmssnScopeAllocVal4"
+      },
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "FuelType": "Propane",
+      "FuelTypeAllocation": "SCOPE1"
+    },
+    {
+      "attributes": {
+        "type": "CrbnEmssnScopeAllocVal",
+        "referenceId": "ShowCrbnEmssnScopeAllocVal5"
+      },
+      "CrbnEmssnScopeAllocId": "@ShowCrbnEmssnScopeAlloc1",
+      "FuelType": "FuelOil",
+      "FuelTypeAllocation": "SCOPE1"
+    }
+  ]
+}

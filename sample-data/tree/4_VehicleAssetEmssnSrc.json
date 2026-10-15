@@ -1,0 +1,48 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "VehicleAssetEmssnSrcRef1"
+      },
+      "Name": "Fourgon Citroën 01",
+      "City": "Lyon",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "InternalCombustionEngine",
+      "Description": "Footprint and energy use"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "VehicleAssetEmssnSrcRef2"
+      },
+      "Name": "Lastbil Volvo 02",
+      "City": "Göteborg",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "InternalCombustionEngine",
+      "Description": "Footprint and energy use"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "VehicleAssetEmssnSrcRef3"
+      },
+      "Name": "Camión Peñarol 03",
+      "City": "Montevideo",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "InternalCombustionEngine",
+      "Description": "Energy use but no footprint"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "VehicleAssetEmssnSrcRef4"
+      },
+      "Name": "Kleinwagen Škoda 04",
+      "City": "München",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "Electric",
+      "Description": "Nothing attached: both fleet gap reports"
+    }
+  ]
+}

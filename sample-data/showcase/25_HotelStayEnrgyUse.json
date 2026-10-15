@@ -1,0 +1,616 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse1"
+      },
+      "Name": "Hotel EMEA 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 3,
+      "HotelCountry": "US",
+      "StartDate": "2022-03-10",
+      "EndDate": "2022-03-13"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse2"
+      },
+      "Name": "Hotel EMEA 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "US",
+      "StartDate": "2022-01-10",
+      "EndDate": "2022-01-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse3"
+      },
+      "Name": "Hotel EMEA 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sales",
+      "RoomCount": 1,
+      "StayNightsCount": 3,
+      "HotelCountry": "US",
+      "StartDate": "2022-03-10",
+      "EndDate": "2022-03-13"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse4"
+      },
+      "Name": "Hotel EMEA 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "US",
+      "StartDate": "2022-01-10",
+      "EndDate": "2022-01-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse5"
+      },
+      "Name": "Hotel EMEA 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Engineering",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "US",
+      "StartDate": "2023-11-10",
+      "EndDate": "2023-11-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse6"
+      },
+      "Name": "Hotel EMEA 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Engineering",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "US",
+      "StartDate": "2023-03-10",
+      "EndDate": "2023-03-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse7"
+      },
+      "Name": "Hotel EMEA 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "US",
+      "StartDate": "2023-08-10",
+      "EndDate": "2023-08-12"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse8"
+      },
+      "Name": "Hotel EMEA 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sales",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "US",
+      "StartDate": "2023-09-10",
+      "EndDate": "2023-09-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse9"
+      },
+      "Name": "Hotel EMEA 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "US",
+      "StartDate": "2024-05-10",
+      "EndDate": "2024-05-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse10"
+      },
+      "Name": "Hotel EMEA 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Engineering",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "US",
+      "StartDate": "2024-03-10",
+      "EndDate": "2024-03-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse11"
+      },
+      "Name": "Hotel EMEA 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "US",
+      "StartDate": "2024-12-10",
+      "EndDate": "2024-12-12"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse12"
+      },
+      "Name": "Hotel EMEA 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Executive",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "US",
+      "StartDate": "2024-11-10",
+      "EndDate": "2024-11-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse13"
+      },
+      "Name": "Hotel AMER 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Executive",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "BR",
+      "StartDate": "2022-06-10",
+      "EndDate": "2022-06-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse14"
+      },
+      "Name": "Hotel AMER 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 3,
+      "HotelCountry": "BR",
+      "StartDate": "2022-02-10",
+      "EndDate": "2022-02-13"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse15"
+      },
+      "Name": "Hotel AMER 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "BR",
+      "StartDate": "2022-11-10",
+      "EndDate": "2022-11-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse16"
+      },
+      "Name": "Hotel AMER 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sales",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "BR",
+      "StartDate": "2022-06-10",
+      "EndDate": "2022-06-12"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse17"
+      },
+      "Name": "Hotel AMER 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Engineering",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "BR",
+      "StartDate": "2023-08-10",
+      "EndDate": "2023-08-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse18"
+      },
+      "Name": "Hotel AMER 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Engineering",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "BR",
+      "StartDate": "2023-09-10",
+      "EndDate": "2023-09-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse19"
+      },
+      "Name": "Hotel AMER 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 3,
+      "HotelCountry": "BR",
+      "StartDate": "2023-06-10",
+      "EndDate": "2023-06-13"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse20"
+      },
+      "Name": "Hotel AMER 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "BR",
+      "StartDate": "2023-02-10",
+      "EndDate": "2023-02-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse21"
+      },
+      "Name": "Hotel AMER 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "BR",
+      "StartDate": "2024-04-10",
+      "EndDate": "2024-04-12"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse22"
+      },
+      "Name": "Hotel AMER 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Engineering",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "BR",
+      "StartDate": "2024-06-10",
+      "EndDate": "2024-06-12"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse23"
+      },
+      "Name": "Hotel AMER 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "BR",
+      "StartDate": "2024-08-10",
+      "EndDate": "2024-08-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse24"
+      },
+      "Name": "Hotel AMER 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sales",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "BR",
+      "StartDate": "2024-11-10",
+      "EndDate": "2024-11-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse25"
+      },
+      "Name": "Hotel APAC 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Executive",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "SG",
+      "StartDate": "2022-05-10",
+      "EndDate": "2022-05-12"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse26"
+      },
+      "Name": "Hotel APAC 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Executive",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "SG",
+      "StartDate": "2022-03-10",
+      "EndDate": "2022-03-12"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse27"
+      },
+      "Name": "Hotel APAC 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Executive",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "SG",
+      "StartDate": "2022-06-10",
+      "EndDate": "2022-06-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse28"
+      },
+      "Name": "Hotel APAC 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "SG",
+      "StartDate": "2022-04-10",
+      "EndDate": "2022-04-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse29"
+      },
+      "Name": "Hotel APAC 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 3,
+      "HotelCountry": "SG",
+      "StartDate": "2023-09-10",
+      "EndDate": "2023-09-13"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse30"
+      },
+      "Name": "Hotel APAC 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Executive",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "SG",
+      "StartDate": "2023-04-10",
+      "EndDate": "2023-04-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse31"
+      },
+      "Name": "Hotel APAC 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 4,
+      "HotelCountry": "SG",
+      "StartDate": "2023-03-10",
+      "EndDate": "2023-03-14"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse32"
+      },
+      "Name": "Hotel APAC 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "SG",
+      "StartDate": "2023-11-10",
+      "EndDate": "2023-11-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse33"
+      },
+      "Name": "Hotel APAC 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Engineering",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "SG",
+      "StartDate": "2024-11-10",
+      "EndDate": "2024-11-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse34"
+      },
+      "Name": "Hotel APAC 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sustainability",
+      "RoomCount": 1,
+      "StayNightsCount": 3,
+      "HotelCountry": "SG",
+      "StartDate": "2024-06-10",
+      "EndDate": "2024-06-13"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse35"
+      },
+      "Name": "Hotel APAC 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Sales",
+      "RoomCount": 1,
+      "StayNightsCount": 5,
+      "HotelCountry": "SG",
+      "StartDate": "2024-01-10",
+      "EndDate": "2024-01-15"
+    },
+    {
+      "attributes": {
+        "type": "HotelStayEnrgyUse",
+        "referenceId": "ShowHotelStayEnrgyUse36"
+      },
+      "Name": "Hotel APAC 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "HotelStayEmssnFctrId": "@ShowHotelStayEmssnFctr1",
+      "SupplierId": "@ShowSupplier11",
+      "CostCenter": "Operations",
+      "RoomCount": 1,
+      "StayNightsCount": 2,
+      "HotelCountry": "SG",
+      "StartDate": "2024-01-10",
+      "EndDate": "2024-01-12"
+    }
+  ]
+}

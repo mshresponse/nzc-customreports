@@ -7,6 +7,7 @@
         <members>NZC_Dashboards/NZC_Audit</members>
         <members>NZC_Dashboards/NZC_Data_Quality</members>
         <members>NZC_Dashboards/NZC_Emissions_Coverage</members>
+        <members>NZC_Dashboards/NZC_Scope_3</members>
         <name>Dashboard</name>
     </types>
     <version>67.0</version>

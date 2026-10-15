@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>GroundTravelEnrgyUse$Name</field>
+    </columns>
+    <columns>
+        <field>GroundTravelEnrgyUse$CostCenter</field>
+    </columns>
+    <columns>
+        <field>GroundTravelEnrgyUse$Scope3GhgCategory</field>
+    </columns>
+    <columns>
+        <field>GroundTravelEnrgyUse$Distance</field>
+    </columns>
+    <columns>
+        <field>GroundTravelEnrgyUse$DistanceUnit</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>GroundTravelEnrgyUse$Scope3EmissionsInTco2e</field>
+    </columns>
+    <description>Ground travel by expense type (taxi, transit, personal car), with Scope 3 tCO2e totalled. The GHG category column separates business travel from commuting.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>GroundTravelEnrgyUse$ExpenseType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Ground Travel Emissions by Type</name>
+    <reportType>Standalone_Ground_Travel__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>GroundTravelEnrgyUse$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

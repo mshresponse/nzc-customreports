@@ -1,0 +1,18 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "GroundTravelEmssnFctr",
+        "referenceId": "GroundTravelEmssnFctrRef1"
+      },
+      "Name": "Sample Ground Travel Factors",
+      "DistanceUnit": "Kilometers",
+      "CurrencyCode": "USD",
+      "EmissionFactorUpdateYear": "2023",
+      "TaxiEmssnInKgCo2eDstnUnit": 0.15,
+      "TaxiRateForDstnUnit": 2,
+      "PersCarEmssnInKgCo2eDstnUnit": 0.17,
+      "EmissionFactorDataSource": "Illustrative only"
+    }
+  ]
+}

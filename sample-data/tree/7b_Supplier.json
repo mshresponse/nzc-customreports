@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "SupplierRef1"
+      },
+      "Name": "Northbridge Logistics",
+      "AccountId": "@AccountRef1",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    },
+    {
+      "attributes": {
+        "type": "Supplier",
+        "referenceId": "SupplierRef2"
+      },
+      "Name": "Copperleaf Office Supply",
+      "AccountId": "@AccountRef2",
+      "CompanyRelationshipType": "Value Chain Supplier"
+    }
+  ]
+}

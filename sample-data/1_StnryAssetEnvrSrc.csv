@@ -1,7 +1,7 @@
-Name,City,StationaryAssetType,StreetAddress,Description
-Zürich Süd Rechenzentrum,Zürich,Data Center,Bahnhofstraße 47,Full chain: footprint and energy use
-São Paulo Fábrica,São Paulo,Factory,Avenida Paulista 1.578,Full chain
-Kraków Magazyn,Kraków,Warehouse,ulica Długa 12,Footprint but no energy use
-Peña Verde Oficina,Ciudad de México,Office,Paseo de la Reforma 222,Energy use but no footprint
-Malmö Kontor,Malmö,Office,Storgatan 8,Nothing attached: appears in both gap reports
-Ōsaka Seizōsho,Ōsaka,Manufacturing,Chūō-ku 3-5-1,"Full chain, prior reporting year"
+Name,City,Country,BusinessRegion,StationaryAssetType,StreetAddress,Description
+Zürich Süd Rechenzentrum,Zürich,CH,EMEA,Data Center,Bahnhofstraße 47,Full chain: footprint and energy use
+São Paulo Fábrica,São Paulo,BR,AMER,Factory,Avenida Paulista 1.578,Full chain
+Kraków Magazyn,Kraków,PL,EMEA,Warehouse,ulica Długa 12,Footprint but no energy use
+Peña Verde Oficina,Ciudad de México,MX,AMER,Office,Paseo de la Reforma 222,Energy use but no footprint
+Malmö Kontor,Malmö,SE,EMEA,Office,Storgatan 8,Nothing attached: appears in both gap reports
+Ōsaka Seizōsho,Ōsaka,JP,APAC,Manufacturing,Chūō-ku 3-5-1,"Full chain, prior reporting year"

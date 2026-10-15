@@ -1,0 +1,14 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSet",
+        "referenceId": "ShowPcmtEmssnFctrSet1"
+      },
+      "Name": "Showcase Spend-Based Factors",
+      "CurrencyCode": "USD",
+      "EmissionFactorUpdateYear": "2023",
+      "EmissionFactorDataSource": "Illustrative only, for demo data. Replace with factors from your own source before reporting."
+    }
+  ]
+}

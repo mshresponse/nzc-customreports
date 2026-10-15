@@ -6,15 +6,13 @@
     <columns>
         <field>VehicleAssetEmssnSrc$FleetVehicleType</field>
     </columns>
+    <crossFilters>
+        <operation>without</operation>
+        <primaryTableColumn>VehicleAssetEmssnSrc$Id</primaryTableColumn>
+        <relatedTable>VehicleAssetEnrgyUse</relatedTable>
+        <relatedTableJoinColumn>VehicleAssetEmssnSrc</relatedTableJoinColumn>
+    </crossFilters>
     <description>Fleet emission sources with no fuel or mileage recorded, grouped by vehicle type.</description>
-    <filter>
-        <criteriaItems>
-            <column>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse$Id</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value></value>
-        </criteriaItems>
-    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AirTravelEnrgyUse$Name</field>
+    </columns>
+    <columns>
+        <field>AirTravelEnrgyUse$SourceCountry</field>
+    </columns>
+    <columns>
+        <field>AirTravelEnrgyUse$DestinationCountry</field>
+    </columns>
+    <columns>
+        <field>AirTravelEnrgyUse$SegmentDistance</field>
+    </columns>
+    <columns>
+        <field>AirTravelEnrgyUse$SegmentDistanceUnit</field>
+    </columns>
+    <columns>
+        <field>AirTravelEnrgyUse$StartDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AirTravelEnrgyUse$Scope3EmissionsInTco2e</field>
+    </columns>
+    <description>Flights by cost center, with Scope 3 tCO2e totalled. Distance is shown per flight with its unit rather than summed, since a record can be in miles or kilometers.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AirTravelEnrgyUse$CostCenter</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Air Travel Emissions by Cost Center</name>
+    <reportType>Standalone_Air_Travel__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AirTravelEnrgyUse$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

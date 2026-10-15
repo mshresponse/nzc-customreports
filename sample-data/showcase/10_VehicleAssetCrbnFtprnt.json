@@ -1,0 +1,333 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt1"
+      },
+      "Name": "Fourgon Citroën Lyon 01 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc1",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt2"
+      },
+      "Name": "Fourgon Citroën Lyon 01 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc1",
+      "ReportingYear": "2024",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt3"
+      },
+      "Name": "Lastbil Volvo Göteborg 02 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc2",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt4"
+      },
+      "Name": "Lastbil Volvo Göteborg 02 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc2",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt5"
+      },
+      "Name": "Camión Peñarol Montevideo 03 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc3",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt6"
+      },
+      "Name": "Camión Peñarol Montevideo 03 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc3",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt7"
+      },
+      "Name": "Kleinwagen Škoda München 04 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc4",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt8"
+      },
+      "Name": "Kleinwagen Škoda München 04 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc4",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt9"
+      },
+      "Name": "Ford Transit London 05 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc5",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt10"
+      },
+      "Name": "Ford Transit London 05 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc5",
+      "ReportingYear": "2024",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt11"
+      },
+      "Name": "Mercedes Sprinter Frankfurt 06 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc6",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt12"
+      },
+      "Name": "Mercedes Sprinter Frankfurt 06 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc6",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt13"
+      },
+      "Name": "Isuzu Elf Tōkyō 07 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc7",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt14"
+      },
+      "Name": "Isuzu Elf Tōkyō 07 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc7",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt15"
+      },
+      "Name": "Toyota HiAce Sydney 08 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc8",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt16"
+      },
+      "Name": "Toyota HiAce Sydney 08 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc8",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt17"
+      },
+      "Name": "Ram ProMaster Chicago 09 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc9",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt18"
+      },
+      "Name": "Ram ProMaster Chicago 09 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc9",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt19"
+      },
+      "Name": "Chevrolet Express Dallas 10 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc10",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt20"
+      },
+      "Name": "Chevrolet Express Dallas 10 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc10",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt21"
+      },
+      "Name": "Volkswagen Crafter Milano 12 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc12",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt22"
+      },
+      "Name": "Volkswagen Crafter Milano 12 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc12",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt23"
+      },
+      "Name": "Shuttle Bus Dublin 13 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc13",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt24"
+      },
+      "Name": "Shuttle Bus Dublin 13 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc13",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt25"
+      },
+      "Name": "Toyota Prius Toronto 15 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc15",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt26"
+      },
+      "Name": "Toyota Prius Toronto 15 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc15",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt27"
+      },
+      "Name": "Corolla Hybrid São Paulo 16 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc16",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt28"
+      },
+      "Name": "Corolla Hybrid São Paulo 16 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc16",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt29"
+      },
+      "Name": "Shuttle Bus Lyon 21 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc21",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt30"
+      },
+      "Name": "Shuttle Bus Lyon 21 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc21",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt31"
+      },
+      "Name": "Ford Ranger Santiago 22 2023",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc22",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt32"
+      },
+      "Name": "Ford Ranger Santiago 22 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc22",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetCrbnFtprnt",
+        "referenceId": "ShowVehicleAssetCrbnFtprnt33"
+      },
+      "Name": "Retired Van 2023",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+Name,DistanceUnit,EmissionFactorUpdateYear,ShortHaulMaximumDistance,MediumHaulMaximumDistance,LongHaulMinimumDistance,Co2PsgrKmShortHaulInKg,Co2PsgrKmMediumHaulInKg,Co2PsgrKmLongHaulInKg,EmissionFactorDataSource
+Sample Air Travel Factors,Kilometers,2023,1000,3700,3700,0.15,0.13,0.11,Illustrative only

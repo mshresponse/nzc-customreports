@@ -3,7 +3,7 @@
 [![Validate metadata](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml/badge.svg)](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**16 custom report types, 21 reports, 3 dashboards and 6 list views for Salesforce Net Zero
+**22 custom report types, 32 reports, 4 dashboards and 6 list views for Salesforce Net Zero
 Cloud** (now sold as Agentforce Net Zero), using core Lightning reporting only. No CRM
 Analytics, no Einstein, no managed package, no custom objects or fields. API 67.0.
 
@@ -15,6 +15,35 @@ type's API name can't be renamed in place, only deleted and recreated in every o
 The reports are laid out for **inline editing**, so a sustainability team can correct data
 in the report instead of raising a ticket for a CSV re-upload.
 
+## What it looks like
+
+Captured in a Net Zero Cloud scratch org loaded with [`sample-data/showcase`](sample-data/README.md).
+Every site, supplier and figure is fictional.
+
+**Scope 1 and 2.** Total Scope 1 by reporting year on the *NZC Emissions Coverage* dashboard,
+and the *Emissions by Reporting Year* report with both Scope 2 bases beside it, never added
+together.
+
+![Scope 1 by reporting year](docs/images/nzc-scope1-trend.png)
+![Scope 1, location-based and market-based Scope 2 by reporting year](docs/images/nzc-scope1-2-by-year.png)
+
+**Scope 3.** Purchases by year, GHG category and supplier, and business travel by cost centre
+and type, on the *NZC Scope 3* dashboard.
+
+![Scope 3 purchases by year, category and supplier](docs/images/nzc-scope3-procurement.png)
+![Air travel, hotel stays and ground travel emissions](docs/images/nzc-scope3-travel.png)
+
+**Inline editing.** Correct an energy use or a purchase in the report itself; Net Zero Cloud
+recalculates its Scope 1, 2 or 3 on save.
+
+![Energy Use Data Entry with an inline editor open on Fuel Consumption](docs/images/nzc-inline-editing.png)
+![Procurement Items Data Entry with an inline editor open on Spent Amount](docs/images/nzc-scope3-inline-editing.png)
+
+**Data quality.** Sites and vehicles with no footprint or no energy use; each chart opens the
+worklist behind it.
+
+![NZC Data Quality dashboard](docs/images/nzc-data-quality.png)
+
 ---
 
 ## Setup — 4 steps
@@ -22,7 +51,8 @@ in the report instead of raising a ticket for a CSV re-upload.
 **1. Check your org has Net Zero Cloud.**
 Setup → Object Manager. You need to see `StnryAssetEnvrSrc`, `StnryAssetCrbnFtprnt`,
 `StnryAssetEnrgyUse`, `VehicleAssetEmssnSrc`, `VehicleAssetCrbnFtprnt` and
-`VehicleAssetEnrgyUse`. A free Developer Edition org and a standard Trailhead Playground
+`VehicleAssetEnrgyUse`, and for the Scope 3 reports `Scope3CrbnFtprnt`, `Scope3PcmtItem` and
+`AirTravelEnrgyUse` among others. A free Developer Edition org and a standard Trailhead Playground
 do **not** have these — see [Orgs that work](#orgs-that-work).
 
 **2. Deploy.**
@@ -61,11 +91,16 @@ script.
 |---|---|
 | Asset Names and Locations | Site names, city, country, asset type |
 | Fleet Names and Types | Vehicle names and types |
-| Footprint Data Entry | Reporting year, stage, Scope 1 and Scope 2 figures |
+| Footprint Data Entry | Reporting year, stage |
 | Energy Use Data Entry | Fuel type, consumption, unit |
 | Fleet Energy Data Entry | Fuel type, consumption, distance |
 
-**4 reports that find missing records** — outer joins, grouped by asset type:
+The Scope 1 and Scope 2 totals on a footprint are not on that list, and can't be: Net Zero
+Cloud calculates them from the energy use records and emission factors, and the fields are
+read-only even for an admin. Correct the energy use and the footprint follows.
+
+**4 reports that find missing records** — a cross filter (*assets **without** footprints*),
+grouped by asset type:
 
 Stationary Assets Missing Footprints · Stationary Assets Missing Energy Use ·
 Fleet Assets Missing Footprints · Fleet Assets Missing Energy Use
@@ -76,11 +111,15 @@ can never show you:
 Orphaned Carbon Footprints · Orphaned Stationary Energy Uses · Orphaned Fleet Footprints ·
 Orphaned Vehicle Energy Uses
 
-An orphaned footprint still contributes to a total. It's a number in your disclosure that
-nothing explains.
+An orphaned footprint, one with no asset, still contributes to a total. It's a number in
+your disclosure that nothing explains. An orphaned energy use is the opposite problem: Net
+Zero Cloud won't let one exist without its asset, but it can lose its footprint — deleting a
+footprint blanks the lookup on every energy use under it — and then its consumption is
+counted in no footprint at all.
 
 **3 summaries** — Emissions by Reporting Year, Fuel Consumption by Fuel Type, Fleet Fuel by
-Fuel Type.
+Fuel Type. The two fuel reports group by fuel type *and* unit and have no grand total,
+because kilowatt-hours, therms and liters don't add up.
 
 **5 audit reports** — the part of the CRM Analytics audit dashboard you can rebuild in core
 Lightning. Emissions by Asset and Year is a matrix, one site per row and one year per
@@ -89,11 +128,27 @@ Footprints by Stage and Footprints by Year and Stage (stationary and fleet) show
 each disclosure year is still draft or in progress — a number that could still change under
 audit.
 
-**16 report types** covering both stationary and fleet, in three shapes each — `with`
-(inner join), `with/without` (outer join), and standalone. Build your own reports on any of
-them; that's rather the point of shipping the source.
+**11 Scope 3 reports and the NZC Scope 3 dashboard** — built on the figures Net Zero Cloud
+calculates on each record as it saves it: spend times factor for a purchase, distance and haul
+band for a flight, nights for a hotel stay, distance for ground travel.
 
-**3 dashboards** — NZC Audit, NZC Data Quality and NZC Emissions Coverage. NZC Audit has a
+- Purchases by year and GHG category, by supplier, and spend against emissions by category —
+  spend grouped by currency, never added across currencies.
+- Air travel and hotel stays by cost center; ground travel by type, which separates business
+  travel from commuting.
+- Scope 3 footprints by year and stage, and Scope 3 emissions by reporting year from Net Zero
+  Cloud's footprint roll-ups.
+- Procurement Items Data Entry, editable in place.
+- Two worklists: **Procurement Items Without a Factor** — spend that is in your procurement
+  data but adds nothing to Scope 3 — and **Scope 3 Sources Missing Footprints**.
+
+**22 report types** — 16 for stationary and fleet, in three shapes each (`with`, an inner
+join; `with/without`, an outer join; and standalone), and 6 for Scope 3: procurement summaries
+with their items, air, hotel and ground travel, Scope 3 sources with or without footprints,
+and Scope 3 footprints. Build your own reports on any of them; that's rather the point of
+shipping the source.
+
+**4 dashboards** — NZC Audit, NZC Data Quality, NZC Emissions Coverage and NZC Scope 3. NZC Audit has a
 **Reporting Year** filter across the top, so an admin can audit one disclosure year at a
 time; the year list is 2023–2026 and is a one-minute edit in the dashboard builder. Every
 component opens its report, and every report is editable inline where the record exists.
@@ -181,6 +236,7 @@ names are their own name space (see [`docs/building-your-own.md`](docs/building-
 | [NZC trial — Learning org](https://developer.salesforce.com/free-trials/comparison/net-zero-cloud) | Yes | 30 days | Pre-configured with sample data. |
 | [NZC trial — Base org](https://developer.salesforce.com/free-trials/comparison/net-zero-cloud) | Yes | 30 days | Licences only. Reports deploy but return nothing until you load data — see [`sample-data/`](sample-data/). |
 | [Trailhead promo DE org](https://trailhead.salesforce.com/promo/orgs/net-zero-cloud) | Yes | Check at signup | Licensed for Agentforce Net Zero. |
+| Scratch org from your Dev Hub | Yes | Up to 30 days | `sf org create scratch --definition-file config/project-scratch-def.json --alias nzc`. Net Zero Cloud is switched on by the definition file; assign yourself the `NetZeroAdmin` permission set before loading data. |
 | Your own licensed org or sandbox | — | — | Deploy to a sandbox first. |
 
 Salesforce's docs list NZC as available in Enterprise, Performance, Unlimited and Developer
@@ -211,7 +267,8 @@ fuel, consumption and distance all live on `VehicleAssetEnrgyUse`.
 
 ## Scope: the reports read the whole object, deliberately
 
-Fifteen of the 21 reports carry no filter, and all 21 leave the standard date filter
+Twenty-two of the 32 reports carry no filter — the other ten are the Missing, Orphaned and
+Without a Factor worklists, which filter by definition — and all 32 leave the standard date filter
 unbounded. That is a decision, not an oversight, and it is worth understanding before you
 deploy into an org with years of history.
 
@@ -243,17 +300,27 @@ Two related shapes, also deliberate:
 
 ## Also in this repo
 
-- [`sample-data/`](sample-data/) — six UTF-8 CSVs with deliberate gaps and orphans, so the
-  Missing and Orphaned reports return rows on an empty trial org.
+- [`sample-data/`](sample-data/) — UTF-8 CSVs with deliberate gaps and orphans, so the
+  Missing and Orphaned reports return rows on an empty trial org. Loads in one command; the
+  README there lists the rows each report should return. `sample-data/showcase/` is a
+  larger fictional dataset — 34 sites, 22 vehicles, three years, plus Scope 3 procurement
+  and business travel — for demos.
+- [`scripts/check-reports.py`](scripts/check-reports.py) — runs every report and dashboard
+  against an org holding the sample data and compares with those rows.
+- [`config/project-scratch-def.json`](config/project-scratch-def.json) — a scratch org with
+  Net Zero Cloud switched on.
 - [`docs/encoding-evidence/`](docs/encoding-evidence/) — why accented site names arrive as
   question marks, and which step is responsible.
 - [`docs/building-your-own.md`](docs/building-your-own.md) — the report type metadata
   gotchas, for anyone forking this.
+- [`docs/appexchange.md`](docs/appexchange.md) — the plan for a free AgentExchange
+  (AppExchange) listing, and what a managed package would change for people who install it.
 
 ## Continuous integration
 
 `.github/workflows/validate.yml` checks XML well-formedness, that `sf project convert
-source` succeeds, and that every member in every `manifest/*.xml` has a matching source file.
+source` succeeds, that every member in every `manifest/*.xml` has a matching source file, and
+that `sample-data/tree/` matches the CSVs it is generated from.
 
 **None of that can see a wrong object or field name.** A reference to an object that does
 not exist produces well-formed XML that converts cleanly and matches the manifest. This
@@ -264,6 +331,14 @@ against a licensed org proves the names resolve:
 sf project deploy start --manifest manifest/package.xml --target-org <alias> --dry-run
 ```
 
+**And a deploy can't see a report that returns the wrong rows.** The four Missing reports
+deployed cleanly for months while listing every asset, because a filter on the child side
+of an outer join behaves like part of the join (see
+[`docs/building-your-own.md`](docs/building-your-own.md)). So the workflow has a second
+job: it creates a Net Zero Cloud scratch org, deploys, loads the sample data and runs
+`scripts/check-reports.py`. It needs a Dev Hub, supplied as the repository secret
+`DEVHUB_SFDX_AUTH_URL`; without it the job is skipped.
+
 ## License
 
-MIT.
+MIT. Built and maintained by [Everything Virtually](https://www.everythingvirtually.com/).

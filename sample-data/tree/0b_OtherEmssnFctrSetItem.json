@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "OtherEmssnFctrSetItemRef1"
+      },
+      "ParentEmissionFactorId": "@OtherEmssnFctrSetRef1",
+      "FuelType": "Diesel",
+      "Co2EmissionFactor": 2.68,
+      "Co2EmissionFactorUnit": "KG_PER_L",
+      "CalorificValue": 10,
+      "CalorificValueUnit": "KWH_PER_L"
+    }
+  ]
+}

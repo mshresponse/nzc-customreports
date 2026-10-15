@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "AirTravelEmssnFctr",
+        "referenceId": "AirTravelEmssnFctrRef1"
+      },
+      "Name": "Sample Air Travel Factors",
+      "DistanceUnit": "Kilometers",
+      "EmissionFactorUpdateYear": "2023",
+      "ShortHaulMaximumDistance": 1000,
+      "MediumHaulMaximumDistance": 3700,
+      "LongHaulMinimumDistance": 3700,
+      "Co2PsgrKmShortHaulInKg": 0.15,
+      "Co2PsgrKmMediumHaulInKg": 0.13,
+      "Co2PsgrKmLongHaulInKg": 0.11,
+      "EmissionFactorDataSource": "Illustrative only"
+    }
+  ]
+}

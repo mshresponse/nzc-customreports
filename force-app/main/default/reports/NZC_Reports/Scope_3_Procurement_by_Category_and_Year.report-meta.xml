@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Name</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Supplier</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$SpentAmount</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary$CurrencyCode</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Scope3EmissionsInTco2</field>
+    </columns>
+    <description>Final Scope 3 emissions from purchases, by calendar year and GHG category. Only tCO2e is totalled: spend is in each summary's currency, so it is shown per purchase and never added up here.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3PcmtSummary$CalendarYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Scope3GhgCategory</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Scope 3 Procurement by Category and Year</name>
+    <reportType>Scope3_Procurement_Summaries_with_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Scope3PcmtSummary$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

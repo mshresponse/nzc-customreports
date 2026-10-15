@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem1"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "Co2EmissionFactor": 2.68,
+      "Co2EmissionFactorUnit": "KG_PER_L",
+      "CalorificValue": 10.0,
+      "CalorificValueUnit": "KWH_PER_L"
+    },
+    {
+      "attributes": {
+        "type": "OtherEmssnFctrSetItem",
+        "referenceId": "ShowOtherEmssnFctrSetItem2"
+      },
+      "ParentEmissionFactorId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Gasoline",
+      "Co2EmissionFactor": 2.31,
+      "Co2EmissionFactorUnit": "KG_PER_L",
+      "CalorificValue": 9.1,
+      "CalorificValueUnit": "KWH_PER_L"
+    }
+  ]
+}

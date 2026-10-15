@@ -1,7 +1,7 @@
-Name,StnryAssetEnvrSrc.Name,ReportingYear
-FP Zürich 2024,Zürich Süd Rechenzentrum,2024
-FP São Paulo 2024,São Paulo Fábrica,2024
-FP Kraków 2024,Kraków Magazyn,2024
-FP Ōsaka 2023,Ōsaka Seizōsho,2023
-FP Orphan A 2024,,2024
-FP Orphan B 2023,,2023
+Name,StnryAssetEnvrSrc.Name,ReportingYear,FootprintStage
+FP Zürich 2024,Zürich Süd Rechenzentrum,2024,Internal Audit
+FP São Paulo 2024,São Paulo Fábrica,2024,Data Validation
+FP Kraków 2024,Kraków Magazyn,2024,Data Collection
+FP Ōsaka 2023,Ōsaka Seizōsho,2023,Completed
+FP Orphan A 2024,,2024,Data Collection
+FP Orphan B 2023,,2023,Completed

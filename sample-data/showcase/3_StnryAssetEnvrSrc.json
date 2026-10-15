@@ -1,0 +1,268 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc1"
+      },
+      "Name": "Zürich Süd Rechenzentrum",
+      "City": "Zürich",
+      "Country": "CH",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Data Center"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc2"
+      },
+      "Name": "Frankfurt Rechenzentrum",
+      "City": "Frankfurt",
+      "Country": "DE",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Data Center"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc3"
+      },
+      "Name": "Dublin Data Centre",
+      "City": "Dublin",
+      "Country": "IE",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Data Center"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc4"
+      },
+      "Name": "London Head Office",
+      "City": "London",
+      "Country": "GB",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc5"
+      },
+      "Name": "Paris La Défense Bureau",
+      "City": "Paris",
+      "Country": "FR",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc6"
+      },
+      "Name": "Malmö Kontor",
+      "City": "Malmö",
+      "Country": "SE",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc7"
+      },
+      "Name": "Kraków Magazyn",
+      "City": "Kraków",
+      "Country": "PL",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Warehouse"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc8"
+      },
+      "Name": "Rotterdam Distributiecentrum",
+      "City": "Rotterdam",
+      "Country": "NL",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Warehouse"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc9"
+      },
+      "Name": "Milano Stabilimento",
+      "City": "Milano",
+      "Country": "IT",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Manufacturing"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc10"
+      },
+      "Name": "Lyon Usine",
+      "City": "Lyon",
+      "Country": "FR",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Factory"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc11"
+      },
+      "Name": "São Paulo Fábrica",
+      "City": "São Paulo",
+      "Country": "BR",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Factory"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc12"
+      },
+      "Name": "Peña Verde Oficina",
+      "City": "Ciudad de México",
+      "Country": "MX",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc13"
+      },
+      "Name": "Monterrey Planta",
+      "City": "Monterrey",
+      "Country": "MX",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Manufacturing"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc14"
+      },
+      "Name": "Chicago Regional Office",
+      "City": "Chicago",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc15"
+      },
+      "Name": "Dallas Data Center",
+      "City": "Dallas",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Data Center"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc16"
+      },
+      "Name": "Toronto Warehouse",
+      "City": "Toronto",
+      "Country": "CA",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc17"
+      },
+      "Name": "Santiago Bodega",
+      "City": "Santiago",
+      "Country": "CL",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc18"
+      },
+      "Name": "Atlanta Retail Hub",
+      "City": "Atlanta",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Retail"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc19"
+      },
+      "Name": "Ōsaka Seizōsho",
+      "City": "Ōsaka",
+      "Country": "JP",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Manufacturing"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc20"
+      },
+      "Name": "Tōkyō Honsha",
+      "City": "Tōkyō",
+      "Country": "JP",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc21"
+      },
+      "Name": "Singapore Data Centre",
+      "City": "Singapore",
+      "Country": "SG",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Data Center"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc22"
+      },
+      "Name": "Sydney Office",
+      "City": "Sydney",
+      "Country": "AU",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc23"
+      },
+      "Name": "Bengaluru Campus",
+      "City": "Bengaluru",
+      "Country": "IN",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc24"
+      },
+      "Name": "Shenzhen Factory",
+      "City": "Shenzhen",
+      "Country": "CN",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Factory"
+    }
+  ]
+}

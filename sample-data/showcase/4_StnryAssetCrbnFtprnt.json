@@ -1,0 +1,591 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt1"
+      },
+      "Name": "Zürich Süd Rechenzentrum 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt2"
+      },
+      "Name": "Zürich Süd Rechenzentrum 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt3"
+      },
+      "Name": "Zürich Süd Rechenzentrum 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc1",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt4"
+      },
+      "Name": "Frankfurt Rechenzentrum 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt5"
+      },
+      "Name": "Frankfurt Rechenzentrum 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt6"
+      },
+      "Name": "Frankfurt Rechenzentrum 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc2",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt7"
+      },
+      "Name": "Dublin Data Centre 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt8"
+      },
+      "Name": "Dublin Data Centre 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt9"
+      },
+      "Name": "Dublin Data Centre 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc3",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt10"
+      },
+      "Name": "London Head Office 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt11"
+      },
+      "Name": "London Head Office 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt12"
+      },
+      "Name": "London Head Office 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc4",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt13"
+      },
+      "Name": "Paris La Défense Bureau 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt14"
+      },
+      "Name": "Paris La Défense Bureau 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt15"
+      },
+      "Name": "Paris La Défense Bureau 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc5",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt16"
+      },
+      "Name": "Malmö Kontor 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt17"
+      },
+      "Name": "Malmö Kontor 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt18"
+      },
+      "Name": "Malmö Kontor 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc6",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt19"
+      },
+      "Name": "Kraków Magazyn 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt20"
+      },
+      "Name": "Kraków Magazyn 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt21"
+      },
+      "Name": "Kraków Magazyn 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc7",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt22"
+      },
+      "Name": "Rotterdam Distributiecentrum 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc8",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt23"
+      },
+      "Name": "Milano Stabilimento 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt24"
+      },
+      "Name": "Milano Stabilimento 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt25"
+      },
+      "Name": "Milano Stabilimento 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc9",
+      "ReportingYear": "2024",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt26"
+      },
+      "Name": "Lyon Usine 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt27"
+      },
+      "Name": "Lyon Usine 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt28"
+      },
+      "Name": "Lyon Usine 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc10",
+      "ReportingYear": "2024",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt29"
+      },
+      "Name": "São Paulo Fábrica 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt30"
+      },
+      "Name": "São Paulo Fábrica 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt31"
+      },
+      "Name": "São Paulo Fábrica 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc11",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt32"
+      },
+      "Name": "Peña Verde Oficina 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt33"
+      },
+      "Name": "Peña Verde Oficina 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt34"
+      },
+      "Name": "Peña Verde Oficina 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc12",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt35"
+      },
+      "Name": "Monterrey Planta 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc13",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt36"
+      },
+      "Name": "Monterrey Planta 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc13",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt37"
+      },
+      "Name": "Chicago Regional Office 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt38"
+      },
+      "Name": "Chicago Regional Office 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt39"
+      },
+      "Name": "Chicago Regional Office 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc14",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt40"
+      },
+      "Name": "Dallas Data Center 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc15",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt41"
+      },
+      "Name": "Dallas Data Center 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc15",
+      "ReportingYear": "2024",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt42"
+      },
+      "Name": "Toronto Warehouse 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt43"
+      },
+      "Name": "Toronto Warehouse 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc16",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt44"
+      },
+      "Name": "Ōsaka Seizōsho 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt45"
+      },
+      "Name": "Ōsaka Seizōsho 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt46"
+      },
+      "Name": "Ōsaka Seizōsho 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc19",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt47"
+      },
+      "Name": "Tōkyō Honsha 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt48"
+      },
+      "Name": "Tōkyō Honsha 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt49"
+      },
+      "Name": "Tōkyō Honsha 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc20",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt50"
+      },
+      "Name": "Singapore Data Centre 2022",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt51"
+      },
+      "Name": "Singapore Data Centre 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt52"
+      },
+      "Name": "Singapore Data Centre 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc21",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt53"
+      },
+      "Name": "Bengaluru Campus 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc23",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt54"
+      },
+      "Name": "Bengaluru Campus 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc23",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt55"
+      },
+      "Name": "Shenzhen Factory 2023",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc24",
+      "ReportingYear": "2023",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt56"
+      },
+      "Name": "Shenzhen Factory 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc24",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt57"
+      },
+      "Name": "Leeds Office 2023",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt58"
+      },
+      "Name": "Leeds Office 2024",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt59"
+      },
+      "Name": "Imported Footprint 2022",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    }
+  ]
+}

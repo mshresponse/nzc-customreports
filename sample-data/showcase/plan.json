@@ -1,0 +1,66 @@
+[
+  {
+    "sobject": "OtherEmssnFctrSet",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "1_OtherEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "OtherEmssnFctrSetItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "2_OtherEmssnFctrSetItem.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetEnvrSrc",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "3_StnryAssetEnvrSrc.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetCrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "4_StnryAssetCrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "StnryAssetEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "5_StnryAssetEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetEmssnSrc",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "6_VehicleAssetEmssnSrc.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetCrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "7_VehicleAssetCrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "VehicleAssetEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "8_VehicleAssetEnrgyUse.json"
+    ]
+  }
+]

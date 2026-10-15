@@ -7,7 +7,8 @@
       },
       "Name": "VFP Citroën 2024",
       "VehicleAssetEmssnSrcId": "@VehicleAssetEmssnSrcRef1",
-      "ReportingYear": "2024"
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
     },
     {
       "attributes": {
@@ -16,7 +17,8 @@
       },
       "Name": "VFP Volvo 2024",
       "VehicleAssetEmssnSrcId": "@VehicleAssetEmssnSrcRef2",
-      "ReportingYear": "2024"
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
     },
     {
       "attributes": {
@@ -24,7 +26,8 @@
         "referenceId": "VehicleAssetCrbnFtprntRef3"
       },
       "Name": "VFP Fleet Orphan 2024",
-      "ReportingYear": "2024"
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
     }
   ]
 }

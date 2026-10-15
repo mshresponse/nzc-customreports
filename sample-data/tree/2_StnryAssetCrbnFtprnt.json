@@ -7,7 +7,8 @@
       },
       "Name": "FP Zürich 2024",
       "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef1",
-      "ReportingYear": "2024"
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
     },
     {
       "attributes": {
@@ -16,7 +17,8 @@
       },
       "Name": "FP São Paulo 2024",
       "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef2",
-      "ReportingYear": "2024"
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
     },
     {
       "attributes": {
@@ -25,7 +27,8 @@
       },
       "Name": "FP Kraków 2024",
       "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef3",
-      "ReportingYear": "2024"
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
     },
     {
       "attributes": {
@@ -34,7 +37,8 @@
       },
       "Name": "FP Ōsaka 2023",
       "StnryAssetEnvrSrcId": "@StnryAssetEnvrSrcRef6",
-      "ReportingYear": "2023"
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
     },
     {
       "attributes": {
@@ -42,7 +46,8 @@
         "referenceId": "StnryAssetCrbnFtprntRef5"
       },
       "Name": "FP Orphan A 2024",
-      "ReportingYear": "2024"
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Collection"
     },
     {
       "attributes": {
@@ -50,7 +55,8 @@
         "referenceId": "StnryAssetCrbnFtprntRef6"
       },
       "Name": "FP Orphan B 2023",
-      "ReportingYear": "2023"
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
     }
   ]
 }

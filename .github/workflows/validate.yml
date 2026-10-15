@@ -12,11 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check sample-data/tree matches the CSVs
+      - name: Check the generated sample data is up to date
         run: |
           python3 scripts/build-sample-tree.py
-          git diff --exit-code -- sample-data/tree || {
-            echo "sample-data/tree is stale: run python3 scripts/build-sample-tree.py and commit the result."
+          python3 scripts/build-showcase-data.py
+          git diff --exit-code -- sample-data/tree sample-data/showcase || {
+            echo "Generated sample data is stale: run scripts/build-sample-tree.py and scripts/build-showcase-data.py and commit the result."
             exit 1
           }
 

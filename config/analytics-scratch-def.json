@@ -1,0 +1,14 @@
+{
+  "orgName": "NZC Custom Reports with CRM Analytics",
+  "edition": "Enterprise",
+  "features": ["SustainabilityApp", "DevelopmentWave", "TCRMforSustainability"],
+  "settings": {
+    "industriesSettings": {
+      "enableSustainabilityCloud": true,
+      "enableSCCarbonAccounting": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    }
+  }
+}

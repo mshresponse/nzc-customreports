@@ -1,0 +1,71 @@
+# Comparing with the CRM Analytics Net Zero app
+
+How to stand up Salesforce's own **Net Zero Analytics** app (CRM Analytics) next to this
+package in one scratch org, loaded with the same data, and what the comparison shows. Built
+and checked on 2026-10-15 against template version 4.8.
+
+## Set it up
+
+1. **A scratch org with all three features.** `config/analytics-scratch-def.json` adds
+   `DevelopmentWave` (CRM Analytics) and `TCRMforSustainability` (the Net Zero Analytics
+   licence and permission sets) to the usual `SustainabilityApp`:
+
+   ```bash
+   sf org create scratch --definition-file config/analytics-scratch-def.json --alias nzc-crma --duration-days 14
+   ```
+
+2. **Permission sets for yourself:** `NetZeroAdmin`, `NetZeroManager` and
+   `TCRMforSustainabilityAdmin` (`EinsteinAnalyticsPlusAdmin` comes pre-assigned).
+3. **This package and the showcase data,** exactly as in `sample-data/README.md`.
+4. **Give the CRM Analytics Integration User read access.** The template refuses to create
+   the app until the Integration User (profile *Analytics Cloud Integration User*) can read
+   every object and field it loads — 33 Net Zero Cloud objects, about 800 fields. A permission
+   set with read and View All on those objects, read on every permissionable field, plus read
+   on `Account` and `AnnualEmssnInventory` (dependencies the deploy insists on), assigned to
+   that user, is enough. The template's error names the fields it is missing.
+5. **Create the app from the template** — `sfdc_internal__Net_Zero_Analytics` — with
+   `POST /services/data/v67.0/wave/folders`:
+
+   ```json
+   {
+     "label": "Net Zero Analytics",
+     "name": "Net_Zero_Analytics",
+     "templateSourceId": "sfdc_internal__Net_Zero_Analytics",
+     "templateValues": {
+       "Can_Continue": true,
+       "IsProgrammatic": true,
+       "autoconfig": "true",
+       "ApplySecurityPredicates": "None",
+       "includePrograms": "No"
+     }
+   }
+   ```
+
+   `includePrograms` is off because the Program objects aren't in a Net Zero Cloud scratch
+   org. `ApplySecurityPredicates: None` makes every row visible to anyone who can open the
+   app, which suits a demo org; a real one would use the role hierarchy. The build takes
+   about eight minutes and creates six dashboards, including **Audit Dashboard**.
+
+## What the comparison shows
+
+Both read the same 300 showcase records in the same org.
+
+| | Net Zero Analytics (CRM Analytics) | This package (Lightning reports) |
+|---|---|---|
+| Licence | CRM Analytics for Net Zero Cloud add-on | None beyond Net Zero Cloud |
+| Setup | Template app, Integration User access to 33 objects, ~8 minute build | One deploy |
+| Freshness | As of the last data sync ("Data updated: Today at 10:43 AM") | Live: every run queries the records |
+| Audit view | Four tabs (Overview, Emission Factors, Data Quality, Renewable Energy), five filters including a comparison year | One dashboard, one Reporting Year filter |
+| What "data quality" means | Usage intensity per m², monthly variance, outliers | Missing footprints and energy use, orphaned records, footprint stages |
+| Fixing what it finds | Open the record | Edit in the report |
+
+Two things only show up when both run on the same data:
+
+- **Neither shows Scope 1 or 2 totals in a fresh org.** Both read the totals Net Zero
+  Cloud's own calculation writes, and loading records doesn't run it, so both emissions
+  charts read zero. The CRM Analytics app does show 313 for vehicles: it also reads the
+  per-gas CO2 that Net Zero Cloud fills in on save when a vehicle energy use has a factor.
+- **Most of the CRM Analytics Data Quality tab needs data this demo doesn't have** — floor
+  area for intensity, start and end dates on energy use for the monthly views — so it reads
+  zero or "No results found". The two products answer different questions: theirs is "is
+  this consumption plausible?", this package's is "is this inventory complete?".

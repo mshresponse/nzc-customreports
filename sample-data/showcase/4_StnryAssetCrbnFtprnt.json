@@ -565,6 +565,36 @@
         "type": "StnryAssetCrbnFtprnt",
         "referenceId": "ShowStnryAssetCrbnFtprnt57"
       },
+      "Name": "Bogotá Bodega 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc32",
+      "ReportingYear": "2024",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt58"
+      },
+      "Name": "Porto Armazém 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc33",
+      "ReportingYear": "2024",
+      "FootprintStage": "External Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt59"
+      },
+      "Name": "Hanoi Factory 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc34",
+      "ReportingYear": "2024",
+      "FootprintStage": "Internal Audit"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetCrbnFtprnt",
+        "referenceId": "ShowStnryAssetCrbnFtprnt60"
+      },
       "Name": "Leeds Office 2023",
       "ReportingYear": "2023",
       "FootprintStage": "Completed"
@@ -572,7 +602,7 @@
     {
       "attributes": {
         "type": "StnryAssetCrbnFtprnt",
-        "referenceId": "ShowStnryAssetCrbnFtprnt58"
+        "referenceId": "ShowStnryAssetCrbnFtprnt61"
       },
       "Name": "Leeds Office 2024",
       "ReportingYear": "2024",
@@ -581,7 +611,7 @@
     {
       "attributes": {
         "type": "StnryAssetCrbnFtprnt",
-        "referenceId": "ShowStnryAssetCrbnFtprnt59"
+        "referenceId": "ShowStnryAssetCrbnFtprnt62"
       },
       "Name": "Imported Footprint 2022",
       "ReportingYear": "2022",

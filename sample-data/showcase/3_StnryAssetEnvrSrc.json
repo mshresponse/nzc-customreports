@@ -263,6 +263,116 @@
       "Country": "CN",
       "BusinessRegion": "APAC",
       "StationaryAssetType": "Factory"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc25"
+      },
+      "Name": "Auckland Office",
+      "City": "Auckland",
+      "Country": "NZ",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc26"
+      },
+      "Name": "Melbourne Office",
+      "City": "Melbourne",
+      "Country": "AU",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc27"
+      },
+      "Name": "Seoul Office",
+      "City": "Seoul",
+      "Country": "KR",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc28"
+      },
+      "Name": "Gdańsk Biuro",
+      "City": "Gdańsk",
+      "Country": "PL",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Office"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc29"
+      },
+      "Name": "Denver Retail Store",
+      "City": "Denver",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Retail"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc30"
+      },
+      "Name": "Phoenix Retail Store",
+      "City": "Phoenix",
+      "Country": "US",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Retail"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc31"
+      },
+      "Name": "Lima Almacén",
+      "City": "Lima",
+      "Country": "PE",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc32"
+      },
+      "Name": "Bogotá Bodega",
+      "City": "Bogotá",
+      "Country": "CO",
+      "BusinessRegion": "AMER",
+      "StationaryAssetType": "Warehouse"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc33"
+      },
+      "Name": "Porto Armazém",
+      "City": "Porto",
+      "Country": "PT",
+      "BusinessRegion": "EMEA",
+      "StationaryAssetType": "Warehouse"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnvrSrc",
+        "referenceId": "ShowStnryAssetEnvrSrc34"
+      },
+      "Name": "Hanoi Factory",
+      "City": "Hanoi",
+      "Country": "VN",
+      "BusinessRegion": "APAC",
+      "StationaryAssetType": "Factory"
     }
   ]
 }

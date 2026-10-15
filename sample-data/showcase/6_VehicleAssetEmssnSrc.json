@@ -159,6 +159,66 @@
       "City": "São Paulo",
       "VehicleType": "Fleet Vehicle",
       "FleetVehicleType": "Hybrid"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "ShowVehicleAssetEmssnSrc17"
+      },
+      "Name": "Mahindra Bolero Pune 17",
+      "City": "Pune",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "InternalCombustionEngine"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "ShowVehicleAssetEmssnSrc18"
+      },
+      "Name": "Hyundai Porter Seoul 18",
+      "City": "Seoul",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "InternalCombustionEngine"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "ShowVehicleAssetEmssnSrc19"
+      },
+      "Name": "Shuttle Bus Auckland 19",
+      "City": "Auckland",
+      "VehicleType": "Company Shuttle",
+      "FleetVehicleType": "InternalCombustionEngine"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "ShowVehicleAssetEmssnSrc20"
+      },
+      "Name": "Isuzu D-Max Bangkok 20",
+      "City": "Bangkok",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "InternalCombustionEngine"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "ShowVehicleAssetEmssnSrc21"
+      },
+      "Name": "Shuttle Bus Lyon 21",
+      "City": "Lyon",
+      "VehicleType": "Company Shuttle",
+      "FleetVehicleType": "InternalCombustionEngine"
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEmssnSrc",
+        "referenceId": "ShowVehicleAssetEmssnSrc22"
+      },
+      "Name": "Ford Ranger Santiago 22",
+      "City": "Santiago",
+      "VehicleType": "Fleet Vehicle",
+      "FleetVehicleType": "InternalCombustionEngine"
     }
   ]
 }

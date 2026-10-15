@@ -3,7 +3,7 @@
     sf data import tree --plan sample-data/showcase/plan.json --target-org <alias>
 
 sample-data/ itself is a test fixture: six sites, every row chosen so each report has a
-known answer. That makes it a good check and a thin demo. This is the demo: 24 sites and 16
+known answer. That makes it a good check and a thin demo. This is the demo: 34 sites and 22
 vehicles on three continents, three reporting years with footprints moving through their
 stages, a few hundred energy use records trending down, and the kind of gaps a real
 inventory has — sites not onboarded yet, consumption not collected, footprints with no
@@ -49,6 +49,16 @@ SITES = [
     ('Sydney Office', 'Sydney', 'AU', 'APAC', 'Office', 1.5, None, 'energy use, no footprint'),
     ('Bengaluru Campus', 'Bengaluru', 'IN', 'APAC', 'Office', 3, '2023', None),
     ('Shenzhen Factory', 'Shenzhen', 'CN', 'APAC', 'Factory', 5, '2023', 'no energy use'),
+    ('Auckland Office', 'Auckland', 'NZ', 'APAC', 'Office', 1.2, None, 'not onboarded'),
+    ('Melbourne Office', 'Melbourne', 'AU', 'APAC', 'Office', 1.4, None, 'energy use, no footprint'),
+    ('Seoul Office', 'Seoul', 'KR', 'APAC', 'Office', 1.6, None, 'not onboarded'),
+    ('Gdańsk Biuro', 'Gdańsk', 'PL', 'EMEA', 'Office', 0.9, None, 'energy use, no footprint'),
+    ('Denver Retail Store', 'Denver', 'US', 'AMER', 'Retail', 0.8, None, 'not onboarded'),
+    ('Phoenix Retail Store', 'Phoenix', 'US', 'AMER', 'Retail', 0.9, None, 'not onboarded'),
+    ('Lima Almacén', 'Lima', 'PE', 'AMER', 'Warehouse', 1.3, None, 'not onboarded'),
+    ('Bogotá Bodega', 'Bogotá', 'CO', 'AMER', 'Warehouse', 1.1, '2024', 'no energy use'),
+    ('Porto Armazém', 'Porto', 'PT', 'EMEA', 'Warehouse', 1.0, '2024', 'no energy use'),
+    ('Hanoi Factory', 'Hanoi', 'VN', 'APAC', 'Factory', 4, '2024', 'no energy use'),
 ]
 
 # Fuel, unit and annual consumption per unit of site size, by asset type.
@@ -80,6 +90,12 @@ VEHICLES = [
     ('Shuttle Bus Singapore 14', 'Singapore', 'Company Shuttle', 'InternalCombustionEngine', 'Diesel', 13_200, 4.1, 'not onboarded'),
     ('Toyota Prius Toronto 15', 'Toronto', 'Fleet Vehicle', 'Hybrid', 'Gasoline', 950, 22.0, None),
     ('Corolla Hybrid São Paulo 16', 'São Paulo', 'Fleet Vehicle', 'Hybrid', 'Gasoline', 1_050, 20.5, None),
+    ('Mahindra Bolero Pune 17', 'Pune', 'Fleet Vehicle', 'InternalCombustionEngine', 'Diesel', 2_600, 13.0, 'not onboarded'),
+    ('Hyundai Porter Seoul 18', 'Seoul', 'Fleet Vehicle', 'InternalCombustionEngine', 'Diesel', 3_000, 12.0, 'not onboarded'),
+    ('Shuttle Bus Auckland 19', 'Auckland', 'Company Shuttle', 'InternalCombustionEngine', 'Diesel', 12_800, 4.0, 'not onboarded'),
+    ('Isuzu D-Max Bangkok 20', 'Bangkok', 'Fleet Vehicle', 'InternalCombustionEngine', 'Diesel', 2_900, 12.5, 'energy use, no footprint'),
+    ('Shuttle Bus Lyon 21', 'Lyon', 'Company Shuttle', 'InternalCombustionEngine', 'Diesel', 13_900, 4.0, 'no energy use'),
+    ('Ford Ranger Santiago 22', 'Santiago', 'Fleet Vehicle', 'InternalCombustionEngine', 'Diesel', 3_100, 11.8, 'no energy use'),
 ]
 
 # Where each year's footprints sit in the process: closed years done, the current one spread.

@@ -41,11 +41,11 @@ python3 scripts/check-reports.py --target-org <alias>
 ## A bigger dataset for demos
 
 The files above are a test fixture — six sites, each row there so a report has a known
-answer — which makes them a good check and a thin demo. `showcase/` is the demo: 24 sites
-and 16 vehicles across three continents, footprints for 2022–2024 moving through their
-stages, about 140 energy use records trending down year on year, and the gaps a real
+answer — which makes them a good check and a thin demo. `showcase/` is the demo: 34 sites
+and 22 vehicles across three continents, footprints for 2022–2024 moving through their
+stages, about 150 energy use records trending down year on year, and the gaps a real
 inventory has (sites not onboarded, consumption not collected, a footprint deleted, records
-with no parent). 272 records, all fictional.
+with no parent). 300 records, all fictional.
 
 ```bash
 sf data import tree --plan sample-data/showcase/plan.json --target-org <alias>

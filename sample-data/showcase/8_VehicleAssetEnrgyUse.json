@@ -10,9 +10,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt1",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 2934,
+      "FuelConsumption": 3055,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 38315
+      "Distance": 40549
     },
     {
       "attributes": {
@@ -24,9 +24,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt2",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 3131,
+      "FuelConsumption": 2983,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 41440
+      "Distance": 36793
     },
     {
       "attributes": {
@@ -38,9 +38,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt3",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 11398,
+      "FuelConsumption": 11236,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 91110
+      "Distance": 86353
     },
     {
       "attributes": {
@@ -52,9 +52,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt4",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 10511,
+      "FuelConsumption": 11414,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 88275
+      "Distance": 94076
     },
     {
       "attributes": {
@@ -66,9 +66,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt5",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 7534,
+      "FuelConsumption": 7150,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 62445
+      "Distance": 58819
     },
     {
       "attributes": {
@@ -80,9 +80,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt6",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 6530,
+      "FuelConsumption": 6720,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 57049
+      "Distance": 55270
     },
     {
       "attributes": {
@@ -94,9 +94,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt9",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 3478,
+      "FuelConsumption": 3523,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 40533
+      "Distance": 40267
     },
     {
       "attributes": {
@@ -108,9 +108,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt10",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 3269,
+      "FuelConsumption": 3385,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 38089
+      "Distance": 38865
     },
     {
       "attributes": {
@@ -122,9 +122,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt11",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 3966,
+      "FuelConsumption": 3745,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 44801
+      "Distance": 40602
     },
     {
       "attributes": {
@@ -136,9 +136,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt12",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 3760,
+      "FuelConsumption": 3719,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 40363
+      "Distance": 41889
     },
     {
       "attributes": {
@@ -150,9 +150,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt13",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 4499,
+      "FuelConsumption": 4616,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 42343
+      "Distance": 42577
     },
     {
       "attributes": {
@@ -164,9 +164,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt14",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 4423,
+      "FuelConsumption": 4449,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 43370
+      "Distance": 44919
     },
     {
       "attributes": {
@@ -178,9 +178,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt15",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 3146,
+      "FuelConsumption": 3325,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 34857
+      "Distance": 38884
     },
     {
       "attributes": {
@@ -192,9 +192,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt16",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 3224,
+      "FuelConsumption": 3063,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 35053
+      "Distance": 35980
     },
     {
       "attributes": {
@@ -206,9 +206,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt17",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 3934,
+      "FuelConsumption": 4026,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 32029
+      "Distance": 30732
     },
     {
       "attributes": {
@@ -220,9 +220,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt18",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 3670,
+      "FuelConsumption": 3988,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 29727
+      "Distance": 32997
     },
     {
       "attributes": {
@@ -234,9 +234,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt19",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 4320,
+      "FuelConsumption": 4328,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 29637
+      "Distance": 29571
     },
     {
       "attributes": {
@@ -248,9 +248,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt20",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 4280,
+      "FuelConsumption": 3980,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 31827
+      "Distance": 28370
     },
     {
       "attributes": {
@@ -261,9 +261,9 @@
       "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc11",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 1868,
+      "FuelConsumption": 2039,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 27039
+      "Distance": 28548
     },
     {
       "attributes": {
@@ -275,9 +275,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt23",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 14048,
+      "FuelConsumption": 13932,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 57207
+      "Distance": 57590
     },
     {
       "attributes": {
@@ -289,9 +289,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt24",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Diesel",
-      "FuelConsumption": 13296,
+      "FuelConsumption": 13995,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 49908
+      "Distance": 53190
     },
     {
       "attributes": {
@@ -303,9 +303,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt25",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 913,
+      "FuelConsumption": 919,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 21289
+      "Distance": 20084
     },
     {
       "attributes": {
@@ -317,9 +317,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt26",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 917,
+      "FuelConsumption": 886,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 19660
+      "Distance": 19550
     },
     {
       "attributes": {
@@ -331,9 +331,9 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt27",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 1016,
+      "FuelConsumption": 1056,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 20689
+      "Distance": 20950
     },
     {
       "attributes": {
@@ -345,9 +345,22 @@
       "VehicleAssetCrbnFtprntId": "@ShowVehicleAssetCrbnFtprnt28",
       "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
       "FuelType": "Gasoline",
-      "FuelConsumption": 980,
+      "FuelConsumption": 1030,
       "FuelConsumptionUnit": "LITERS",
-      "Distance": 20150
+      "Distance": 22074
+    },
+    {
+      "attributes": {
+        "type": "VehicleAssetEnrgyUse",
+        "referenceId": "ShowVehicleAssetEnrgyUse26"
+      },
+      "Name": "Isuzu D-Max Bangkok 20 Diesel 2024",
+      "VehicleAssetEmssnSrcId": "@ShowVehicleAssetEmssnSrc20",
+      "OtherEmssnFctrId": "@ShowOtherEmssnFctrSet1",
+      "FuelType": "Diesel",
+      "FuelConsumption": 2744,
+      "FuelConsumptionUnit": "LITERS",
+      "Distance": 33921
     }
   ]
 }

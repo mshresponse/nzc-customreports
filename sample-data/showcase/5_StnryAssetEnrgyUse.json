@@ -1387,6 +1387,50 @@
       "FuelType": "NaturalGas",
       "FuelConsumption": 8740,
       "FuelConsumptionUnit": "Therms"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse117"
+      },
+      "Name": "Melbourne Office Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc26",
+      "FuelType": "Electricity",
+      "FuelConsumption": 241006,
+      "FuelConsumptionUnit": "kWh"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse118"
+      },
+      "Name": "Melbourne Office Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc26",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 3835,
+      "FuelConsumptionUnit": "Therms"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse119"
+      },
+      "Name": "Gdańsk Biuro Electricity 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc28",
+      "FuelType": "Electricity",
+      "FuelConsumption": 157977,
+      "FuelConsumptionUnit": "kWh"
+    },
+    {
+      "attributes": {
+        "type": "StnryAssetEnrgyUse",
+        "referenceId": "ShowStnryAssetEnrgyUse120"
+      },
+      "Name": "Gdańsk Biuro Natural Gas 2024",
+      "StnryAssetEnvrSrcId": "@ShowStnryAssetEnvrSrc28",
+      "FuelType": "NaturalGas",
+      "FuelConsumption": 2730,
+      "FuelConsumptionUnit": "Therms"
     }
   ]
 }

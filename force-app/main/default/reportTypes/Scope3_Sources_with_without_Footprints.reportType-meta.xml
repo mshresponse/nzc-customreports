@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Scope3EmssnSrc</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Scope 3 emission sources with or without carbon footprints (outer join). Use it to find sources still needing a footprint, with a cross filter rather than a blank-Id filter.</description>
+    <join>
+        <outerJoin>true</outerJoin>
+        <relationship>Scope3CrbnFtprnt</relationship>
+    </join>
+    <label>NZC: Scope 3 Sources with/without Footprints</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Scope3EmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Scope 3 Source Name</displayNameOverride>
+            <field>Name</field>
+            <table>Scope3EmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3EmissionSourceType</field>
+            <table>Scope3EmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>BusinessRegion</field>
+            <table>Scope3EmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Country</field>
+            <table>Scope3EmssnSrc</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Scope3EmssnSrc</table>
+        </columns>
+        <masterLabel>Scope 3 Emissions Sources</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Scope3EmssnSrc.Scope3CrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Footprint Name</displayNameOverride>
+            <field>Name</field>
+            <table>Scope3EmssnSrc.Scope3CrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ReportingYear</field>
+            <table>Scope3EmssnSrc.Scope3CrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>FootprintStage</field>
+            <table>Scope3EmssnSrc.Scope3CrbnFtprnt</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>TotScope3EmissionsInTco2e</field>
+            <table>Scope3EmssnSrc.Scope3CrbnFtprnt</table>
+        </columns>
+        <masterLabel>Scope 3 Carbon Footprints</masterLabel>
+    </sections>
+</ReportType>

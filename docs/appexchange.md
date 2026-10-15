@@ -115,6 +115,6 @@ Owner steps happen in a browser; the rest are commands in this repository.
    Support for Net Zero Cloud licences in a Partner Developer Edition org before
    submitting.
 8. **Listing (owner):** create a *Packaged Solution | Salesforce Platform Package* listing,
-   priced Free, with screenshots of the three dashboards and the Missing reports; submit for
+   priced Free, with screenshots of the four dashboards and the Missing reports; submit for
    approval; sign the PADA; publish. Then swap the website's install button for the
    listing.

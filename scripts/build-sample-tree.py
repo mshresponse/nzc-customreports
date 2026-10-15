@@ -16,9 +16,15 @@ from pathlib import Path
 
 SRC = Path('sample-data')
 OUT = SRC / 'tree'
-NUMERIC = {'FuelConsumption', 'Distance', 'Co2EmissionFactor', 'CalorificValue'}
+NUMERIC = {'FuelConsumption', 'Distance', 'Co2EmissionFactor', 'CalorificValue', 'SpentAmount',
+           'TotScpe3EmssnPerMillionSpent', 'InflationRate', 'SegmentDistance', 'RoomCount', 'StayNightsCount',
+           'ShortHaulMaximumDistance', 'MediumHaulMaximumDistance', 'LongHaulMinimumDistance',
+           'Co2PsgrKmShortHaulInKg', 'Co2PsgrKmMediumHaulInKg', 'Co2PsgrKmLongHaulInKg',
+           'HotelStayEmssnInKgCo2eNight', 'TaxiEmssnInKgCo2eDstnUnit', 'TaxiRateForDstnUnit',
+           'PersCarEmssnInKgCo2eDstnUnit'}
 # Lookups whose relationship name is not the parent object's name.
-PARENT_OBJECT = {'ParentEmissionFactor': 'OtherEmssnFctrSet', 'OtherEmssnFctr': 'OtherEmssnFctrSet'}
+PARENT_OBJECT = {'ParentEmissionFactor': 'OtherEmssnFctrSet', 'OtherEmssnFctr': 'OtherEmssnFctrSet',
+                 'ProcurementSummary': 'Scope3PcmtSummary', 'PcmtEmssnFctr': 'PcmtEmssnFctrSet'}
 
 
 def number(value):

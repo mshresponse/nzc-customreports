@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Name</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$SpendingCategory1</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$SpentAmount</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary$CalendarYear</field>
+    </columns>
+    <description>Purchases with neither an emission factor nor an override, so nothing is calculated for them: spend missing from Scope 3. By currency, then supplier, so every spend total is in one currency.</description>
+    <filter>
+        <criteriaItems>
+            <column>Scope3PcmtSummary.Scope3PcmtItem$PcmtEmssnFctrSetItem</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Scope3PcmtSummary.Scope3PcmtItem$VendorPrvdScope3EmssnInTco2e</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3PcmtSummary$CurrencyCode</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Supplier</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Procurement Items Without a Factor</name>
+    <reportType>Scope3_Procurement_Summaries_with_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <timeFrameFilter>
+        <dateColumn>Scope3PcmtSummary$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

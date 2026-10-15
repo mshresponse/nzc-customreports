@@ -689,6 +689,58 @@
       "SpendingCategory2": "E-waste recycling",
       "SpentAmount": 62100.0,
       "SpentDate": "2024-03-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem47"
+      },
+      "Name": "Promotional merchandise 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "SupplierId": "@ShowSupplier3",
+      "SpendingCategory1": "Marketing",
+      "SpendingCategory2": "Promotional merchandise",
+      "SpentAmount": 38000,
+      "SpentDate": "2024-09-30"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem48"
+      },
+      "Name": "Legal fees 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "SupplierId": "@ShowSupplier2",
+      "SpendingCategory1": "Legal services",
+      "SpendingCategory2": "Legal fees",
+      "SpentAmount": 96000,
+      "SpentDate": "2024-09-30"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem49"
+      },
+      "Name": "Spare parts 2023",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary2",
+      "SupplierId": "@ShowSupplier5",
+      "SpendingCategory1": "Maintenance",
+      "SpendingCategory2": "Spare parts",
+      "SpentAmount": 22000,
+      "SpentDate": "2023-09-30"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "ShowScope3PcmtItem50"
+      },
+      "Name": "Customs brokerage 2024",
+      "ProcurementSummaryId": "@ShowScope3PcmtSummary3",
+      "SupplierId": "@ShowSupplier7",
+      "SpendingCategory1": "Freight services",
+      "SpendingCategory2": "Customs brokerage",
+      "SpentAmount": 17500,
+      "SpentDate": "2024-09-30"
     }
   ]
 }

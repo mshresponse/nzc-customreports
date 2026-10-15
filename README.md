@@ -3,7 +3,7 @@
 [![Validate metadata](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml/badge.svg)](https://github.com/mshresponse/nzc-customreports/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**16 custom report types, 21 reports, 3 dashboards and 6 list views for Salesforce Net Zero
+**22 custom report types, 32 reports, 4 dashboards and 6 list views for Salesforce Net Zero
 Cloud** (now sold as Agentforce Net Zero), using core Lightning reporting only. No CRM
 Analytics, no Einstein, no managed package, no custom objects or fields. API 67.0.
 
@@ -22,7 +22,8 @@ in the report instead of raising a ticket for a CSV re-upload.
 **1. Check your org has Net Zero Cloud.**
 Setup → Object Manager. You need to see `StnryAssetEnvrSrc`, `StnryAssetCrbnFtprnt`,
 `StnryAssetEnrgyUse`, `VehicleAssetEmssnSrc`, `VehicleAssetCrbnFtprnt` and
-`VehicleAssetEnrgyUse`. A free Developer Edition org and a standard Trailhead Playground
+`VehicleAssetEnrgyUse`, and for the Scope 3 reports `Scope3CrbnFtprnt`, `Scope3PcmtItem` and
+`AirTravelEnrgyUse` among others. A free Developer Edition org and a standard Trailhead Playground
 do **not** have these — see [Orgs that work](#orgs-that-work).
 
 **2. Deploy.**
@@ -98,11 +99,27 @@ Footprints by Stage and Footprints by Year and Stage (stationary and fleet) show
 each disclosure year is still draft or in progress — a number that could still change under
 audit.
 
-**16 report types** covering both stationary and fleet, in three shapes each — `with`
-(inner join), `with/without` (outer join), and standalone. Build your own reports on any of
-them; that's rather the point of shipping the source.
+**11 Scope 3 reports and the NZC Scope 3 dashboard** — built on the figures Net Zero Cloud
+calculates on each record as it saves it: spend times factor for a purchase, distance and haul
+band for a flight, nights for a hotel stay, distance for ground travel.
 
-**3 dashboards** — NZC Audit, NZC Data Quality and NZC Emissions Coverage. NZC Audit has a
+- Purchases by year and GHG category, by supplier, and spend against emissions by category —
+  spend grouped by currency, never added across currencies.
+- Air travel and hotel stays by cost center; ground travel by type, which separates business
+  travel from commuting.
+- Scope 3 footprints by year and stage, and Scope 3 emissions by reporting year from Net Zero
+  Cloud's footprint roll-ups.
+- Procurement Items Data Entry, editable in place.
+- Two worklists: **Procurement Items Without a Factor** — spend that is in your procurement
+  data but adds nothing to Scope 3 — and **Scope 3 Sources Missing Footprints**.
+
+**22 report types** — 16 for stationary and fleet, in three shapes each (`with`, an inner
+join; `with/without`, an outer join; and standalone), and 6 for Scope 3: procurement summaries
+with their items, air, hotel and ground travel, Scope 3 sources with or without footprints,
+and Scope 3 footprints. Build your own reports on any of them; that's rather the point of
+shipping the source.
+
+**4 dashboards** — NZC Audit, NZC Data Quality, NZC Emissions Coverage and NZC Scope 3. NZC Audit has a
 **Reporting Year** filter across the top, so an admin can audit one disclosure year at a
 time; the year list is 2023–2026 and is a one-minute edit in the dashboard builder. Every
 component opens its report, and every report is editable inline where the record exists.
@@ -221,8 +238,8 @@ fuel, consumption and distance all live on `VehicleAssetEnrgyUse`.
 
 ## Scope: the reports read the whole object, deliberately
 
-Thirteen of the 21 reports carry no filter — the other eight are the Missing and Orphaned
-worklists, which filter by definition — and all 21 leave the standard date filter
+Twenty-two of the 32 reports carry no filter — the other ten are the Missing, Orphaned and
+Without a Factor worklists, which filter by definition — and all 32 leave the standard date filter
 unbounded. That is a decision, not an oversight, and it is worth understanding before you
 deploy into an org with years of history.
 

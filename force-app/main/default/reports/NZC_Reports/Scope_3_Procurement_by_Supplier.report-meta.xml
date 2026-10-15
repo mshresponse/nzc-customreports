@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Name</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary$CalendarYear</field>
+    </columns>
+    <columns>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Scope3GhgCategory</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Scope3EmissionsInTco2</field>
+    </columns>
+    <description>Final Scope 3 emissions from purchases, by supplier: where engagement on supplier-specific data would move the total most.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3PcmtSummary.Scope3PcmtItem$Supplier</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Scope 3 Procurement by Supplier</name>
+    <reportType>Scope3_Procurement_Summaries_with_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Scope3PcmtSummary$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

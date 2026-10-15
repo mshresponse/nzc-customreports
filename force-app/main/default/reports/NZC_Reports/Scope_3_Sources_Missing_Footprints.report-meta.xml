@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Scope3EmssnSrc$Name</field>
+    </columns>
+    <columns>
+        <field>Scope3EmssnSrc$BusinessRegion</field>
+    </columns>
+    <columns>
+        <field>Scope3EmssnSrc$Country</field>
+    </columns>
+    <crossFilters>
+        <operation>without</operation>
+        <primaryTableColumn>Scope3EmssnSrc$Id</primaryTableColumn>
+        <relatedTable>Scope3CrbnFtprnt</relatedTable>
+        <relatedTableJoinColumn>Scope3EmssnSrc</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Scope 3 emission sources with no carbon footprint, grouped by source type: activity that exists but is attached to no footprint yet. Needs records created, not edited.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3EmssnSrc$Scope3EmissionSourceType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Scope 3 Sources Missing Footprints</name>
+    <reportType>Scope3_Sources_with_without_Footprints__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Scope3EmssnSrc$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

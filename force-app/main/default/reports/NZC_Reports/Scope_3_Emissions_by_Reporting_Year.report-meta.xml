@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Scope3CrbnFtprnt$Name</field>
+    </columns>
+    <columns>
+        <field>Scope3CrbnFtprnt$Scope3EmssnSrc</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Scope3CrbnFtprnt$TotScope3EmissionsInTco2e</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Scope3CrbnFtprnt$TotalScp3UpstrmEmissions</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Scope3CrbnFtprnt$TotalScp3DnstrmEmissions</field>
+    </columns>
+    <description>Net Zero Cloud's Scope 3 footprint totals by reporting year, upstream and downstream, as they will be disclosed. Zero until its calculation has run on the footprints.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3CrbnFtprnt$ReportingYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Scope 3 Emissions by Reporting Year</name>
+    <reportType>Standalone_Scope3_Footprints__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Scope3CrbnFtprnt$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

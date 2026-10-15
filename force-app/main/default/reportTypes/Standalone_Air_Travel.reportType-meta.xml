@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>AirTravelEnrgyUse</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Every air travel record, single object. Net Zero Cloud calculates Scope 3 tCO2e on each flight from its distance and haul band as it saves it.</description>
+    <label>NZC: Air Travel (all)</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Air Travel Energy Use Name</displayNameOverride>
+            <field>Name</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3EmssnSrc</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3CrbnFtprnt</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Supplier</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CostCenter</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>SourceCountry</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>DestinationCountry</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>SegmentDistance</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>SegmentDistanceUnit</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>StartDate</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3EmissionsInTco2e</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>AirTravelEnrgyUse</table>
+        </columns>
+        <masterLabel>Air Travel Energy Uses</masterLabel>
+    </sections>
+</ReportType>

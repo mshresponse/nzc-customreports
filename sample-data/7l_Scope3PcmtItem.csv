@@ -1,0 +1,5 @@
+Name,ProcurementSummary.Name,Supplier.Name,PcmtEmssnFctrSetItem.Name,Scope3GhgCategory,SpendingCategory1,SpentAmount,SpentDate
+Freight Q1 2024,Procurement Summary 2024,Northbridge Logistics,Freight and logistics,Upstream Transportation and Distribution,Freight and logistics,120000,2024-03-31
+Freight Q3 2024,Procurement Summary 2024,Northbridge Logistics,Freight and logistics,Upstream Transportation and Distribution,Freight and logistics,95000,2024-09-30
+Office chairs 2024,Procurement Summary 2024,Copperleaf Office Supply,Office furniture,Purchased Goods and Services,Office furniture,40000,2024-05-15
+Branded merchandise 2024,Procurement Summary 2024,Copperleaf Office Supply,,,Marketing,12500,2024-06-30

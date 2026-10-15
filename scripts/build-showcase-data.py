@@ -214,6 +214,17 @@ SUPPLIERS = [   # supplier, factor it buys, annual spend in USD, what is bought
     ('Meridian Freight', 'Freight and logistics', 830_000, ['Inbound freight', 'Last-mile delivery']),
     ('GreenCycle Waste Services', 'Waste collection and treatment', 140_000, ['Waste collection', 'E-waste recycling']),
 ]
+UNFACTORED = [   # purchases nobody has matched to a factor yet: spend with no Scope 3 attached
+    ('Atlas Office Supply', 'Promotional merchandise', 'Marketing', '2024', 38_000),
+    ('Halvorsen Consulting', 'Legal fees', 'Legal services', '2024', 96_000),
+    ('Kestrel Hardware', 'Spare parts', 'Maintenance', '2023', 22_000),
+    ('Meridian Freight', 'Customs brokerage', 'Freight services', '2024', 17_500),
+]
+UNTRACKED_SOURCES = [   # Scope 3 sources set up with no footprint yet
+    ('Employee Commuting - Global', 'Employee Commuting', 'EMEA', 'GB'),
+    ('Downstream Distribution - AMER', 'Downstream Transportation', 'AMER', 'US'),
+    ('Leased Warehouses - APAC', 'Upstream Leased Assets', 'APAC', 'SG'),
+]
 TRAVEL_SUPPLIERS = ['Skyward Airlines', 'Polar Air', 'Harbor Hotels Group', 'CityCab Network']
 COST_CENTERS = ['Sales', 'Engineering', 'Operations', 'Executive', 'Sustainability']
 TRAVEL_REGIONS = [   # region, country, flights a year as (from, to, km), hotel country
@@ -256,13 +267,14 @@ def build_scope3(r, rng, noise):
     stage = {'2022': 'Completed', '2023': 'Completed', '2024': 'Data Validation'}
     procurement = r.add('Scope3EmssnSrc', {'Name': 'Procurement - Global', 'Scope3EmissionSourceType': 'Procurement',
                                            'BusinessRegion': 'EMEA', 'Country': 'GB'})
-    items = []
+    items, summaries = [], {}
     for year in YEARS:
         footprint = r.add('Scope3CrbnFtprnt', {'Name': f'Procurement {year}', 'Scope3EmssnSrcId': procurement,
                                                'ReportingYear': year, 'FootprintStage': stage[year]})
         summary = r.add('Scope3PcmtSummary', {'Name': f'Procurement Summary {year}', 'Scope3CrbnFtprntId': footprint,
                                               'Scope3EmssnSrcId': procurement, 'CalendarYear': year,
                                               'CurrencyCode': 'USD', 'PcmtEmssnFctrId': pcmt_set})
+        summaries[year] = summary
         for supplier, factor, annual, purchases in SUPPLIERS:
             if factor == 'Construction and fit-out' and year != '2023':
                 continue   # a one-off project
@@ -274,6 +286,10 @@ def build_scope3(r, rng, noise):
                               'SpendingCategory1': factor, 'SpendingCategory2': purchase,
                               'SpentAmount': round(annual / len(purchases) * TREND[year] * noise(), -2),
                               'SpentDate': f'{year}-{rng.randint(1, 12):02d}-15'})
+    for supplier, purchase, category, year, spend in UNFACTORED:
+        items.append({'Name': f'{purchase} {year}', 'ProcurementSummaryId': summaries[year],
+                      'SupplierId': r.refs[('Supplier', supplier)], 'SpendingCategory1': category,
+                      'SpendingCategory2': purchase, 'SpentAmount': spend, 'SpentDate': f'{year}-09-30'})
     for item in items:
         r.add('Scope3PcmtItem', item, key=('item', item['Name']))
 
@@ -323,6 +339,8 @@ def build_scope3(r, rng, noise):
         r.add('HotelStayEnrgyUse', s)
     for g in rides:
         r.add('GroundTravelEnrgyUse', g)
+    for name, kind, region, country in UNTRACKED_SOURCES:
+        r.add('Scope3EmssnSrc', {'Name': name, 'Scope3EmissionSourceType': kind, 'BusinessRegion': region, 'Country': country})
 
 
 def main():

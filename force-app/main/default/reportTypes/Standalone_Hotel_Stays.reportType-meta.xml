@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>HotelStayEnrgyUse</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Every hotel stay record, single object. Net Zero Cloud calculates Scope 3 tCO2e on each stay from rooms, nights and the hotel factor as it saves it.</description>
+    <label>NZC: Hotel Stays (all)</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Hotel Stay Energy Use Name</displayNameOverride>
+            <field>Name</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3EmssnSrc</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3CrbnFtprnt</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Supplier</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CostCenter</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>HotelCountry</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>RoomCount</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>StayNightsCount</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>StartDate</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scope3EmissionsInTco2e</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>HotelStayEnrgyUse</table>
+        </columns>
+        <masterLabel>Hotel Stay Energy Uses</masterLabel>
+    </sections>
+</ReportType>

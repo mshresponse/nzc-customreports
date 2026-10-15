@@ -140,7 +140,7 @@ sf data query --use-tooling-api --target-org <alias> --query \
 ```
 
 Worth knowing what it does *not* mean. Every Net Zero Cloud object returns
-`IsReportingEnabled = false`, yet all sixteen report types here deploy and run. The flag
+`IsReportingEnabled = false`, yet all twenty-two report types here deploy and run. The flag
 describes whether Salesforce auto-generates a **standard** report type for the object, not
 whether the object can be reported on. NZC ships none — which is precisely why a custom
 report type is not a refinement here but the only way in.
@@ -232,8 +232,31 @@ field:
 </columns>
 ```
 
-All sixteen report types here label the name column by object: Asset Name, Vehicle Name,
-Footprint Name, Energy Use Name.
+All twenty-two report types here label the name column by object: Asset Name, Vehicle Name,
+Footprint Name, Energy Use Name, Procurement Item Name, Scope 3 Source Name and so on.
+
+## Scope 3
+
+The Scope 3 reports read different figures from the Scope 1 and 2 ones, and the difference is
+worth knowing before you add your own:
+
+- **Scope 3 is calculated on every record as it saves.** A procurement item gets Final Scope 3
+  Emissions from spend times its factor (deflated to the factor's year, which is why a
+  procurement summary refuses to save without an `InflationRate` for its year and currency);
+  a flight gets tCO2e from distance and haul band, a hotel stay from nights, ground travel
+  from distance. The Scope 3 footprint totals fill in a few minutes later. The Scope 1 and 2
+  footprint totals don't, until Net Zero Cloud's own calculation runs — so in a new org the
+  Scope 3 dashboard shows numbers and the Scope 1 trend shows zero.
+- **The join rule holds even when the lookup isn't named after the parent.** Procurement items
+  point at their summary through `ProcurementSummaryId`, but the report type join is still
+  `<relationship>Scope3PcmtItem</relationship>`, the child object's API name.
+- **Group spend by currency before you total it.** `SpentAmount` is in the currency of its
+  procurement summary, so a spend total is only meaningful within one currency — the same
+  problem as fuel units. The spend reports group by currency first and carry no grand total;
+  tCO2e is the one figure totalled freely.
+- **Two dashboard limits the builder enforces and the XML doesn't warn about:** a component
+  title is at most 40 characters, and a Metric component needs `indicatorLowColor`,
+  `indicatorMiddleColor` and `indicatorHighColor` even when there are no breakpoints.
 
 ## Year-over-year change: build it in the UI
 

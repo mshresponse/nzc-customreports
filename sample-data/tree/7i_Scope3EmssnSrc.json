@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "Scope3EmssnSrcRef1"
+      },
+      "Name": "Procurement - Sample",
+      "Scope3EmissionSourceType": "Procurement",
+      "BusinessRegion": "EMEA",
+      "Country": "GB"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "Scope3EmssnSrcRef2"
+      },
+      "Name": "Business Travel - Sample",
+      "Scope3EmissionSourceType": "Business Travel",
+      "BusinessRegion": "EMEA",
+      "Country": "GB",
+      "AirTravelEmssnFctrId": "@AirTravelEmssnFctrRef1",
+      "HotelStayEmssnFctrId": "@HotelStayEmssnFctrRef1",
+      "GroundTravelEmssnFctrId": "@GroundTravelEmssnFctrRef1"
+    },
+    {
+      "attributes": {
+        "type": "Scope3EmssnSrc",
+        "referenceId": "Scope3EmssnSrcRef3"
+      },
+      "Name": "Employee Commuting - Sample",
+      "Scope3EmissionSourceType": "Employee Commuting",
+      "BusinessRegion": "EMEA",
+      "Country": "GB"
+    }
+  ]
+}

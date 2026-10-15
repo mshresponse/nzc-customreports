@@ -1,0 +1,24 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "InflationRate",
+        "referenceId": "InflationRateRef1"
+      },
+      "CurrencyCode": "USD",
+      "CalendarYear": "2023",
+      "InflationRate": 4.1,
+      "DataSource": "Illustrative only"
+    },
+    {
+      "attributes": {
+        "type": "InflationRate",
+        "referenceId": "InflationRateRef2"
+      },
+      "CurrencyCode": "USD",
+      "CalendarYear": "2024",
+      "InflationRate": 2.9,
+      "DataSource": "Illustrative only"
+    }
+  ]
+}

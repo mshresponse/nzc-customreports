@@ -3,7 +3,7 @@
     <baseObject>StnryAssetEnrgyUse</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Every stationary asset energy use record, single object. Carries both parent lookups, since an energy use record may hang off either a footprint or an asset. An orphan is one where both are blank.</description>
+    <description>Every stationary asset energy use record, single object, with both parent lookups. Net Zero Cloud requires the asset, so the footprint is the lookup that goes missing; a record with no footprint counts in no footprint total.</description>
     <label>NZC: Energy Uses (all)</label>
     <sections>
         <columns>

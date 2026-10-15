@@ -28,7 +28,7 @@ sf data import tree --plan sample-data/tree/plan.json --target-org <alias>
 
 The first command gives you access to the Net Zero Cloud fields; skip it if you already
 have the permission set. The second is the Net Zero Cloud setup an unconfigured org is
-missing (next section). The third loads all 31 records, parents first, with every lookup
+missing (next section). The third loads all 58 records, parents first, with every lookup
 resolved — no Ids to copy between files. Run it once: run it twice and you get two of
 everything.
 
@@ -47,13 +47,15 @@ stages, about 150 energy use records trending down year on year, and the gaps a 
 inventory has (sites not onboarded, consumption not collected, a footprint deleted, records
 with no parent).
 
-It also carries **Scope 3**, for the parts of Net Zero Cloud this package doesn't report on
-yet: 12 suppliers, 46 purchases priced against spend-based factors in eight categories
-(purchased goods and services, capital goods, freight, waste), and business travel for three
-regions — 72 flights, 36 hotel stays, 72 taxi rides and commutes — with cost centres and
-travel suppliers. Net Zero Cloud calculates tCO2e on each of those records as it saves
-them; procurement also needs an `InflationRate` row for each year and currency, which the
-data includes. 584 records in all, all fictional, every factor illustrative.
+It also carries **Scope 3**, which fills the NZC Scope 3 dashboard: 12 suppliers, 50
+purchases priced against spend-based factors in eight categories (purchased goods and
+services, capital goods, freight, waste) — four of them with no factor, for the worklist —
+and business travel for three regions: 72 flights, 36 hotel stays, 72 taxi rides and
+commutes, with cost centres and travel suppliers. Three Scope 3 sources have no footprint
+yet. Net Zero Cloud calculates tCO2e on each record as it saves it, and rolls it up onto the
+Scope 3 footprints a few minutes later; procurement also needs an `InflationRate` row for
+each year and currency, which the data includes. 591 records in all, all fictional, every
+factor illustrative.
 
 ```bash
 sf data import tree --plan sample-data/showcase/plan.json --target-org <alias>
@@ -90,6 +92,9 @@ trial org, or your own — skip it; the data still loads.
 | 4 | `4_VehicleAssetEmssnSrc.csv` | Vehicle Asset Emission Source | — |
 | 5 | `5_VehicleAssetCrbnFtprnt.csv` | Vehicle Asset Carbon Footprint | 4 |
 | 6 | `6_VehicleAssetEnrgyUse.csv` | Vehicle Asset Energy Use | 0a, 4, 5 |
+| 7a–7h | `7a_Account.csv` … `7h_GroundTravelEmssnFctr.csv` | Suppliers and their Accounts, the procurement, air, hotel and ground travel factor sets, inflation rates | — |
+| 7i–7k | `7i_Scope3EmssnSrc.csv` … `7k_Scope3PcmtSummary.csv` | Scope 3 sources, footprints, a procurement summary | 7a–7h |
+| 7l–7o | `7l_Scope3PcmtItem.csv` … `7o_GroundTravelEnrgyUse.csv` | Purchases, flights, a hotel stay, ground travel | 7a–7k |
 
 The CSVs are the source. `tree/` is generated from them by
 [`scripts/build-sample-tree.py`](../scripts/build-sample-tree.py) — rerun it after editing a
@@ -134,6 +139,8 @@ of empty results — you can see them working rather than taking their word for 
 | Orphaned Fleet Footprints | VFP Fleet Orphan 2024 |
 | Orphaned Stationary Energy Uses | EU Peña Verde Electricity 2024 |
 | Orphaned Vehicle Energy Uses | VEU Peñarol Diesel 2024 |
+| Procurement Items Without a Factor | Branded merchandise 2024 |
+| Scope 3 Sources Missing Footprints | Employee Commuting - Sample |
 
 If a Missing report lists *every* asset, the cross filter isn't in your copy — redeploy
 from `main`.

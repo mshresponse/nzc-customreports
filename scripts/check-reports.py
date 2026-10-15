@@ -33,6 +33,8 @@ ENERGY_USES = ['EU Zürich Electricity 2024', 'EU Zürich Natural Gas 2024',
                'EU Peña Verde Electricity 2024', 'EU Ōsaka Electricity 2023',
                'EU Ōsaka Propane 2023']
 FLEET_ENERGY_USES = ['VEU Citroën Diesel 2024', 'VEU Volvo Diesel 2024', 'VEU Peñarol Diesel 2024']
+PURCHASES = ['Freight Q1 2024', 'Freight Q3 2024', 'Office chairs 2024', 'Branded merchandise 2024']
+SCOPE3_FOOTPRINTS = ['S3 Procurement 2024', 'S3 Business Travel 2024']
 
 # First-column label of every detail row, or a row count where the first column is a
 # figure rather than a name. Order doesn't matter; duplicates do.
@@ -58,6 +60,18 @@ EXPECTED = {
     'Fleet_Footprints_by_Year_and_Stage': FLEET_FOOTPRINTS,
     'Fuel_Consumption_by_Fuel_Type': ENERGY_USES,
     'Fleet_Fuel_by_Fuel_Type': FLEET_ENERGY_USES,
+    # Scope 3
+    'Scope_3_Procurement_by_Category_and_Year': PURCHASES,
+    'Scope_3_Procurement_by_Supplier': PURCHASES,
+    'Scope_3_Spend_and_Emissions_by_Category': PURCHASES,
+    'Procurement_Items_Data_Entry': PURCHASES,
+    'Procurement_Items_Without_a_Factor': ['Branded merchandise 2024'],
+    'Air_Travel_Emissions_by_Cost_Center': ['Flight LHR-JFK 2024', 'Flight LHR-AMS 2024'],
+    'Hotel_Stay_Emissions_by_Cost_Center': ['Hotel New York 2024'],
+    'Ground_Travel_Emissions_by_Type': ['Taxi JFK 2024', 'Commute 2024'],
+    'Scope_3_Sources_Missing_Footprints': ['Employee Commuting - Sample'],
+    'Scope_3_Footprints_by_Year_and_Stage': SCOPE3_FOOTPRINTS,
+    'Scope_3_Emissions_by_Reporting_Year': SCOPE3_FOOTPRINTS,
 }
 
 

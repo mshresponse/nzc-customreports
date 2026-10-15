@@ -1,0 +1,2 @@
+Name,CurrencyCode,EmissionFactorUpdateYear,EmissionFactorDataSource
+Sample Spend-Based Factors,USD,2023,"Illustrative only, for loading sample data. Replace with factors from your own source before reporting."

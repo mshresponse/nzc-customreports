@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "Scope3PcmtItemRef1"
+      },
+      "Name": "Freight Q1 2024",
+      "ProcurementSummaryId": "@Scope3PcmtSummaryRef1",
+      "SupplierId": "@SupplierRef1",
+      "PcmtEmssnFctrSetItemId": "@PcmtEmssnFctrSetItemRef1",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpentAmount": 120000,
+      "SpentDate": "2024-03-31"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "Scope3PcmtItemRef2"
+      },
+      "Name": "Freight Q3 2024",
+      "ProcurementSummaryId": "@Scope3PcmtSummaryRef1",
+      "SupplierId": "@SupplierRef1",
+      "PcmtEmssnFctrSetItemId": "@PcmtEmssnFctrSetItemRef1",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "SpendingCategory1": "Freight and logistics",
+      "SpentAmount": 95000,
+      "SpentDate": "2024-09-30"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "Scope3PcmtItemRef3"
+      },
+      "Name": "Office chairs 2024",
+      "ProcurementSummaryId": "@Scope3PcmtSummaryRef1",
+      "SupplierId": "@SupplierRef2",
+      "PcmtEmssnFctrSetItemId": "@PcmtEmssnFctrSetItemRef2",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "SpendingCategory1": "Office furniture",
+      "SpentAmount": 40000,
+      "SpentDate": "2024-05-15"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtItem",
+        "referenceId": "Scope3PcmtItemRef4"
+      },
+      "Name": "Branded merchandise 2024",
+      "ProcurementSummaryId": "@Scope3PcmtSummaryRef1",
+      "SupplierId": "@SupplierRef2",
+      "SpendingCategory1": "Marketing",
+      "SpentAmount": 12500,
+      "SpentDate": "2024-06-30"
+    }
+  ]
+}

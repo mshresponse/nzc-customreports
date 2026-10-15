@@ -3,7 +3,7 @@
     <baseObject>VehicleAssetEnrgyUse</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Every vehicle energy use record, single object. Carries both parent lookups, since a record may hang off either a fleet footprint or a vehicle. An orphan is one where both are blank.</description>
+    <description>Every vehicle energy use record, single object, with both parent lookups. Net Zero Cloud requires the vehicle, so the footprint is the lookup that goes missing; a record with no footprint counts in no footprint total.</description>
     <label>NZC: Fleet Energy Uses (all)</label>
     <sections>
         <columns>

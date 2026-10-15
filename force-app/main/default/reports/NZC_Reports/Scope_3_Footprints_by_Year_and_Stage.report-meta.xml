@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Scope3CrbnFtprnt$Name</field>
+    </columns>
+    <columns>
+        <field>Scope3CrbnFtprnt$Scope3EmssnSrc</field>
+    </columns>
+    <description>Reporting years down, footprint stage across, record count in each cell: how much of each year's Scope 3 is closed and how much could still change under audit.</description>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3CrbnFtprnt$FootprintStage</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Scope3CrbnFtprnt$ReportingYear</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Scope 3 Footprints by Year and Stage</name>
+    <reportType>Standalone_Scope3_Footprints__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Scope3CrbnFtprnt$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

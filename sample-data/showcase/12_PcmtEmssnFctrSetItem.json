@@ -1,0 +1,92 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem1"
+      },
+      "Name": "IT services and software",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "EconomicSectorCategory": "Information technology",
+      "TotScpe3EmssnPerMillionSpent": 120
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem2"
+      },
+      "Name": "Professional services",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "EconomicSectorCategory": "Professional services",
+      "TotScpe3EmssnPerMillionSpent": 95
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem3"
+      },
+      "Name": "Office supplies and furniture",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "EconomicSectorCategory": "Office goods",
+      "TotScpe3EmssnPerMillionSpent": 310
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem4"
+      },
+      "Name": "Facilities and cleaning",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Purchased Goods and Services",
+      "EconomicSectorCategory": "Facilities management",
+      "TotScpe3EmssnPerMillionSpent": 210
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem5"
+      },
+      "Name": "Computers and servers",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Capital Goods",
+      "EconomicSectorCategory": "Computer equipment",
+      "TotScpe3EmssnPerMillionSpent": 380
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem6"
+      },
+      "Name": "Construction and fit-out",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Capital Goods",
+      "EconomicSectorCategory": "Construction",
+      "TotScpe3EmssnPerMillionSpent": 450
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem7"
+      },
+      "Name": "Freight and logistics",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Upstream Transportation and Distribution",
+      "EconomicSectorCategory": "Freight transport",
+      "TotScpe3EmssnPerMillionSpent": 720
+    },
+    {
+      "attributes": {
+        "type": "PcmtEmssnFctrSetItem",
+        "referenceId": "ShowPcmtEmssnFctrSetItem8"
+      },
+      "Name": "Waste collection and treatment",
+      "PcmtEmssnFctrSetId": "@ShowPcmtEmssnFctrSet1",
+      "Scope3GhgCategory": "Waste Generated In Operations",
+      "EconomicSectorCategory": "Waste management",
+      "TotScpe3EmssnPerMillionSpent": 650
+    }
+  ]
+}

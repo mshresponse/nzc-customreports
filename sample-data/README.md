@@ -45,7 +45,15 @@ answer — which makes them a good check and a thin demo. `showcase/` is the dem
 and 22 vehicles across three continents, footprints for 2022–2024 moving through their
 stages, about 150 energy use records trending down year on year, and the gaps a real
 inventory has (sites not onboarded, consumption not collected, a footprint deleted, records
-with no parent). 300 records, all fictional.
+with no parent).
+
+It also carries **Scope 3**, for the parts of Net Zero Cloud this package doesn't report on
+yet: 12 suppliers, 46 purchases priced against spend-based factors in eight categories
+(purchased goods and services, capital goods, freight, waste), and business travel for three
+regions — 72 flights, 36 hotel stays, 72 taxi rides and commutes — with cost centres and
+travel suppliers. Net Zero Cloud calculates tCO2e on each of those records as it saves
+them; procurement also needs an `InflationRate` row for each year and currency, which the
+data includes. 584 records in all, all fictional, every factor illustrative.
 
 ```bash
 sf data import tree --plan sample-data/showcase/plan.json --target-org <alias>

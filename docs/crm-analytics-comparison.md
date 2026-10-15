@@ -69,3 +69,28 @@ Two things only show up when both run on the same data:
   area for intensity, start and end dates on energy use for the monthly views — so it reads
   zero or "No results found". The two products answer different questions: theirs is "is
   this consumption plausible?", this package's is "is this inventory complete?".
+
+## Scope 3
+
+The showcase data includes Scope 3 (spend-based procurement and business travel), which
+this package doesn't report on. Loaded into the comparison org, it fills two of the CRM
+Analytics app's dashboards:
+
+- **Scope 3 Procurement Dashboard**: 4.8K tCO2e from $14.1M of spend across eight
+  suppliers, by year, by GHG category and by supplier, with emissions per million spent.
+- **Business Travel Impact**: 76 tCO2e from flights, hotels and ground travel, by cost
+  centre, month, traveller location and supplier.
+
+Three things that weren't obvious:
+
+- **Net Zero Cloud calculates Scope 3 on each record as it saves it** — spend times the
+  procurement factor (deflated to the factor's year, hence the inflation rate the summary
+  needs), distance times the haul-band factor for a flight, nights times the hotel factor.
+  The roll-ups onto Scope 3 footprints and procurement summaries stay at zero, as Scope 1
+  and 2 do, until Net Zero Cloud's own processing runs. The CRM Analytics dashboards read
+  the record-level figures, which is why they show numbers.
+- **After loading data, CRM Analytics needs a data sync and a recipe run** before the
+  dashboards see it (`POST /wave/dataConnectors/{id}/ingest`, then start the recipe's
+  dataflow with `POST /wave/dataflowjobs`). About ten minutes in a scratch org.
+- **Both dashboards default to the current year.** With data for 2022–2024 they open empty;
+  set Duration (procurement) or Travel Start Date (travel) to All Time.

@@ -1,0 +1,124 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt1"
+      },
+      "Name": "Procurement 2022",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc1",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt2"
+      },
+      "Name": "Procurement 2023",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc1",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt3"
+      },
+      "Name": "Procurement 2024",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc1",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt4"
+      },
+      "Name": "Business Travel EMEA 2022",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt5"
+      },
+      "Name": "Business Travel EMEA 2023",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt6"
+      },
+      "Name": "Business Travel EMEA 2024",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt7"
+      },
+      "Name": "Business Travel AMER 2022",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt8"
+      },
+      "Name": "Business Travel AMER 2023",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt9"
+      },
+      "Name": "Business Travel AMER 2024",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt10"
+      },
+      "Name": "Business Travel APAC 2022",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "ReportingYear": "2022",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt11"
+      },
+      "Name": "Business Travel APAC 2023",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "ReportingYear": "2023",
+      "FootprintStage": "Completed"
+    },
+    {
+      "attributes": {
+        "type": "Scope3CrbnFtprnt",
+        "referenceId": "ShowScope3CrbnFtprnt12"
+      },
+      "Name": "Business Travel APAC 2024",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "ReportingYear": "2024",
+      "FootprintStage": "Data Validation"
+    }
+  ]
+}

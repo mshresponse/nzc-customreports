@@ -62,5 +62,125 @@
     "files": [
       "8_VehicleAssetEnrgyUse.json"
     ]
+  },
+  {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "9_Account.json"
+    ]
+  },
+  {
+    "sobject": "Supplier",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "10_Supplier.json"
+    ]
+  },
+  {
+    "sobject": "PcmtEmssnFctrSet",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "11_PcmtEmssnFctrSet.json"
+    ]
+  },
+  {
+    "sobject": "PcmtEmssnFctrSetItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "12_PcmtEmssnFctrSetItem.json"
+    ]
+  },
+  {
+    "sobject": "AirTravelEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "13_AirTravelEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "HotelStayEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "14_HotelStayEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "GroundTravelEmssnFctr",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "15_GroundTravelEmssnFctr.json"
+    ]
+  },
+  {
+    "sobject": "InflationRate",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "16_InflationRate.json"
+    ]
+  },
+  {
+    "sobject": "Scope3EmssnSrc",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "17_Scope3EmssnSrc.json"
+    ]
+  },
+  {
+    "sobject": "Scope3CrbnFtprnt",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "18_Scope3CrbnFtprnt.json"
+    ]
+  },
+  {
+    "sobject": "Scope3PcmtSummary",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "19_Scope3PcmtSummary.json"
+    ]
+  },
+  {
+    "sobject": "Scope3PcmtItem",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "20_Scope3PcmtItem.json"
+    ]
+  },
+  {
+    "sobject": "AirTravelEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "21_AirTravelEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "HotelStayEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "22_HotelStayEnrgyUse.json"
+    ]
+  },
+  {
+    "sobject": "GroundTravelEnrgyUse",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "23_GroundTravelEnrgyUse.json"
+    ]
   }
 ]

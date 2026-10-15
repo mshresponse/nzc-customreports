@@ -1,0 +1,40 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Scope3PcmtSummary",
+        "referenceId": "ShowScope3PcmtSummary1"
+      },
+      "Name": "Procurement Summary 2022",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc1",
+      "CalendarYear": "2022",
+      "CurrencyCode": "USD",
+      "PcmtEmssnFctrId": "@ShowPcmtEmssnFctrSet1"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtSummary",
+        "referenceId": "ShowScope3PcmtSummary2"
+      },
+      "Name": "Procurement Summary 2023",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc1",
+      "CalendarYear": "2023",
+      "CurrencyCode": "USD",
+      "PcmtEmssnFctrId": "@ShowPcmtEmssnFctrSet1"
+    },
+    {
+      "attributes": {
+        "type": "Scope3PcmtSummary",
+        "referenceId": "ShowScope3PcmtSummary3"
+      },
+      "Name": "Procurement Summary 2024",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc1",
+      "CalendarYear": "2024",
+      "CurrencyCode": "USD",
+      "PcmtEmssnFctrId": "@ShowPcmtEmssnFctrSet1"
+    }
+  ]
+}

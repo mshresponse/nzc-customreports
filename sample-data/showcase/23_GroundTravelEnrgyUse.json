@@ -1,0 +1,1282 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse1"
+      },
+      "Name": "Taxi EMEA 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 36,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-08-12",
+      "EndDate": "2022-08-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse2"
+      },
+      "Name": "Taxi EMEA 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 18,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2022-06-12",
+      "EndDate": "2022-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse3"
+      },
+      "Name": "Taxi EMEA 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 21,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2022-02-12",
+      "EndDate": "2022-02-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse4"
+      },
+      "Name": "Taxi EMEA 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 42,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-01-12",
+      "EndDate": "2022-01-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse5"
+      },
+      "Name": "Taxi EMEA 2022 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 43,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-06-12",
+      "EndDate": "2022-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse6"
+      },
+      "Name": "Taxi EMEA 2022 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 10,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2022-01-12",
+      "EndDate": "2022-01-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse7"
+      },
+      "Name": "Commuting EMEA 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 3127,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse8"
+      },
+      "Name": "Commuting EMEA 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt4",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2108,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2022-07-01",
+      "EndDate": "2022-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse9"
+      },
+      "Name": "Taxi EMEA 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 21,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2023-11-12",
+      "EndDate": "2023-11-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse10"
+      },
+      "Name": "Taxi EMEA 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 33,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2023-05-12",
+      "EndDate": "2023-05-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse11"
+      },
+      "Name": "Taxi EMEA 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 26,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-12-12",
+      "EndDate": "2023-12-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse12"
+      },
+      "Name": "Taxi EMEA 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 16,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2023-12-12",
+      "EndDate": "2023-12-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse13"
+      },
+      "Name": "Taxi EMEA 2023 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 23,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2023-09-12",
+      "EndDate": "2023-09-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse14"
+      },
+      "Name": "Taxi EMEA 2023 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 12,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2023-05-12",
+      "EndDate": "2023-05-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse15"
+      },
+      "Name": "Commuting EMEA 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2758,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse16"
+      },
+      "Name": "Commuting EMEA 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt5",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 3315,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-07-01",
+      "EndDate": "2023-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse17"
+      },
+      "Name": "Taxi EMEA 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 44,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-06-12",
+      "EndDate": "2024-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse18"
+      },
+      "Name": "Taxi EMEA 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 43,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2024-12-12",
+      "EndDate": "2024-12-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse19"
+      },
+      "Name": "Taxi EMEA 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 30,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2024-03-12",
+      "EndDate": "2024-03-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse20"
+      },
+      "Name": "Taxi EMEA 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 20,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2024-03-12",
+      "EndDate": "2024-03-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse21"
+      },
+      "Name": "Taxi EMEA 2024 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 42,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2024-02-12",
+      "EndDate": "2024-02-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse22"
+      },
+      "Name": "Taxi EMEA 2024 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 14,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2024-06-12",
+      "EndDate": "2024-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse23"
+      },
+      "Name": "Commuting EMEA 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2439,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse24"
+      },
+      "Name": "Commuting EMEA 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc2",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt6",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 3379,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-07-01",
+      "EndDate": "2024-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse25"
+      },
+      "Name": "Taxi AMER 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 41,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-02-12",
+      "EndDate": "2022-02-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse26"
+      },
+      "Name": "Taxi AMER 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 24,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2022-05-12",
+      "EndDate": "2022-05-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse27"
+      },
+      "Name": "Taxi AMER 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 37,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2022-06-12",
+      "EndDate": "2022-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse28"
+      },
+      "Name": "Taxi AMER 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 31,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-09-12",
+      "EndDate": "2022-09-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse29"
+      },
+      "Name": "Taxi AMER 2022 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 41,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2022-12-12",
+      "EndDate": "2022-12-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse30"
+      },
+      "Name": "Taxi AMER 2022 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 21,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2022-06-12",
+      "EndDate": "2022-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse31"
+      },
+      "Name": "Commuting AMER 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 3096,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse32"
+      },
+      "Name": "Commuting AMER 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt7",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2627,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-07-01",
+      "EndDate": "2022-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse33"
+      },
+      "Name": "Taxi AMER 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 39,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2023-10-12",
+      "EndDate": "2023-10-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse34"
+      },
+      "Name": "Taxi AMER 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 11,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2023-07-12",
+      "EndDate": "2023-07-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse35"
+      },
+      "Name": "Taxi AMER 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 31,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2023-12-12",
+      "EndDate": "2023-12-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse36"
+      },
+      "Name": "Taxi AMER 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 16,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2023-06-12",
+      "EndDate": "2023-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse37"
+      },
+      "Name": "Taxi AMER 2023 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 44,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2023-11-12",
+      "EndDate": "2023-11-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse38"
+      },
+      "Name": "Taxi AMER 2023 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 37,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2023-04-12",
+      "EndDate": "2023-04-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse39"
+      },
+      "Name": "Commuting AMER 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 3855,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse40"
+      },
+      "Name": "Commuting AMER 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt8",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 1445,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2023-07-01",
+      "EndDate": "2023-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse41"
+      },
+      "Name": "Taxi AMER 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 22,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2024-09-12",
+      "EndDate": "2024-09-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse42"
+      },
+      "Name": "Taxi AMER 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 16,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-01-12",
+      "EndDate": "2024-01-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse43"
+      },
+      "Name": "Taxi AMER 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 24,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2024-06-12",
+      "EndDate": "2024-06-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse44"
+      },
+      "Name": "Taxi AMER 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 20,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2024-04-12",
+      "EndDate": "2024-04-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse45"
+      },
+      "Name": "Taxi AMER 2024 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 36,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2024-02-12",
+      "EndDate": "2024-02-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse46"
+      },
+      "Name": "Taxi AMER 2024 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 45,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-11-12",
+      "EndDate": "2024-11-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse47"
+      },
+      "Name": "Commuting AMER 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 1642,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse48"
+      },
+      "Name": "Commuting AMER 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc3",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt9",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2309,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2024-07-01",
+      "EndDate": "2024-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse49"
+      },
+      "Name": "Taxi APAC 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 35,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-09-12",
+      "EndDate": "2022-09-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse50"
+      },
+      "Name": "Taxi APAC 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 13,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2022-04-12",
+      "EndDate": "2022-04-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse51"
+      },
+      "Name": "Taxi APAC 2022 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 42,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2022-02-12",
+      "EndDate": "2022-02-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse52"
+      },
+      "Name": "Taxi APAC 2022 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 40,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2022-05-12",
+      "EndDate": "2022-05-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse53"
+      },
+      "Name": "Taxi APAC 2022 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 42,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2022-02-12",
+      "EndDate": "2022-02-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse54"
+      },
+      "Name": "Taxi APAC 2022 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 30,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2022-10-12",
+      "EndDate": "2022-10-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse55"
+      },
+      "Name": "Commuting APAC 2022 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2502,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2022-01-01",
+      "EndDate": "2022-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse56"
+      },
+      "Name": "Commuting APAC 2022 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt10",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2674,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2022-07-01",
+      "EndDate": "2022-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse57"
+      },
+      "Name": "Taxi APAC 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 44,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-10-12",
+      "EndDate": "2023-10-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse58"
+      },
+      "Name": "Taxi APAC 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 45,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-03-12",
+      "EndDate": "2023-03-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse59"
+      },
+      "Name": "Taxi APAC 2023 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 19,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-12-12",
+      "EndDate": "2023-12-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse60"
+      },
+      "Name": "Taxi APAC 2023 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 13,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sales",
+      "StartDate": "2023-11-12",
+      "EndDate": "2023-11-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse61"
+      },
+      "Name": "Taxi APAC 2023 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 29,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-05-12",
+      "EndDate": "2023-05-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse62"
+      },
+      "Name": "Taxi APAC 2023 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 27,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2023-03-12",
+      "EndDate": "2023-03-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse63"
+      },
+      "Name": "Commuting APAC 2023 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2660,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-01-01",
+      "EndDate": "2023-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse64"
+      },
+      "Name": "Commuting APAC 2023 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt11",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 3073,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2023-07-01",
+      "EndDate": "2023-12-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse65"
+      },
+      "Name": "Taxi APAC 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 26,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Operations",
+      "StartDate": "2024-10-12",
+      "EndDate": "2024-10-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse66"
+      },
+      "Name": "Taxi APAC 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 20,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Sustainability",
+      "StartDate": "2024-01-12",
+      "EndDate": "2024-01-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse67"
+      },
+      "Name": "Taxi APAC 2024 #3",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 15,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2024-04-12",
+      "EndDate": "2024-04-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse68"
+      },
+      "Name": "Taxi APAC 2024 #4",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 37,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-11-12",
+      "EndDate": "2024-11-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse69"
+      },
+      "Name": "Taxi APAC 2024 #5",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 25,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-03-12",
+      "EndDate": "2024-03-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse70"
+      },
+      "Name": "Taxi APAC 2024 #6",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "SupplierId": "@ShowSupplier12",
+      "ExpenseType": "Taxi",
+      "Scope3GhgCategory": "BusinessTravel",
+      "Distance": 41,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-11-12",
+      "EndDate": "2024-11-12"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse71"
+      },
+      "Name": "Commuting APAC 2024 #1",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 2725,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Engineering",
+      "StartDate": "2024-01-01",
+      "EndDate": "2024-06-28"
+    },
+    {
+      "attributes": {
+        "type": "GroundTravelEnrgyUse",
+        "referenceId": "ShowGroundTravelEnrgyUse72"
+      },
+      "Name": "Commuting APAC 2024 #2",
+      "Scope3EmssnSrcId": "@ShowScope3EmssnSrc4",
+      "Scope3CrbnFtprntId": "@ShowScope3CrbnFtprnt12",
+      "GroundTravelEmssnFctrId": "@ShowGroundTravelEmssnFctr1",
+      "ExpenseType": "PersonalCarDistance",
+      "Scope3GhgCategory": "EmployeeCommuting",
+      "Distance": 3394,
+      "DistanceUnit": "Kilometers",
+      "CostCenter": "Executive",
+      "StartDate": "2024-07-01",
+      "EndDate": "2024-12-28"
+    }
+  ]
+}

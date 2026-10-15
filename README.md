@@ -257,7 +257,8 @@ Two related shapes, also deliberate:
 - [`sample-data/`](sample-data/) — UTF-8 CSVs with deliberate gaps and orphans, so the
   Missing and Orphaned reports return rows on an empty trial org. Loads in one command; the
   README there lists the rows each report should return. `sample-data/showcase/` is a
-  larger fictional dataset — 34 sites, 22 vehicles, three years — for demos.
+  larger fictional dataset — 34 sites, 22 vehicles, three years, plus Scope 3 procurement
+  and business travel — for demos.
 - [`scripts/check-reports.py`](scripts/check-reports.py) — runs every report and dashboard
   against an org holding the sample data and compares with those rows.
 - [`config/project-scratch-def.json`](config/project-scratch-def.json) — a scratch org with

@@ -7,7 +7,10 @@ known answer. That makes it a good check and a thin demo. This is the demo: 34 s
 vehicles on three continents, three reporting years with footprints moving through their
 stages, a few hundred energy use records trending down, and the kind of gaps a real
 inventory has — sites not onboarded yet, consumption not collected, footprints with no
-asset, energy use whose footprint was deleted. It is generated rather than hand-written,
+asset, energy use whose footprint was deleted. Then Scope 3: suppliers, spend-based
+procurement in eight categories, and business travel (flights, hotels, taxis, commuting) for
+three regions, with the factor sets and inflation rates Net Zero Cloud needs to calculate
+them on save. It is generated rather than hand-written,
 deterministically, so rerunning the script changes nothing unless the script changes.
 
 Load it into an org that has had sample-data/org-setup deployed, instead of the fixture
@@ -185,7 +188,141 @@ def build():
     r.add('VehicleAssetCrbnFtprnt', {'Name': 'Retired Van 2023', 'ReportingYear': '2023', 'FootprintStage': 'Completed'})
     for record in fleet_energy:
         r.add('VehicleAssetEnrgyUse', record)
+    build_scope3(r, rng, noise)
     return r
+
+
+# Scope 3. Spend-based procurement factors in tCO2e per million spent, by category, then
+# who is bought from and roughly how much a year. All illustrative.
+PCMT_FACTORS = [
+    ('IT services and software', 'Purchased Goods and Services', 'Information technology', 120),
+    ('Professional services', 'Purchased Goods and Services', 'Professional services', 95),
+    ('Office supplies and furniture', 'Purchased Goods and Services', 'Office goods', 310),
+    ('Facilities and cleaning', 'Purchased Goods and Services', 'Facilities management', 210),
+    ('Computers and servers', 'Capital Goods', 'Computer equipment', 380),
+    ('Construction and fit-out', 'Capital Goods', 'Construction', 450),
+    ('Freight and logistics', 'Upstream Transportation and Distribution', 'Freight transport', 720),
+    ('Waste collection and treatment', 'Waste Generated In Operations', 'Waste management', 650),
+]
+SUPPLIERS = [   # supplier, factor it buys, annual spend in USD, what is bought
+    ('Nordlicht IT Services', 'IT services and software', 1_150_000, ['Cloud hosting', 'Software licences', 'Managed service desk']),
+    ('Halvorsen Consulting', 'Professional services', 640_000, ['Audit and assurance', 'Sustainability advisory']),
+    ('Atlas Office Supply', 'Office supplies and furniture', 210_000, ['Office furniture', 'Stationery']),
+    ('Clearwater Facilities', 'Facilities and cleaning', 480_000, ['Cleaning contract', 'Building maintenance']),
+    ('Kestrel Hardware', 'Computers and servers', 920_000, ['Server refresh', 'Laptop fleet']),
+    ('Summit Fit-Out', 'Construction and fit-out', 1_600_000, ['Office fit-out']),
+    ('Meridian Freight', 'Freight and logistics', 830_000, ['Inbound freight', 'Last-mile delivery']),
+    ('GreenCycle Waste Services', 'Waste collection and treatment', 140_000, ['Waste collection', 'E-waste recycling']),
+]
+TRAVEL_SUPPLIERS = ['Skyward Airlines', 'Polar Air', 'Harbor Hotels Group', 'CityCab Network']
+COST_CENTERS = ['Sales', 'Engineering', 'Operations', 'Executive', 'Sustainability']
+TRAVEL_REGIONS = [   # region, country, flights a year as (from, to, km), hotel country
+    ('EMEA', 'GB', [('LHR', 'JFK', 5540), ('LHR', 'FRA', 650), ('ZRH', 'SIN', 10300), ('CDG', 'MAD', 1060)], 'US'),
+    ('AMER', 'US', [('ORD', 'GRU', 8400), ('DFW', 'YYZ', 1950), ('ORD', 'LHR', 6350), ('ATL', 'MEX', 2140)], 'BR'),
+    ('APAC', 'JP', [('HND', 'SIN', 5320), ('SYD', 'AKL', 2160), ('BLR', 'SIN', 3180), ('HND', 'ICN', 1210)], 'SG'),
+]
+
+
+def build_scope3(r, rng, noise):
+    for supplier in [s[0] for s in SUPPLIERS] + TRAVEL_SUPPLIERS:
+        account = r.add('Account', {'Name': supplier}, key=('Account', supplier))
+        r.add('Supplier', {'Name': supplier, 'AccountId': account, 'CompanyRelationshipType': 'Value Chain Supplier'})
+    pcmt_set = r.add('PcmtEmssnFctrSet', {
+        'Name': 'Showcase Spend-Based Factors', 'CurrencyCode': 'USD', 'EmissionFactorUpdateYear': '2023',
+        'EmissionFactorDataSource': 'Illustrative only, for demo data. Replace with factors from your own source before reporting.'})
+    for name, category, sector, per_million in PCMT_FACTORS:
+        r.add('PcmtEmssnFctrSetItem', {'Name': name, 'PcmtEmssnFctrSetId': pcmt_set, 'Scope3GhgCategory': category,
+                                       'EconomicSectorCategory': sector, 'TotScpe3EmssnPerMillionSpent': per_million})
+    air = r.add('AirTravelEmssnFctr', {
+        'Name': 'Showcase Air Travel Factors', 'DistanceUnit': 'Kilometers', 'EmissionFactorUpdateYear': '2023',
+        'ShortHaulMaximumDistance': 1000, 'MediumHaulMaximumDistance': 3700, 'LongHaulMinimumDistance': 3700,
+        'Co2PsgrKmShortHaulInKg': 0.15, 'Co2PsgrKmMediumHaulInKg': 0.13, 'Co2PsgrKmLongHaulInKg': 0.11,
+        'Ch4PsgrKmShortHaulInKgCo2e': 0.0001, 'Ch4PsgrKmMediumHaulInKgCo2e': 0.0001, 'Ch4PsgrKmLongHaulInKgCo2e': 0.0001,
+        'N2oPsgrKmShortHaulInKgCo2e': 0.0015, 'N2oPsgrKmMediumHaulInKgCo2e': 0.0012, 'N2oPsgrKmLongHaulInKgCo2e': 0.0011,
+        'EmissionFactorDataSource': 'Illustrative only, for demo data.'})
+    hotel = r.add('HotelStayEmssnFctr', {'Name': 'Showcase Hotel Factors', 'EmissionFactorUpdateYear': '2023',
+                                         'HotelStayEmssnInKgCo2eNight': 15, 'EmissionFactorDataSource': 'Illustrative only, for demo data.'})
+    ground = r.add('GroundTravelEmssnFctr', {
+        'Name': 'Showcase Ground Travel Factors', 'DistanceUnit': 'Kilometers', 'CurrencyCode': 'USD',
+        'EmissionFactorUpdateYear': '2023', 'TaxiEmssnInKgCo2eDstnUnit': 0.15, 'TaxiRateForDstnUnit': 2.0,
+        'TrainEmssnInKgCo2eDstnUnit': 0.035, 'TrainRateForDstnUnit': 0.3, 'PersCarEmssnInKgCo2eDstnUnit': 0.17,
+        'EmissionFactorDataSource': 'Illustrative only, for demo data.'})
+    # A procurement summary won't save without an inflation rate for its year and currency:
+    # spend is deflated to the factor set's year before the factor is applied.
+    for year, rate in [('2022', 8.0), ('2023', 4.1), ('2024', 2.9)]:
+        r.add('InflationRate', {'CurrencyCode': 'USD', 'CalendarYear': year, 'InflationRate': rate,
+                                'DataSource': 'Illustrative only, for demo data.'}, key=('InflationRate', year))
+
+    stage = {'2022': 'Completed', '2023': 'Completed', '2024': 'Data Validation'}
+    procurement = r.add('Scope3EmssnSrc', {'Name': 'Procurement - Global', 'Scope3EmissionSourceType': 'Procurement',
+                                           'BusinessRegion': 'EMEA', 'Country': 'GB'})
+    items = []
+    for year in YEARS:
+        footprint = r.add('Scope3CrbnFtprnt', {'Name': f'Procurement {year}', 'Scope3EmssnSrcId': procurement,
+                                               'ReportingYear': year, 'FootprintStage': stage[year]})
+        summary = r.add('Scope3PcmtSummary', {'Name': f'Procurement Summary {year}', 'Scope3CrbnFtprntId': footprint,
+                                              'Scope3EmssnSrcId': procurement, 'CalendarYear': year,
+                                              'CurrencyCode': 'USD', 'PcmtEmssnFctrId': pcmt_set})
+        for supplier, factor, annual, purchases in SUPPLIERS:
+            if factor == 'Construction and fit-out' and year != '2023':
+                continue   # a one-off project
+            category = next(c for n, c, *_ in PCMT_FACTORS if n == factor)
+            for purchase in purchases:
+                items.append({'Name': f'{purchase} {year}', 'ProcurementSummaryId': summary,
+                              'PcmtEmssnFctrSetItemId': r.refs[('PcmtEmssnFctrSetItem', factor)],
+                              'SupplierId': r.refs[('Supplier', supplier)], 'Scope3GhgCategory': category,
+                              'SpendingCategory1': factor, 'SpendingCategory2': purchase,
+                              'SpentAmount': round(annual / len(purchases) * TREND[year] * noise(), -2),
+                              'SpentDate': f'{year}-{rng.randint(1, 12):02d}-15'})
+    for item in items:
+        r.add('Scope3PcmtItem', item, key=('item', item['Name']))
+
+    flights, stays, rides = [], [], []
+    airlines = [r.refs[('Supplier', 'Skyward Airlines')], r.refs[('Supplier', 'Polar Air')]]
+    for region, country, routes, hotel_country in TRAVEL_REGIONS:
+        source = r.add('Scope3EmssnSrc', {'Name': f'Business Travel - {region}', 'Scope3EmissionSourceType': 'Business Travel',
+                                          'BusinessRegion': region, 'Country': country,
+                                          'AirTravelEmssnFctrId': air, 'HotelStayEmssnFctrId': hotel,
+                                          'GroundTravelEmssnFctrId': ground})
+        for year in YEARS:
+            footprint = r.add('Scope3CrbnFtprnt', {'Name': f'Business Travel {region} {year}', 'Scope3EmssnSrcId': source,
+                                                   'ReportingYear': year, 'FootprintStage': stage[year]})
+            for trip, (origin, dest, km) in enumerate(routes * 2, start=1):
+                month = rng.randint(1, 12)
+                flights.append({'Name': f'{origin}-{dest} {year} #{trip}', 'Scope3EmssnSrcId': source,
+                                'Scope3CrbnFtprntId': footprint, 'AirTravelEmssnFctrId': air,
+                                'SupplierId': airlines[trip % 2], 'CostCenter': rng.choice(COST_CENTERS),
+                                'SegmentDistance': km * 2, 'SegmentDistanceUnit': 'Kilometers',
+                                'SourceCountry': country, 'TravelerBaseCountry': country,
+                                'StartDate': f'{year}-{month:02d}-03', 'EndDate': f'{year}-{month:02d}-07'})
+            for stay in range(1, 5):
+                month, nights = rng.randint(1, 12), rng.randint(2, 5)
+                stays.append({'Name': f'Hotel {region} {year} #{stay}', 'Scope3EmssnSrcId': source,
+                              'Scope3CrbnFtprntId': footprint, 'HotelStayEmssnFctrId': hotel,
+                              'SupplierId': r.refs[('Supplier', 'Harbor Hotels Group')], 'CostCenter': rng.choice(COST_CENTERS),
+                              'RoomCount': 1, 'StayNightsCount': nights, 'HotelCountry': hotel_country,
+                              'StartDate': f'{year}-{month:02d}-10', 'EndDate': f'{year}-{month:02d}-{10 + nights}'})
+            for ride in range(1, 7):
+                month = rng.randint(1, 12)
+                rides.append({'Name': f'Taxi {region} {year} #{ride}', 'Scope3EmssnSrcId': source,
+                              'Scope3CrbnFtprntId': footprint, 'GroundTravelEmssnFctrId': ground,
+                              'SupplierId': r.refs[('Supplier', 'CityCab Network')], 'ExpenseType': 'Taxi',
+                              'Scope3GhgCategory': 'BusinessTravel', 'Distance': rng.randint(10, 45),
+                              'DistanceUnit': 'Kilometers', 'CostCenter': rng.choice(COST_CENTERS),
+                              'StartDate': f'{year}-{month:02d}-12', 'EndDate': f'{year}-{month:02d}-12'})
+            for car in range(1, 3):
+                rides.append({'Name': f'Commuting {region} {year} #{car}', 'Scope3EmssnSrcId': source,
+                              'Scope3CrbnFtprntId': footprint, 'GroundTravelEmssnFctrId': ground,
+                              'ExpenseType': 'PersonalCarDistance', 'Scope3GhgCategory': 'EmployeeCommuting',
+                              'Distance': rng.randint(1200, 4000), 'DistanceUnit': 'Kilometers',
+                              'CostCenter': rng.choice(COST_CENTERS),
+                              'StartDate': f'{year}-{6 * car - 5:02d}-01', 'EndDate': f'{year}-{6 * car:02d}-28'})
+    for f in flights:
+        r.add('AirTravelEnrgyUse', f)
+    for s in stays:
+        r.add('HotelStayEnrgyUse', s)
+    for g in rides:
+        r.add('GroundTravelEnrgyUse', g)
 
 
 def main():

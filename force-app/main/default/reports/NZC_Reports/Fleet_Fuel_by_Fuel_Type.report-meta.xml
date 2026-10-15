@@ -8,23 +8,26 @@
         <field>VehicleAssetEnrgyUse$FuelConsumption</field>
     </columns>
     <columns>
-        <field>VehicleAssetEnrgyUse$FuelConsumptionUnit</field>
-    </columns>
-    <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>VehicleAssetEnrgyUse$Distance</field>
     </columns>
-    <description>Fleet consumption and distance grouped by fuel type. Same unit caveat as the stationary equivalent.</description>
+    <description>Fleet consumption and distance by fuel type, then unit, so every subtotal is in a single unit. No grand total: liters, gallons and kWh do not add up to anything.</description>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>VehicleAssetEnrgyUse$FuelType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VehicleAssetEnrgyUse$FuelConsumptionUnit</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>Fleet Fuel by Fuel Type</name>
     <reportType>Standalone_Vehicle_Energy_Uses__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
     <timeFrameFilter>
         <dateColumn>VehicleAssetEnrgyUse$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

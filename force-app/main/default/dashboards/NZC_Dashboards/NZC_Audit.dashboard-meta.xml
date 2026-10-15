@@ -83,7 +83,7 @@
             <enableHover>true</enableHover>
             <expandOthers>true</expandOthers>
             <header>Completeness</header>
-            <legendPosition>Bottom</legendPosition>
+            <legendPosition>Right</legendPosition>
             <report>NZC_Reports/Footprints_by_Stage</report>
             <showPercentage>true</showPercentage>
             <showTotal>true</showTotal>
@@ -104,7 +104,7 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <header>Completeness</header>
-            <legendPosition>Bottom</legendPosition>
+            <legendPosition>Right</legendPosition>
             <report>NZC_Reports/Footprints_by_Year_and_Stage</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
@@ -128,7 +128,7 @@
             <enableHover>true</enableHover>
             <expandOthers>true</expandOthers>
             <header>Fleet completeness</header>
-            <legendPosition>Bottom</legendPosition>
+            <legendPosition>Right</legendPosition>
             <report>NZC_Reports/Fleet_Footprints_by_Stage</report>
             <showPercentage>true</showPercentage>
             <showTotal>true</showTotal>
@@ -149,7 +149,7 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <header>Fleet completeness</header>
-            <legendPosition>Bottom</legendPosition>
+            <legendPosition>Right</legendPosition>
             <report>NZC_Reports/Fleet_Footprints_by_Year_and_Stage</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>

@@ -7,20 +7,23 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>StnryAssetEnrgyUse$FuelConsumption</field>
     </columns>
-    <columns>
-        <field>StnryAssetEnrgyUse$FuelConsumptionUnit</field>
-    </columns>
-    <description>Stationary consumption grouped by fuel type. Consumption sums across whatever units are present, so read the unit column before trusting a subtotal.</description>
+    <description>Stationary consumption by fuel type, then unit, so every subtotal is in a single unit. No grand total: kWh, therms and liters do not add up to anything.</description>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>StnryAssetEnrgyUse$FuelType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>StnryAssetEnrgyUse$FuelConsumptionUnit</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>Fuel Consumption by Fuel Type</name>
     <reportType>Standalone_Stationary_Energy_Uses__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
     <timeFrameFilter>
         <dateColumn>StnryAssetEnrgyUse$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

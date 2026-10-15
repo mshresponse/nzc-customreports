@@ -12,6 +12,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Footprint Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetCrbnFtprnt</table>
         </columns>
@@ -35,6 +36,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Energy Use Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetCrbnFtprnt.VehicleAssetEnrgyUse</table>
         </columns>

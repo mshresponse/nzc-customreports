@@ -88,7 +88,8 @@ footprint blanks the lookup on every energy use under it — and then its consum
 counted in no footprint at all.
 
 **3 summaries** — Emissions by Reporting Year, Fuel Consumption by Fuel Type, Fleet Fuel by
-Fuel Type.
+Fuel Type. The two fuel reports group by fuel type *and* unit and have no grand total,
+because kilowatt-hours, therms and liters don't add up.
 
 **5 audit reports** — the part of the CRM Analytics audit dashboard you can rebuild in core
 Lightning. Emissions by Asset and Year is a matrix, one site per row and one year per
@@ -256,7 +257,7 @@ Two related shapes, also deliberate:
 - [`sample-data/`](sample-data/) — UTF-8 CSVs with deliberate gaps and orphans, so the
   Missing and Orphaned reports return rows on an empty trial org. Loads in one command; the
   README there lists the rows each report should return. `sample-data/showcase/` is a
-  larger fictional dataset — 24 sites, 16 vehicles, three years — for demos.
+  larger fictional dataset — 34 sites, 22 vehicles, three years — for demos.
 - [`scripts/check-reports.py`](scripts/check-reports.py) — runs every report and dashboard
   against an org holding the sample data and compares with those rows.
 - [`config/project-scratch-def.json`](config/project-scratch-def.json) — a scratch org with

@@ -12,6 +12,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Asset Name</displayNameOverride>
             <field>Name</field>
             <table>StnryAssetEnvrSrc</table>
         </columns>
@@ -45,6 +46,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Energy Use Name</displayNameOverride>
             <field>Name</field>
             <table>StnryAssetEnvrSrc.StnryAssetEnrgyUse</table>
         </columns>

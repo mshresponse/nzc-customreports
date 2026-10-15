@@ -8,6 +8,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Energy Use Name</displayNameOverride>
             <field>Name</field>
             <table>StnryAssetEnrgyUse</table>
         </columns>

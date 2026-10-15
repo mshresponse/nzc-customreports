@@ -8,6 +8,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Vehicle Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc</table>
         </columns>

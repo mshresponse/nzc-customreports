@@ -17,6 +17,7 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Vehicle Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc</table>
         </columns>
@@ -45,6 +46,7 @@
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Energy Use Name</displayNameOverride>
             <field>Name</field>
             <table>VehicleAssetEmssnSrc.VehicleAssetEnrgyUse</table>
         </columns>

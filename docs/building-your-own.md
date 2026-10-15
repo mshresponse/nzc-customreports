@@ -184,6 +184,57 @@ report types can share one picker:
 The options are literal values, so the year list is hard-coded. Editing it in the dashboard
 builder is faster than editing the XML.
 
+## Fuel never shares an axis
+
+Fuel Consumption on an energy use record is in whatever unit its Fuel Consumption Unit says:
+kWh for electricity, therms or m³ for gas, liters or gallons for liquid fuels. Summing it
+across fuel types produces a number with no unit, and a chart of it puts 170 million kWh on
+the same scale as 95 thousand liters. So:
+
+- **Fuel Consumption by Fuel Type** and **Fleet Fuel by Fuel Type** group by fuel type and
+  then by unit, so every subtotal is in one unit, and carry `<showGrandTotal>false</showGrandTotal>`
+  because there is no meaningful grand total.
+- The **Emissions Coverage** dashboard shows them as **tables**, one row per fuel and unit,
+  not as charts.
+- The two **Orphaned Energy Use** reports carry no sum on consumption, so their dashboard
+  charts count records — how many to fix — instead of adding up mixed units.
+
+CO2e is the one measure that does share a unit across fuels. It isn't used here because Net
+Zero Cloud only fills it in once its own calculation has run, so a chart of it reads zero in
+a new org and in every trial.
+
+## Two dashboard formats
+
+NZC Audit and NZC Data Quality are **Classic-format** dashboards: `leftSection`,
+`middleSection`, `rightSection`, `isGridLayout` false. NZC Emissions Coverage is
+**Lightning-format**: `dashboardGridLayout`, a 12-column grid where each component has
+`columnIndex`, `colSpan`, `rowIndex` and `rowSpan`. Both render in Lightning Experience.
+
+The Lightning format exists here because the table component (`FlexTable`, with its
+`flexTableColumn` list of groupings and aggregates) is Lightning-only. Opening a Classic
+dashboard in the Lightning builder converts it on save; the retrieve then comes back in grid
+form with `owner` and `runningUser` stamped in, which have to come out (see below). The
+grid's column positions are easier to edit in the XML than by dragging.
+
+## Column labels in report types
+
+Every Net Zero Cloud object's record name field is called Name, so a report on a joined
+report type shows two or three columns all headed "Name". `displayNameOverride` on the
+report type column renames it for every report built on that type, without touching the
+field:
+
+```xml
+<columns>
+    <checkedByDefault>true</checkedByDefault>
+    <displayNameOverride>Asset Name</displayNameOverride>
+    <field>Name</field>
+    <table>StnryAssetEnvrSrc</table>
+</columns>
+```
+
+All sixteen report types here label the name column by object: Asset Name, Vehicle Name,
+Footprint Name, Energy Use Name.
+
 ## Year-over-year change: build it in the UI
 
 The one audit signal deliberately not shipped as metadata is a **% change from the previous

@@ -8,6 +8,7 @@
     <sections>
         <columns>
             <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Asset Name</displayNameOverride>
             <field>Name</field>
             <table>StnryAssetEnvrSrc</table>
         </columns>

@@ -4,3 +4,6 @@ package.xml
 # LWC/Aura config files (none in this project, kept for convention)
 **/jsconfig.json
 **/.eslintrc.json
+
+# macOS Finder metadata
+**/.DS_Store

@@ -148,7 +148,7 @@ Build history:
 | Build | 04t | Status |
 |---|---|---|
 | 1.0.0.1 (2026-10-16) | `04thm000003NZWPAA4` | **Superseded. Do not promote.** Its four dashboards were dynamic (LoggedInUser), which counts against the subscriber org's dynamic-dashboard cap. Left in place; betas cannot be deleted without asking the owner. |
-| 1.0.0.2 (2026-10-16) | `04thm000003NZY1AAO` | Dashboards run as a specified user. Validated with code coverage (check passed), build 95 s, package version Id 05ihm0000001FoDAAU, request 08chm0000001TWDAA2. The version to test, promote and list. |
+| 1.0.0.2 (2026-10-16) | `04thm000003NZY1AAO` | Dashboards run as a specified user. Validated with code coverage (check passed), build 95 s, package version Id 05ihm0000001FoDAAU, request 08chm0000001TWDAA2. **Promoted to released 2026-10-16.** The version to list. |
 
 ## 5. Install the beta into a clean subscriber-shaped org and run the checks (~15 minutes)
 
@@ -225,13 +225,15 @@ sf package version promote --package "NZC Reports and Dashboards@1.0.0-2" --targ
 sf package version list --packages "NZC Reports and Dashboards" --released --target-dev-hub ev-dev
 ```
 
+Done 2026-10-16: 1.0.0.2 promoted (`IsReleased` true); 1.0.0.1 remains an unreleased beta.
+
 ## 7. Record the release
 
 ```bash
 git add sfdx-project.json && git commit -m "Release NZC Reports and Dashboards 1.0.0 (evirt)" && git tag v1.0.0 && git push && git push --tags
 ```
 
-Install link to put on the README and the website once 1.0.0.2 is promoted:
+Install link (on the README since 2026-10-16; still to add to the website):
 
 ```
 https://login.salesforce.com/packaging/installPackage.apexp?p0=04thm000003NZY1AAO

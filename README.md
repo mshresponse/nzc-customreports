@@ -7,11 +7,11 @@
 Cloud** (now sold as Agentforce Net Zero), using core Lightning reporting only. No CRM
 Analytics, no Einstein, no code, no custom objects or fields. API 67.0.
 
-Two ways to get it, and you should **pick one**: deploy the source from this repository, or
-install the managed package (namespace `evirt`) that is being prepared for a free AgentExchange
-listing. Both ship the same components under the same `NZC:` labels, so an org with both has two
-of every report type, report, dashboard and list view. The package is not published yet; until a
-version is promoted, the source deploy is the route. See
+Two ways to get it, and you should **pick one**: install the free managed package (namespace
+`evirt`, version 1.0.0, from Salesforce's own installer), or deploy the source from this
+repository. Both ship the same components under the same `NZC:` labels, so an org with both has
+two of every report type, report, dashboard and list view. The AgentExchange listing is pending
+security review; the install link works regardless. See
 [Managed package or source deploy](#managed-package-or-source-deploy).
 
 On the name: the product launched as Sustainability Cloud, became Net Zero Cloud in 2022 and
@@ -62,7 +62,21 @@ Setup → Object Manager. You need to see `StnryAssetEnvrSrc`, `StnryAssetCrbnFt
 `AirTravelEnrgyUse` among others. A free Developer Edition org and a standard Trailhead Playground
 do **not** have these — see [Orgs that work](#orgs-that-work).
 
-**2. Deploy.**
+**2. Install the package, or deploy the source.**
+
+Managed package 1.0.0 (namespace `evirt`), Salesforce's own installer, no installation key:
+
+- Production or Developer Edition: <https://login.salesforce.com/packaging/installPackage.apexp?p0=04thm000003NZY1AAO>
+- Sandbox: <https://test.salesforce.com/packaging/installPackage.apexp?p0=04thm000003NZY1AAO>
+
+Or with the CLI:
+
+```bash
+sf package install --package 04thm000003NZY1AAO --target-org <alias> --wait 20 --no-prompt
+```
+
+Or deploy the source instead, not as well (see
+[Managed package or source deploy](#managed-package-or-source-deploy)):
 
 ```bash
 sf project deploy start --manifest manifest/package.xml --target-org <alias>
@@ -286,8 +300,8 @@ signup — which is where the afternoon goes.
 Pick one route per org. Both ship the same 22 report types, 32 reports, 4 dashboards and 6 list
 views under the same `NZC:` labels. The package's API names carry the `evirt__` prefix, so the
 two don't collide, but an org with both has two of everything and users can't tell them apart by
-name. The managed package is not published yet, so there is no install link here until a version
-is promoted; the source deploy is available today.
+name. Managed package 1.0.0 was released on 2026-10-16 and installs from the links in
+[Setup](#setup--4-steps); its AgentExchange listing is pending security review.
 
 **What the source deploy does**
 

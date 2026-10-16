@@ -26,7 +26,7 @@ The guide lists these as the conditions for being ready to submit *(guide)*:
 | 3 | Solution certified **Lightning Ready** (mandatory for every new submission) | Owner attestation; trivially true, the package is Lightning reports and dashboards only | Listing → Lightning Ready section |
 | 4 | Packaging org connected to the Partner Console | Owner action: connect Dev Hub `ev-dev` (00Dhm000004OFTdEAO) | Partner Console → Publishing → Technologies → Connect an org |
 | 5 | Provider (company) profile created | Owner action | Partner Console → Publishing → Company Info |
-| 6 | Package version is **Managed – Released** (promoted). Beta versions are rejected *(guide)* | After `sf package version promote` (see `Release_Commands.md` step 6) | Technologies → Solutions shows *Security Review Required* next to the version |
+| 6 | Package version is **Managed – Released** (promoted). Beta versions are rejected *(guide)* | Done 2026-10-16: 1.0.0.2 promoted | Technologies → Solutions shows *Security Review Required* next to the version |
 | 7 | Listing created and linked to the released version | Owner action | Publishing → Listings → New → *Packaged Solution / Salesforce Platform Package* |
 
 Version to submit: **1.0.0.2 (`04thm000003NZY1AAO`)**; 1.0.0.1 is superseded and must not be promoted. Submit a major or minor version, never a patch; later
@@ -54,7 +54,7 @@ external services) *(guide)*:
 | Question | Answer |
 |---|---|
 | Listing / solution | NZC Reports and Dashboards |
-| Package version under review | 1.0.0.2 (`04thm000003NZY1AAO`, namespace `evirt`, 2GP Managed – Released once promoted) |
+| Package version under review | 1.0.0.2 (`04thm000003NZY1AAO`, namespace `evirt`, 2GP Managed – Released, promoted 2026-10-16) |
 | Solution type | Managed package, Salesforce Platform |
 | Short description | Lightning report types, reports, dashboards and list views for Salesforce Net Zero Cloud (Agentforce Net Zero). 100% declarative: no Apex, no Lightning components, no integrations. |
 | Does the solution require any Salesforce licence or feature? | Yes: Net Zero Cloud (SustainabilityApp feature) must be enabled in the org. The test org provided has it. |

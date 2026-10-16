@@ -82,7 +82,9 @@ commands, the security-review answers and the architecture document for the subm
 `0Hohm0000000WKrCAM`; version 1.0.0.1 (`04thm000003NZWPAA4`) was built and install-tested, then
 superseded by 1.0.0.2 after a review changed the dashboards from dynamic to specified-user (see
 below). Installed reports keep their developer names (the prefix lives in `NamespacePrefix`),
-so `check-reports.py` needed no change. Nothing is promoted.
+so `check-reports.py` needed no change. **1.0.0.2 was promoted to released on 2026-10-16** and
+the install link is on the README; the website button, the reviewer org and the security review
+are next.
 
 **Dashboards run as a specified user, not as the viewer.** Dynamic dashboards count against a
 per-org cap (Developer 3, Enterprise 5, Unlimited 10), and a deploy or install that goes over the

@@ -74,13 +74,30 @@ admins: Salesforce's own installer, no third-party sign-in, and an uninstall but
 
 Owner steps happen in a browser; the rest are commands in this repository.
 
-1. **Choose the namespace (owner, permanent).** Either a new product namespace registered
-   in a fresh Developer Edition org and linked to the `ev-dev` Dev Hub through Namespace
-   Registries, or `evirt`, which is already registered and linked and has no package on
-   it since 2026-09-22. The OrgTriage record's rule was a product namespace for anything
-   listed on its own, with `evirt` kept for internal packages; the counter-argument here is
-   that this package has no objects, fields or permission sets, so the prefix appears
-   almost nowhere an admin looks.
+**Status 2026-10-16.** Steps 1 and 2 are done: the namespace is `evirt`, `sfdx-project.json`
+carries the package directory settings and `definitionFile`, and the source deployed and passed
+`scripts/check-reports.py` in a scratch org created with the namespace. The exact release
+commands, the security-review answers and the architecture document for the submission are in
+[`appexchange-submission/`](appexchange-submission/). Steps 3 to 5 are done too: package
+`0Hohm0000000WKrCAM`; version 1.0.0.1 (`04thm000003NZWPAA4`) was built and install-tested, then
+superseded by 1.0.0.2 after a review changed the dashboards from dynamic to specified-user (see
+below). Installed reports keep their developer names (the prefix lives in `NamespacePrefix`),
+so `check-reports.py` needed no change. Nothing is promoted.
+
+**Dashboards run as a specified user, not as the viewer.** Dynamic dashboards count against a
+per-org cap (Developer 3, Enterprise 5, Unlimited 10), and a deploy or install that goes over the
+cap fails; a customer with two dynamic dashboards of their own could not have installed four
+more. No running user is committed (no usernames in a public repository): the deploying or
+installing admin becomes the running user, and because customers can edit packaged dashboards,
+anyone who wants one dynamic can switch it after installing. A failed install has no workaround.
+
+1. **Choose the namespace (owner, permanent). Decided 2026-10-16: `evirt`.** The options
+   were a new product namespace registered in a fresh Developer Edition org and linked to the
+   `ev-dev` Dev Hub, or `evirt`, already registered and linked. OrgTriage has its own
+   namespace because it is listed on its own to any Salesforce org; this package only serves
+   Net Zero Cloud customers, a small subset of Salesforce orgs, so it stays under the company
+   namespace. It also has no objects, fields or permission sets, so the prefix appears almost
+   nowhere an admin looks.
 2. **Set it in `sfdx-project.json`** — `"namespace"` plus a `package` and `versionNumber`
    (`1.0.0.NEXT`) on the `force-app` directory — and prove it deploys with the prefix to a
    scratch org created after the change.

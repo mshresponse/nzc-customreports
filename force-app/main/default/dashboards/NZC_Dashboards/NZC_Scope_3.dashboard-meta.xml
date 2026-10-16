@@ -275,7 +275,7 @@
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
-    <dashboardType>LoggedInUser</dashboardType>
+    <dashboardType>SpecifiedUser</dashboardType>
     <description>Scope 3 from the records Net Zero Cloud calculates on save: purchases by category and supplier, spend against emissions, business travel by cost center and mode, footprint stages, and the gaps that leave activity out of the total.</description>
     <isGridLayout>true</isGridLayout>
     <textColor>#000000</textColor>

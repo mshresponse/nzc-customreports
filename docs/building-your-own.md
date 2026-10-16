@@ -322,14 +322,16 @@ deliberately does not carry:
 <runningUser>someone@example.com</runningUser>
 ```
 
-Salesforce stamps both on every dashboard, whatever the source said, and it does so even
-for a `LoggedInUser` dashboard where the running user is not used to decide what anyone
-sees. Commit them and you have broken the package for everybody else: that username does
-not exist in their org, so the deploy fails on a user it cannot resolve. You have also put
+Salesforce stamps both on every dashboard, whatever the source said and whatever the
+dashboard type. Commit them and you have broken the package for everybody else: that username
+does not exist in their org, so the deploy fails on a user it cannot resolve. You have also put
 your own email address into a public repository, twice per dashboard.
 
-The committed dashboards here carry `<dashboardType>LoggedInUser</dashboardType>` and no
-owner or running user. That omission is the portable form, and it is load-bearing.
+The committed dashboards here carry `<dashboardType>SpecifiedUser</dashboardType>` and no
+owner or running user; the deploying user (or, for the managed package, the installing user)
+becomes the running user. That omission is the portable form, and it is load-bearing. They are
+not dynamic (`LoggedInUser`) dashboards on purpose: dynamic dashboards count against a per-org
+cap (Developer 3, Enterprise 5, Unlimited 10) and a deploy or install over the cap fails.
 
 **So: never commit a dashboard retrieve without checking.**
 

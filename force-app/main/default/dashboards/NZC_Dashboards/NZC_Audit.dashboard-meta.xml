@@ -22,7 +22,7 @@
         </dashboardFilterOptions>
         <name>Reporting Year</name>
     </dashboardFilters>
-    <dashboardType>LoggedInUser</dashboardType>
+    <dashboardType>SpecifiedUser</dashboardType>
     <description>Audit view in core Lightning, no CRM Analytics licence: emissions per asset across years to spot anomalies, how much of each year is still not complete, and orphaned records. Pick a Reporting Year at the top to audit one year at a time.</description>
     <isGridLayout>false</isGridLayout>
     <leftSection>

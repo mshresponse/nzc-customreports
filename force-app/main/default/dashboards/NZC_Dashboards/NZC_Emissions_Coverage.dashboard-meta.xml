@@ -146,7 +146,7 @@
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
-    <dashboardType>LoggedInUser</dashboardType>
+    <dashboardType>SpecifiedUser</dashboardType>
     <description>Net Zero Cloud emissions overview: Scope 1 trend by reporting year, then stationary and fleet fuel consumption by fuel type and unit, as tables because kWh, therms and liters share no scale. Core Lightning analytics only.</description>
     <isGridLayout>true</isGridLayout>
     <textColor>#000000</textColor>

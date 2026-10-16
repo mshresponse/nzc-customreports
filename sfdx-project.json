@@ -2,11 +2,21 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "NZC Reports and Dashboards",
+      "versionName": "ver 1.0",
+      "versionNumber": "1.0.0.NEXT",
+      "versionDescription": "22 custom report types, 32 reports, 4 dashboards and 6 list views for Salesforce Net Zero Cloud. Declarative only: no Apex, no Lightning components, no callouts.",
+      "definitionFile": "config/project-scratch-def.json"
     }
   ],
   "name": "nzc-customreports",
-  "namespace": "",
+  "namespace": "evirt",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "67.0"
+  "sourceApiVersion": "67.0",
+  "packageAliases": {
+    "NZC Reports and Dashboards": "0Hohm0000000WKrCAM",
+    "NZC Reports and Dashboards@1.0.0-1": "04thm000003NZWPAA4",
+    "NZC Reports and Dashboards@1.0.0-2": "04thm000003NZY1AAO"
+  }
 }

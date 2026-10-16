@@ -4,3 +4,6 @@
 deploy-options.json
 node_modules/
 .DS_Store
+
+# Code Analyzer report for the security review: generated locally, contains local paths
+docs/appexchange-submission/CodeAnalyzerReport.html

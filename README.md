@@ -5,7 +5,14 @@
 
 **22 custom report types, 32 reports, 4 dashboards and 6 list views for Salesforce Net Zero
 Cloud** (now sold as Agentforce Net Zero), using core Lightning reporting only. No CRM
-Analytics, no Einstein, no managed package, no custom objects or fields. API 67.0.
+Analytics, no Einstein, no code, no custom objects or fields. API 67.0.
+
+Two ways to get it, and you should **pick one**: install the free managed package (namespace
+`evirt`, version 1.0.0, from Salesforce's own installer), or deploy the source from this
+repository. Both ship the same components under the same `NZC:` labels, so an org with both has
+two of every report type, report, dashboard and list view. The AgentExchange listing is pending
+security review; the install link works regardless. See
+[Managed package or source deploy](#managed-package-or-source-deploy).
 
 On the name: the product launched as Sustainability Cloud, became Net Zero Cloud in 2022 and
 Agentforce Net Zero in 2025. Everything here is labelled `NZC:` because that is what the
@@ -55,7 +62,21 @@ Setup → Object Manager. You need to see `StnryAssetEnvrSrc`, `StnryAssetCrbnFt
 `AirTravelEnrgyUse` among others. A free Developer Edition org and a standard Trailhead Playground
 do **not** have these — see [Orgs that work](#orgs-that-work).
 
-**2. Deploy.**
+**2. Install the package, or deploy the source.**
+
+Managed package 1.0.0 (namespace `evirt`), Salesforce's own installer, no installation key:
+
+- Production or Developer Edition: <https://login.salesforce.com/packaging/installPackage.apexp?p0=04thm000003NZY1AAO>
+- Sandbox: <https://test.salesforce.com/packaging/installPackage.apexp?p0=04thm000003NZY1AAO>
+
+Or with the CLI:
+
+```bash
+sf package install --package 04thm000003NZY1AAO --target-org <alias> --wait 20 --no-prompt
+```
+
+Or deploy the source instead, not as well (see
+[Managed package or source deploy](#managed-package-or-source-deploy)):
 
 ```bash
 sf project deploy start --manifest manifest/package.xml --target-org <alias>
@@ -85,15 +106,18 @@ script.
 
 ## What you get
 
-**5 reports you edit directly** — tabular, narrow, every column editable in place:
+**6 reports you edit directly** — tabular and narrow. The fields you fix are editable in
+place; three of the six also carry read-only emissions columns beside them, so the effect of a
+correction shows on the same row after a refresh:
 
-| Report | Fix in place |
-|---|---|
-| Asset Names and Locations | Site names, city, country, asset type |
-| Fleet Names and Types | Vehicle names and types |
-| Footprint Data Entry | Reporting year, stage |
-| Energy Use Data Entry | Fuel type, consumption, unit |
-| Fleet Energy Data Entry | Fuel type, consumption, distance |
+| Report | Fix in place | Read-only alongside |
+|---|---|---|
+| Asset Names and Locations | Site names, asset type, region, city, country | — |
+| Fleet Names and Types | Vehicle names and types | — |
+| Footprint Data Entry | Reporting year, stage | — |
+| Energy Use Data Entry | Fuel type, consumption, unit | Scope 1 and both Scope 2 bases (tCO2e) |
+| Fleet Energy Data Entry | Fuel type, consumption, unit, distance | Scope 1 (tCO2e) |
+| Procurement Items Data Entry | Supplier, spending categories, GHG category, spent amount and date, emission factor | Scope 3 (tCO2e) |
 
 The Scope 1 and Scope 2 totals on a footprint are not on that list, and can't be: Net Zero
 Cloud calculates them from the energy use records and emission factors, and the fields are
@@ -153,8 +177,20 @@ shipping the source.
 time; the year list is 2023–2026 and is a one-minute edit in the dashboard builder. Every
 component opens its report, and every report is editable inline where the record exists.
 
-**6 list views**, optional, for Winter '27 bulk editing — see
-[List views for bulk edits](#list-views-for-bulk-edits-winter-27).
+The dashboards **run as the admin who deployed or installed them**. Everyone with access to the
+folder sees the same totals, computed at that admin's visibility; opening a component's report
+runs the report as the viewer, under their own sharing. To change that, edit the dashboard, open
+**Properties** (the gear) and look under **View Dashboard As**: *Me*, *Another person* or *The
+dashboard viewer*, plus a checkbox *Let dashboard viewers choose whom they view the dashboard
+as*. *The dashboard viewer* makes it dynamic, which takes one of the org's dynamic-dashboard
+slots (3 in Developer, 5 in Enterprise, 10 in Unlimited Edition). The dashboards don't ship that
+way because a deploy or install that goes over the cap fails, with no workaround. NZC Audit and
+NZC Data Quality use the Classic three-column layout; the first time you save one in the Lightning
+builder it is converted to a Lightning layout, and the builder says so before you start.
+
+**6 list views**, one per Net Zero Cloud object, for Winter '27 bulk editing — see
+[List views for bulk edits](#list-views-for-bulk-edits-winter-27). The managed package installs
+all six; the source deploy keeps them in a separate, optional manifest.
 
 ---
 
@@ -214,15 +250,30 @@ default:
   edit access to, on the layout or not.
 
 With both on, a list view becomes the better bulk-edit surface: edit several rows, save
-once, no refresh after every cell. The package ships one list view per Net Zero Cloud
-object with the same narrow columns as the data-entry reports. They're in their own
-manifest so they never gate the core deploy:
+once, no refresh after every cell. There is one list view per Net Zero Cloud object, with the
+same narrow columns as the data-entry reports.
+
+**The managed package installs all six.** They are visible to every user who can see the
+object (`filterScope` Everything, not shared to a group), like any other public list view. On a
+packaged list view the **List View Controls** menu shows New, Clone, Rename, Sharing Settings,
+Select Fields to Display, Delete and Reset Column Sorting, and no *Edit List Filters*. Tested in
+a scratch org with the package installed:
+
+- **Sharing Settings → Share list view with groups of users** saves (shared with *All Internal
+  Users* as the test), so an admin can narrow a packaged list view to public groups.
+- **Sharing Settings → Only I can see this list view** is refused: "Managed list views cannot
+  be visible to only a single user".
+- **Delete** works and removes the list view for everyone, which is the way to hide one. Clone
+  it first if you want your own copy with different columns or filters.
+
+**The source deploy keeps them optional.** They're in their own manifest so they never gate
+the core deploy:
 
 ```bash
 sf project deploy start --manifest manifest/package-4-list-views.xml --target-org <alias> --dry-run
 ```
 
-All six validate against a licensed Net Zero Cloud org. They're kept separate anyway, because
+All six validate against a licensed Net Zero Cloud org. They're kept separate there because
 they only earn their place once those two settings are on, and because list view column
 names are their own name space (see [`docs/building-your-own.md`](docs/building-your-own.md)).
 
@@ -243,7 +294,16 @@ Salesforce's docs list NZC as available in Enterprise, Performance, Unlimited an
 Editions. That describes which editions the licence *can be added to*, not what you get on
 signup — which is where the afternoon goes.
 
-## What the deploy does
+<a name="managed-package-or-source-deploy"></a>
+## Managed package or source deploy
+
+Pick one route per org. Both ship the same 22 report types, 32 reports, 4 dashboards and 6 list
+views under the same `NZC:` labels. The package's API names carry the `evirt__` prefix, so the
+two don't collide, but an org with both has two of everything and users can't tell them apart by
+name. Managed package 1.0.0 was released on 2026-10-16 and installs from the links in
+[Setup](#setup--4-steps); its AgentExchange listing is pending security review.
+
+**What the source deploy does**
 
 - A **Metadata API deploy of source**, not a package install. Nothing appears under Setup →
   Installed Packages.
@@ -252,6 +312,17 @@ signup — which is where the afternoon goes.
 - **All-or-nothing** (`rollbackOnError`). A failure leaves nothing behind.
 - Deploying user needs **Modify Metadata Through Metadata API Functions** or **Modify All
   Data**.
+
+**What the managed package does differently**
+
+- Appears under Setup → Installed Packages, with an uninstall button that removes everything.
+- The report types are the package's: build your own reports on them, but you can't add
+  columns to them. Reports and dashboards are yours to edit or delete, and a package upgrade
+  leaves them as installed. List views can be re-shared, renamed or deleted (see above) but not
+  re-filtered.
+- Dashboards run as the installing admin (see [What you get](#what-you-get)).
+- No installation key, no post-install script, no permission sets. The four setup steps above
+  are the same, with the install in place of the deploy in step 2.
 
 ## Two modelling choices worth knowing
 
@@ -314,7 +385,9 @@ Two related shapes, also deliberate:
 - [`docs/building-your-own.md`](docs/building-your-own.md) — the report type metadata
   gotchas, for anyone forking this.
 - [`docs/appexchange.md`](docs/appexchange.md) — the plan for a free AgentExchange
-  (AppExchange) listing, and what a managed package would change for people who install it.
+  (AppExchange) listing, and what the managed package changes for people who install it;
+  [`docs/appexchange-submission/`](docs/appexchange-submission/) — the release commands and the
+  security-review material.
 
 ## Continuous integration
 
@@ -337,7 +410,10 @@ of an outer join behaves like part of the join (see
 [`docs/building-your-own.md`](docs/building-your-own.md)). So the workflow has a second
 job: it creates a Net Zero Cloud scratch org, deploys, loads the sample data and runs
 `scripts/check-reports.py`. It needs a Dev Hub, supplied as the repository secret
-`DEVHUB_SFDX_AUTH_URL`; without it the job is skipped.
+`DEVHUB_SFDX_AUTH_URL`; without it the job is skipped. **That secret is not set in this
+repository today**, so the badge above covers the metadata checks only, and the functional check
+is run by hand before each release (for the 2026-10-16 package build it ran in a namespaced
+scratch org and again against the installed package).
 
 ## License
 

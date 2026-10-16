@@ -3,7 +3,7 @@
     <backgroundEndColor>#FFFFFF</backgroundEndColor>
     <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
     <backgroundStartColor>#FFFFFF</backgroundStartColor>
-    <dashboardType>LoggedInUser</dashboardType>
+    <dashboardType>SpecifiedUser</dashboardType>
     <description>Where the emissions inventory is incomplete: assets and vehicles with no footprint or no consumption data, and records orphaned from their parent. Each component names a report you can open and work through.</description>
     <isGridLayout>false</isGridLayout>
     <leftSection>

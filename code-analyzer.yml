@@ -1,0 +1,10 @@
+# Salesforce Code Analyzer configuration for the AppExchange security review scan
+# (docs/appexchange-submission/Release_Commands.md, step 2).
+#
+# The Flow Scanner engine needs Python 3.10 or newer on the PATH. macOS ships 3.9 as
+# `python3`, so name a newer interpreter here (any `python3.1x` on the PATH works; change
+# the value if yours is called something else). Without it the engine fails to start and
+# the report shows one critical "engine error" instead of a clean result.
+engines:
+  flow:
+    python_command: python3.12

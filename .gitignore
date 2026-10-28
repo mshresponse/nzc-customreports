@@ -7,3 +7,10 @@ node_modules/
 
 # Code Analyzer report for the security review: generated locally, contains local paths
 docs/appexchange-submission/CodeAnalyzerReport.html
+docs/appexchange-submission/CodeAnalyzerReport.pdf
+
+# Security-review material that is generated or raw (the PDFs that were uploaded are tracked)
+docs/appexchange-submission/README.pdf
+docs/appexchange-submission/Checkmarx_Report.html
+docs/appexchange-submission/Checkmarx_Report.xml
+docs/appexchange-submission/visuals/security-review-fee-page-*.jpg

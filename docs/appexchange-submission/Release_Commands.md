@@ -265,6 +265,14 @@ sf project deploy start --metadata-dir sample-data/org-setup --target-org nzc-re
 sf data import tree --plan sample-data/showcase/plan.json --target-org nzc-review
 ```
 
+Before the import, a Trailhead Net Zero Cloud Developer Edition needs the product switched on; the
+objects and licences exist but `enableSustainabilityCloud` is false, and the import fails with
+"entity type cannot be inserted: Other Emissions Factor Set". Deploy an `Industries` settings file
+with `enableSustainabilityCloud` and `enableSCCarbonAccounting` set to true (the same two values as
+`config/project-scratch-def.json`) and the import goes through. Done 2026-10-19 on `nzc-review`
+(the Trailhead Net Zero Cloud Developer Edition used as the reviewer org): 1.0.0.2 installed,
+permission sets assigned, org-setup deployed, 605 showcase records imported.
+
 Then re-save every energy use so Net Zero Cloud rolls the Scope 1 and 2 totals up into the
 footprints (a tree import does not trigger that calculation; without this step the footprint
 totals stay empty):
@@ -273,9 +281,57 @@ totals stay empty):
 echo "update [SELECT Id FROM StnryAssetEnrgyUse]; update [SELECT Id FROM VehicleAssetEnrgyUse];" | sf apex run --target-org nzc-review
 ```
 
+If that reports "Compilation failed at Line 1 column 1", the CLI did not read stdin; put the two
+statements in a file and run `sf apex run --file resave.apex --target-org nzc-review` instead.
+
 Create a dedicated reviewer user (System Administrator profile plus the two NZC permission sets),
 share both folders with it, enable inline editing, and enter its login in the wizard's
 test-environment step. Do not reuse your own credentials.
+
+Done 2026-10-19 on `nzc-review`: a dedicated reviewer user (its own username on the org's domain,
+email partners@everythingvirtually.com, System Administrator, NetZeroAdmin + NetZeroManager), created
+with `sf data create record --sobject User`; both folders shared with it (View) from the Reports and
+Dashboards tabs; inline editing was already on in the Trailhead org. Password: Setup → Users → the
+user → Reset Password (or Forgot Your Password? at login) sends the link to partners@; set it there
+and paste only into the wizard. `sf org generate password --on-behalf-of` only works for users the
+CLI created itself; for any other user, run `System.resetPassword(userId, true)` as anonymous Apex
+(from a file, see above) to email the reset link. The wizard's Submit button logs in as that user, so
+the password must already be valid, and the user and password must stay unchanged for the whole
+review.
+
+## 8b. Checkmarx (Source Code Scanner)
+
+Corrected 2026-10-19 from the Partner Security Portal FAQ (security.my.salesforce-sites.com/sourcescanner):
+the scanner does **not** scan an org you point it at. It scans a **managed-released package
+version** that the connected Dev Hub owns, so there is nothing to deploy and no org to prepare.
+(The `nzc-src` scratch org created on 2026-10-19 was unnecessary for this; it expires 2026-10-26.)
+
+1. Go to https://security.my.salesforce-sites.com/sourcescanner/ and click **Login**. Use a System
+   Administrator on the Dev Hub (`mike@everythingvirtually.com` on `ev-dev`). The FAQ's conditions:
+   that user's email must be on the Partner Community publisher account (Manage Users → Invite,
+   with the Listings permission), and the Dev Hub must be connected under Technologies → Orgs
+   (it is).
+2. Open **Source Code Scanner**. It lists the last 10 managed-beta or managed-released versions
+   of each package that also appear under Technologies → Solutions. Pick
+   `NZC Reports and Dashboards` 1.0.0 (04thm000003NZY1AAO) and submit the scan. Partners get
+   3 free scans per review; the result arrives by email and is downloadable from the portal.
+3. **No-code packages**: the FAQ states that a package with no Apex, Visualforce or Lightning code
+   "might not get any results at all" and that you can upload, in place of Checkmarx results, "a
+   document stating that your package doesn't contain any code so the Checkmarx scan
+   requirement is not applicable". That document is `No_Code_Statement.md` / `.pdf` in this
+   folder. Run the scan anyway if the portal lists the version: an empty report plus the
+   statement is the strongest combination.
+
+Done 2026-10-19: scan submitted from the portal for 04thm000003NZY1AAO, Job Id `a0BKX000000pdGR2AY`,
+profile "Security and Quality Rules", status "Job Requested" at 17:37 UTC. The report appears in the
+dashboard's Download Report column (and by email to the Dev Hub user) when the job completes; save it
+as `Checkmarx_Report.pdf` here. Note the portal's own Author Apex check is asynchronous (it emails
+when verified) and the Checkmarx Terms of Use must be accepted once.
+
+Result (job done within the hour): **Security Issues: 0, Quality Issues: 0**, every rule "No Issues
+Found"; Checkmarx 9.7, preset PortalAll, 41 files and 1,351 lines scanned (the metadata XML), scan
+time 20 s, scan Id a0OKX000001JTxS2AW. The portal's Download menu offers HTML and XML (each a ZIP);
+saved here as `Checkmarx_Report.html`, `.xml` and a `Checkmarx_Report.pdf` rendering for the wizard.
 
 ## 9. Next version (after 1.0.0 is promoted)
 

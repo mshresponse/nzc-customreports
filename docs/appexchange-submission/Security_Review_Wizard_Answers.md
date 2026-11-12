@@ -153,6 +153,34 @@ the fee" *(guide)*. There is no separate waiver form; the fee step keys off the 
    Operations to zero the fee. They respond within about two business days.
 5. If you ever convert the listing to paid, a review fee becomes due at that point.
 
+**How the waiver actually works (learned 2026-10-19 to 10-27):** Pricing Model = Free does not
+zero the fee by itself. With the listing priced Free but still awaiting listing approval, the
+Review & Submit page demanded $999.00 USD via Stripe, and an unpaid draft is discarded within a day
+or two (stages 2 to 4 go blank; the contacts survive), so leave the wizard alone until the voucher
+is in hand. The sequence that worked:
+
+1. Open a Salesforce Help case (help.salesforce.com → Cases, topic *AppExchange and Partner
+   Programs* → *Security Review*) stating that the listing is Free and asking for the free-app
+   waiver. The Partner Community's "Log a Case" link leads to the same intake.
+2. ISV Scale Operations replies within a day or two with about 18 free-app qualification
+   questions (company, how services are charged, no freemium, no paid product or integration
+   behind the app, adoption goals) and asks for written agreement to the SPPA free-app Program
+   Policy. Answer on the case; comments are plain text with a 2,000-character limit.
+3. They approve the listing (Get Approved shows "Your listing is approved"), then open a child
+   case and request a one-time voucher code internally. It arrives on that case a few business
+   days later and the case is closed on delivery.
+4. Refill the wizard (stages 2 to 4 and the PDFs), click Submit on the last stage, then
+   *Pay with Stripe* on Review & Submit. On the hosted Stripe Checkout page use *Add promotion
+   code* and enter the voucher: the line item shows the discount and the total drops to $1.00 USD,
+   a processing charge Stripe cannot zero out. Untick "Save my information with Link" unless you
+   want a Link account. Pay the $1 with any card.
+5. Stripe returns to Review & Submit with "We received your payment of $1.00 USD" and the Submit
+   button enabled. Click it; the overview then shows "Submitted" with the Submission Verification
+   stage (about two weeks) ahead of Testing.
+
+The voucher is single-use and tied to that submission; if the review fails, open a new case for a
+fresh code before resubmitting.
+
 ## 5. After you click Submit
 
 | Stage *(guide)* | Typical time |

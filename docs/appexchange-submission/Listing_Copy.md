@@ -12,7 +12,7 @@ NZC Reports and Dashboards: Net Zero Cloud Scope 1, 2 and 3 Reporting
 
 Net Zero Cloud Scope 1, 2 and 3 reports and dashboards, no CRM Analytics
 
-## Full Description (limit 1,200 characters including line breaks; this version is 1195)
+## Full Description (limit 1,200 characters including line breaks; this version is 1199)
 
 Net Zero Cloud ships no report types for its emissions objects, and its own dashboards need the CRM Analytics add-on. NZC Reports and Dashboards fills that gap with core Lightning reporting: 22 custom report types, 32 reports, 4 dashboards and 6 list views in a free managed package with no code.
 
@@ -22,11 +22,11 @@ Scope 3: purchases by year, GHG category and supplier; spend against emissions; 
 
 Data quality: sites and vehicles missing footprints or energy use, orphaned records, purchases without a factor. Each chart opens its worklist.
 
-Data entry: six tabular reports built for inline editing; Net Zero Cloud recalculates on save.
+Data entry: six tabular reports for inline editing; Net Zero Cloud recalculates on save.
 
 Four dashboards: Emissions Coverage, Audit (by reporting year), Data Quality and Scope 3.
 
-Runs in the Salesforce report engine as the viewing user, so object, field and sharing security apply. No Apex, no components, no callouts, no custom objects. Requires a Net Zero Cloud licence. Source and sample data: github.com/mshresponse/nzc-customreports (MIT).
+Reports respect each viewer's object, field and sharing security; dashboards run as the installing admin until changed. No Apex, components, callouts or custom objects. Requires a Net Zero Cloud licence. Source and sample data: github.com/mshresponse/nzc-customreports (MIT).
 
 ## Highlights (up to 9)
 
